@@ -1,0 +1,19 @@
+# Reproducible default configuration for Approach 1.
+seed: 42
+data:
+  rows: 50000 # synthetic claim records; increase to 120000 for the specified full fallback scale
+  fraud_rate: 0.09
+  source: synthetic
+splitting:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+models:
+  enabled: [majority, logistic_l2, logistic_l1, gaussian_nb, knn, linear_svm, decision_tree, random_forest, extra_trees, hist_gradient_boosting, ada_boost, mlp]
+  cv_folds: 3 # laptop-safe development budget; recorded in manifest
+reporting:
+  build_documents: true
+  dpi: 180
+paths:
+  evaluation: evaluation
+  images: images

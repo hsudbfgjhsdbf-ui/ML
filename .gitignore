@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+workspace/
+data/raw/*.csv
+data/interim/*.csv
+data/processed/*.csv
+evaluation/runs/
+evaluation/latest/
+evaluation/*.csv
+evaluation/*.json
+evaluation/*.log
+evaluation/**/*.csv
+evaluation/**/*.json
+images/**/*.png
+presentation/*.pptx
+reports/*.pdf
