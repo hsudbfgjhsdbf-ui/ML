@@ -1,0 +1,17 @@
+
+{
+  "document_type": "medical_bill",
+  "claim_id": "e35193b4-3609-492b-866a-98de19317e9c",
+  "patient_name": "REDACTED",
+  "provider_name": "City Clinic - East Curtis",
+  "bill_date": "2024-07-10",
+  "discharge_date": "2024-07-08",
+  "total_amount": 6000.00,
+  "items": [
+    {"description": "Consultation", "amount": 500},
+    {"description": "Procedure", "amount": 4000}
+  ],
+  "diagnosis_code": "Fo766",
+  "procedure_code": "jR349",
+  "notes": "Intentional mismatch: items sum 4500 vs total 6000 for testing"
+}

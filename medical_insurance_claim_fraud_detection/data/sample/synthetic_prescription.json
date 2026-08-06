@@ -1,0 +1,9 @@
+
+{
+  "document_type": "prescription",
+  "patient_id": "REDACTED",
+  "doctor": "Dr. Smith, Orthopedics",
+  "date": "2024-07-06",
+  "medications": ["Ibuprofen 400mg", "Amoxicillin 500mg"],
+  "diagnosis": "Fracture"
+}

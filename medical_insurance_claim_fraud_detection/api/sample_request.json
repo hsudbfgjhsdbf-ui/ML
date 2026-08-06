@@ -1,0 +1,21 @@
+{
+  "ClaimID": "6eea92b2-bd25-484d-94bd-278706e7f11c",
+  "PatientID": "e86c4d40-dc9f-4666-bcb6-0561ae7468e4",
+  "ProviderID": "3ebc3513-699e-4efe-82e1-7e81e9274edd",
+  "ClaimAmount": 1703.04,
+  "ClaimDate": "2023-06-23",
+  "DiagnosisCode": "Bj740",
+  "ProcedureCode": "Ws079",
+  "PatientAge": 30,
+  "PatientGender": "M",
+  "ProviderSpecialty": "Neurology",
+  "ClaimStatus": "Denied",
+  "PatientIncome": 61778.09,
+  "PatientMaritalStatus": "Widowed",
+  "PatientEmploymentStatus": "Employed",
+  "ProviderLocation": "Harrisfurt",
+  "ClaimType": "Routine",
+  "ClaimSubmissionMethod": "Paper",
+  "Cluster": 3,
+  "ClaimLegitimacy": "Legitimate"
+}

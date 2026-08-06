@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+venv/
+.venv/
+env/
+*.log
+
+# Data & artifacts
+data/raw/*.xlsx
+data/raw/*.csv
+data/interim/
+data/processed/*.pkl
+data/processed/*.csv
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.h5
+models/
+checkpoints/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Evaluation outputs that are large but keep csv/md
+evaluation/*.npy
+# Keep csvs
+
+# Images temp
+images/*.png
+visualizations/*.png
+!images/.gitkeep
+!visualizations/.gitkeep
+
+# Report artifacts
+report/*.pdf
+report/*.pptx
+presentation/*.pptx
+presentation/*.pdf
+
+# Optional large
+*.zip
+*.tar.gz

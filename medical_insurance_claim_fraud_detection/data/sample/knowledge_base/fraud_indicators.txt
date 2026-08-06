@@ -1,0 +1,13 @@
+Fraud Indicators
+- Unusually high claim amount vs peer group (>3 std dev).
+- Upcoding: billing for more expensive procedure than performed.
+- Duplicate billing same date same procedure.
+- Patient age inconsistent with diagnosis.
+- Provider billing far outside specialty (e.g., orthopedics billing cardiology).
+- Claim submission date before service date.
+- Inconsistent provider location vs patient location without referral.
+- Missing discharge summary for inpatient claims.
+- Altered documents, mismatched totals, overlapping dates.
+- High frequency claims same patient in short window.
+- Provider with history of high fraud rate.
+- Unbundling: splitting procedure into separate billable components.

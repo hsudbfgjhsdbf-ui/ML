@@ -1,0 +1,20 @@
+Column,Type,Description,Example,IsTarget,IsSensitive,Notes
+ClaimID,string,Anonymized unique claim identifier,4d76c7f7-d36a-4139-b451-a9a4ad10d7d5,No,No,Primary key for claim
+PatientID,string,Anonymized patient identifier,19cf2638-3ec0-4ed9-9995-d9ba4553813a,No,Yes,Quasi-identifier
+ProviderID,string,Anonymized provider identifier,a3d0cc80-dffe-40ff-a302-23c8ffeedb36,No,No,Provider entity
+ClaimAmount,float,Claimed monetary amount in USD,7820.52,No,No,Key fraud signal; check outlier
+ClaimDate,datetime,Date claim was submitted,2024-07-08,No,No,Engineered to year/month/day etc
+DiagnosisCode,string,ICD-like diagnosis code,Ta150,No,No,Categorical high cardinality
+ProcedureCode,string,CPT-like procedure code,iO013,No,No,Categorical high cardinality
+PatientAge,int,Patient age in years,96,No,Yes,Sensitive; check bias
+PatientGender,string,Patient gender M/F,F,No,Yes,Sensitive; fairness audit
+ProviderSpecialty,string,Medical specialty,Orthopedics,No,No,May correlate with fraud
+ClaimStatus,string,Administrative status Pending/Approved/Denied,Pending,No,No,Potential leakage - post-decision
+PatientIncome,float,Annual income USD,57595.11,No,Yes,Sensitive
+PatientMaritalStatus,string,Marital status,Single,No,Yes,Demographic
+PatientEmploymentStatus,string,Employment status,Employed,No,Yes,Demographic
+ProviderLocation,string,Provider location city string,New Alishaview,No,No,Geographic bias risk
+ClaimType,string,Type Inpatient/Outpatient/Emergency/Routine,Inpatient,No,No,Claim context
+ClaimSubmissionMethod,string,Submission method Paper/Online/Phone,Paper,No,No,Operational feature
+Cluster,int,K-means or similar cluster id 0-3,3,No,No,Possibly derived feature; treat as categorical/numeric
+ClaimLegitimacy,string,Ground truth label Legitimate/Fraud,Legitimate,Yes,No,Target variable

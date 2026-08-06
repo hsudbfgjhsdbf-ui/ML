@@ -1,0 +1,17 @@
+
+{
+  "document_type": "medical_bill",
+  "claim_id": "4d76c7f7-d36a-4139-b451-a9a4ad10d7d5",
+  "patient_name": "REDACTED",
+  "provider_name": "General Hospital - New Alishaview",
+  "bill_date": "2024-07-08",
+  "discharge_date": "2024-07-07",
+  "total_amount": 7820.52,
+  "items": [
+    {"description": "Room Charges", "amount": 3000},
+    {"description": "Surgery", "amount": 4000},
+    {"description": "Lab", "amount": 820.52}
+  ],
+  "diagnosis_code": "Ta150",
+  "procedure_code": "iO013"
+}

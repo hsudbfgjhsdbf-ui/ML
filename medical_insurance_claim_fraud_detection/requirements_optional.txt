@@ -1,0 +1,21 @@
+# Optional dependencies - install as needed
+# Deep learning
+torch>=2.0
+tensorflow>=2.13
+# Gradient boosting
+xgboost>=2.0
+lightgbm>=4.0
+catboost>=1.2
+# OCR / Vision
+pytesseract>=0.3.10
+easyocr>=1.7
+paddleocr>=2.7
+# LLM / RAG / Embeddings
+openai>=1.0
+sentence-transformers>=2.2
+faiss-cpu>=1.7
+chromadb>=0.4
+# Other
+shap>=0.44
+lime>=0.2
+transformers>=4.35

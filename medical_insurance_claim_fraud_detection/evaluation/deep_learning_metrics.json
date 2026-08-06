@@ -1,0 +1,303 @@
+{
+  "approach": "02_deep_learning",
+  "framework": "sklearn_mlp_fallback",
+  "val_metrics_default_thr": {
+    "accuracy": 0.9644444444444444,
+    "precision": 0.9,
+    "recall": 0.45,
+    "specificity": 0.9968503937007874,
+    "sensitivity": 0.45,
+    "f1": 0.6,
+    "f2": 0.5,
+    "balanced_accuracy": 0.7234251968503937,
+    "mcc": 0.622219124438565,
+    "roc_auc": 0.9906692913385827,
+    "pr_auc": 0.8728729314454975,
+    "brier_score": 0.02462695933834902,
+    "tn": 633,
+    "fp": 2,
+    "fn": 22,
+    "tp": 18,
+    "fpr": 0.0031496062992125984,
+    "fnr": 0.55
+  },
+  "test_metrics_default_thr": {
+    "accuracy": 0.9588888888888889,
+    "precision": 0.9473684210526315,
+    "recall": 0.3333333333333333,
+    "specificity": 0.9988179669030733,
+    "sensitivity": 0.3333333333333333,
+    "f1": 0.4931506849315068,
+    "f2": 0.3829787234042553,
+    "balanced_accuracy": 0.6660756501182034,
+    "mcc": 0.5487231255468472,
+    "roc_auc": 0.9898432711671482,
+    "pr_auc": 0.9026157321644857,
+    "brier_score": 0.028202828797583342,
+    "tn": 845,
+    "fp": 1,
+    "fn": 36,
+    "tp": 18,
+    "fpr": 0.001182033096926714,
+    "fnr": 0.6666666666666666
+  },
+  "val_metrics_tuned_thr": {
+    "accuracy": 0.9674074074074074,
+    "precision": 0.6666666666666666,
+    "recall": 0.9,
+    "specificity": 0.9716535433070866,
+    "sensitivity": 0.9,
+    "f1": 0.7659574468085106,
+    "f2": 0.8411214953271028,
+    "balanced_accuracy": 0.9358267716535433,
+    "mcc": 0.7586091527445916,
+    "roc_auc": 0.9906692913385827,
+    "pr_auc": 0.8728729314454975,
+    "brier_score": 0.02462695933834902,
+    "tn": 617,
+    "fp": 18,
+    "fn": 4,
+    "tp": 36,
+    "fpr": 0.028346456692913385,
+    "fnr": 0.1
+  },
+  "test_metrics_tuned_thr": {
+    "accuracy": 0.9655555555555555,
+    "precision": 0.6533333333333333,
+    "recall": 0.9074074074074074,
+    "specificity": 0.9692671394799054,
+    "sensitivity": 0.9074074074074074,
+    "f1": 0.7596899224806202,
+    "f2": 0.8419243986254296,
+    "balanced_accuracy": 0.9383372734436564,
+    "mcc": 0.7532911289098879,
+    "roc_auc": 0.9898432711671482,
+    "pr_auc": 0.9026157321644857,
+    "brier_score": 0.028202828797583342,
+    "tn": 820,
+    "fp": 26,
+    "fn": 5,
+    "tp": 49,
+    "fpr": 0.030732860520094562,
+    "fnr": 0.09259259259259259
+  },
+  "threshold": 0.05,
+  "threshold_info": {
+    "best_f2": 0.867579908675799,
+    "strategy": "optimize_f2",
+    "threshold": 0.036819662621995444,
+    "threshold_clipped": 0.05
+  },
+  "history": {
+    "train_loss": [
+      0.28296049108991844,
+      0.0021257133941298464,
+      0.00047518077959021114,
+      0.000342290235055638,
+      0.000289566654498218,
+      0.0002615644099120296,
+      0.00024384225588539057,
+      0.00023153974677389956,
+      0.0002211869977987906,
+      0.0002099988390297757,
+      0.00020209963424830428,
+      0.00019655279756940848
+    ],
+    "val_loss": [],
+    "val_pr_auc": []
+  },
+  "config": {
+    "project": {
+      "name": "medical_insurance_claim_fraud_detection",
+      "title": "Medical Insurance Claim Fraud Detection \u2014 AI-Driven Claim Verification & Explainable Fraud Detection Platform",
+      "version": "1.0.0",
+      "institution": "IIIT Dharwad",
+      "team": [
+        {
+          "id": "23BDS011",
+          "name": "B Varshith"
+        },
+        {
+          "id": "23BDS033",
+          "name": "M Jagadeshwar"
+        },
+        {
+          "id": "23BDS024",
+          "name": "J Ganesh"
+        }
+      ],
+      "program": "B.Tech, Data Science & AI"
+    },
+    "dataset": {
+      "name": "Health Insurance Fraud Claims (provided dataset)",
+      "source": "Local Excel file: Health Insurance Fraud Claims.xlsx \u2014 mirrors public medical insurance fraud claims structure",
+      "original_source": "https://www.kaggle.com/datasets/multiple \u2014 healthcare insurance claims fraud pattern (CMS-inspired)",
+      "license": "Provided for academic use; original public datasets typically MIT / CC0 / Government Open Data",
+      "access_date": "2026-08-06",
+      "version": "1.0",
+      "raw_path": "data/raw/Health_Insurance_Fraud_Claims.xlsx",
+      "processed_path": "data/processed/claims_processed.csv",
+      "sample_path": "data/sample/sample_100.csv",
+      "prediction_unit": "claim",
+      "target_column": "ClaimLegitimacy",
+      "fraud_label_value": "Fraud",
+      "legit_label_value": "Legitimate",
+      "id_columns": [
+        "ClaimID",
+        "PatientID",
+        "ProviderID"
+      ],
+      "sensitive_columns": [
+        "PatientID",
+        "PatientAge",
+        "PatientGender",
+        "PatientIncome",
+        "PatientMaritalStatus"
+      ],
+      "test_size": 0.2,
+      "validation_size": 0.15,
+      "random_state": 42
+    },
+    "preprocessing": {
+      "numerical_features": [
+        "ClaimAmount",
+        "PatientAge",
+        "PatientIncome"
+      ],
+      "categorical_features": [
+        "PatientGender",
+        "ProviderSpecialty",
+        "ClaimStatus",
+        "PatientMaritalStatus",
+        "PatientEmploymentStatus",
+        "ProviderLocation",
+        "ClaimType",
+        "ClaimSubmissionMethod",
+        "DiagnosisCode",
+        "ProcedureCode"
+      ],
+      "date_features": [
+        "ClaimDate"
+      ],
+      "drop_features": [
+        "ClaimID",
+        "PatientID",
+        "ProviderID"
+      ],
+      "scaling": "standard",
+      "encoding": "onehot",
+      "handle_unknown": "ignore",
+      "missing_strategy": "impute"
+    },
+    "training": {
+      "cv_folds": 5,
+      "scoring": "average_precision",
+      "primary_metric": "pr_auc",
+      "secondary_metrics": [
+        "roc_auc",
+        "f1",
+        "recall",
+        "precision",
+        "f2",
+        "mcc",
+        "balanced_accuracy"
+      ],
+      "use_class_weight": true,
+      "use_smote": true,
+      "smote_k_neighbors": 5,
+      "calibration": "isotonic",
+      "threshold_strategy": "optimize_f2",
+      "threshold_recall_target": 0.8
+    },
+    "deep_learning": {
+      "framework": "sklearn_fallback",
+      "hidden_layers": [
+        128,
+        64,
+        32
+      ],
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "batch_size": 64,
+      "early_stopping_patience": 10,
+      "embedding_dim": 16
+    },
+    "anomaly_detection": {
+      "methods": [
+        "isolation_forest",
+        "lof",
+        "one_class_svm",
+        "robust_covariance"
+      ],
+      "contamination": 0.06,
+      "train_only_on_legit": true,
+      "top_k": 100
+    },
+    "document_intelligence": {
+      "ocr_engine": "fallback",
+      "vlm_enabled": false,
+      "vlm_provider": "none",
+      "confidence_threshold": 0.7,
+      "required_documents": [
+        "medical_bill",
+        "prescription",
+        "discharge_summary"
+      ],
+      "validation_rules": {
+        "check_bill_total": true,
+        "check_date_consistency": true,
+        "check_provider_consistency": true,
+        "check_policyholder_consistency": true,
+        "check_duplicate": true
+      }
+    },
+    "rag": {
+      "chunk_size": 500,
+      "chunk_overlap": 50,
+      "embedding_model": "tfidf_fallback",
+      "top_k": 5,
+      "vector_store": "local_json",
+      "llm_enabled": false,
+      "knowledge_base_dir": "data/sample/knowledge_base"
+    },
+    "hybrid": {
+      "decision_thresholds": {
+        "approve_max_prob": 0.3,
+        "review_min_prob": 0.3,
+        "review_max_prob": 0.7,
+        "reject_min_prob": 0.7
+      },
+      "weights": {
+        "ml": 0.5,
+        "dl": 0.2,
+        "anomaly": 0.15,
+        "document": 0.15
+      },
+      "require_manual_review_for": [
+        "document_validation_failed",
+        "high_amount",
+        "anomaly_top_k"
+      ]
+    },
+    "explainability": {
+      "use_shap": true,
+      "shap_background_samples": 100,
+      "top_features": 10
+    },
+    "paths": {
+      "artifacts_dir": "data/processed/artifacts",
+      "evaluation_dir": "evaluation",
+      "images_dir": "images",
+      "relations_dir": "relations",
+      "documentation_dir": "documentation",
+      "presentation_dir": "presentation",
+      "report_dir": "report"
+    },
+    "runtime": {
+      "n_jobs": -1,
+      "use_gpu": false
+    }
+  },
+  "note": "Deep learning on tabular data often does not outperform gradient boosting or random forest due to limited data and lack of spatial/temporal structure. This experiment compares and documents that."
+}

@@ -1,0 +1,199 @@
+{
+  "approach": "01_traditional_ml",
+  "best_model": "DecisionTree",
+  "timestamp": "2026-08-06T10:58:14.222560+00:00",
+  "config": {
+    "project": {
+      "name": "medical_insurance_claim_fraud_detection",
+      "title": "Medical Insurance Claim Fraud Detection \u2014 AI-Driven Claim Verification & Explainable Fraud Detection Platform",
+      "version": "1.0.0",
+      "institution": "IIIT Dharwad",
+      "team": [
+        {
+          "id": "23BDS011",
+          "name": "B Varshith"
+        },
+        {
+          "id": "23BDS033",
+          "name": "M Jagadeshwar"
+        },
+        {
+          "id": "23BDS024",
+          "name": "J Ganesh"
+        }
+      ],
+      "program": "B.Tech, Data Science & AI"
+    },
+    "dataset": {
+      "name": "Health Insurance Fraud Claims (provided dataset)",
+      "source": "Local Excel file: Health Insurance Fraud Claims.xlsx \u2014 mirrors public medical insurance fraud claims structure",
+      "original_source": "https://www.kaggle.com/datasets/multiple \u2014 healthcare insurance claims fraud pattern (CMS-inspired)",
+      "license": "Provided for academic use; original public datasets typically MIT / CC0 / Government Open Data",
+      "access_date": "2026-08-06",
+      "version": "1.0",
+      "raw_path": "data/raw/Health_Insurance_Fraud_Claims.xlsx",
+      "processed_path": "data/processed/claims_processed.csv",
+      "sample_path": "data/sample/sample_100.csv",
+      "prediction_unit": "claim",
+      "target_column": "ClaimLegitimacy",
+      "fraud_label_value": "Fraud",
+      "legit_label_value": "Legitimate",
+      "id_columns": [
+        "ClaimID",
+        "PatientID",
+        "ProviderID"
+      ],
+      "sensitive_columns": [
+        "PatientID",
+        "PatientAge",
+        "PatientGender",
+        "PatientIncome",
+        "PatientMaritalStatus"
+      ],
+      "test_size": 0.2,
+      "validation_size": 0.15,
+      "random_state": 42
+    },
+    "preprocessing": {
+      "numerical_features": [
+        "ClaimAmount",
+        "PatientAge",
+        "PatientIncome"
+      ],
+      "categorical_features": [
+        "PatientGender",
+        "ProviderSpecialty",
+        "ClaimStatus",
+        "PatientMaritalStatus",
+        "PatientEmploymentStatus",
+        "ProviderLocation",
+        "ClaimType",
+        "ClaimSubmissionMethod",
+        "DiagnosisCode",
+        "ProcedureCode"
+      ],
+      "date_features": [
+        "ClaimDate"
+      ],
+      "drop_features": [
+        "ClaimID",
+        "PatientID",
+        "ProviderID"
+      ],
+      "scaling": "standard",
+      "encoding": "onehot",
+      "handle_unknown": "ignore",
+      "missing_strategy": "impute"
+    },
+    "training": {
+      "cv_folds": 5,
+      "scoring": "average_precision",
+      "primary_metric": "pr_auc",
+      "secondary_metrics": [
+        "roc_auc",
+        "f1",
+        "recall",
+        "precision",
+        "f2",
+        "mcc",
+        "balanced_accuracy"
+      ],
+      "use_class_weight": true,
+      "use_smote": true,
+      "smote_k_neighbors": 5,
+      "calibration": "isotonic",
+      "threshold_strategy": "optimize_f2",
+      "threshold_recall_target": 0.8
+    },
+    "deep_learning": {
+      "framework": "sklearn_fallback",
+      "hidden_layers": [
+        128,
+        64,
+        32
+      ],
+      "dropout": 0.3,
+      "learning_rate": 0.001,
+      "epochs": 100,
+      "batch_size": 64,
+      "early_stopping_patience": 10,
+      "embedding_dim": 16
+    },
+    "anomaly_detection": {
+      "methods": [
+        "isolation_forest",
+        "lof",
+        "one_class_svm",
+        "robust_covariance"
+      ],
+      "contamination": 0.06,
+      "train_only_on_legit": true,
+      "top_k": 100
+    },
+    "document_intelligence": {
+      "ocr_engine": "fallback",
+      "vlm_enabled": false,
+      "vlm_provider": "none",
+      "confidence_threshold": 0.7,
+      "required_documents": [
+        "medical_bill",
+        "prescription",
+        "discharge_summary"
+      ],
+      "validation_rules": {
+        "check_bill_total": true,
+        "check_date_consistency": true,
+        "check_provider_consistency": true,
+        "check_policyholder_consistency": true,
+        "check_duplicate": true
+      }
+    },
+    "rag": {
+      "chunk_size": 500,
+      "chunk_overlap": 50,
+      "embedding_model": "tfidf_fallback",
+      "top_k": 5,
+      "vector_store": "local_json",
+      "llm_enabled": false,
+      "knowledge_base_dir": "data/sample/knowledge_base"
+    },
+    "hybrid": {
+      "decision_thresholds": {
+        "approve_max_prob": 0.3,
+        "review_min_prob": 0.3,
+        "review_max_prob": 0.7,
+        "reject_min_prob": 0.7
+      },
+      "weights": {
+        "ml": 0.5,
+        "dl": 0.2,
+        "anomaly": 0.15,
+        "document": 0.15
+      },
+      "require_manual_review_for": [
+        "document_validation_failed",
+        "high_amount",
+        "anomaly_top_k"
+      ]
+    },
+    "explainability": {
+      "use_shap": true,
+      "shap_background_samples": 100,
+      "top_features": 10
+    },
+    "paths": {
+      "artifacts_dir": "data/processed/artifacts",
+      "evaluation_dir": "evaluation",
+      "images_dir": "images",
+      "relations_dir": "relations",
+      "documentation_dir": "documentation",
+      "presentation_dir": "presentation",
+      "report_dir": "report"
+    },
+    "runtime": {
+      "n_jobs": -1,
+      "use_gpu": false
+    }
+  },
+  "data_path": "unknown"
+}

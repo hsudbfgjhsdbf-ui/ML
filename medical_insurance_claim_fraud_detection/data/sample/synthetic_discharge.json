@@ -1,0 +1,11 @@
+
+{
+  "document_type": "discharge_summary",
+  "patient_id": "REDACTED",
+  "admission_date": "2024-07-03",
+  "discharge_date": "2024-07-07",
+  "diagnosis": "Ta150",
+  "procedure": "iO013",
+  "hospital": "General Hospital - New Alishaview",
+  "follow_up": "2 weeks"
+}

@@ -1,0 +1,67 @@
+{
+  "approach": "03_anomaly_detection",
+  "contamination": 0.06,
+  "train_only_legit": true,
+  "results": [
+    {
+      "model": "IsolationForest",
+      "pr_auc": 0.07178017706415085,
+      "roc_auc": 0.4872384204535505,
+      "prec@10": 0.2,
+      "prec@50": 0.06,
+      "prec@100": 0.03,
+      "prec@200": 0.05,
+      "rec@10": 0.037037037037037035,
+      "rec@50": 0.05555555555555555,
+      "rec@100": 0.05555555555555555,
+      "rec@200": 0.18518518518518517
+    },
+    {
+      "model": "LOF",
+      "pr_auc": 0.14685294482759562,
+      "roc_auc": 0.7374573154714998,
+      "prec@10": 0.2,
+      "prec@50": 0.16,
+      "prec@100": 0.17,
+      "prec@200": 0.14,
+      "rec@10": 0.037037037037037035,
+      "rec@50": 0.14814814814814814,
+      "rec@100": 0.3148148148148148,
+      "rec@200": 0.5185185185185185
+    },
+    {
+      "model": "OneClassSVM",
+      "pr_auc": 0.12281454716036347,
+      "roc_auc": 0.6797565887400403,
+      "prec@10": 0.1,
+      "prec@50": 0.18,
+      "prec@100": 0.17,
+      "prec@200": 0.12,
+      "rec@10": 0.018518518518518517,
+      "rec@50": 0.16666666666666666,
+      "rec@100": 0.3148148148148148,
+      "rec@200": 0.4444444444444444
+    },
+    {
+      "model": "EnsembleAnomalyAvg",
+      "pr_auc": 0.1293600300280877,
+      "roc_auc": 0.6562034848086857,
+      "prec@10": 0.2,
+      "prec@50": 0.16,
+      "prec@100": 0.12,
+      "prec@200": 0.1,
+      "rec@10": 0.037037037037037035,
+      "rec@50": 0.14814814814814814,
+      "rec@100": 0.2222222222222222,
+      "rec@200": 0.37037037037037035
+    }
+  ],
+  "note_anomaly_vs_fraud": "Anomaly score measures deviation from normal pattern, NOT verified fraud probability. Fraud probability requires supervised calibration. Anomaly is unsupervised risk indicator.",
+  "limitations": [
+    "Unsupervised methods have high false positives",
+    "Cannot distinguish fraud vs rare but legitimate cases without labels",
+    "Requires calibrated threshold via labeled data for operational use",
+    "If trained only on legit, assumes clean training data",
+    "High-cardinality categorical may degrade distance-based methods"
+  ]
+}

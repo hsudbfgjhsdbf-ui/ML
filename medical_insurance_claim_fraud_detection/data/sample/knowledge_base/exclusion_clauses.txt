@@ -1,0 +1,7 @@
+Exclusion Clauses
+- Cosmetic surgery not covered unless post-trauma reconstructive.
+- Experimental treatments not covered.
+- Self-inflicted injuries excluded.
+- Claims with fraudulent documents automatically flagged.
+- Pre-existing conditions have 90-day waiting period.
+- Dental procedures only covered under dental rider.
