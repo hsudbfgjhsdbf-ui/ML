@@ -1,0 +1,17 @@
+{
+  "name": "medical-insurance-fraud-detection-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next.js frontend application for Medical Insurance Claim Fraud Detection System (IIIT Dharwad)",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000"
+  },
+  "dependencies": {
+    "lucide-react": "^0.383.0",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
