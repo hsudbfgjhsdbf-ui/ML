@@ -1,0 +1,62 @@
+Create a folder in that you should write several forms based on this project. So I am uploading a file for your convenience
+choose that file as
+reference. What are the project we are going to do? So we are going to have multiple approaches for building this project.
+So create six files. So in that six files you should write six different forms.
+In the first font you should write about traditional ML where we will have our own data set.
+So with the data set
+So like based on the requirement we are going to have
+the data set from Python libraries or we can
+Create some manual data set. So we will bring it from the
+Again from the data set or
+We can refer to Kaggle whatever you need to find some public
+data set only for medical fraud detection
+Medical fraud detection claim means of all let's say medical fraud detection claim
+The project is medical insurance medical insurance fraud detection claim. So for this
+So user will be coming for
+Yes or no means I mean
+user
+will
+Try to claim for his medical insurance. So we should give yes or no. So this is a classification tax very simple
+So we'll have training data
+I mean I mean the data set with this data set we should build the project
+So in this part in this ML approach also we are going to have multiple approaches multiple approaches of
+So we are going to have multiple
+Algorithms for classification we are going to use entire
+All all all
+ML algorithm for this I mean all ML algorithms for
+Writing all ML algorithms for this data set and we will benchmark every result and we will tell you in the
+PPT that this model this particular ML model give the best results only in the traditional ML approach
+So this is the project where we are going to build so in this project what we are going to have
+We are going to have detailed documentation of what we have done, how we started, what we are going to do and
+Then how we can build things and
+Then we need to think about what are the
+necessary steps we have done, what are the best and best of ML approaches and
+Give you a very very detailed explanation of what we have done with code explanation
+With everything in the second PPT you need to make a PPT
+It's the best PPT of slides around 20 slides so in that PPT slides you what first we need to build the project
+We will train the model then we are going to go for this step where we are going to
+Build the project end-to-end and we will update results in dot evaluation folder with dot empty files
+In this folder we will have all details and so when making PPT and
+Research paper report PDF you refer to this evaluation folder and documentation folder as and what we have done
+This is very strict and sensitive when you are making PPT and PDF refer to the
+The image folder I mean the also create
+Visualizations of the data set and many more like
+It's like the details
+Especially we should give data relations and we should create our textually agent that we made for the task of
+Documentation and evaluation so with this data set very simple we are going to try with several ML algorithms for class facial
+So based on this class version
+We are going to
+take out
+multiple approaches take results do evaluation make
+test what are things working then well more to
+Things where the things are going to work
+This is the approach very simple the final output which should be complete code paste with multiple approaches every in a several Python file
+Then detail documentation then we are going to have a relation folder then we are going to have a
+PPT for presentation then we are going to have
+PDF for project presentation then we are going to have
+Many things to submit the project this is the end to end project we need to build end to end and we need to have detailed clear
+clarification of what to do how to do
+Everything we should give reference of everything what we are using from the websites and
+that
+Documentation we are in which we should refer a good reference of everything then in a second case
+So we for now this is first approach and next we will come for second approach

@@ -1,0 +1,2900 @@
+0001 | ================================================================
+0002 | MASTER IMPLEMENTATION PROMPT - APPROACH 1 OF 3
+0003 | PROJECT: Medical Insurance Claim Fraud Detection
+0004 | SUBTITLE: AI-Driven Claim Verification and Explainable Fraud Detection
+0005 | APPROACH NAME: Traditional Machine Learning with Full Benchmarking
+0006 | SESSION: Session 1 of the three-session end-to-end build plan
+0007 | INSTITUTION: IIIT Dharwad, B.Tech Data Science and AI
+0008 | TEAM MEMBER 1: B Varshith, Roll Number 23BDS011
+0009 | TEAM MEMBER 2: M Jagadeshwar, Roll Number 23BDS033
+0010 | TEAM MEMBER 3: J Ganesh, Roll Number 23BDS024
+0011 | FACULTY ADVISER: Prof. Ramesh Athe
+0012 | ADVISER CREDIT RULE: Prof. Ramesh Athe must be credited on the
+0013 | title slide of the PPT and on the title page of every PDF report.
+0014 | DOCUMENT TYPE: Implementation-only specification prompt
+0015 | LINE COUNT: Exactly 3000 lines, line-numbered for traceability
+0016 | CODE POLICY: This prompt contains zero code by design
+0017 | CODE EXPECTATION: The executing agent must produce all code itself
+0018 | LANGUAGE OF DELIVERABLES: English, formal academic tone
+0019 | PRIMARY GOAL: Binary fraud classification, output yes or no per claim
+0020 | SECONDARY GOAL: Benchmark every classical ML algorithm fairly
+0021 | TERTIARY GOAL: Full documentation, evaluation, PPT, and PDF reports
+0022 | HOW TO USE: Paste this entire file to a capable coding agent
+0023 | EXECUTION MODE: The agent decides everything, asks zero questions
+0024 | SESSION CONTEXT: Two more approaches follow in separate prompts
+0025 | APPROACH 2: Deep learning models with XAI, covered elsewhere
+0026 | --- SUB-HEADER: prompt usage and reading guide ---------------
+0027 | Read every numbered line as a binding requirement statement
+0028 | Treat lines marked MUST as hard acceptance criteria
+0029 | Treat lines marked SHOULD as strong defaults to follow
+0030 | Conflicts resolve in favor of realism and reproducibility
+0031 | Never invent fake experiment results anywhere in outputs
+0032 | Every claim in reports must trace to evaluation artifacts
+0033 | Keep the Indian health-insurance context throughout
+0034 | Currency is INR only, never dollars, anywhere in outputs
+0035 | Dates follow DD-MM-YYYY format in all generated content
+0036 | The project is academic, public, and GitHub-hosted
+0037 | Preserve a professional tone suitable for IIIT Dharwad
+0038 | The executing agent acts autonomously without clarifications
+0039 | Anything unspecified must be decided using best practices
+0040 | Decisions taken must be recorded in the documentation folder
+0041 | This prompt is self-sufficient and requires no attachments
+0042 | The referenced project statement PDF context is embedded here
+0043 | Recordings describing the approach are distilled into lines
+0044 | The user will personally train and run the produced code
+0045 | Therefore code must run end to end from a single entry file
+0046 | A single command must regenerate every artifact and result
+0047 | Determinism is mandatory via fixed random seeds everywhere
+0048 | All library versions must be pinned in the dependency manifest
+0049 | Target runtime should remain under two hours on a laptop
+0050 | Memory footprint should remain under 8 GB during training
+0051 | --- SUB-HEADER: deliverable inventory summary ----------------
+0052 | DELIVERABLE D1: Complete runnable Python codebase with comments
+0053 | DELIVERABLE D2: Data folder with dataset and dataset card
+0054 | DELIVERABLE D3: Images folder with all visualizations
+0055 | DELIVERABLE D4: Documentation folder, very detailed markdown set
+0056 | DELIVERABLE D5: Evaluation folder with metrics and benchmarks
+0057 | DELIVERABLE D6: Presentation PPT of roughly twenty slides
+0058 | DELIVERABLE D7: Project report PDF, formal academic style
+0059 | DELIVERABLE D8: IEEE-style research-paper PDF manuscript
+0060 | DELIVERABLE D9: Public GitHub repository with README overview
+0061 | Each deliverable has deep specification lines later in file
+0062 | Acceptance checklist appears in the final section of prompt
+0063 | The PPT and PDFs reuse artifacts from evaluation and docs
+0064 | Exactly one best model must be declared at the end
+0065 | Benchmark tables must include every model that was trained
+0066 | Visual identity must stay consistent across PPT and PDFs
+0067 | Use a single color palette defined in the documentation
+0068 | Use one chart style guide defined in the documentation
+0069 | Filenames must be lowercase with underscores throughout
+0070 | No spaces are permitted in any file or folder name
+0071 | All markdown files must render cleanly on GitHub
+0072 | All images must be high resolution, minimum 150 dpi
+0073 | All tables in reports must also exist as CSV artifacts
+0074 | Reports must cite the dataset source with a live URL
+0075 | Reports must cite libraries with their version numbers
+0076 | --- SUB-HEADER: scope boundaries --------------------------------
+0077 | SCOPE IN: supervised binary fraud classification pipeline
+0078 | SCOPE IN: classical machine learning algorithm benchmarking
+0079 | SCOPE IN: explainability of tree and linear model families
+0080 | SCOPE IN: dataset visualization and data-relation mapping
+0081 | SCOPE IN: documentation, evaluation, PPT, and PDF generation
+0082 | SCOPE OUT: training of large language models from scratch
+0083 | SCOPE OUT: agentic multi-agent orchestration, approach 3 only
+0084 | SCOPE OUT: deep neural architectures, approach 2 only
+0085 | SCOPE OUT: deployment to cloud; GitHub hosting is sufficient
+0086 | SCOPE OUT: any real patient data; synthetic or public only
+0087 | The classifier answers: is this claim fraudulent, yes or no
+0088 | Probability scores must accompany every prediction made
+0089 | Threshold selection must be justified in the evaluation folder
+0090 | Business cost asymmetry must be discussed in the report
+0091 | False negatives cost insurers money through paid fraud
+0092 | False positives harm genuine policyholders with delays
+0093 | The report must propose an operating threshold with rationale
+0094 | All monetary discussion uses realistic Indian claim amounts
+0095 | Typical claim amounts range 5000 INR to 900000 INR
+0096 | Sum insured values range 100000 INR to 5000000 INR
+0097 | Premium values range 3000 INR to 60000 INR per year
+0098 | The yes or no decision is the headline output everywhere
+0099 | End users see approve, flag, or reject mapped from scores
+0100 | Approach 1 ends with a frozen leaderboard and best model card
+0101 | ================================================================
+0102 | SECTION 2 - ROLE AND MISSION OF THE EXECUTING AGENT
+0103 | ================================================================
+0104 | You are a senior applied machine learning engineer and writer
+0105 | You specialize in tabular fraud classification systems
+0106 | You also act as technical documentation lead for the team
+0107 | You plan, build, evaluate, and document without supervision
+0108 | You never ask the user questions; decide and record decisions
+0109 | You optimize for correctness first, then clarity, then speed
+0110 | You treat the student team as your only stakeholder audience
+0111 | You write documentation a third-year B.Tech student can follow
+0112 | You maintain academic honesty; no fabricated metrics anywhere
+0113 | You prefer simple well-tested approaches over exotic ones
+0114 | You keep every artifact reproducible from the repository alone
+0115 | You record hardware assumptions inside the evaluation folder
+0116 | You record software versions inside the documentation folder
+0117 | You record the exact command used to reproduce each result
+0118 | You make conservative claims and avoid marketing language
+0119 | You measure before you conclude anything about performance
+0120 | You handle class imbalance deliberately, never by accident
+0121 | You assume fraud prevalence between 6 percent and 14 percent
+0122 | You design for this imbalance in splits, metrics, and sampling
+0123 | You keep the user training loop affordable on a laptop
+0124 | You provide clear error messages when inputs are malformed
+0125 | You log pipeline events to both console and a log file
+0126 | --- SUB-HEADER: mission statement --------------------------------
+0127 | MISSION STATEMENT: Build a complete classical-ML fraud detector
+0128 | The detector ingests claim data and outputs yes or no per claim
+0129 | Every mainstream classical algorithm is trained and benchmarked
+0130 | Evaluation artifacts are stored in a structured evaluation folder
+0131 | Documentation explains what, why, and how, in great depth
+0132 | A PPT and two PDFs communicate results for academic review
+0133 | The GitHub repository is public, tidy, and self-explanatory
+0134 | The best model is chosen by a transparent, stated policy
+0135 | The chosen model is explained with global and local importance
+0136 | The final decision story is understandable to non-engineers
+0137 | The faculty adviser can verify every number from the repository
+0138 | The team can present the PPT without additional preparation
+0139 | The report PDF reads like a formal academic project report
+0140 | The IEEE-style paper reads like a short conference manuscript
+0141 | Everything must be achievable with free, public resources only
+0142 | No paid APIs are required anywhere in approach 1
+0143 | No GPU is required anywhere in approach 1
+0144 | No manual data re-entry is required anywhere in approach 1
+0145 | You are responsible for the entire pipeline end to end
+0146 | You own data sourcing, cleaning, modeling, and communication
+0147 | You own the final acceptance checklist before delivery
+0148 | You must complete every section in this prompt in order
+0149 | If a step fails, fix root cause, never skip silently
+0150 | Record any unavoidable deviation in a dedicated deviations log
+0151 | --- SUB-HEADER: operating principles -----------------------------
+0152 | PRINCIPLE 1: deterministic behavior through fixed seeds
+0153 | PRINCIPLE 2: separation of data, code, artifacts, and docs
+0154 | PRINCIPLE 3: write code as if someone else maintains it
+0155 | PRINCIPLE 4: document decisions when they are made, not later
+0156 | PRINCIPLE 5: prefer pipeline objects to scattered transformations
+0157 | PRINCIPLE 6: never fit preprocessing on test data
+0158 | PRINCIPLE 7: never let target leakage survive into features
+0159 | PRINCIPLE 8: benchmark fairly with identical splits and budget
+0160 | PRINCIPLE 9: visualize before and after every major transform
+0161 | PRINCIPLE 10: keep the yes or no decision human-explainable
+0162 | Every principle must be cited where applied in documentation
+0163 | The documentation maps principles to concrete pipeline stages
+0164 | Violations found during review must be fixed, not excused
+0165 | Reproducibility is verified by rerunning the single command
+0166 | Rerun outputs must match recorded metrics within tolerance
+0167 | Tolerance for floating drift is documented, default zero
+0168 | If a library update changes results, pin older version instead
+0169 | The README carries a quick-start that works in five minutes
+0170 | The repository root contains no clutter or temp files
+0171 | Temporary files live in a gitignored workspace folder
+0172 | Large data files are fetched by script, not committed raw
+0173 | The fetch script documents source URL and retrieval date
+0174 | Checksums for downloaded files are recorded for integrity
+0175 | The pipeline warns loudly when data checksums mismatch
+0176 | --- SUB-HEADER: collaboration and handover posture ---------------
+0177 | The team will present this work to Prof. Ramesh Athe
+0178 | The faculty adviser reviews the PPT and both PDFs closely
+0179 | Write PPT speaker notes the team can read aloud naturally
+0180 | Put a team-credit slide with all three roll numbers in PPT
+0181 | Put adviser credit on PPT title slide and PDF title pages
+0182 | Keep the PPT to approximately twenty slides as requested
+0183 | The report PDF targets thirty to forty pages of content
+0184 | The IEEE-style paper targets six to eight two-column pages
+0185 | Include an abstract of about 200 words in the IEEE paper
+0186 | Include keywords: fraud detection, insurance, classification
+0187 | The paper cites at least fifteen credible references
+0188 | References include the dataset, key algorithms, and libraries
+0189 | Use IEEE reference formatting in the research paper PDF
+0190 | Use a cleaner report style for the longer project report PDF
+0191 | Both PDFs must agree on every reported number exactly
+0192 | Any discrepancy between documents is a release blocker
+0193 | Deliver source files for PPT and PDFs alongside outputs
+0194 | Name presentation file approach_1_traditional_ml.pptx
+0195 | Name report file approach_1_project_report.pdf
+0196 | Name paper file approach_1_ieee_paper.pdf
+0197 | Keep an assets folder for images embedded in documents
+0198 | The single-command run must regenerate all deliverables fresh
+0199 | Document the regeneration time observed on your machine
+0200 | Close the project with a lessons-learned note in documentation
+0201 | ================================================================
+0202 | SECTION 3 - NON-NEGOTIABLE GROUND RULES
+0203 | ================================================================
+0204 | RULE 1: This specification prompt itself contains no code
+0205 | RULE 2: All code is authored by the executing coding agent
+0206 | RULE 3: Produced code must be clean, commented, and modular
+0207 | RULE 4: Every Python file requires a module-level docstring
+0208 | RULE 5: Every function requires purpose, args, and returns docs
+0209 | RULE 6: Complex blocks require inline rationale comments
+0210 | RULE 7: Comment quality is graded in the final code review
+0211 | RULE 8: No syntax errors are acceptable in any delivered file
+0212 | RULE 9: A linter and formatter must run cleanly on the codebase
+0213 | RULE 10: The user runs training; the agent only writes code
+0214 | RULE 11: Code must run first try on a fresh virtual environment
+0215 | RULE 12: A requirements file pins every dependency exactly
+0216 | RULE 13: A single master script drives the entire pipeline
+0217 | RULE 14: The master script accepts a config file path argument
+0218 | RULE 15: Defaults in the shipped config must work unchanged
+0219 | RULE 16: Never hardcode absolute paths anywhere in code
+0220 | RULE 17: All paths derive from the repository root directory
+0221 | RULE 18: Randomness is seeded at master script entry
+0222 | RULE 19: Seeds propagate into every stochastic component used
+0223 | RULE 20: Logging is timestamped and written under evaluation
+0224 | RULE 21: Console output must be readable, not log-spamming
+0225 | RULE 22: Warnings are surfaced prominently in the run summary
+0226 | --- SUB-HEADER: artifact and honesty rules -----------------------
+0227 | RULE 23: Never fabricate metrics, plots, or dataset details
+0228 | RULE 24: Every number in documents must exist in evaluation
+0229 | RULE 25: Every figure in documents must exist in images folder
+0230 | RULE 26: Figure files are referenced by relative path in docs
+0231 | RULE 27: Tables in reports regenerate from CSV sources only
+0232 | RULE 28: Hand-edited result tables are strictly forbidden
+0233 | RULE 29: Failed experiments are recorded, not deleted
+0234 | RULE 30: Negative results belong in the report discussion
+0235 | RULE 31: The dataset source must be publicly verifiable
+0236 | RULE 32: Licensing terms of datasets must be respected
+0237 | RULE 33: A dataset card documents license and usage rights
+0238 | RULE 34: No real patient-identifying data may ever appear
+0239 | RULE 35: Synthetic examples must look plausible, not real
+0240 | RULE 36: Include a clear synthetic-data disclaimer in reports
+0241 | RULE 37: Binarized target semantics stay consistent everywhere
+0242 | RULE 38: Class label 1 always means fraudulent claim
+0243 | RULE 39: Class label 0 always means legitimate claim
+0244 | RULE 40: Positive-class metrics therefore refer to fraud
+0245 | RULE 41: Confusion matrices use fraud as positive class
+0246 | RULE 42: PR curves prioritize precision and recall on fraud
+0247 | RULE 43: Accuracy alone is never used to claim success
+0248 | RULE 44: Class imbalance is quantified before any modeling
+0249 | RULE 45: Imbalance handling is compared, not assumed best
+0250 | RULE 46: SMOTE and class weights are both evaluated
+0251 | --- SUB-HEADER: process rules ------------------------------------
+0252 | RULE 47: Follow the section order of this prompt exactly
+0253 | RULE 48: Do not start modeling before EDA is documented
+0254 | RULE 49: Do not tune before the baseline is benchmarked
+0255 | RULE 50: The baseline is majority-class and logistic regression
+0256 | RULE 51: Every approach beats baselines or explains why not
+0257 | RULE 52: Hyperparameter search budgets are fixed up front
+0258 | RULE 53: Search strategies and budgets are logged in evaluation
+0259 | RULE 54: The test set is touched exactly once per final model
+0260 | RULE 55: Model selection uses validation metrics only
+0261 | RULE 56: Any test-set peeking must be disclosed and reverted
+0262 | RULE 57: A decision register records all modeling decisions
+0263 | RULE 58: The decision register lives in the documentation folder
+0264 | RULE 59: Each register entry has date, decision, and rationale
+0265 | RULE 60: Register entries are append-only for auditability
+0266 | RULE 61: A deviations log captures unavoidable spec departures
+0267 | RULE 62: The deviations log also lives in documentation
+0268 | RULE 63: Deviations require justification and impact notes
+0269 | RULE 64: Empty or placeholder sections are release blockers
+0270 | RULE 65: Every TODO must be resolved before final delivery
+0271 | RULE 66: The GitHub repository gets tagged v1.0 on completion
+0272 | RULE 67: The README shows the pipeline architecture diagram
+0273 | RULE 68: The README shows the final leaderboard table too
+0274 | RULE 69: The README links the PPT and both PDFs directly
+0275 | RULE 70: Commit messages follow a clear imperative style
+0276 | --- SUB-HEADER: quality-gate rules --------------------------------
+0277 | RULE 71: Code review checklist exists in documentation folder
+0278 | RULE 72: Each checklist item is marked pass with evidence
+0279 | RULE 73: A static type pass is encouraged but not required
+0280 | RULE 74: Data validation gates run before any training step
+0281 | RULE 75: Gate failures halt the pipeline with clear messages
+0282 | RULE 76: The pipeline is idempotent; reruns overwrite cleanly
+0283 | RULE 77: Artifacts carry the run identifier in their metadata
+0284 | RULE 78: A run manifest lists every artifact produced per run
+0285 | RULE 79: The manifest lives in the evaluation folder per run
+0286 | RULE 80: Historical runs are archived, never silently lost
+0287 | RULE 81: Only the final run feeds the PPT and PDF documents
+0288 | RULE 82: The final run identifier is recorded in both PDFs
+0289 | RULE 83: Plots use colorblind-safe palettes by default
+0290 | RULE 90-quality rule: every axis is labeled with units
+0291 | RULE: every plot title states dataset, split, and model context
+0292 | RULE: no chart is allowed to appear without a caption in docs
+0293 | RULE: tables round numbers consistently, four decimals metrics
+0294 | RULE: currency formats use Indian digit grouping in prose
+0295 | RULE: percentages show one decimal place in all documents
+0296 | RULE: large counts use thousands separators everywhere shown
+0297 | RULE: all documents spell-check clean before delivery
+0298 | RULE: the single-command run covers code, eval, docs, PPT, PDFs
+0299 | RULE: CI-free setup is acceptable for this academic scope
+0300 | RULE 100: when in doubt, prefer the simpler working option
+0301 | ================================================================
+0302 | SECTION 4 - PROBLEM STATEMENT DEEP DIVE
+0303 | ================================================================
+0304 | Health insurance fraud drains insurer reserves nationwide
+0305 | Fraud raises premiums for every genuine policyholder
+0306 | Manual claim review is slow, costly, and inconsistent at scale
+0307 | Rejected claimants rarely receive understandable explanations
+0308 | This project verifies claims and explains every decision
+0309 | Approach 1 answers the core question with classical ML
+0310 | QUESTION: is this submitted claim fraudulent, yes or no
+0311 | The input is a structured claim record with many fields
+0312 | The output is a binary label plus calibrated probability
+0313 | Fraudulent means intentional deception for financial gain
+0314 | Errors and abuse are discussed but labeled as fraud only
+0315 | --- FRAUD TAXONOMY the dataset must represent ----------------
+0316 | FRAUD TYPE A: falsified or fabricated medical bills
+0317 | FRAUD TYPE B: exaggerated treatment costs and upcoding
+0318 | FRAUD TYPE C: duplicate claim submissions across insurers
+0319 | FRAUD TYPE D: misrepresented diagnosis or procedure records
+0320 | FRAUD TYPE E: phantom hospital admissions that never occurred
+0321 | FRAUD TYPE F: identity misuse, treatment for another person
+0322 | FRAUD TYPE G: collusion between provider and claimant
+0323 | FRAUD TYPE H: staged or exaggerated accidental injuries
+0324 | FRAUD TYPE I: billing for services never actually rendered
+0325 | FRAUD TYPE J: unbundling procedures to inflate totals
+0326 | Each fraud type needs characteristic signal in features
+0327 | The data dictionary maps fraud types to indicative fields
+0328 | Reports must show fraud-type distribution in the dataset
+0329 | Label remains binary; fraud type is auxiliary metadata
+0330 | Auxiliary fraud type never leaks into model features
+0331 | Cost of fraud examples in reports use Indian scenarios
+0332 | Cite public IRDAI annual report context for market scale
+0333 | Cite industry estimates with proper references in the paper
+0334 | Stakeholders: policyholders, insurers, TPAs, hospitals
+0335 | A TPA is a third-party administrator processing claims
+0336 | Explain the cashless versus reimbursement claim distinction
+0337 | Cashless: insurer settles directly with network hospital
+0338 | Reimbursement: claimant pays first, then claims the amount
+0339 | Fraud risk profiles differ between the two modes
+0340 | --- SUB-HEADER: decision workflow context ------------------------
+0341 | Intake: claimant submits claim with documents and details
+0342 | Verification: fields and documents are checked for consistency
+0343 | Investigation: suspicious claims go to special review teams
+0344 | Adjudication: insurer approves, partially pays, or rejects
+0345 | Approach 1 augments verification and investigation triage
+0346 | High predicted fraud probability routes to human investigators
+0347 | Low probability with low risk routes toward fast settlement
+0348 | The classifier is decision support, not an auto-denial machine
+0349 | This ethical framing must be explicit in the PDF reports
+0350 | The PPT must dedicate one slide to responsible AI usage
+0351 | Discuss potential harm from wrongly flagging honest claims
+0352 | Discuss appeal pathways for flagged or rejected claims
+0353 | Discuss why explanations are operationally necessary
+0354 | Discuss regulatory expectations for claim denial reasons
+0355 | Reference IRDAI policyholder protection norms in prose
+0356 | Never imply replacing human investigators completely
+0357 | Frame the system as triage plus explanation assistance
+0358 | The problem is imbalanced binary classification at its core
+0359 | Features are tabular, mixed numeric and categorical types
+0360 | Dataset scale target: between 50000 and 500000 rows
+0361 | Feature count target after engineering: 40 to 120 features
+0362 | The pipeline must handle unseen categories gracefully
+0363 | Production-readiness is discussed but deployment is out
+0364 | Latency targets are irrelevant for this offline approach
+0365 | Throughput discussion is limited to batch scoring time
+0366 | Batch scoring of 100000 rows should finish in minutes
+0367 | --- SUB-HEADER: why classical ML first ---------------------------
+0368 | Classical ML is the mandated first approach for this project
+0369 | REASON 1: tabular data often favors gradient-boosted trees
+0370 | REASON 2: classical models train fast on modest hardware
+0371 | REASON 3: interpretability is strong with trees and linear
+0372 | REASON 4: baselines anchor value claims for later approaches
+0373 | REASON 5: regulators accept interpretable tabular models
+0374 | The report must articulate these reasons with citations
+0375 | Approach 2 and 3 results later compare against this baseline
+0376 | A comparison placeholder section exists in the IEEE paper
+0377 | The placeholder states comparative work appears in later reports
+0378 | Approach 1 must therefore be executed with maximum rigor
+0379 | Weak approach-1 numbers undermine the whole project story
+0380 | Document limitations of classical ML honestly as well
+0381 | LIMITATION: no native handling of document images
+0382 | LIMITATION: manual feature engineering burden is high
+0383 | LIMITATION: sequential claim patterns need heavy engineering
+0384 | LIMITATION: interactions beyond engineering may be missed
+0385 | These limitations motivate approaches 2 and 3 in the story
+0386 | The PPT narrative: classical ML is the strong baseline story
+0387 | The PDF narrative: rigorous benchmarking builds trust
+0388 | Success means a defensible best model with clear evidence
+0389 | Success also means documents another team could reproduce
+0390 | Failure means unexplained numbers or missing artifacts
+0391 | The yes or no answer remains the headline metric story
+0392 | Probability calibration matters for routed triage decisions
+0393 | Calibration plots must be included for the final model
+0394 | Reliability discussion appears in the report results section
+0395 | Expected calibration error is reported for the best model
+0396 | Reframe business impact as investigator-hours saved estimate
+0397 | Estimate uses clear assumptions stated in the report
+0398 | No exaggerated savings claims are permitted anywhere
+0399 | Keep all problem framing consistent across PPT and PDFs
+0400 | The problem statement slide quotes objectives verbatim
+0401 | ================================================================
+0402 | SECTION 5 - OBJECTIVES AND SUCCESS CRITERIA
+0403 | ================================================================
+0404 | OBJECTIVE O1: acquire or build a credible fraud dataset
+0405 | O1 MEASURE: dataset card complete, license verified, checksums
+0406 | OBJECTIVE O2: deeply understand data through EDA and plots
+0407 | O2 MEASURE: full EDA report with at least forty-eight figures
+0408 | OBJECTIVE O3: engineer leakage-free predictive features
+0409 | O3 MEASURE: frozen feature list with lineage documentation
+0410 | OBJECTIVE O4: train every mainstream classical classifier
+0411 | O4 MEASURE: minimum twelve distinct algorithm families trained
+0412 | OBJECTIVE O5: benchmark all models under identical protocol
+0413 | O5 MEASURE: one leaderboard CSV with full metric suite
+0414 | OBJECTIVE O6: select best model via transparent policy
+0415 | O6 MEASURE: selection memo citing validation PR-AUC primarily
+0416 | OBJECTIVE O7: tune the winner within a fixed budget
+0417 | O7 MEASURE: tuning log with trials and final parameters
+0418 | OBJECTIVE O8: calibrate and threshold for operations
+0419 | O8 MEASURE: calibration plot plus threshold rationale memo
+0420 | OBJECTIVE O9: explain the best model globally and locally
+0421 | O9 MEASURE: importance plots and five claim narratives
+0422 | OBJECTIVE O10: assess fairness across demographic slices
+0423 | O10 MEASURE: slice metric table with disparity discussion
+0424 | OBJECTIVE O11: document everything in a documentation folder
+0425 | O11 MEASURE: ten-plus detailed markdown files, no placeholders
+0426 | --- SUB-HEADER: delivery objectives --------------------------------
+0427 | OBJECTIVE O12: build an evaluation folder as results home
+0428 | O12 MEASURE: evaluation.md plus machine-readable CSV/JSON files
+0429 | OBJECTIVE O13: produce roughly twenty-slide presentation PPT
+0430 | O13 MEASURE: PPT with adviser credit and speaker notes
+0431 | OBJECTIVE O14: produce the long project report PDF
+0432 | O14 MEASURE: thirty-plus pages, numbered, referenced, clean
+0433 | OBJECTIVE O15: produce the IEEE-style research paper PDF
+0434 | O15 MEASURE: two-column format with abstract and references
+0435 | OBJECTIVE O16: publish a tidy public GitHub repository
+0436 | O16 MEASURE: README quick-start verified on fresh environment
+0437 | OBJECTIVE O17: regenerate everything with one command
+0438 | O17 MEASURE: timed clean rerun recorded in evaluation notes
+0439 | Objective success is binary per item; no partial credit
+0440 | The final acceptance checklist restates all measures verbatim
+0441 | Any failed objective blocks release until remediated
+0442 | The team presents only released, verified artifacts
+0443 | Success thresholds must be stated before experiments run
+0444 | Pre-register target metrics inside the documentation folder
+0445 | TARGET: validation PR-AUC at least 0.60 on this dataset
+0446 | TARGET: validation ROC-AUC at least 0.80 where achievable
+0447 | TARGET: recall at 95 percent-precision operating point stated
+0448 | If targets prove infeasible, document why with evidence
+0449 | Never silently lower targets after seeing results
+0450 | Target changes require a decision-register entry with cause
+0451 | --- SUB-HEADER: milestone plan --------------------------------------
+0452 | MILESTONE M1: dataset frozen and card published
+0453 | MILESTONE M2: EDA pack and visualization library complete
+0454 | MILESTONE M3: preprocessing and features frozen
+0455 | MILESTONE M4: baselines benchmarked and logged
+0456 | MILESTONE M5: full model zoo benchmarked
+0457 | MILESTONE M6: winner tuned, calibrated, explained
+0458 | MILESTONE M7: documentation folder finalized
+0459 | MILESTONE M8: evaluation folder finalized and archived
+0460 | MILESTONE M9: PPT drafted, reviewed, and rehearsed
+0461 | MILESTONE M10: both PDFs compiled and number-checked
+0462 | Each milestone has entry and exit criteria in documentation
+0463 | The run manifest timestamps milestone completions
+0464 | Milestones appear as a timeline slide in the PPT
+0465 | Milestones appear as a work-plan table in the report PDF
+0466 | Estimated durations accompany each milestone in the table
+0467 | The plan is indicative; actuals are recorded beside estimates
+0468 | Slippage, if any, is explained in the lessons-learned note
+0469 | Milestones enforce the EDA-before-modeling discipline
+0470 | Milestones enforce baselines-before-tuning discipline
+0471 | Milestone review is a rendered markdown file per milestone
+0472 | Files named milestone_m1.md through milestone_m10.md
+0473 | Each review lists artifacts produced and open issues
+0474 | Open issues must be zero by milestone M10
+0475 | The faculty adviser may read milestone files for progress
+0476 | --- SUB-HEADER: risk register ----------------------------------------
+0477 | RISK R1: public dataset proves unsuitable or unavailable
+0478 | R1 MITIGATION: synthetic generator fallback defined later
+0479 | RISK R2: severe imbalance collapses minority recall
+0480 | R2 MITIGATION: resampling comparison and threshold tuning
+0481 | RISK R3: leakage inflates metrics undetected
+0482 | R3 MITIGATION: leakage checklist and holdout discipline
+0483 | RISK R4: library incompatibilities break reproducibility
+0484 | R4 MITIGATION: pinned versions and conda-lock style manifest
+0485 | RISK R5: charts look inconsistent across documents
+0486 | R5 MITIGATION: single plotting style module used everywhere
+0487 | RISK R6: report numbers drift from evaluation CSVs
+0488 | R6 MITIGATION: documents generated from data, not by hand
+0489 | RISK R7: team overclaims in presentations
+0490 | R7 MITIGATION: claims gated by artifact evidence rule
+0491 | RISK R8: runtime exceeds laptop capabilities
+0492 | R8 MITIGATION: sampled dev runs and budgeted searches
+0493 | RISK R9: reviewer confusion about methodology
+0494 | R9 MITIGATION: method diagrams and glossary in report
+0495 | RISK R10: dataset license blocks public GitHub data
+0496 | R10 MITIGATION: ship fetch script instead of raw data
+0497 | The risk register table appears in the project report PDF
+0498 | Each risk lists likelihood, impact, and current status
+0499 | Statuses update at every milestone review file
+0500 | Success criteria close when every objective reads PASS
+0501 | ================================================================
+0502 | SECTION 6 - END-TO-END PIPELINE ARCHITECTURE OVERVIEW
+0503 | ================================================================
+0504 | The pipeline is a linear DAG of numbered stages S0 to S14
+0505 | STAGE S0: environment bootstrap and dependency verification
+0506 | S0 INPUT: requirements manifest; OUTPUT: verified environment
+0507 | STAGE S1: dataset acquisition via fetch script or generator
+0508 | S1 INPUT: source config; OUTPUT: raw data plus checksums
+0509 | STAGE S2: schema validation and data-quality gates
+0510 | S2 INPUT: raw data; OUTPUT: validated data or halted run
+0511 | STAGE S3: exploratory analysis and visualization production
+0512 | S3 INPUT: validated data; OUTPUT: EDA report plus figures
+0513 | STAGE S4: preprocessing pipeline fitting on train split only
+0514 | S4 INPUT: train split; OUTPUT: fitted transformers artifact
+0515 | STAGE S5: feature engineering and feature-list freeze
+0516 | S5 INPUT: transformed train; OUTPUT: frozen feature schema
+0517 | STAGE S6: resampling strategy comparison on train only
+0518 | S6 INPUT: train split; OUTPUT: chosen resampling decision
+0519 | STAGE S7: baseline model training and logging
+0520 | S7 INPUT: train/validation; OUTPUT: baseline metrics row
+0521 | STAGE S8: model-zoo training under identical protocol
+0522 | S8 INPUT: train/validation; OUTPUT: per-model metric rows
+0523 | STAGE S9: leaderboard assembly and best-model selection
+0524 | S9 INPUT: metric rows; OUTPUT: selection memo and winner
+0525 | STAGE S10: hyperparameter tuning of the winner only
+0526 | S10 INPUT: winner config space; OUTPUT: tuned parameters
+0527 | --- SUB-HEADER: stages eleven onward --------------------------------
+0528 | STAGE S11: final training on train-plus-validation data
+0529 | S11 INPUT: tuned config; OUTPUT: final model artifact
+0530 | STAGE S12: single test-set evaluation, exactly once
+0531 | S12 INPUT: untouched test split; OUTPUT: final test metrics
+0532 | STAGE S13: calibration, thresholding, and operating point
+0533 | S13 INPUT: validation probabilities; OUTPUT: threshold memo
+0534 | STAGE S14: artifact generation: docs, PPT, PDFs, manifest
+0535 | S14 INPUT: all upstream artifacts; OUTPUT: deliverable set
+0536 | Every stage writes a status line into the run manifest
+0537 | Every stage failure halts downstream stages immediately
+0538 | Skip flags exist for EDA only when artifacts already present
+0539 | Stage-skipping is logged explicitly in the run summary
+0540 | Data contracts define schemas between every pair of stages
+0541 | A contract is a documented table of expected columns and types
+0542 | Contract validation runs at every stage boundary
+0543 | Contract docs live in documentation folder as data_contracts.md
+0544 | Artifact versioning uses the run identifier folder scheme
+0545 | evaluation/runs/<run_id>/ holds everything run-specific
+0546 | evaluation/latest is a copy or link to the final run
+0547 | Reports only read from evaluation/latest contents
+0548 | This indirection prevents accidental stale-number usage
+0549 | Intermediate data caches live under workspace/cache folder
+0550 | Caches are safe to delete; pipeline rebuilds them
+0551 | --- SUB-HEADER: master control flow ----------------------------------
+0552 | The master script executes S0 through S14 in order
+0553 | A dry-run flag prints the plan without executing it
+0554 | A from-stage flag resumes at a chosen stage number
+0555 | Resume requires existing upstream artifacts to validate
+0556 | Configuration is a single YAML file with sane defaults
+0577-line rule: every config key is commented in the shipped file
+0558 | Config sections: data, splitting, resampling, models, tuning
+0559 | Config sections continue: metrics, reporting, plotting, paths
+0560 | Environment variables only carry secrets; none needed here
+0561 | The config file is printed into the run manifest verbatim
+0562 | Pipeline events log start, end, duration, and rows processed
+0563 | Memory usage snapshots log at heavy stages for reference
+0564 | A final summary prints the leaderboard top five to console
+0565 | The summary prints the winner and its test metrics clearly
+0566 | The summary prints paths to PPT and both PDF documents
+0567 | Exit code is zero only when all acceptance checks pass
+0568 | A self-test mode validates installation with toy data
+0569 | The self-test completes within two minutes always
+0570 | Self-test failure messages point to probable causes
+0571 | --- SUB-HEADER: architecture documentation requirements --------------
+0572 | An architecture diagram image must exist in images folder
+0573 | The diagram shows all stages S0 to S14 with arrows
+0574 | The diagram distinguishes data stores from compute stages
+0575 | The diagram uses the project palette defined in docs
+0576 | The README embeds this diagram near the top
+0577 | The report PDF includes the diagram in methodology
+0578 | The PPT includes the diagram on the architecture slide
+0579 | A second diagram shows the folder tree of the repository
+0580 | Both diagrams regenerate cleanly from their source files
+0581 | Diagram sources live alongside images for future edits
+0582 | Keep diagram text legible at slide scale, minimum 18 pt
+0583 | Color encodes stage categories consistently in diagrams
+0584 | A legend explains every symbol used in the diagrams
+0585 | The architecture narrative walks through one claim example
+0586 | The example claim is synthetic and clearly marked as such
+0587 | Narrative example starts at intake and ends at decision
+0588 | The narrative appears in README, report, and PPT notes
+0589 | Consistency between all narratives is manually verified
+0590 | Any stage added later must update both diagrams first
+0591 | The pipeline has no hidden side channels between stages
+0592 | All communication happens through declared artifact files
+0593 | This rule makes the pipeline auditable stage by stage
+0594 | An auditor can recompute any stage from its inputs alone
+0595 | Audit instructions live in documentation/auditing.md
+0596 | The audit guide includes expected runtime per stage
+0597 | The audit guide includes checksums of key frozen artifacts
+0598 | Architecture review is milestone M4 exit criteria item
+0599 | The adviser-facing PPT shows the simplified pipeline view
+0600 | Detailed DAG is reserved for the report PDF appendix
+0601 | ================================================================
+0602 | SECTION 7 - REPOSITORY AND FOLDER STRUCTURE SPECIFICATION
+0603 | ================================================================
+0604 | Root folder name: medical_insurance_fraud_detection
+0605 | Root contains README.md, LICENSE, and environment manifest
+0606 | Root contains run_pipeline entry script and config folder
+0607 | FOLDER data/ holds raw, interim, and processed subfolders
+0608 | data/raw created by the fetch or generate scripts only
+0609 | data/interim stores validated and cleaned tables
+0610 | data/processed stores model-ready feature tables
+0611 | data/ also stores dataset_card.md and data_dictionary.md
+0612 | FOLDER src/ holds all Python source modules
+0613 | src/data handles loading, validation, and saving helpers
+0614 | src/features handles preprocessing and engineering logic
+0615 | src/models holds one file per algorithm family trained
+0616 | src/evaluation handles metrics, plots, and leaderboard logic
+0617 | src/reporting builds documents from evaluation artifacts
+0618 | src/utils holds seeds, logging, and path helpers
+0619 | Each src subfolder contains an init file with purpose doc
+0620 | FOLDER notebooks/ is optional for exploration only
+0621 | Nothing in notebooks is required for the final pipeline
+0622 | Notebook outputs must never be the sole artifact source
+0623 | FOLDER images/ holds every generated chart and diagram
+0624 | images/ organizes into eda, models, xai, diagrams subfolders
+0625 | FOLDER documentation/ holds all markdown documentation
+0626 | documentation/ contains index.md as the entry point
+0627 | --- SUB-HEADER: documentation folder file map ------------------------
+0628 | documentation/overview.md explains the project at a glance
+0629 | documentation/problem_statement.md deepens section 4 content
+0630 | documentation/dataset.md explains sourcing and schema fully
+0631 | documentation/methodology.md explains pipeline stages in depth
+0632 | documentation/preprocessing.md justifies every transform used
+0633 | documentation/models.md documents every algorithm and config
+0634 | documentation/evaluation.md-summary link points to eval folder
+0635 | documentation/explainability.md covers interpretation method
+0636 | documentation/fairness.md covers slice analysis and limits
+0637 | documentation/decisions.md is the decision register file
+0638 | documentation/deviations.md is the deviations log file
+0639 | documentation/data_contracts.md defines stage boundary schemas
+0640 | documentation/code_walkthrough.md explains every source file
+0641 | documentation/reproduction.md is the rerun instruction guide
+0642 | documentation/auditing.md enables third-party verification
+0643 | documentation/limitations.md lists known weakness honestly
+0644 | documentation/future_work.md connects toward approaches 2 and 3
+0645 | documentation/glossary.md defines insurance and ML terms
+0646 | documentation/references.md lists every citation used
+0647 | documentation/lessons_learned.md closes the loop honestly
+0648 | Each documentation file begins with purpose and owner lines
+0649 | Each documentation file ends with last-updated stamp
+0650 | Cross-links between documentation files must all resolve
+0651 | --- SUB-HEADER: evaluation and reporting folders ---------------------
+0652 | FOLDER evaluation/ holds results for every run
+0653 | evaluation/evaluation.md is the human-readable results hub
+0654 | evaluation/leaderboard.csv is the master comparison table
+0655 | evaluation/metrics/ stores per-model JSON metric files
+0656 | evaluation/curves/ stores ROC and PR curve data points
+0657 | evaluation/calibration/ stores calibration tables and plots
+0658 | evaluation/fairness/ stores slice metric tables
+0659 | evaluation/tuning/ stores search logs and best parameters
+0660 | evaluation/runs/ archives immutable run folders
+0661 | evaluation/latest mirrors the final approved run
+0662 | evaluation/test_results.json stores the one-time test numbers
+0663 | evaluation/threshold_memo.md justifies the operating point
+0664 | evaluation/selection_memo.md records the winner decision
+0665 | evaluation/evaluation.md section order is fixed later in file
+0666 | FOLDER presentation/ holds PPT source and exported PPTX
+0667 | presentation/assets/ holds slide-optimized image exports
+0668 | FOLDER reports/ holds report and paper sources plus PDFs
+0669 | reports/assets/ holds print-resolution images used
+0670 | FOLDER scripts/ holds acquisition and utility scripts
+0671 | scripts/fetch_dataset.py downloads and verifies raw data
+0672 | scripts/generate_synthetic.py builds the fallback dataset
+0673 | scripts/make_documents.py assembles PPT and PDF outputs
+0674 | FOLDER config/ holds the default pipeline configuration
+0675 | FOLDER workspace/ is gitignored scratch space for caches
+0676 | --- SUB-HEADER: naming and hygiene rules ------------------------------
+0677 | All filenames lowercase with underscores, no spaces ever
+0678 | Metric files named <model_key>_metrics.json pattern
+0679 | Curve files named <model_key>_roc.csv and _pr.csv pattern
+0680 | Images named section_topic_index.png descriptive pattern
+0681 | Model keys are short slugs defined in models documentation
+0682 | The leaderboard uses the same model keys as filenames
+0683 | Git ignores data, workspace, caches, and build outputs
+0684 | Git tracks code, configs, docs, and lightweight manifests
+0685 | A .gitattributes handles line endings consistently
+0686 | Binary artifacts like PPTX are committed once at release
+0687 | The release commit is tagged and described in CHANGELOG
+0688 | CHANGELOG.md records milestone-level changes only
+0689 | README badges may show license and Python version
+0690 | README contains zero fabricated status claims
+0691 | README quick-start: create env, install, fetch, run, open
+0692 | Quick-start commands target Linux first, Windows noted
+0693 | A Makefile or task script may mirror the same commands
+0694 | Folder counts and file lists appear in documentation index
+0695 | The structure diagram in README matches reality exactly
+0696 | Structure drift is a release-blocking documentation bug
+0697 | Every folder has a one-line purpose written in index.md
+0698 | Empty folders are not committed to the repository
+0699 | The final tree is printed into the run manifest
+0700 | Structure review is part of milestone M7 exit criteria
+0701 | ================================================================
+0702 | SECTION 8 - DATASET SOURCING STRATEGY
+0703 | ================================================================
+0704 | PRIMARY GOAL: public, license-clean, fraud-labeled claim data
+0705 | Preferred sources: Kaggle datasets with clear licenses
+0706 | Candidate: healthcare provider fraud public dataset variants
+0707 | Candidate: Medicare Part B utilization public aggregates
+0708 | Candidate: LEIE exclusion list for provider risk enrichment
+0709 | Candidate: insurance claim fraud CSV datasets on Kaggle
+0710 | Selection criteria are documented before choosing
+0711 | CRITERION 1: contains claim-level tabular records
+0712 | CRITERION 2: contains a usable fraud label column
+0713 | CRITERION 3: row count at least 50000 preferred
+0714 | CRITERION 4: mixed numerical and categorical fields
+0715 | CRITERION 5: license permits academic use and redistribution
+0716 | CRITERION 6: Indian-context adaptation is plausible
+0717 | CRITERION 7: no personal identifying information present
+0718 | Score each candidate against all seven criteria in a table
+0719 | The scoring table lives in documentation/dataset.md
+0720 | Winner selection gets a decision-register entry too
+0721 | If no candidate scores adequate, invoke synthetic fallback
+0722 | Hybrid path: real schema plus synthetic row generation allowed
+0723 | Hybrid decisions require explicit justification in dataset.md
+0724 | --- SUB-HEADER: acquisition execution spec ----------------------------
+0725 | The fetch script records source URL and retrieval timestamp
+0726 | The fetch script verifies file checksums after download
+0727 | The fetch script refuses to overwrite existing raw data silently
+0728 | A force flag exists for intentional refreshes with logging
+0729 | Retrieved files land in data/raw with original names preserved
+0730 | A raw MANIFEST.json lists files, sizes, and checksums
+0731 | Manual download steps, if any, are documented exactly
+0732 | Kaggle API usage, if chosen, is documented with screenshots
+0733 | API tokens are never committed to the repository
+0734 | The fetch process must complete unattended in ten minutes
+0735 | Post-fetch validation: row counts and column presence checks
+0736 | Validation failures produce actionable error messages
+0737 | The retrieval date appears in the dataset card and report
+0738 | The dataset version, if any, is recorded alongside
+0739 | Citation format for the dataset is fixed in references.md
+0740 | The IEEE paper cites the dataset in its references section
+0741 | The report PDF cites the dataset in its data chapter
+0742 | The PPT cites the dataset on the data slide footer
+0743 | If multiple files combine, join keys are documented fully
+0744 | Join cardinality checks run and are reported in EDA
+0745 | Any row loss from joins is quantified and justified
+0746 | Anti-joins are profiled to detect orphan records
+0747 | --- SUB-HEADER: Indian-context adaptation rules -----------------------
+0748 | Original foreign data must be localized responsibly for India
+0749 | Currency fields convert to INR with a stated static rate
+0750 | Conversion rate and date recorded in dataset.md
+0751 | Geographic fields map to Indian states and city tiers
+0752 | The state mapping table is documented and versioned
+0753 | Provider names become realistic Indian hospital names
+0754 | Hospital tiers follow metro, tier-2, tier-3 categories
+0755 | Procedure costs align with published Indian tariff ranges
+0756 | CGHS rate references may inform realistic pricing bands
+0757 | Diagnosis codes remain ICD-10 style for universality
+0758 | Document the adaptation steps as numbered transformations
+0759 | Each transformation lists affected columns and rationale
+0760 | Adaptation code is part of scripts, fully commented
+0761 | A sample of fifty adapted rows is eyeballed for realism
+0762 | Eyeball findings are recorded in dataset.md appendix
+0763 | The disclaimer notes synthetic localization, not real patients
+0764 | Label preservation: adaptations must not alter fraud labels
+0765 | Label integrity checks compare pre and post adaptation
+0766 | Any label perturbation is a release-blocking defect
+0767 | --- SUB-HEADER: dataset card requirements ------------------------------
+0768 | The dataset card follows a recognized datasheet structure
+0769 | Sections: motivation, composition, collection, preprocessing
+0770 | Sections continue: uses, distribution, maintenance, license
+0771 | Composition lists row count, column count, and label balance
+0772 | Collection explains original source and adaptation lineage
+0773 | Uses warn against real-world deployment of this artifact
+0774 | Maintenance names the team as caretakers for this version
+0775 | The card states known biases and representativeness limits
+0776 | The card links the source URL and retrieval date
+0777 | The card is cited in both PDFs and the PPT footer
+0778 | Dataset FAQ answers five anticipated reviewer questions
+0779 | FAQ entries cover sourcing, licensing, realism, size, labels
+0780 | The FAQ lives at the end of the dataset card file
+0781 | A one-paragraph dataset summary feeds the README table
+0782 | Summary includes rows, features, fraud rate, and source
+0783 | Any dataset change requires card version increment
+0784 | Card versions are tracked in CHANGELOG.md as well
+0785 | Sourcing compliance review is milestone M1 exit criteria
+0786 | The review is signed off inside milestone_m1.md file
+0787 | The review verifies license text archived in documentation
+0788 | License text archive: documentation/licenses/ subfolder
+0789 | Each third-party asset gets its own license file there
+0790 | Missing license file equals release blocker, no exceptions
+0791 | The team never claims dataset ownership in documents
+0792 | Attribution wording is copied exactly from source terms
+0793 | Redistribution follows source license constraints strictly
+0794 | If redistribution is disallowed, ship fetch script only
+0795 | The README then documents the manual fetch alternative
+0796 | Sourcing story appears identically in PPT and both PDFs
+0797 | Inconsistency in sourcing statements is a release blocker
+0798 | The sourcing mentor-check question list lives in FAQ
+0799 | End state: auditable, reproducible, honest dataset provenance
+0800 | SECTION complete: move to synthetic fallback specification
+0801 | ================================================================
+0802 | SECTION 9 - SYNTHETIC DATASET FALLBACK SPECIFICATION
+0803 | ================================================================
+0804 | Purpose: guarantee a dataset even if public ones fail
+0805 | The generator produces realistic Indian claim records
+0806 | Row count default: 120000 claims across 24000 policyholders
+0807 | Policyholders average five claims each with wide variance
+0808 | Fraud prevalence default: 9 percent of claims labeled fraud
+0809 | Prevalence configurable between 5 and 15 percent
+0810 | Generation is seeded; same config yields identical data
+0811 | The generator script is fully commented and parameterized
+0812 | Schema matches sections 10 to 13 field specifications exactly
+0813 | Distributions are fitted from publicly stated Indian context
+0814 | Document every distribution choice with a justification line
+0815 | Age distribution: adults 18 to 85, right-skewed toward 35
+0816 | Gender: female 48 percent, male 51 percent, other 1 percent
+0817 | City tiers: tier-1 30, tier-2 35, tier-3 35 percent split
+0818 | States: weighted by realistic insurance-penetration patterns
+0819 | Occupation buckets: salaried, self-employed, agriculture, other
+0820 | Income bands correlate with occupation and city tier
+0821 | Sum insured correlates with income band and age bracket
+0822 | Premium derives from sum insured, age, and plan type
+0823 | Plan types: individual, family floater, senior citizen
+0824 | Family floaters generate dependent children claim rows
+0825 | Senior plans generate higher comorbidity and claim rates
+0826 | --- SUB-HEADER: clinical and billing generators -----------------------
+0827 | Diagnosis groups: cardiac, orthopedic, maternity, respiratory
+0828 | Additional groups: gastro, renal, oncology, infectious, other
+0829 | Each group maps to plausible ICD-10 code ranges
+0830 | Procedure costs follow group-specific ranges in INR
+0831 | Cardiac procedures: 80000 to 600000 INR typical
+0832 | Orthopedic: 40000 to 350000 INR typical
+0833 | Maternity: 25000 to 120000 INR typical
+0834 | Respiratory: 15000 to 200000 INR typical
+0835 | Oncology: 150000 to 900000 INR typical
+0836 | Room rent follows hospital tier with daily caps
+0837 | Tier-1 room rent: 3000 to 12000 INR per day
+0838 | Tier-3 room rent: 800 to 4000 INR per day
+0839 | Length of stay depends on diagnosis group and severity
+0840 | Pharmacy share of bill: 10 to 35 percent typically
+0841 | Diagnostics share: 5 to 25 percent typically
+0842 | Consumables share: 5 to 15 percent typically
+0843 | Bill line items sum exactly to total claimed amount
+0844 | A consistency check enforces the line-item sum rule
+0845 | Preauthorization flag correlates with planned procedures
+0846 | Emergency admissions bypass preauth with realistic rates
+0847 | Submission delay: most claims within 30 days of discharge
+0848 | Delay tail extends to 180 days for some reimbursements
+0849 | Cashless share: 55 percent of claims, rest reimbursement
+0850 | Weekend-admission indicator derived from generated dates
+0851 | --- SUB-HEADER: fraud injection patterns --------------------------------
+0852 | Fraud injects through twelve documented pattern templates
+0853 | PATTERN 1: bill total inflated by 40 to 200 percent
+0854 | PATTERN 2: duplicate claim resubmitted within 15 days
+0855 | PATTERN 3: upcoding to higher-cost diagnosis group
+0856 | PATTERN 4: phantom admission with forged documents indicator
+0857 | PATTERN 5: provider repeatedly billing outlier amounts
+0858 | PATTERN 6: claimant history of frequent short-stay claims
+0859 | PATTERN 7: room-rent category above declared hospital tier
+0860 | PATTERN 8: line-item sums inconsistent with stated total
+0861 | PATTERN 9: claim filed after policy lapse date boundary
+0862 | PATTERN 10: waiting-period diagnosis claimed too early
+0863 | PATTERN 11: newborn claims on policies lacking maternity
+0864 | PATTERN 12: identity age inconsistent with diagnosis profile
+0865 | Each pattern has configurable frequency within fraud rows
+0866 | Combined patterns on the same claim are allowed and logged
+0867 | Latent fraud_type column records injected pattern labels
+0868 | fraud_type column is excluded from model features always
+0869 | A leakage test asserts fraud_type absence from features
+0870 | Provider-level fraud creates provider clusters to discover
+0871 | Around 3 percent of providers are high-fraud generators
+0872 | Provider fraud propensity is a hidden generation parameter
+0873 | Claimant-level fraud creates repeat-offender behavior
+0874 | Around 2 percent of claimants are repeat fraud generators
+0875 | --- SUB-HEADER: realism validation and quality checks -------------------
+0876 | Validate synthetic data against published Indian benchmarks
+0877 | Compare average claim size to industry-reported ranges
+0878 | Compare average length of stay to typical reported values
+0879 | Document benchmark sources with citations in dataset.md
+0880 | Distribution checks: no impossible negative amounts exist
+0881 | Distribution checks: ages within plausible human bounds
+0882 | Cross-field logic: maternity claims only on eligible plans
+0883 | Cross-field logic: pediatric diagnoses only for minors
+0884 | Cross-field logic: senior plans restricted to age sixty plus
+0885 | Temporal logic: claim dates within policy active window
+0886 | Temporal logic: discharge date never before admission date
+0887 | A validation suite of forty checks runs post-generation
+0888 | Every check result prints pass or fail with counts
+0889 | Failures abort generation and demand configuration fixes
+0890 | Synthetic EDA must qualitatively resemble real data shape
+0891 | Compare synthetic versus source schema field by field
+0892 | The comparison table appears in dataset.md appendix
+0893 | If public data exists, synthetic generator stays as fallback
+0894 | The fallback path is documented even when unused
+0895 | README states which path the shipped results used
+0896 | Both PDFs state the data path used in identical words
+0897 | The generator doubles as a demo data source for the PPT
+0898 | PPT screenshots of data come from synthetic samples only
+0899 | Synthetic rows must never be presented as real records
+0900 | Fallback review closes milestone M1 alongside sourcing
+0901 | ================================================================
+0902 | SECTION 10 - DATASET SCHEMA: CLAIMANT FIELDS
+0903 | ================================================================
+0904 | Each field line gives name, type, range, and description
+0905 | claim_id: string, unique key, format CLM plus ten digits
+0906 | claimant_id: string, foreign key to policyholder table
+0907 | age_at_claim: integer, 0 to 95 years, computed from DOB
+0908 | gender: category, values female, male, other
+0909 | marital_status: category, single, married, widowed, divorced
+0910 | dependents_count: integer, 0 to 8 household dependents
+0911 | occupation: category from ten documented Indian buckets
+0912 | income_band: ordinal, E1 lowest through A5 highest, six bands
+0913 | education_level: ordinal, none through postgraduate, five steps
+0914 | state: category, Indian state or union territory name
+0915 | district: category, free text normalized to title case
+0916 | city_tier: ordinal, tier_1, tier_2, tier_3 categories
+0917 | pin_code: string, six digits, plausibility checked per state
+0918 | smoker_status: boolean, self-declared at policy issuance
+0919 | alcohol_use: category, never, occasional, regular, unknown
+0920 | bmi: float, 14.0 to 45.0, kilogram per meter squared
+0921 | height_cm and weight_kg: consistency-checked against bmi
+0922 | pre_existing_count: integer, 0 to 6 declared conditions
+0923 | pre_existing_list: multi-value from standardized condition set
+0924 | chronic_disease_flag: boolean derived from condition set
+0925 | disability_flag: boolean, affects occupation feasibility
+0926 | --- SUB-HEADER: claimant history fields --------------------------------
+0927 | policyholder_since_year: integer, first policy purchase year
+0928 | total_policies_held: integer, 1 to 6 concurrent policies
+0929 | lifetime_premium_paid_inr: float, cumulative across years
+0930 | lifetime_claims_count: integer, all-time filed claims
+0931 | lifetime_claims_amount_inr: float, all-time claimed total
+0932 | claims_last_12m_count: integer, recent activity level
+0933 | claims_last_12m_amount_inr: float, recent financial exposure
+0934 | rejected_claims_count: integer, all-time rejections count
+0935 | rejection_rate: float, 0.0 to 1.0 derived ratio
+0936 | avg_claim_size_inr: float, lifetime average per claim
+0937 | max_claim_size_inr: float, lifetime largest single claim
+0938 | days_since_last_claim: integer, recency indicator, 0 to 5000
+0939 | premium_payment_delays: integer, count of late renewals
+0940 | policy_lapse_history: integer, count of past lapses
+0941 | nominee_relation: category, spouse, child, parent, sibling
+0942 | kyc_verified: boolean, identity verification completion
+0943 | address_mismatch_flag: boolean, KYC versus claim address
+0944 | bank_account_verified: boolean, payout account status
+0945 | contact_consistency_score: float, 0 to 1 data stability
+0946 | agent_assisted_policy: boolean, purchased via agent channel
+0947 | online_policy: boolean, purchased through digital channel
+0948 | portability_history: integer, insurer switches count, 0 to 4
+0949 | ncb_percent: float, no-claim bonus 0 to 50 percent
+0950 | claim_intimidation_channel: category, app, call, agent, email
+0951 | --- SUB-HEADER: validation rules for claimant fields -------------------
+0952 | RULE: age_at_claim must equal claim year minus birth year
+0953 | RULE: dependents_count consistent with plan type floater logic
+0954 | RULE: income_band and occupation correlation within bounds
+0955 | RULE: pin_code first digit validates against state mapping
+0956 | RULE: bmi equals weight divided by height squared, tolerance 1
+0957 | RULE: pre_existing_list length equals pre_existing_count
+0958 | RULE: rejection_rate equals rejected divided by total claims
+0959 | RULE: ncb_percent zero whenever claims_last_12m_count positive
+0960 | RULE: policyholder_since_year never after claim year
+0961 | RULE: portability_history never exceeds total_policies_held
+0962 | RULE: senior plan implies age at least sixty at claim
+0963 | RULE: maternity claims imply eligible plan and demographics
+0964 | Violations route rows to quarantine with reason codes
+0965 | Quarantine rates above 2 percent halt the pipeline
+0966 | The quarantine report lists counts by violation rule code
+0967 | Field-level null rates report accompanies every ingestion
+0968 | Nulls above threshold in key identifiers halt ingestion
+0969 | Key identifiers: claim_id, claimant_id, policy_id always
+0970 | Duplicate claim_id detection runs before any processing
+0971 | Duplicate handling policy: keep first, log all occurrences
+0972 | All claimant fields documented in data_dictionary.md verbatim
+0973 | Dictionary includes example values for every field
+0974 | Dictionary includes sensitivity classification per field
+0975 | Sensitive fields get masking rules in printed outputs
+0976 | Reports never print full claimant identifiers anywhere
+0977 | PPT examples use obviously fictional demo claimants only
+0978 | Claimant schema review signs off milestone M1 completely
+0979 | Schema changes require dictionary version bump and changelog
+0980 | The schema is frozen before feature engineering begins
+0981 | Freeze record: schema_freeze.json with hash of definitions
+0982 | Hash verification runs on every pipeline start
+0983 | Any drift triggers a loud warning and decision entry
+0984 | Frozen schema keeps benchmarks comparable across models
+0985 | Benchmark comparability is a stated fairness requirement
+0986 | The fairness of process paragraph appears in report methods
+0987 | Claimant fields count target: thirty-five to forty fields
+0988 | Derived claimant ratios add five to eight more later
+0989 | Field provenance: source-native versus synthesized is tagged
+0990 | Tags appear in the data dictionary provenance column
+0991 | Provenance helps reviewers distinguish adaptation layers
+0992 | Reviewer questions about fields answered in dataset FAQ
+0993 | FAQ cross-links to exact dictionary line anchors
+0994 | The dictionary renders as a proper table on GitHub
+0995 | Column order in dictionary matches finalized dataset order
+0996 | A CSV copy of the dictionary ships in data folder too
+0997 | Naming consistency between CSV and markdown is verified
+0998 | Verification script lives in scripts with clear comments
+0999 | Claimant schema section complete and binding for all models
+1000 | Next section specifies policy-level fields in equal detail
+1001 | ================================================================
+1002 | SECTION 11 - DATASET SCHEMA: POLICY FIELDS
+1003 | ================================================================
+1004 | policy_id: string, unique key, format POL plus nine digits
+1005 | claimant_id links policy to its primary policyholder
+1006 | plan_type: category, individual, family_floater, senior_citizen
+1007 | plan_name: category from fifteen realistic Indian plan names
+1008 | insurer_type: category, public_sector, private_sector
+1009 | distribution_channel: category, agent, broker, online, banca
+1010 | policy_start_date: date DD-MM-YYYY, coverage begins
+1011 | policy_end_date: date, exactly one year after start default
+1012 | renewal_count: integer, 0 to 20 successful renewals
+1013 | sum_insured_inr: float, 100000 to 5000000 INR
+1014 | annual_premium_inr: float, 3000 to 60000 INR
+1015 | premium_frequency: category, yearly, half_yearly, monthly
+1016 | waiting_period_days: integer, 30 to 1460 for conditions
+1017 | preexisting_waiting_days: integer, 365 to 1460 typically
+1018 | maternity_waiting_days: integer, 365 to 1095 where relevant
+1019 | copay_percent: float, 0 to 20 percent claimant share
+1020 | room_rent_limit_inr: float daily cap, 500 to 15000 INR
+1021 | room_rent_limit_type: category, fixed, percent_of_si, none
+1022 | icu_limit_multiplier: float, 1.5 to 3.0 times room cap
+1023 | deductible_inr: float, 0 to 50000 per claim year
+1024 | restoration_benefit: boolean, sum insured restore feature
+1025 | --- SUB-HEADER: coverage detail fields ----------------------------------
+1026 | maternity_cover: boolean, includes delivery and newborn
+1027 | daycare_procedures_covered: integer, count of listed daycare
+1028 | pre_hospitalization_days: integer, 30 to 60 covered days
+1029 | post_hospitalization_days: integer, 60 to 180 covered days
+1030 | ambulance_cover_inr: float, 0 to 5000 per hospitalization
+1031 | domiciliary_cover: boolean, home-treatment coverage flag
+1032 | organ_donor_cover: boolean, transplant donor expense flag
+1033 | ayush_cover: boolean, alternative-treatment coverage flag
+1034 | modern_treatment_cover: boolean, advanced-procedure flag
+1035 | cataract_sublimit_inr: float, per-eye cap where applicable
+1036 | joint_replacement_sublimit_inr: float cap where applicable
+1037 | disease_specific_sublimits: multi-value field documented
+1038 | exclusion_list_version: category, v1 through v3 rulebooks
+1039 | permanent_exclusions_count: integer, documented list size
+1040 | network_hospital_access: integer, count of network hospitals
+1041 | zone: category, zone_a metro through zone_c rural pricing
+1042 | zone_premium_loading: float percent, 0 to 15 adjustment
+1043 | floater_members_covered: integer, 1 to 6 insured persons
+1044 | eldest_member_age: integer, drives floater premium heavily
+1045 | ped_coverage: boolean, declared pre-existing coverage start
+1046 | portability_credit_days: integer, waiting credit carried over
+1047 | loyalty_bonus_percent: float, 0 to 20 renewal loyalty
+1048 | wellness_discount_percent: float, 0 to 10 program discount
+1049 | riders: multi-value from documented rider catalog
+1050 | rider_catalog: hospital cashmlog, critical illness, accident
+1051 | --- SUB-HEADER: policy financial behavior fields -------------------------
+1052 | premium_to_si_ratio: float derived, premium divided by SI
+1053 | expected_claim_ratio_band: category, low, medium, high historic
+1054 | policy_utilization_history: float, claimed divided by SI ratio
+1055 | renewal_price_change_percent: float, last renewal adjustment
+1056 | loading_applied: boolean, risk loading on premium flag
+1057 | loading_reason: category, health, occupation, age, none
+1058 | discount_total_percent: float, combined discounts applied
+1059 | gst_amount_inr: float, 18 percent on premium documented
+1060 | total_premium_with_gst_inr: float derived and validated
+1061 | installment_default_flag: boolean, missed installment event
+1062 | grace_period_used: boolean, payment within grace window
+1063 | policy_status: category, active, lapsed, cancelled, ported
+1064 | status_as_of_claim: category snapshot at claim event time
+1065 | Underwriting_decision: category, standard, rated, declined_history
+1066 | proposal_form_flags: multi-value disclosure issues list
+1067 | medical_tests_done: boolean, pre-issuance test requirement
+1068 | tele_underwriting_done: boolean, phone interview completed
+1069 | inspection_flag: boolean, field investigation at issuance
+1070 | fraud_watchlist_hit: boolean, entity on insurer watchlist
+1071 | watchlist_source: category, internal, industry_bureau, none
+1072 | previous_claim_settlement_ratio: float, approved versus filed
+1073 | average_settlement_days: float, insurer speed statistic
+1074 | policy_document_version: category, wording revision tag
+1075 | document_word_count: integer, policy document length proxy
+1076 | --- SUB-HEADER: policy validation rules ----------------------------------
+1077 | RULE: end date must follow start date by policy term days
+1078 | RULE: total premium equals premium plus GST within one rupee
+1079 | RULE: copay applies only to reimbursement calculation fields
+1080 | RULE: maternity_cover false blocks maternity claim approval
+1081 | RULE: claim within waiting period triggers investigation flag
+1082 | RULE: room rent above limit triggers proportional deduction
+1083 | RULE: sum insured positive and within declared plan range
+1084 | RULE: floater members count matches dependent structure
+1085 | RULE: senior plan requires eldest age sixty or above
+1086 | RULE: lapsed policies cannot host new approved claims
+1087 | RULE: exclusions list version matches rulebook effective year
+1088 | RULE: zone pricing consistent with pin_code classification
+1089 | RULE: deductible applies once per policy year, tracked
+1090 | RULE: restoration benefit usage decrements available pool
+1091 | These rules double as feature-engineering opportunities later
+1092 | Rule-derived features are documented as such in dictionary
+1093 | The fraud label must never derive from a single rule alone
+1094 | Rules inform but do not determine labels, by design
+1095 | This prevents trivially learnable synthetic leakage paths
+1096 | Leakage review explicitly checks rule-feature correlations
+1097 | Correlations above 0.95 with label demand investigation
+1098 | Investigation outcome recorded in decisions register
+1099 | Policy schema complete: twenty-six plus derived fields
+1100 | Next: claim and billing fields, the largest schema block
+1101 | ================================================================
+1102 | SECTION 12 - DATASET SCHEMA: CLAIM AND BILLING FIELDS
+1103 | ================================================================
+1104 | claim_number: string, unique, format matches claim_id order
+1105 | claim_type: category, cashless, reimbursement
+1106 | claim_event_type: category, hospitalization, daycare, domiciliary
+1107 | admission_date: date, hospital admission timestamp date
+1108 | discharge_date: date, never before admission_date
+1109 | length_of_stay_days: integer derived, 0 to 60 days
+1110 | admission_type: category, emergency, planned, transferred
+1111 | room_category: category, general, twin_sharing, single, deluxe
+1112 | icu_days: integer, 0 to length_of_stay_days
+1113 | hospital_id: string, key to provider reference table
+1114 | hospital_tier: ordinal, tier_1, tier_2, tier_3
+1115 | hospital_network_flag: boolean, empanelled network member
+1116 | hospital_city_tier: ordinal matching hospital location
+1117 | treating_specialty: category, twenty Indian specialty values
+1118 | primary_diagnosis_code: string, ICD-10 style code
+1119 | primary_diagnosis_group: category, twelve clinical groups
+1120 | secondary_diagnoses: multi-value ICD list, 0 to 6 items
+1121 | procedure_code: string, procedure catalog identifier
+1122 | procedure_group: category, surgical, medical, diagnostic
+1123 | severity_score: ordinal, 1 mild through 5 critical
+1124 | comorbidity_index: float, 0.0 to 10.0 weighted burden
+1125 | emergency_flag: boolean derived from admission_type
+1126 | --- SUB-HEADER: billing composition fields --------------------------------
+1127 | total_claimed_amount_inr: float, headline financial field
+1128 | room_charges_inr: float component, within tier plausibility
+1129 | icu_charges_inr: float component, constrained by icu_days
+1130 | surgery_charges_inr: float component, procedure-linked
+1131 | doctor_fees_inr: float component, specialty-linked ranges
+1132 | pharmacy_charges_inr: float component, 5 to 40 percent share
+1133 | diagnostics_charges_inr: float component, 3 to 30 percent
+1134 | consumables_charges_inr: float component, 2 to 20 percent
+1135 | implant_charges_inr: float component, procedure dependent
+1136 | ambulance_charges_inr: float component, within policy cap
+1137 | pre_hosp_expenses_inr: float, within covered day window
+1138 | post_hosp_expenses_inr: float, within covered day window
+1139 | other_charges_inr: float, bounded small miscellaneous
+1140 | line_items_count: integer, 3 to 60 distinct bill lines
+1141 | bill_document_pages: integer, 1 to 20 scanned pages proxy
+1142 | invoice_number: string, provider invoice reference
+1143 | invoice_date: date, must fall on or before discharge date
+1144 | duplicate_invoice_flag: boolean from duplicate detection
+1145 | claimed_minus_authorized_inr: float, overage versus preauth
+1146 | preauth_amount_inr: float, zero when no preauthorization
+1147 | preauth_status: category, approved, partial, denied, none
+1148 | requested_amount_inr: float, asked by claimant initially
+1149 | deduction_amount_inr: float, insurer-applied reductions
+1150 | approved_amount_inr: float historical outcomes for past claims
+1151 | --- SUB-HEADER: claim process behavior fields ------------------------------
+1152 | intimation_date: date claim first reported to insurer
+1153 | intimation_delay_days: integer, discharge to intimation gap
+1154 | document_submission_date: date full documents received
+1155 | submission_delay_days: integer, discharge to submission gap
+1156 | documents_complete_first_pass: boolean, no deficiency raised
+1157 | deficiency_count: integer, number of deficiency memos issued
+1158 | resubmission_count: integer, document resubmission events
+1159 | investigation_triggered: boolean, historical field visits
+1160 | investigation_outcome: category for past claims only
+1161 | settlement_days: float, historical processing duration
+1162 | settlement_ratio: float, approved divided by claimed historic
+1163 | partial_settlement_flag: boolean, historical partial payouts
+1164 | appeal_filed_flag: boolean, past claimant appeals recorded
+1165 | appeal_outcome: category for past appeal results
+1166 | claim_withdrawn_flag: boolean, withdrawn before decision
+1167 | multiple_policy_claim: boolean, same event on other policy
+1168 | coordination_of_benefits: boolean, other insurer contribution
+1169 | employer_cover_overlap: boolean, group policy overlap present
+1170 | early_claim_flag: boolean, within first 90 policy days
+1171 | renewal_boundary_claim: boolean, within 30 days of renewal
+1172 | festival_period_claim: boolean, major Indian festival window
+1173 | weekend_admission_flag: boolean, Saturday or Sunday admit
+1174 | night_admission_flag: boolean, admit between 22 and 06 hours
+1175 | distance_to_hospital_km: float, home to facility distance
+1176 | --- SUB-HEADER: claim validation rules --------------------------------------
+1177 | RULE: component charges sum equals total within one rupee
+1178 | RULE: icu_days never exceed length_of_stay_days
+1179 | RULE: room charges plausible for category and tier pairing
+1180 | RULE: deluxe room with tier_3 hospital demands review flag
+1181 | RULE: doctor fees plausible for specialty and stay duration
+1182 | RULE: pharmacy share above 50 percent triggers anomaly flag
+1183 | RULE: diagnostics share above 40 percent triggers anomaly flag
+1184 | RULE: implant charges require matching surgical procedure
+1185 | RULE: pre_hosp expenses require dates within covered window
+1186 | RULE: intimation delay above 180 days triggers review
+1187 | RULE: submission delay above 365 days triggers rejection review
+1188 | RULE: invoice date before admission date impossible, reject row
+1189 | RULE: duplicate invoice across claims sets both flags true
+1190 | RULE: early claims together with preexisting trigger review
+1191 | RULE: cashless claims require network hospital true
+1192 | RULE: claim event dates must sit inside policy active window
+1193 | RULE: amount claimed above sum insured triggers scrutiny flag
+1194 | RULE: zero-amount claims are invalid and quarantined
+1195 | RULE: negative component values are invalid and quarantined
+1196 | All rules emit coded reasons into ingestion quarantine report
+1197 | Reason codes catalog lives in documentation/data_contracts.md
+1198 | Claim and billing fields count approximately forty-eight
+1199 | This schema block is the core fraud-signal surface area
+1200 | Next: clinical enrichments plus the target label definition
+1201 | ================================================================
+1202 | SECTION 13 - DATASET SCHEMA: CLINICAL FIELDS AND TARGET LABEL
+1203 | ================================================================
+1204 | Clinical enrichment deepens fraud-signal realism per claim
+1205 | diagnosis_consistency_score: float, 0 to 1 internal coherence
+1206 | procedure_diagnosis_match: boolean, procedure fits diagnosis
+1207 | age_diagnosis_plausibility: boolean, pediatric versus geriatric fit
+1208 | gender_diagnosis_plausibility: boolean, sex-specific condition fit
+1209 | stay_justification_score: float, expected versus actual LOS
+1210 | expected_los_days: float, diagnosis-group typical duration
+1211 | los_deviation_ratio: float, actual divided by expected LOS
+1212 | readmission_30d_flag: boolean, same claimant within 30 days
+1213 | same_diagnosis_repeat_90d: boolean, chronic-exclusion signal
+1214 | treatment_protocol_match: boolean, guideline-concordant flag
+1215 | medication_count: integer, distinct medicines billed, 1 to 30
+1216 | high_cost_medication_flag: boolean, specialty drug present
+1217 | diagnostic_test_count: integer, distinct tests billed, 0 to 20
+1218 | duplicate_test_same_day: boolean, repeated test billing signal
+1219 | unbundling_suspicion_score: float, split-procedure indicator
+1220 | upcoding_suspicion_score: float, severity-inflation indicator
+1221 | phantom_day_score: float, billed days beyond clinical need
+1222 | provider_claim_volume_30d: integer, facility throughput context
+1223 | provider_avg_claim_amount: float, facility billing baseline
+1224 | provider_claim_zscore: float, this claim versus facility norm
+1225 | provider_rejection_rate: float, facility historic rejections
+1226 | --- SUB-HEADER: provider and network fields ---------------------------------
+1227 | provider_fraud_exposure_score: float, hidden-generation signal
+1228 | provider_patient_outflow_ratio: float, referral oddity metric
+1229 | hospital_accreditation: category, NABH full, entry, none
+1230 | hospital_bed_count: integer, 20 to 1200 facility size
+1231 | hospital_specialty_count: integer, breadth of services
+1232 | rohini_registered: boolean, registry presence indicator
+1333-check rule: registry fields documented even when mocked
+1234 | doctor_registration_flag: boolean, medical council registered
+1235 | doctor_experience_years: integer, 1 to 45 practice duration
+1236 | second_opinion_documented: boolean, high-cost claim support
+1237 | discharge_summary_present: boolean, key document presence
+1238 | prescription_present: boolean, supporting document presence
+1239 | lab_reports_present: boolean, diagnostic evidence presence
+1240 | imaging_reports_present: boolean, radiology evidence presence
+1241 | implant_invoice_present: boolean, implant proof presence
+1242 | document_set_completeness: float, 0 to 1 required-docs ratio
+1243 | document_issuing_consistency: boolean, issuer matches hospital
+1244 | signature_verified: boolean, attestation presence indicator
+1245 | stamp_verified: boolean, facility seal presence indicator
+1246 | document_metadata_age_days: integer, file creation recency
+1247 | These document fields foreshadow approach 3 verification depth
+1248 | In approach 1 they remain structured tabular proxies only
+1249 | The report must state this simplification explicitly
+1250 | --- SUB-HEADER: target label definition --------------------------------------
+1251 | TARGET COLUMN: is_fraud, integer, 1 fraud, 0 legitimate
+1252 | Label semantics identical across every file and document
+1253 | Positive class 1 is always the fraud class everywhere
+1254 | Class balance report prints exact counts and percentages
+1255 | Default prevalence: about 9 percent positives in dataset
+1256 | Prevalence by segment: table across plan type and tiers
+1257 | Prevalence stability check across synthetic generation seeds
+1258 | Label noise: up to 1 percent random flips optional experiment
+1259 | Noise experiments are secondary and clearly marked optional
+1260 | fraud_type auxiliary column exists only in synthetic mode
+1261 | fraud_type values: fabricated_bill, upcoding, duplicate_claim
+1262 | fraud_type continued: phantom_admission, provider_collusion
+1263 | fraud_type continued: identity_misuse, unbundling, unrendered
+1264 | fraud_type distribution chart required in EDA deliverables
+1265 | fraud_type never enters training features under any condition
+1266 | A unit-style check asserts feature-label column separation
+1267 | Legitimacy of labels: synthetic rules are documented fully
+1268 | Labeling rubric table maps patterns to label assignment
+1269 | Rubric exceptions are enumerated and justified in dataset.md
+1270 | The report dedicates a subsection to label-construction honesty
+1271 | Reviewers must understand synthetic labels are constructed
+1272 | This honesty protects the team during adviser questioning
+1273 | --- SUB-HEADER: label-adjacent leakage audit ---------------------------------
+1274 | Define leakage: features unknowable at decision time
+1275 | approved_amount_inr for the current claim is leakage, drop
+1276 | settlement_days for the current claim is leakage, drop
+1277 | investigation_outcome for current claim is leakage, drop
+1278 | Historical aggregates computed before the claim are allowed
+1279 | Temporal aggregation windows documented per derived field
+1280 | A leakage audit table lists every field with decision
+1281 | Decisions: keep, transform, drop, with one-line reasons
+1282 | The table lives in documentation/preprocessing.md
+1283 | Suspicious-importance watchdog: single feature over 0.6 gain
+1284 | Watchdog triggers a mandatory leakage re-review cycle
+1285 | Re-review outcome logs into the decisions register file
+1286 | Leakage discipline is examinable content for the PPT Q&A
+1287 | A dedicated slide explains leakage controls in the PPT
+1288 | A dedicated appendix section covers it in the report PDF
+1289 | The IEEE paper mentions leakage controls in methodology
+1290 | Target semantics complete: binary, consistent, auditable
+1291 | Schema totals: claimant 40, policy 26, claim 48, clinical 47
+1292 | Total raw fields approximately one hundred sixty one
+1293 | Post-leakage model-ready fields target ninety to one hundred ten
+1294 | The feature freeze at stage S5 publishes the final list
+1295 | Schema documentation must render without horizontal scrolling
+1296 | Wide tables split across multiple dictionary sub-tables
+1297 | Every sub-table keeps identical column structure for joins
+1298 | Join key for sub-tables: field_name column, unique
+1299 | Schema section complete and binding for all downstream work
+1300 | Next: Indian-context localization rules in full detail
+1301 | ================================================================
+1302 | SECTION 14 - INDIAN CONTEXT LOCALIZATION RULES
+1303 | ================================================================
+1304 | All scenarios, numbers, and language assume Indian healthcare
+1305 | Currency: INR with Indian digit grouping in narrative text
+1306 | Example: one lakh fifty thousand written as 1,50,000 INR
+1307 | Tables may use plain integers; prose uses grouped format
+1308 | Date format: DD-MM-YYYY across data, docs, and slides
+1309 | Hospital names: realistic Indian style, clearly fictional
+1310 | Example pattern: City prefix plus Institute of Medical Sciences
+1311 | Avoid names of real hospital chains anywhere in data
+1312 | A name-similarity check against known chains is documented
+1313 | States list: all 28 states and 8 union territories allowed
+1314 | Tier mapping: eight tier-1 cities named explicitly in docs
+1315 | Tier-2 list of about forty cities documented in appendix
+1316 | Pin-code plausibility: first one-two digits map to zones
+1317 | The zone mapping table ships as CSV in data folder
+1318 | Language: English only, with terms like lakh explained once
+1319 | Glossary defines lakh and crore for international readers
+1320 | Regulatory mentions: IRDAI spelled out at first use
+1321 | PM-JAY and Ayushman Bharat referenced for scheme context
+1322 | TPAs explained as third-party administrators once, then TPA
+1323 | GST on premiums mentioned at 18 percent where relevant
+1324 | Section 80D tax deduction context allowed in report intro
+1325 | Common procedures price anchors documented with citations
+1326 | --- SUB-HEADER: realism anchors for costs --------------------------------------
+1327 | Anchor: normal delivery 25000 to 70000 INR by tier
+1328 | Anchor: cesarean delivery 45000 to 150000 INR by tier
+1329 | Anchor: cataract per eye 18000 to 60000 INR by lens type
+1330 | Anchor: angioplasty with stent 120000 to 450000 INR
+1331 | Anchor: CABG bypass 250000 to 750000 INR by tier
+1332 | Anchor: knee replacement 180000 to 550000 INR per knee
+1333 | Anchor: appendectomy 40000 to 150000 INR by tier
+1334 | Anchor: dengue admission 25000 to 120000 INR by severity
+1335 | Anchor: chemotherapy cycle 20000 to 150000 INR by regimen
+1336 | Anchor: gallbladder removal 60000 to 200000 INR laparoscopic
+1337 | Anchor: kidney stone removal 40000 to 180000 INR by method
+1338 | Anchor: ICU per day 8000 to 45000 INR by tier
+1339 | Anchor: general ward day 800 to 5000 INR by tier
+1340 | Anchor: MRI scan 3500 to 15000 INR by region
+1341 | Anchor: CT scan 2000 to 10000 INR by region
+1342 | Anchor: blood panel 500 to 5000 INR by breadth
+1343 | Anchors feed both generator bounds and validation gates
+1344 | Anchor table lives in documentation/dataset.md appendix
+1345 | Anchor sources cited: published tariffs and scheme packages
+1346 | CGHS package rates serve as a public reference baseline
+1347 | PM-JAY package rates serve as a secondary baseline
+1348 | Private-sector uplift rationale documented in one paragraph
+1349 | Seasonality: dengue and malaria peaks in monsoon months
+1350 | Festival windows: Diwali, Holi, Eid, regional new years listed
+1351 | --- SUB-HEADER: demographic realism rules ---------------------------------------
+1352 | Age pyramid realism: fewer senior policies, higher claim rates
+1353 | Family floater composition matches documented Indian norms
+1354 | Rural penetration lower: tier-3 share capped at 35 percent
+1355 | Gender split near parity with slight male majority in buyers
+1356 | Occupation mix includes agriculture heavy in tier-3 areas
+1357 | Income bands align with tier using documented quartiles
+1358 | Education levels correlate mildly with tier and occupation
+1359 | Digital channel purchases skew younger and tier-1 heavy
+1360 | Agent channel dominates tier-2 and tier-3 policy origins
+1361 | Banca channel small share, mostly urban salaried buyers
+1362 | Claim intimation via app grows with younger claimant age
+1363 | Cashless usage higher in metros with dense networks
+1364 | Reimbursement dominates tier-3 with weaker network access
+1365 | Distance to hospital higher in tier-3 by design
+1366 | Weekend admission rates uniform except planned surgeries lower
+1367 | Monday planned-surgery peak modeled realistically
+1368 | Public holidays table for one reference year included
+1369 | The holiday table lives as CSV in data folder
+1370 | Timezone handling irrelevant; all dates date-only precision
+1371 | Localization review is part of milestone M2 exit criteria
+1372 | Reviewer: verify ten sampled claims read like Indian reality
+1373 | Sampling notes recorded in milestone_m2.md file
+1374 | Localization slips found later route through deviations log
+1375 | --- SUB-HEADER: language and presentation localization ---------------------------
+1376 | PPT uses Indian examples exclusively in every anecdote
+1377 | Report case studies use Indian city names and INR
+1378 | IEEE paper keeps Indian market framing in introduction
+1379 | Charts annotate currency axes with INR explicitly
+1380 | Number axes use compact notation: K, L for lakh, Cr crore
+1381 | A legend explains L and Cr notation on first chart use
+1382 | Maps avoided; tier bar charts convey geography instead
+1383 | If a map is used, it must be a correct India outline
+1384 | Incorrect maps are unacceptable and release-blocking
+1385 | State names spelled in standard official forms only
+1386 | No political or sensitive content anywhere in any artifact
+1387 | Religious festival mentions stay neutral and factual
+1388 | Cultural examples stay respectful and professional always
+1389 | Localization glossary lines live in documentation/glossary.md
+1390 | Glossary includes IRDAI, TPA, cashless, floater, PM-JAY
+1391 | Glossary includes copay, deductible, waiting period, NCB
+1392 | Glossary ordering alphabetical with cross-references
+1393 | Localization consistency checker: grep-style audit documented
+1394 | Audit searches for dollar signs and foreign formats
+1395 | Audit results logged into run manifest as check lines
+1396 | Failing audit blocks document generation stages
+1397 | Localization policy versioned inside documentation folder
+1398 | Policy changes flow through decisions register entries
+1399 | Indian context is a competitive feature of this project
+1400 | Next: data quality and validation gate specifications
+1401 | ================================================================
+1402 | SECTION 15 - DATA QUALITY AND VALIDATION GATES
+1403 | ================================================================
+1404 | Quality gates run at stage S2 before any analysis begins
+1405 | GATE G1: file integrity, checksums match manifest values
+1406 | GATE G2: schema presence, all required columns exist
+1407 | GATE G3: type conformance, columns parse to declared types
+1408 | GATE G4: uniqueness, claim_id primary key has no duplicates
+1409 | GATE G5: referential integrity, claimant and policy joins hold
+1410 | GATE G6: null budget, key fields one hundred percent complete
+1411 | GATE G7: range checks, numeric fields within declared bounds
+1412 | GATE G8: category checks, values within declared vocabularies
+1413 | GATE G9: temporal logic, date orderings valid per rules
+1414 | GATE G10: financial logic, component sums equal totals
+1415 | GATE G11: label sanity, is_fraud contains only 0 and 1
+1416 | GATE G12: prevalence sanity, fraud rate within 3 to 20 percent
+1417 | Each gate reports pass, warn, or fail with row counts
+1418 | Fail status halts pipeline with remediation guidance printed
+1419 | Warn status continues but appears in run summary prominently
+1420 | Gate results persist to evaluation/data_quality_report.json
+1421 | A rendered markdown version lands in documentation/dataset.md
+1422 | Gate thresholds live in config with documented defaults
+1423 | Changing thresholds requires decision-register justification
+1424 | Quarantine stores violating rows with reason code lists
+1425 | Quarantined rows never silently drop; counts are reported
+1426 | Rejoin policy: fixed rows may rejoin with audit trail note
+1427 | --- SUB-HEADER: missing data doctrine ----------------------------------------
+1428 | Missingness is profiled per column before any imputation
+1429 | Categories: MCAR, MAR, MNAR considered and argued per field
+1430 | The argument appears in preprocessing.md per critical field
+1431 | Structural missing: fields not applicable by design stay null
+1432 | Example: maternity fields null for ineligible plan types
+1433 | Structural nulls encode as dedicated not_applicable category
+1434 | Numeric structural nulls use sentinel category indicator splits
+1435 | Random nulls under 2 percent: simple imputation permitted
+1436 | Moderate nulls 2 to 15 percent: model-based imputation allowed
+1437 | Severe nulls above 15 percent: drop or justify heavily
+1438 | The imputation matrix decision table documents each column
+1439 | Columns: column name, null rate, mechanism guess, action
+1440 | Actions: none, median, mode, knn, indicator, drop, sentinel
+1441 | Imputation fitted strictly on train split only
+1442 | Validation and test reuse frozen train imputation state
+1443 | This discipline is asserted by automated leakage tests
+1444 | Missing-indicator features added for high-signal columns
+1445 | Indicator usefulness validated via ablation table later
+1446 | Ablation results land in evaluation folder for review
+1447 | Missingness over time is plotted if temporal field exists
+1448 | Drift in missing rates triggers data-quality investigation
+1449 | Investigation outcome noted in decisions register
+1450 | --- SUB-HEADER: outlier and anomaly data doctrine -------------------------------
+1451 | Outliers detected via IQR and robust z-score methods
+1452 | Detection results tabulated per numeric column pre-treatment
+1453 | Treatment: winsorize at documented percentiles by default
+1454 | Default percentiles: 0.5 and 99.5 for heavy-tailed fields
+1455 | Fraud-relevant extremes are winsorized for training only
+1456 | Original values preserved in a parallel audit column set
+1457 | Monotone transforms considered: log1p for amount fields
+1458 | Transform decisions justified by skew statistics printed
+1459 | Skew above 2.0 triggers mandatory transform consideration
+1460 | Post-transform skew reported alongside original values
+1461 | Outlier treatment never removes fraud rows wholesale
+1462 | Row removal requires explicit documented justification
+1463 | Removal counts above 1 percent of data escalate to halt
+1464 | The outlier report ships in documentation/preprocessing.md
+1465 | Plots show distributions before and after treatment
+1466 | Side-by-side figures required for top ten skewed fields
+1467 | Figure captions state method, thresholds, and row impact
+1468 | Data-quality summary slide appears in final PPT
+1469 | The slide lists gate counts and headline quarantine stats
+1470 | The slide reassures advisers about pipeline discipline
+1471 | --- SUB-HEADER: privacy and ethics gates -----------------------------------------
+1472 | GATE: no real personal identifiers permitted in dataset
+1473 | NAME-style fields are synthetic tokens if present at all
+1474 | Phone, email, Aadhaar-like fields are excluded entirely
+1475 | A pattern scan for such formats runs every ingestion
+1476 | Scan results append to the data-quality JSON report
+1477 | Ethics statement required in report PDF introduction
+1478 | Statement covers synthetic nature and decision-support stance
+1479 | Statement covers fairness monitoring commitments made
+1480 | Statement references no real patient harm possibilities
+1481 | PII scan pattern list documented in data_contracts.md
+1482 | Scan tools may be simple regex utilities, fully commented
+1483 | False positives from scans are reviewed and logged
+1484 | The ethics stance appears on PPT responsible-AI slide
+1485 | Adviser Q&A prep: five ethics questions with answers drafted
+1486 | The Q&A prep lives in presentation/speaker_notes file
+1487 | Ethics checklist signed within milestone M2 review
+1488 | Data-quality sign-off: all gates green or waived with reason
+1489 | Waivers require decision-register entries, no exceptions
+1490 | Gate framework reused identically across all three approaches
+1491 | Approach 2 and 3 docs may cite this gate framework directly
+1492 | Consistency here demonstrates engineering maturity
+1493 | Data-quality artifacts are regenerated on every pipeline run
+1494 | History retained under evaluation/runs for auditing
+1495 | Comparing quality across runs exposes silent data drift
+1496 | Drift alerts documented in evaluation.md when observed
+1497 | Quality gates close milestone M2 together with localization
+1498 | End state: trusted data ready for exploratory analysis
+1499 | Section complete: EDA specification follows next
+1500 | Next: univariate exploratory data analysis requirements
+1501 | ================================================================
+1502 | SECTION 16 - EDA REQUIREMENTS: UNIVARIATE ANALYSIS
+1503 | ================================================================
+1504 | EDA is mandatory before any preprocessing finalization
+1505 | Every column receives a documented univariate profile
+1506 | Profile contents for numerics: count, nulls, mean, median
+1507 | Profile continues: std, min, quartiles, max, skew, kurtosis
+1508 | Profile contents for categoricals: levels, counts, shares
+1509 | Profiles also list top ten frequent and rare categories
+1510 | Rare categories under 0.1 percent are flagged explicitly
+1511 | Profile tables export as CSV per column group
+1512 | Profiles render into the EDA markdown report automatically
+1513 | Numeric summaries also compute percentile p90, p95, p99
+1514 | Heavy-tailed fields get explicit tail commentary lines
+1515 | Zero-inflation checked for count-like fields, reported
+1516 | Integer-versus-float consistency verified in profiles
+1517 | Date fields profiled by year and month distributions
+1518 | Seasonality indices computed for admission months
+1519 | Weekday distributions computed for planned versus emergency
+1520 | Label column profiled first and referenced throughout
+1521 | Fraud prevalence printed prominently at EDA report top
+1522 | Prevalence by year-month table checks temporal stability
+1523 | Any prevalence shift beyond 3 points triggers commentary
+1524 | --- SUB-HEADER: required univariate narrative ------------------------------------
+1525 | Every numeric field gets at least one narrative sentence
+1526 | Narratives state shape, center, spread, and oddities
+1527 | Narratives avoid speculation; hypotheses marked as such
+1528 | Hypotheses feed the bivariate section as questions
+1529 | The question list appears at EDA report midsection
+1530 | Each hypothesis gets resolved or parked with reason
+1531 | Parked items appear in documentation/future_work.md
+1532 | Age distribution commentary must discuss population mix
+1533 | Income band commentary discusses tier interactions
+1534 | Claim amount commentary discusses tier and group effects
+1535 | Length-of-stay commentary discusses severity effects
+1536 | Waiting-period fields commentary discusses policy age mix
+1537 | Premium commentary discusses sum-insured proportionality
+1538 | Component share commentary discusses billing behavior
+1539 | Document completeness commentary discusses process health
+1540 | Provider volume commentary discusses facility concentration
+1541 | Top providers by volume listed with share percentages
+1542 | Concentration metrics: top-10 provider claim share computed
+1543 | Concentration outliers flagged for later fraud inspection
+1544 | Univariate outliers reference the treatment doctrine section
+1545 | Cross-links from EDA to preprocessing decisions required
+1546 | EDA figures follow the style guide defined in docs
+1547 | Style guide: consistent palette, fonts, grid, and captions
+1548 | Every figure numbered and listed in a figure index table
+1549 | Figure index maps file names to captions and sections
+1550 | --- SUB-HEADER: dataset segmentation overviews ---------------------------------
+1551 | Segment table: records by plan_type with fraud rates
+1552 | Segment table: records by city_tier with fraud rates
+1553 | Segment table: records by claim_type with fraud rates
+1554 | Segment table: records by admission_type with fraud rates
+1555 | Segment table: records by age band with fraud rates
+1556 | Age bands: 0-17, 18-30, 31-45, 46-60, 61-75, 76 plus
+1557 | Segment table: records by income_band with fraud rates
+1558 | Segment table: records by hospital_tier with fraud rates
+1559 | Segment table: records by diagnosis_group with fraud rates
+1560 | Each segment table shows count, share, mean amount, fraud rate
+1561 | Tables render into EDA markdown and export CSV twins
+1562 | Notable segment anomalies get one-line commentary each
+1563 | Example expectation: early claims segment fraud elevation
+1564 | Example expectation: duplicate-invoice segment high fraud
+1565 | Expectations stated before looking, results after, honestly
+1566 | Surprises get highlighted with a callout box in markdown
+1567 | Callouts also summarized on one PPT slide later
+1568 | Segment insights feed feature engineering candidates
+1569 | The candidate list lives at the end of the EDA report
+1570 | Candidates are tagged: ratio, interaction, aggregate, flag
+1571 | --- SUB-HEADER: EDA execution mechanics ------------------------------------------
+1572 | EDA runs as a dedicated pipeline stage with own config
+1573 | The stage reads validated data, never raw data directly
+1574 | Sampling for heavy plots allowed with documented fractions
+1575 | Sampled plots must state sample size in their captions
+1576 | Random sampling uses the global seed for reproducibility
+1577 | EDA runtime should stay under fifteen minutes total
+1578 | EDA emits a completion JSON with figure and table counts
+1579 | Completion count assertions: minimum forty figures stage-wide
+1580 | Assertion failure indicates incomplete EDA, halts pipeline
+1581 | EDA report filename: documentation/eda_report.md
+1582 | The report opens with an executive summary of ten bullets
+1583 | Bullets rank by importance to modeling decisions
+1584 | The summary is reused verbatim in the project report PDF
+1585 | A compressed five-bullet version appears in the PPT
+1586 | Number consistency between versions is manually verified
+1587 | The verification step logs into the run manifest
+1588 | EDA review meeting notes template provided in docs
+1589 | The team fills notes after reviewing EDA together
+1590 | Filled note file lands in documentation/meeting_notes/
+1591 | Meeting notes record decisions triggered by EDA findings
+1592 | Triggered decisions also duplicate into decision register
+1593 | This dual-recording keeps both human and audit trails
+1594 | EDA completion is milestone M2 exit criterion number one
+1595 | M2 also requires localization and quality sign-offs done
+1596 | Only then may preprocessing specification execution begin
+1597 | Discipline note: no model fitting is permitted during EDA
+1598 | Violations invalidate the milestone and require review
+1599 | Univariate section ends; bivariate section follows next
+1600 | Next: relationships against the fraud target explored
+1601 | ================================================================
+1602 | SECTION 17 - EDA REQUIREMENTS: BIVARIATE AND TARGET ANALYSIS
+1603 | ================================================================
+1604 | Purpose: quantify relationships between features and label
+1605 | Every candidate predictor gets a target-relationship view
+1606 | Numerics: fraud rate by decile bins of the feature
+1607 | Decile tables include bin range, count, fraud rate, mean
+1608 | Monotone patterns get explicit commentary sentences
+1609 | Non-monotone patterns get hypothesis-generating commentary
+1610 | Categoricals: fraud rate by level with count thresholds
+1611 | Levels with fewer than fifty records merge into other bin
+1612 | Merge decisions recorded in the preprocessing decision table
+1613 | Rare-level fraud spikes require caution callouts
+1614 | Confidence intervals accompany fraud-rate estimates
+1615 | Wilson intervals are acceptable and must be named
+1616 | Interval width commentary highlights data-starved segments
+1617 | Numeric-numeric relationships: correlation matrix computed
+1618 | Pearson and Spearman matrices both produced and compared
+1619 | Divergences between them flag nonlinear associations
+1620 | Correlation with itself trivialities excluded from discussion
+1621 | Target correlation: point-biserial for numeric features
+1622 | Top fifteen target-correlated features tabled with caveats
+1623 | Caveat: correlation is not causation, printed on slide too
+1624 | Mutual information scores computed against the label
+1625 | MI ranking complements correlation for nonlinear detection
+1626 | MI-versus-correlation disagreement list gets commentary
+1627 | --- SUB-HEADER: key fraud-signal deep dives ----------------------------------------
+1628 | DEEP DIVE 1: claim amount versus sum insured ratio
+1629 | DEEP DIVE 2: intimation and submission delay patterns
+1630 | DEEP DIVE 3: duplicate invoice and resubmission behaviors
+1631 | DEEP DIVE 4: provider-level fraud rate concentration
+1632 | DEEP DIVE 5: early-claim and waiting-period violations
+1633 | DEEP DIVE 6: stay length deviations versus expected LOS
+1634 | DEEP DIVE 7: room category versus hospital tier anomalies
+1635 | DEEP DIVE 8: pharmacy and diagnostics share outliers
+1636 | DEEP DIVE 9: claimant history recency-frequency-monetary
+1637 | DEEP DIVE 10: document completeness versus outcomes
+1638 | Each deep dive produces one figure and one paragraph
+1639 | Paragraphs end with a modeling implication statement
+1640 | Implications feed the feature engineering backlog directly
+1641 | Deep-dive figures numbered in their own series for clarity
+1642 | Deep-dive results summarized on two dedicated PPT slides
+1643 | The report PDF dedicates a subsection per deep dive
+1644 | IEEE paper compresses deep dives into one results paragraph
+1645 | Provider analysis includes fraud rate by hospital identifier
+1646 | Minimum volume threshold of thirty claims for provider rates
+1647 | Providers below threshold grouped into low-volume bucket
+1648 | Provider risk tiers derived: low, medium, high watch
+1649 | Risk-tier table lists only synthetic identifiers, no names
+1650 | Commentary clarifies synthetic basis of provider findings
+1651 | --- SUB-HEADER: interaction and segment cross-tabs --------------------------------
+1652 | Cross-tab: plan_type versus claim_type with fraud rates
+1653 | Cross-tab: age band versus diagnosis_group with fraud rates
+1654 | Cross-tab: city_tier versus hospital_tier with fraud rates
+1655 | Cross-tab: admission_type versus weekend flag with rates
+1656 | Cross-tabs render as annotated heatmaps with counts
+1657 | Cells under twenty records masked to avoid overreading
+1658 | Masking rule stated in caption of every heatmap
+1659 | Interaction candidates emerge with documented rationale
+1660 | Example: early claim interacted with preexisting waiting
+1661 | Example: high pharmacy share interacted with provider tier
+1662 | Candidates tagged with expected direction of effect
+1663 | Post-modeling importance validates or refutes candidates
+1664 | Validation outcome feeds back into preprocessing.md notes
+1665 | This feedback loop demonstrates scientific process maturity
+1666 | Bivariate stage emits candidates.json for engineering stage
+1667 | The JSON lists validated candidates with evidence pointers
+1668 | Engineering stage must acknowledge every candidate given
+1669 | Rejections require one-line reasons in the decision table
+1670 | The acknowledgements section lives in preprocessing.md
+1671 | --- SUB-HEADER: temporal and process behavior analysis ----------------------------
+1672 | Monthly claim volume trend across the observation window
+1673 | Monthly fraud rate trend with confidence band overlay
+1674 | Seasonality decomposition attempted for admission volumes
+1675 | Decomposition method named and limitations stated briefly
+1676 | Processing delays: settlement days distribution by year
+1677 | Deficiency and resubmission patterns trended over time
+1678 | Renewal boundary claim clustering quantified and plotted
+1679 | Festival window claim spikes quantified against baselines
+1680 | Weekend versus weekday emergency mix compared by month
+1681 | Any structural breaks marked with hypothesis annotations
+1682 | Temporal leakage caution box printed in this section
+1683 | Reminder: only pre-decision information enters features
+1684 | The caution box repeats verbatim in the report PDF
+1685 | Temporal features candidate list output for engineering
+1686 | Examples: days since policy start, until renewal, last claim
+1687 | Each candidate tagged with its time-reference point
+1688 | Reference-point discipline prevents accidental future peeking
+1689 | Bivariate closure checklist: all deep dives complete
+1690 | Closure checklist: all cross-tabs rendered and narrated
+1691 | Closure checklist: candidates.json emitted and validated
+1692 | Closure checklist: confidence intervals shown throughout
+1693 | Closure checklist: surprises list updated in EDA summary
+1694 | The closure checklist lives at EDA report appendix end
+1695 | Milestone M2 cannot close without this checklist complete
+1696 | Bivariate findings feed directly into visualization set B
+1697 | Consistency between narrative and figures verified manually
+1698 | Verification record appended to the run manifest file
+1699 | Section complete; next enumerates visualization set A fully
+1700 | Next: distribution-focused visualization library build-out
+1701 | ================================================================
+1702 | SECTION 18 - VISUALIZATION SET A: DISTRIBUTIONS
+1703 | ================================================================
+1704 | Every figure saved under images/eda with descriptive names
+1705 | Format PNG at 150 dpi minimum, sized for slide reuse
+1706 | FIGURE A01: age_at_claim histogram with KDE overlay
+1707 | A01 includes vertical marker lines at 18, 60 thresholds
+1708 | FIGURE A02: bmi distribution histogram with normal overlay
+1709 | FIGURE A03: total_claimed_amount_inr raw-scale histogram
+1710 | FIGURE A04: log1p claimed amount histogram annotated
+1711 | FIGURE A05: sum_insured_inr distribution by plan_type violin
+1712 | FIGURE A06: annual_premium_inr versus sum insured scatter
+1713 | A06 includes premium-to-SI ratio contour annotation
+1714 | FIGURE A07: length_of_stay_days distribution, clipped at p99
+1715 | FIGURE A08: icu_days distribution, zero-inflation annotated
+1716 | FIGURE A09: line_items_count histogram with mean marker
+1717 | FIGURE A10: submission_delay_days histogram, p99 clipped
+1718 | A10 includes policy-mandated deadline reference line
+1719 | FIGURE A11: intimation_delay_days histogram similar style
+1720 | FIGURE A12: claims_last_12m_count countplot bars
+1721 | FIGURE A13: rejected_claims_count countplot bars
+1722 | FIGURE A14: days_since_last_claim histogram with median
+1723 | FIGURE A15: provider_claim_volume_30d log histogram
+1724 | FIGURE A16: missingness heatmap across all columns
+1725 | A16 columns sorted by missing rate descending order
+1726 | --- SUB-HEADER: categorical distribution figures -------------------------------
+1727 | FIGURE A17: plan_type countplot with share annotations
+1728 | FIGURE A18: city_tier countplot with share annotations
+1729 | FIGURE A19: claim_type countplot with share annotations
+1730 | FIGURE A20: admission_type countplot with annotations
+1731 | FIGURE A21: diagnosis_group countplot, horizontal bars
+1732 | A21 sorted descending with fraud-rate color secondary axis
+1733 | FIGURE A22: hospital_tier countplot with network split
+1734 | FIGURE A23: room_category countplot with annotations
+1735 | FIGURE A24: occupation top-12 countplot horizontal
+1736 | FIGURE A25: income_band ordinal countplot in band order
+1737 | FIGURE A26: state top-15 countplot with share labels
+1738 | A26 includes an other-category bucket for remaining states
+1739 | FIGURE A27: gender countplot with percentage labels
+1740 | FIGURE A28: education_level ordinal bars in order
+1741 | FIGURE A29: fraud label countplot, headline class balance
+1742 | A29 prints exact counts and percentages on the bars
+1743 | A29 is the first figure shown at EDA report opening
+1744 | FIGURE A30: fraud_type countplot when synthetic metadata exists
+1745 | A30 includes per-type percentage and count annotations
+1746 | FIGURE A31: document_set_completeness histogram by deciles
+1747 | FIGURE A32: month-of-year admission volume bar chart
+1748 | A32 includes monsoon shading annotation block
+1749 | FIGURE A33: weekday-of-admission bar chart split by type
+1750 | FIGURE A34: renewal month distribution bar chart
+1751 | --- SUB-HEADER: distribution figure standards -------------------------------------
+1752 | Every figure carries title, axis labels, and units always
+1753 | Every figure states data scope: full validated training data
+1754 | Sampled figures state sample size inside caption area
+1755 | Color palette follows the project style guide exactly
+1756 | Fraud orange and legit teal recommended but customizable
+1757 | Palette definition lives in documentation/style_guide.md
+1758 | Fonts: DejaVu or equivalent, minimum 10 pt at final size
+1759 | Gridlines light, major only, no chartjunk decorations
+1760 | Legends required whenever multiple series are plotted
+1761 | Legends placed to avoid occluding data regions
+1762 | Annotations use concise phrases, never long sentences
+1763 | Currency axes formatted with compact INR notation
+1764 | Percent axes formatted with one decimal precision
+1765 | Date axes formatted as Mon-YY compact labels
+1766 | Caption files: each figure paired with a caption markdown
+1767 | Captions state takeaway first, then method, then caveat
+1768 | Caption index compiles into documentation/figure_index.md
+1769 | Figure files referenced from EDA report via relative paths
+1770 | Broken references detected by a link-check script run
+1771 | Link-check results logged in run manifest each time
+1772 | --- SUB-HEADER: figure regeneration and governance --------------------------------
+1773 | All figures regenerate from pipeline stage S3 only
+1774 | Manual image editing is forbidden for result figures
+1775 | Cosmetic-only edits permitted with logged justification
+1776 | Figure count assertion for set A: exactly 34 figures
+1777 | Missing figures fail the stage completion assertion
+1778 | Figure checksums recorded in run manifest for integrity
+1779 | Any figure change across runs flagged for review
+1780 | Review decisions recorded in the decisions register
+1781 | Set A feeds EDA report sections one through four
+1782 | Mapping table links report subsections to figure numbers
+1783 | The mapping lives at the start of the figure index file
+1784 | PPT reuses A29, A05, A21 at minimum, upscaled exports
+1785 | Upscaled slide exports land in presentation/assets folder
+1786 | Print-resolution variants for PDF land in reports/assets
+1787 | Naming: same base name with _slide or _print suffixes
+1788 | The asset duplication is automated, never manual copying
+1789 | Governance: deletion of figures requires decision entry
+1790 | Governance: new figures require index update same commit
+1791 | Set A completion logged with count and timestamp lines
+1792 | Next section enumerates relationship visualization set B
+1793 | Sets A and B together satisfy the forty-eight minimum rule
+1794 | Additional exploratory figures may be added beyond minimum
+1795 | Extra figures must still follow all standards above
+1796 | Visualization quality is part of final acceptance review
+1797 | The adviser judges the project partly on figure clarity
+1798 | Invest accordingly in axis labels, titles, and captions
+1799 | Set A specification complete and binding
+1800 | Next: relationship and correlation visualization set B
+1801 | ================================================================
+1802 | SECTION 19 - VISUALIZATION SET B: RELATIONSHIPS
+1803 | ================================================================
+1804 | Set B captures feature-target and feature-feature structure
+1805 | Saved under images/eda with B-series filenames
+1806 | FIGURE B01: Pearson correlation heatmap, top-30 numerics
+1807 | B01 uses diverging colormap with value annotations off diagonal
+1808 | FIGURE B02: Spearman correlation heatmap, same variable set
+1809 | B02 caption explains differences versus Pearson briefly
+1810 | FIGURE B03: fraud rate by claimed amount decile bar plot
+1811 | B03 error bars show Wilson intervals per decile
+1812 | FIGURE B04: fraud rate by claim-to-SI ratio decile plot
+1813 | FIGURE B05: fraud rate by submission delay decile plot
+1814 | FIGURE B06: fraud rate by LOS deviation ratio decile plot
+1815 | FIGURE B07: fraud rate by claims_last_12m_count bars
+1816 | FIGURE B08: fraud rate by provider volume decile bars
+1817 | FIGURE B09: fraud rate by diagnosis_group horizontal bars
+1818 | B09 includes count labels and minimum-count masking note
+1819 | FIGURE B10: fraud rate by plan_type grouped by claim_type
+1820 | FIGURE B11: fraud rate by age band with interval bars
+1821 | FIGURE B12: fraud rate by city_tier grouped by hospital tier
+1822 | FIGURE B13: monthly fraud-rate trend line with band
+1823 | B13 includes volume bars on secondary axis, clearly labeled
+1824 | FIGURE B14: claimed amount boxplot by fraud label
+1825 | B14 includes log-scale variant for readability
+1826 | --- SUB-HEADER: advanced relationship figures --------------------------------------
+1827 | FIGURE B15: LOS versus claimed amount scatter by label
+1828 | B15 uses alpha blending and trend lines per class
+1829 | FIGURE B16: premium versus lifetime claims amount scatter
+1830 | FIGURE B17: pharmacy share versus diagnostics share scatter
+1831 | B17 colored by label with cluster annotation of outliers
+1832 | FIGURE B18: pairplot of five headline numeric features
+1833 | B18 diagonal shows KDE per class for separation view
+1834 | FIGURE B19: heatmap cross-tab plan_type and admission_type
+1835 | B20 FIGURE: heatmap cross-tab age band and diagnosis group
+1836 | FIGURE B21: heatmap cross-tab city tier and hospital tier
+1837 | FIGURE B22: duplicate invoice flag versus fraud rate bars
+1838 | FIGURE B23: early claim flag versus fraud rate bars
+1839 | FIGURE B24: document completeness decile versus fraud rate
+1840 | FIGURE B25: provider risk tier versus fraud rate bars
+1841 | B25 annotated with minimum-volume threshold explanation
+1842 | FIGURE B26: cumulative fraud capture versus claim amount rank
+1843 | B26 resembles a lift chartmotif for EDA insight framing
+1844 | FIGURE B27: calendar heatmap of claim counts by date
+1845 | B27 highlights festival windows with annotation boxes
+1846 | FIGURE B28: violin of claim amounts by diagnosis group
+1847 | B28 split by fraud label for within-group comparison
+1848 | --- SUB-HEADER: set B standards and governance --------------------------------------
+1849 | Set B count assertion: exactly 28 figures minimum
+1850 | Combined sets A and B exceed the forty-eight requirement
+1851 | All set A standards apply identically to set B figures
+1852 | Titles include the compared variables and the label context
+1853 | Colorblind-safe encodings mandatory for class comparisons
+1854 | Legends identify fraud versus legitimate classes clearly
+1855 | Captions lead with the observed relationship strength
+1856 | Captions close with modeling implication when relevant
+1857 | Implication lines feed feature engineering backlog items
+1858 | Backlog items tracked in features_candidates ledger file
+1859 | The ledger lives under documentation folder as markdown
+1860 | Each ledger entry links its motivating figure file path
+1861 | Engineering stage must resolve every ledger entry
+1862 | Resolutions recorded adjacent to entries with outcomes
+1863 | Outcomes: implemented, rejected with reason, deferred
+1864 | Deferred items copy into documentation/future_work.md
+1865 | --- SUB-HEADER: data-relationship documentation outputs ------------------------------
+1866 | Beyond figures, produce a data-relations markdown chapter
+1867 | The chapter maps entities and their join relationships
+1868 | Entities: claimant, policy, claim, provider, documents
+1869 | Relationships: claimant holds one-to-many policies stated
+1870 | Relationships: policy covers one-to-many claims stated
+1871 | Relationships: provider serves one-to-many claims stated
+1872 | Relationships: claim attaches one-to-many documents stated
+1873 | Cardinality assertions verified with actual join counts
+1874 | Verification results tabulated under each relationship
+1875 | Orphan and cyclical anomalies quantified and explained
+1876 | The chapter includes the ER diagram figure reference
+1877 | The ER diagram lives at images/diagrams/er_diagram.png
+1878 | Diagram shows entities, keys, and cardinality crows-feet
+1879 | Diagram regenerate source stored alongside the image
+1880 | The report PDF includes this diagram in data chapter
+1881 | The PPT shows simplified entity diagram on data slide
+1882 | Simplified version shows three entities only for clarity
+1883 | Data-relations chapter also explains fan-out dangers
+1884 | Fan-out example: claim joined to documents inflates rows
+1885 | The chapter states how aggregation prevents fan-out leaks
+1886 | Aggregation windows and keys documented per derived feature
+1887 | This narrative supports defensible feature engineering
+1888 | Reviewers should grasp data shape before any modeling
+1889 | Set B and relations chapter close EDA milestone content
+1890 | Milestone M3 gate: preprocessing may now begin officially
+1891 | Any earlier preprocessing invalidates milestone integrity
+1892 | The integrity stance is printed in the report methodology
+1893 | Set B specification complete and binding
+1894 | Next section: data relations and ER documentation detail
+1895 | Then preprocessing cleaning and imputation specifications
+1896 | Forward references resolve in-order as numbered sections
+1897 | No forward section may begin before this one completes
+1898 | Completion logged with figure counts and timestamps
+1899 | Visualization library state: sets planned, built, verified
+1900 | Next: entity-relationship documentation deep specification
+1901 | ================================================================
+1902 | SECTION 20 - DATA RELATIONS AND ER DOCUMENTATION
+1903 | ================================================================
+1904 | Purpose: formal relational understanding of the dataset
+1905 | Deliverable 1: entity catalog with attribute summaries
+1906 | Deliverable 2: relationship catalog with cardinalities
+1907 | Deliverable 3: ER diagram image plus editable source
+1908 | Deliverable 4: join-playbook documenting safe join patterns
+1909 | Deliverable 5: aggregation playbook preventing fan-out errors
+1910 | ENTITY claimant: grain one row per policyholder
+1911 | Claimant key: claimant_id, unique and non-null enforced
+1912 | Claimant attributes: demographics, socioeconomics, history
+1913 | Claimant history columns are pre-claim aggregates only
+1914 | ENTITY policy: grain one row per coverage year contract
+1915 | Policy key: policy_id, foreign key claimant_id present
+1916 | Policy attributes: plan, pricing, coverage, behavior fields
+1917 | Policy temporal validity defined by start and end dates
+1918 | ENTITY claim: grain one row per filed claim event
+1919 | Claim keys: claim_id primary, claimant and policy foreign
+1920 | Claim attributes: event, clinical, billing, process fields
+1921 | Claim label: is_fraud binary as defined previously
+1922 | ENTITY provider: grain one row per hospital facility
+1923 | Provider key: hospital_id with descriptive attributes
+1924 | Provider attributes: tier, accreditation, volume baselines
+1925 | Provider risk fields reflect pre-claim-period aggregates
+1926 | ENTITY document: grain one row per submitted artifact
+1927 | Document attributes: type, presence flags, metadata fields
+1928 | --- SUB-HEADER: relationship catalog ----------------------------------------------
+1929 | RELATION R1: claimant to policy, one-to-many, required
+1930 | R1 enforcement: every policy joins exactly one claimant
+1931 | RELATION R2: policy to claim, one-to-many, optional
+1932 | R2 meaning: policies can exist without any claims filed
+1933 | RELATION R3: provider to claim, one-to-many, required
+1934 | R3 enforcement: every claim references exactly one hospital
+1935 | RELATION R4: claim to document, one-to-many, optional
+1936 | R4 meaning: some claims lack complete document sets
+1937 | RELATION R5: claimant to claim, derived many-to-many via policy
+1938 | R5 integrity: claims never skip policy linkage path
+1939 | Each relationship verified with programmatic join counts
+1940 | Violations of cardinality expectations get quarantine codes
+1941 | Verification table: relationship, expected, observed, status
+1942 | The table lands in documentation/data_relations.md chapter
+1943 | Chapter also lists every foreign key and its coverage rate
+1944 | Coverage below 99.9 percent triggers investigation notes
+1945 | Referential repair policy documented and reasons logged
+1946 | Never fabricate missing parents; quarantine instead
+1947 | --- SUB-HEADER: join playbook contents ---------------------------------------------
+1948 | PLAYBOOK RULE 1: joins declare expected cardinality first
+1949 | PLAYBOOK RULE 2: post-join row counts asserted versus expected
+1950 | PLAYBOOK RULE 3: unexpected growth triggers automatic aborts
+1951 | PLAYBOOK RULE 4: many-to-one enrichments preferred over others
+1952 | PLAYBOOK RULE 5: one-to-many joins only via aggregations
+1953 | PLAYBOOK RULE 6: aggregation keys and windows always stated
+1954 | PLAYBOOK RULE 7: temporal windows end before claim decision
+1955 | PLAYBOOK RULE 8: document-level joins aggregate to claim grain
+1956 | PLAYBOOK RULE 9: provider enrichments use pre-period stats only
+1957 | PLAYBOOK RULE 10: join audit lines print to run logs always
+1958 | Each rule includes one worked example in the data relations doc
+1959 | Examples cite actual column names from the frozen schema
+1960 | The playbook prevents accidental leakage through joins
+1961 | Leakage examples shown as anti-patterns with corrections
+1962 | Anti-pattern: joining settlement outcomes onto current claim
+1963 | Correction: shift aggregates to strictly prior claim history
+1964 | Anti-pattern: duplicate document rows duplicating claim weight
+1965 | Correction: aggregate documents to completeness metrics first
+1966 | The playbook is cited inside preprocessing.md prominently
+1967 | Model-ready table grain: exactly one row per claim
+1968 | Grain assertion runs at stage S5 output validation
+1969 | Duplicate-grain detection: assert claim_id uniqueness again
+1970 | Grain guarantees stated in the report methodology chapter
+1971 | --- SUB-HEADER: ER diagram production spec ------------------------------------------
+1972 | The diagram uses crow-foot notation for cardinalities
+1973 | Entities drawn as boxes with primary keys underlined
+1974 | Attributes abbreviated to top eight per entity for readability
+1975 | Full attribute lists remain in the data dictionary file
+1976 | Layout: claimant left, policy center, claim right, provider top
+1977 | Document entity drawn below claim with dashed border style
+1978 | Colors follow project palette with entity-type legend block
+1979 | Export PNG at 200 dpi for print and slide adaptability
+1980 | An SVG or source file accompanies for future edits
+1981 | The diagram appears in README data section as thumbnail
+1982 | Thumbnail links to full-resolution version on click
+1983 | The report renders it full-page in landscape appendix too
+1984 | The narrative chapter walks one claim through every relation
+1985 | The walk includes concrete synthetic identifier examples
+1986 | Example uses claimant C-0001 style synthetic references
+1987 | Data-relations sign-off required for milestone M3 gate entry
+1988 | Sign-off recorded in milestone_m3.md with reviewer names
+1989 | Reviewers: all three team members plus self-review note
+1990 | Adviser may be shown this chapter during progress checks
+1991 | The chapter demonstrates database-thinking beyond modeling
+1992 | ER documentation complete and binding for all later joins
+1993 | Feature stage references relationship IDs when deriving fields
+1994 | Example: provider_tier_r3 tag traces to relation R3 origin
+1995 | Traceability strengthens auditability of engineered features
+1996 | The traceability convention is documented in style guide
+1997 | Tags appear as comment lines in feature code files
+1998 | No code in this prompt: tags described as convention only
+1999 | Relations chapter closes the data understanding arc
+2000 | Next: preprocessing cleaning and imputation specification
+2001 | ================================================================
+2002 | SECTION 21 - PREPROCESSING: CLEANING AND IMPUTATION
+2003 | ================================================================
+2004 | Preprocessing executes as pipeline stage S4 on validated data
+2005 | Order matters: split first, then fit cleaning on train only
+2006 | STEP 1: enforce schema types with safe parsing utilities
+2007 | Parse failures quarantine rows with reason codes listed
+2008 | STEP 2: trim and normalize all categorical string values
+2009 | Normalization: lowercase keys internally, display forms kept
+2010 | STEP 3: collapse documented synonym categories into canonical
+2011 | Example: twin share variants unify to twin_sharing value
+2012 | Synonym map shipped as versioned CSV in config folder
+2013 | STEP 4: deduplicate exact duplicate rows keeping first
+2014 | Dedup counts logged; above 0.5 percent triggers review
+2015 | STEP 5: deduplicate semantic duplicates via invoice keys
+2016 | Semantic dupes flagged, never auto-deleted, always reviewable
+2017 | STEP 6: negative and impossible values handled per rules
+2018 | Negative amounts quarantine unless source documents explain
+2019 | STEP 7: unit consistency verified across amount fields
+2020 | All amounts confirmed INR; paise values rounded to rupees
+2021 | STEP 8: date parsing with strict format, failures quarantined
+2022 | Future-dated claims rejected at this cleaning layer
+2023 | STEP 9: bmi consistency recomputed, mismatches flagged
+2024 | Mismatch threshold 1.0 unit triggers review flags only
+2025 | STEP 10: financial component reconciliation as earlier
+2026 | Reconciliation failures quarantine with reason code FIN01
+2027 | --- SUB-HEADER: imputation specification --------------------------------------------
+2028 | Imputation plan table required before any fitting occurs
+2029 | Table columns: field, dtype, null rate, mechanism, method
+2030 | Numeric low-null: median imputation per segment default
+2031 | Segment keys for medians: plan_type and city_tier at most
+2032 | Over-segmentation beyond two keys prohibited for stability
+2033 | Numeric moderate-null: KNN imputation with k equals 5
+2034 | KNN fitted on subset of correlated numeric columns only
+2035 | The subset list documented with correlation justification
+2036 | Categorical low-null: mode within segment or global mode
+2037 | Categorical moderate-null: dedicated missing category value
+2038 | High-null fields above 15 percent: drop unless justified
+2039 | Justification requires importance evidence from ablation
+2040 | Indicator columns added for: document fields, history gaps
+2041 | Indicator naming: original field name plus _was_missing
+2042 | Imputation state serialized as artifact for reuse later
+2043 | State versioned with schema hash for drift detection
+2044 | Refit policy: only on train split of current run
+2045 | Validation and test states never refit, always reuse
+2046 | Automated test asserts no imputation statistics from test
+2047 | The test compares stored stats against train recomputation
+2048 | Any mismatch fails the leakage gate with clear message
+2049 | Imputation summary prints nulls before and after tables
+2050 | The summary embeds into preprocessing.md automatically
+2051 | --- SUB-HEADER: text and category hygiene --------------------------------------------
+2052 | Free-text fields are minimal in approach 1 by design
+2053 | Hospital name fields: canonical synthetic identifiers used
+2054 | Display names maintained in provider reference table only
+2055 | Category vocabularies frozen post-normalization
+2056 | Vocabulary files export to config folder as YAML lists
+2057 | Unseen category policy at inference: map to other bucket
+2058 | The policy documented in data_contracts.md explicitly
+2059 | High-cardinality fields listed with handling decisions
+2060 | hospital_id handled via target-safe aggregation features
+2061 | Direct one-hot of hospital_id prohibited, memory blowup
+2062 | Diagnosis codes map to groups; raw codes held for audit
+2063 | Raw codes may feature via groupings only, not directly
+2064 | Pin codes map to state and tier attributes only
+2065 | Raw pin code strings never enter the model matrix
+2066 | Dates never enter raw; only engineered differences enter
+2067 | Engineered date features enumerated in feature section
+2068 | Cleaning audit: before and after sample rows printed
+2069 | Five sampled rows shown in preprocessing.md appendix
+2070 | Samples chosen by seeded selection for reproducibility
+2071 | Cleaning completion emits clean_dataset.parquet artifact
+2072 | Artifact schema hash recorded in the run manifest
+2073 | Post-clean quality gates rerun faster variant checks
+2074 | Cleaning stage runtime target: under five minutes
+2075 | Cleaning stage memory target: under 2 GB peak
+2076 | --- SUB-HEADER: review and sign-off mechanics ------------------------------------------
+2077 | Cleaning and imputation review meeting conducted by team
+2078 | Review uses a checklist embedded in preprocessing.md end
+2079 | Checklist items: nulls resolved, logic enforced, audit shown
+2080 | Checklist items: leakage tests passed, artifacts versioned
+2081 | Checklist outcomes recorded with pass marks and initials
+2082 | Open issues get owners and dates in the same table
+2083 | The review closes preprocessing milestone sub-gate M3a
+2084 | Encoding and scaling follow in the next section fully
+2085 | Feature engineering follows after encoding decisions land
+2086 | The strict staging preserves causal cleanliness throughout
+2087 | Any shortcut is a decision-register red flag entry
+2088 | Cleaning specification complete and binding
+2089 | Clean dataset becomes the canonical analytic base table
+2090 | All downstream stages read this artifact exclusively
+2091 | No stage may reach around it toward raw data again
+2092 | Exception: EDA rerun on raw requires fresh explicit reason
+2093 | The exception path documented as guarded utility function
+2094 | Guarded utility lives with warning banners in docs
+2095 | Preprocessing section 21 complete
+2096 | Next section defines encodings and scaling in full detail
+2097 | Then feature engineering and selection are specified
+2098 | Then the complete model zoo specification begins
+2099 | The zoo is the heart of the classical approach benchmark
+2100 | Proceed: encoding and scaling specification follows
+2101 | ================================================================
+2102 | SECTION 22 - PREPROCESSING: ENCODING AND SCALING
+2103 | ================================================================
+2104 | Encodings chosen per feature family with written rationale
+2105 | The encoding decision table documents every column outcome
+2106 | Columns: name, dtype, cardinality, encoding, fit scope, reason
+2107 | Fit scope is always train-split-only without exceptions
+2108 | RULE: one-hot for nominal categories under twelve levels
+2109 | Examples: claim_type, admission_type, room_category, gender
+2110 | One-hot columns named field_value patterns consistently
+2111 | RULE: ordinal encoding only for true ordinal features
+2112 | Examples: city_tier, income_band, education_level, severity
+2113 | Ordinal mappings documented with explicit order lists
+2114 | Example order: tier_3 less than tier_2 less than tier_1
+2115 | RULE: binary flags remain zero one integer columns
+2116 | RULE: high-cardinality categoricals use grouped encodings
+2117 | Grouped approach: frequency encoding plus top-N dummies
+2118 | Top-N threshold default twenty levels, documented choice
+2119 | Remaining levels collapse into infrequent bucket column
+2120 | RULE: hospital identity enters only via aggregated features
+2121 | Aggregated provider stats described in engineering section
+2122 | RULE: target encoding permitted only with leakage controls
+2123 | Controls: out-of-fold target means computed on train folds
+2124 | Smoothing prior documented with strength parameter value
+2125 | Target-encoded columns flagged for sensitivity ablation later
+2126 | Ablation compares with and without target encoding runs
+2127 | --- SUB-HEADER: scaling specification ------------------------------------------------
+2128 | Numeric scaling applied per model-family requirements
+2129 | Distance and margin models require scaled features always
+2130 | Families affected: logistic, SVM, KNN, MLP baselines
+2131 | Scaler default: robust scaler for heavy-tailed numerics
+2132 | RobustScaler center median, scale IQR, named in docs
+2133 | StandardScaler variant benchmarked for sensitivity record
+2134 | Tree ensembles receive unscaled copies for fidelity
+2135 | Dual views implemented as two persistent transform states
+2136 | View A: scaled matrix for distance-based family models
+2137 | View B: unscaled matrix for tree-based family models
+2138 | The dual-view policy documented in preprocessing.md
+2139 | Both views share identical encodings and row ordering
+2140 | Row-order alignment asserted via claim_id index checks
+2141 | Amount fields log1p-transformed before scaling in view A
+2142 | The transform list enumerated with per-field reasons
+2143 | Inverse-transform utilities required for reporting units
+2144 | Reports always show amounts in original INR scale
+2145 | Scaling state serialized alongside imputation artifacts
+2146 | Artifacts versioned and checksummed in run manifest
+2147 | Inference path composes impute then encode then scale
+2148 | The composed transformer is one persisted pipeline object
+2149 | Persisted object enables point-in-time claim scoring later
+2150 | Serialization format documented with load-time checks
+2151 | --- SUB-HEADER: class imbalance preparation interfaces ------------------------------
+2152 | Encoded train matrix feeds resampling experiments next
+2153 | Resampling never touches validation or test partitions
+2154 | Resampling variants compared: none, class_weight, SMOTE
+2155 | SMOTE parameters documented: k neighbors default five
+2156 | SMOTE applied only inside training folds during CV
+2157 | A dedicated pipeline step ensures fold-safe application
+2158 | Leakage test asserts validation folds stay untouched
+2159 | Oversampled row counts printed for each variant run
+2160 | Variant comparison metric: validation PR-AUC primarily
+2161 | Secondary metrics: F1, recall at fixed precision, ROC-AUC
+2162 | The comparison table lands in evaluation/resampling.md
+2163 | Winner selection justified in two sentences minimum
+2164 | The winning policy applies uniformly across the zoo
+2165 | Uniformity guarantees fair model-to-model comparisons
+2166 | Exceptions allowed for models with native imbalance handling
+2167 | Native exceptions documented per model in models.md
+2168 | Example: scale_pos_weight style parameters for boosters
+2169 | The fairness-of-comparison paragraph cites this uniformity
+2170 | The paragraph appears in report methodology chapter
+2171 | --- SUB-HEADER: encoding quality checks ---------------------------------------------
+2172 | CHECK: matrix width after encoding recorded and stable
+2173 | Width drift across runs triggers schema investigation
+2174 | CHECK: no column contains only a single constant value
+2175 | Constant columns dropped with log lines listing names
+2176 | CHECK: NaN and infinity counts equal zero post-transform
+2177 | Any residuals halt the stage with offending columns printed
+2178 | CHECK: dummy-trap avoided via drop_first where suitable
+2179 | The choice documented per linear-model compatibility needs
+2180 | CHECK: memory footprint of matrix printed and bounded
+2181 | Bound: under 1.5 GB for full encoded training matrix
+2182 | Sparse formats permitted with conversion policy documented
+2183 | Sparse conversion allowed only for linear and naive bayes
+2184 | Tree models receive dense arrays within memory limits
+2185 | The conversion matrix policy lives in models.md appendix
+2186 | CHECK: feature names registry exported post-encoding
+2187 | The registry CSV lists every final column with source field
+2188 | The registry powers explainability attribution later
+2189 | Registry versioning matches pipeline artifact versioning
+2190 | Encoding section complete and reviewed at M3b sub-gate
+2191 | Review checklist appended in preprocessing.md as table
+2192 | Next section: feature engineering and selection detail
+2193 | All encodings reversible for reporting interpretability
+2194 | Reversal mapping stored in the same registry artifact
+2195 | Interpretability pipeline depends on this reversibility
+2196 | The dependency is noted in explainability documentation
+2197 | Section complete; move to feature engineering backlog execution
+2198 | Feature candidates ledger from EDA resolves next section
+2199 | Engineering must respect leakage doctrine throughout
+2200 | Next: feature engineering and selection specification
+2201 | ================================================================
+2202 | SECTION 23 - FEATURE ENGINEERING AND SELECTION
+2203 | ================================================================
+2204 | Feature engineering converts domain insight into signals
+2205 | Backlog source one: EDA candidates ledger entries
+2206 | Backlog source two: rule-derived policy violation features
+2207 | Backlog source three: aggregation features across relations
+2208 | Backlog source four: temporal recency and frequency ratios
+2209 | Every feature lands in features.md with formula in words
+2210 | Word-formulas required since this prompt carries no code
+2211 | Example wording: ratio equals claimed divided by sum insured
+2212 | RATIO FEATURES list begins here, categories and justifications
+2213 | RF01: claim_to_si_ratio, claim amount over sum insured
+2214 | RF02: per_day_cost, claim amount over length of stay
+2215 | RF03: premium_to_claim_ratio, annual premium over claim size
+2216 | RF04: room_cost_share, room charges over total claimed
+2217 | RF05: pharmacy_share, diagnostics_share, consumables_share
+2218 | RF06: history_utilization, lifetime claims over lifetime premium
+2219 | RF07: recent_utilization, last-12m claims over sum insured
+2220 | RF08: approval_gap_ratio, claimed minus preauth over preauth
+2221 | RF09: los_deviation_ratio as defined in clinical fields
+2222 | RF10: distance_cost_interaction, amount per kilometer proxy
+2223 | Each ratio lists edge-case behavior when denominators zero
+2224 | Zero-division policy: null plus indicator column pair
+2225 | The pair policy documented once and referenced thereafter
+2226 | --- SUB-HEADER: aggregation feature families ------------------------------------------
+2227 | AGG FAMILY claimant-history: counts and sums prior 365 days
+2228 | AGG FAMILY claimant-history: distinct hospitals prior 365 days
+2229 | AGG FAMILY claimant-history: mean gap days between claims
+2230 | AGG FAMILY claimant-history: rejection share prior claims
+2231 | AGG FAMILY provider: claim volume prior 30 and 365 days
+2232 | AGG FAMILY provider: mean claim amount prior 365 days
+2233 | AGG FAMILY provider: rejection rate prior 365 days
+2234 | AGG FAMILY provider: distinct claimants seen prior 90 days
+2235 | AGG FAMILY provider: share of weekend admissions prior year
+2236 | AGG FAMILY provider: share of duplicate-invoice flags prior
+2237 | AGG FAMILY policy: years with insurer, renewal regularity
+2238 | AGG FAMILY policy: coverage utilization slope over years
+2239 | All aggregates strictly end before current claim decision
+2240 | Window boundaries documented with inclusive exclusive notes
+2241 | Anti-leak assertion recomputes aggregates with shifted windows
+2242 | Shift-test confirms features change when window shifts wrongly
+2343-test wording: assertion catches off-by-one window bugs
+2244 | Aggregation grain documented per feature family clearly
+2245 | Provider features joined via relation R3 with playbook rules
+2246 | Claimant features joined via R5 path with playbook rules
+2247 | Every derived feature tagged with originating relation ID
+2248 | Tag convention follows data-relations chapter standards
+2249 | --- SUB-HEADER: interaction and flag features -------------------------------------------
+2250 | IF01: early claim interacted with preexisting waiting breach
+2251 | IF02: high pharmacy share interacted with tier-3 hospital
+2252 | IF03: weekend admission interacted with planned admission type
+2253 | IF04: duplicate invoice interacted with same provider history
+2254 | IF05: low document completeness interacted with high amount
+2255 | IF06: senior age interacted with maternity diagnosis group
+2256 | IF07: new policy interacted with maximum financial severity
+2257 | IF08: distance interacted with claimed amount per-day cost
+2258 | FLAG features: binary breach indicators from policy rules
+2259 | FLAG examples: waiting breach, room-cap breach, sublimit breach
+2260 | FLAG examples: maternity ineligibility, lapse-window claim
+2261 | Flags documented with rule references from section eleven
+2262 | Flag-to-label correlation ceiling enforced at 0.95 review
+2263 | Breach flags imperfect on purpose, avoiding trivial labels
+2264 | The imperfection rationale documented in dataset.md honesty note
+2265 | Interaction candidates empirically validated before keeping
+2266 | Validation: univariate AUC lift versus parent features alone
+2267 | Lifts under 0.005 discarded with reasons logged
+2268 | Kept interactions listed in final features.md table
+2269 | --- SUB-HEADER: feature selection and freeze ----------------------------------------------
+2270 | Selection pipeline: variance filter, correlation prune, model rank
+2271 | Variance filter removes near-constant columns at 1e-6
+2272 | Correlation prune drops one of pairs above 0.98 absolute
+2273 | Prune keeps the more interpretable column per pair
+2274 | Interpretability preference rule documented as tie-breaker
+2275 | Model rank: gradient-boosted importance on train folds
+2276 | Rank stability checked across three seeded rankings
+2277 | Unstable top-borderline features reviewed manually
+2278 | Final feature count target: 90 to 110 model inputs
+2279 | The freeze file: config/frozen_features.yaml artifact
+2280 | Freeze includes: name, source, transform chain, relation tag
+2281 | Freeze hash recorded in run manifest and schema_freeze.json
+2282 | Post-freeze changes require deviations log approvals
+2283 | Benchmarks thereafter comparable across all zoo models
+2284 | Selection methods compared in small table in features.md
+2285 | Methods compared: mutual information versus model importance
+2286 | Agreement rate reported as simple overlap percentage
+2287 | Disagreements discussed in three sentences minimum
+2288 | The freeze step closes milestone M3 fully and formally
+2289 | M3 exit artifacts enumerated in milestone_m3.md file
+2290 | Next major arc: the complete classical model zoo
+2291 | Forward warning: zoo training uses frozen features only
+2292 | Any model-specific extra features require register approval
+2293 | Feature engineering narrative reused in report methods chapter
+2294 | The IEEE paper compresses engineering into one paragraph
+2295 | Compression must still cite ratio, aggregate, flag families
+2296 | Engineering specification complete and binding
+2297 | The model-ready matrix now exists in two scaling views
+2298 | Both views share the frozen registry of feature names
+2299 | Section complete; zoo specification begins next
+2300 | Next: model zoo part one, linear and probabilistic families
+2301 | ================================================================
+2302 | SECTION 24 - MODEL ZOO PART 1: LINEAR AND PROBABILISTIC
+2303 | ================================================================
+2304 | Zoo governance: identical splits, features, seeds, budgets
+2305 | Every model file follows the common specification template
+2306 | Template fields enumerated fully in model zoo part three
+2307 | MODEL M01: Majority-class baseline classifier
+2308 | M01 purpose: sanity floor for all metrics, honesty anchor
+2309 | M01 expectation: PR-AUC equals prevalence baseline level
+2310 | M01 documentation explains why baselines matter scientifically
+2311 | MODEL M02: Logistic regression, L2 regularized
+2312 | M02 grid: C in 0.01, 0.1, 1, 10 with saga or lbfgs
+2313 | M02 notes: interpret coefficients with scaling caveats
+2314 | M02 expectation: strong linear baseline, fast to train
+2315 | Odds-ratio table for top coefficients required in docs
+2316 | MODEL M03: Logistic regression with L1 penalty variant
+2317 | M03 purpose: embedded feature selection demonstration
+2318 | M03 grid: C values same, solver documented precisely
+2319 | M03 outputs: zeroed-feature count reported in metrics
+2320 | MODEL M04: Logistic regression with elastic-net variant
+2321 | M04 grid: l1_ratio in 0.2, 0.5, 0.8 with fixed Cs
+2322 | M04 documents hint when elastic-net beats pure L1
+2323 | MODEL M05: Gaussian naive Bayes baseline
+2324 | M05 note: violated independence discussed but tested anyway
+2325 | M05 expectation: fast, decent recall, weak calibration
+2326 | MODEL M06: Bernoulli naive Bayes on binarized features
+2327 | M06 binarization: median splits documented as transform
+2328 | M06 purpose: show representation impact on same estimator
+2329 | --- SUB-HEADER: neighborhood and margin family -----------------------------------------
+2330 | MODEL M07: k-nearest neighbors uniform weights
+2331 | M07 grid: k in 5, 15, 31, 63 with euclidean distance
+2332 | M07 note: scaling required, view A matrix used
+2333 | M07 expectation: costly at predict time, discussed
+2334 | MODEL M08: k-nearest neighbors distance-weighted variant
+2335 | M08 grid: k in 7, 21, 51, weighting distance mode
+2336 | M08 documents latency versus M07 comparison lines
+2337 | MODEL M09: linear SVM hinge-style linear classifier
+2338 | M09 grid: C in 0.1, 1, 10, class_weight balanced tested
+2339 | M09 note: probability via calibration wrapper explained
+2340 | M09 expectation: strong margins, slower probabilities
+2341 | MODEL M10: SVM with RBF kernel on subsample if needed
+2342 | M10 grid: C in 1, 10, gamma scale versus 0.01
+2343 | M10 note: memory blowup mitigation via capped support set
+2344 | M10 expectation: strong but expensive, honestly reported
+2345 | MODEL M11: linear discriminant analysis baseline
+2346 | M11 purpose: classical statistical classifier benchmark
+2347 | M11 expectation: quick, decent when classes Gaussian-ish
+2348 | MODEL M12: quadratic discriminant analysis if stable
+2349 | M12 guard: singular covariance fallback documented
+2350 | M12 may be skipped with recorded justification entry
+2351 | --- SUB-HEADER: per-model shared requirements part one --------------------------------
+2352 | Every model logs: training seconds, prediction latency
+2353 | Every model logs: memory estimate of fitted artifact size
+2354 | Every model logs: full metric suite on validation split
+2355 | Metric suite: accuracy, precision, recall, F1, F2
+2356 | Metric suite plus: ROC-AUC, PR-AUC, MCC, Brier, logloss
+2357 | Thresholded metrics computed at default 0.5 and tuned point
+2358 | Tuned threshold chosen on validation via F2 maximization
+2359 | F2 preference: recall weighted heavier for fraud catching
+2360 | The F2 choice is justified in threshold memo file
+2361 | Confusion matrix saved per model as CSV and figure
+2362 | ROC and PR curves saved per model with raw points CSV
+2363 | Per-model JSON includes grid-best hyperparameters verbatim
+2364 | Search method: randomized or grid with fixed iterations 40
+2365 | Search scoring: PR-AUC on stratified folds of train
+2366 | Fold count five, repeats two for stability readings
+2367 | Search results table exported per model to tuning folder
+2368 | Runtime guard: single model search must finish 25 minutes
+2369 | Guard breach triggers reduced grid with logged reason
+2370 | All searches seed-fixed for exact reproducibility
+2371 | --- SUB-HEADER: expectations and documentation per model -------------------------------
+2372 | Each model file docstring narrates: what, why, how, limits
+2373 | Paragraph what: algorithm in two plain sentences
+2374 | Paragraph why: relevance to fraud tabular classification
+2375 | Paragraph how: hyperparameters and data view consumed
+2376 | Paragraph limits: known weaknesses on this dataset observed
+2377 | Limit paragraphs honest: no benchmark result hidden ever
+2378 | Model documentation cross-links leaderboard row via key
+2379 | Keys: m01_majority through m12_qda matching filenames
+2380 | The report PDF includes per-model mini-summaries table
+2381 | The table columns: model, family, PR-AUC, notes keyfinding
+2382 | The PPT shows condensed version with top contrasts only
+2383 | Linear-family coefficient stability reported across folds
+2384 | Stability metric: coefficient rank correlation documented
+2385 | Probabilistic-family calibration slopes reported early
+2386 | Early calibration findings foreshadow stage S13 work
+2387 | Zoo part one closure: 12 model specs recorded
+2388 | All 12 produce complete metric rows or documented skips
+2389 | Skips require reasons and never exceed two total zoo-wide
+2390 | Part one models typically finish within one hour total
+2391 | Timing expectations recorded after run in evaluation notes
+2392 | Observed timings compared against expectations table
+2393 | Deviations beyond 2x investigated and explained briefly
+2394 | Part one complete and binding for benchmark fairness
+2395 | Next: tree and ensemble families, expected leaders
+2396 | Reminder: leaderboard includes baselines for honesty
+2397 | PPT mentions baselines to demonstrate rigor to adviser
+2398 | Report includes baselines in results table first rows
+2399 | Baseline rows shaded in leaderboard markdown rendering
+2400 | Next: model zoo part two, trees and boosting ensembles
+2401 | ================================================================
+2402 | SECTION 25 - MODEL ZOO PART 2: TREES AND ENSEMBLES
+2403 | ================================================================
+2404 | Tree family expected to lead tabular benchmark results
+2405 | MODEL M13: single decision tree, depth-controlled
+2406 | M13 grid: max_depth in 3, 5, 8, 12, min_samples_leaf 20
+2407 | M13 purpose: interpretability anchor and bias floor for trees
+2408 | M13 must export a readable tree diagram figure for docs
+2409 | The figure caps depth display at four for legibility
+2410 | MODEL M14: random forest balanced class weights
+2411 | M14 grid: trees 300-600, depth none versus 12, features sqrt
+2412 | M14 purpose: robust bagging benchmark with importance output
+2413 | M14 note: out-of-bag score recorded as CV cross-check
+2414 | MODEL M15: extra-trees extremely randomized ensemble
+2415 | M15 grid mirrors M14 for fair variance-bias comparison
+2416 | M15 purpose: faster splits, sometimes better generalization
+2417 | MODEL M16: AdaBoost with shallow stumps base learner
+2418 | M16 grid: estimators 100-400, learning rate 0.05 to 0.5
+2419 | M16 purpose: classic boosting reference point for story
+2420 | M16 expectation: weaker than modern boosters, stated honestly
+2421 | MODEL M17: histogram gradient boosting machine baseline
+2422 | M17 grid: learning rate 0.05-0.15, leaves 31-127, l2 0-1
+2423 | M17 purpose: native histogram method with strong speed
+2424 | M17 note: handles imbalance via class_weight variant run
+2425 | MODEL M18: XGBoost-style gradient boosted trees
+2426 | M18 grid: depth 4-8, eta 0.03-0.2, subsample 0.7-1.0
+2427 | M18 plus: colsample 0.6-1.0, reg lambda 0.5-5, pos weight
+2428 | M18 purpose: expected leaderboard contender, tuned carefully
+2429 | MODEL M19: LightGBM-style leaf-wise boosting
+2430 | M19 grid: leaves 31-255, lr 0.03-0.2, min child 20-100
+2431 | M19 plus: feature fraction, bagging, imbalance handling param
+2432 | M19 purpose: speed plus accuracy contender, large data ready
+2433 | MODEL M20: CatBoost-style ordered boosting
+2434 | M20 grid: depth 4-10, lr 0.03-0.2, l2 1-10, iterations cap
+2435 | M20 purpose: categorical-native challenger, leakage-safe method
+2436 | M20 note: ordered boosting statistics explained in docs
+2437 | --- SUB-HEADER: ensemble-of-ensembles and voting family -------------------------------
+2438 | MODEL M21: soft voting across top three diverse learners
+2439 | M21 constituents chosen after individual benchmarks only
+2440 | M21 weights: proportional to validation PR-AUC, documented
+2441 | M21 purpose: diversity benefit demonstration with numbers
+2442 | MODEL M22: stacking with logistic meta-learner
+2443 | M22 base learners: one linear, one bagged, one boosted
+2444 | M22 out-of-fold protocol documented to prevent leakage
+2445 | M22 purpose: meta-learning benchmark with honest complexity
+2446 | M22 complexity cost discussed in eighth paragraph of docs
+2447 | MODEL M23: bagged logistic ensemble for variance insight
+2448 | M23 grid: bags 10-30, sample fraction 0.6-0.9
+2449 | M23 purpose: shows variance reduction limits for linear
+2450 | MODEL M24: calibrated boosted ensemble variant
+2451 | M24 purpose: combine M18 or M19 with isotonic calibration
+2452 | M24 note: calibration training strictly out-of-fold validated
+2453 | --- SUB-HEADER: tree-family shared requirements ------------------------------------------
+2454 | Importance extraction required for all tree-family models
+2455 | Native gain importance plus permutation importance both
+2456 | Importance frames exported CSV with top forty features each
+2457 | Importance plots: horizontal bars top twenty five features
+2458 | Plots include mean lines across seeds with error bands
+2459 | Stability: three seeded retrains per tree model minimum
+2460 | Stability metric: top-twenty overlap percent reported
+2461 | Report the overlap in models.md stability subsection
+2462 | Partial dependence prepared for stage features list later
+2463 | Compute budget: tree searches up to 40 minutes each allowed
+2464 | Early-stopping on validation rounds required for boosters
+2465 | Early-stopping patience 50 rounds documented default
+2466 | Best iteration recorded in per-model JSON always
+2467 | GPU usage: none; CPU thread counts logged per model
+2468 | Thread count consistency across models for fairness
+2469 | Fairness thread note recorded in evaluation README
+2470 | --- SUB-HEADER: expectations commentary -----------------------------------------------
+2471 | Boosters expected top ranks; verify, never assume silently
+2472 | If linear wins unexpectedly, investigate before celebrating
+2473 | Investigation checklist: leakage rerun, scaling sanity check
+2474 | Such surprises documented prominently in lessons learned
+2475 | Ensemble tiers discussed: single, bagged, boosted, stacked
+2476 | Tier discussion appears in report background chapter
+2477 | Background cites canonical references per family properly
+2478 | Citation keys synchronized with references.md master list
+2479 | The IEEE paper background mirrors these citations exactly
+2480 | Tree depth versus performance curve figure required once
+2481 | The figure overlays M17-M20 validation PR-AUC by depth
+2482 | Caption interprets bias-variance behavior observed plainly
+2483 | Feature-count sensitivity: top-30 versus full comparison run
+2484 | The comparison table appears in evaluation folder extras
+2485 | Findings: whether compact feature set suffices, stated
+2486 | If compact suffices, note deployment simplicity benefits
+2487 | Nonetheless final model uses frozen full feature set
+2488 | Zoo part two closure: twelve model specs recorded
+2489 | Cumulative zoo size now twenty four with part one
+2490 | Runtime estimate for part two: under three hours total
+2491 | Timing logged and compared against estimate honestly
+2492 | Part two complete and binding for leaderboard integrity
+2493 | Next: remaining families plus the model spec template
+2494 | Reminder: every metric row generated, none hand-typed
+2495 | The leaderboard CSV builds programmatically at stage S9
+2496 | Any hand edit to leaderboard is a release-blocking defect
+2497 | Automated integrity check hashes generated artifacts
+2498 | The hash check runs before document assembly stage
+2499 | Part two specification ends here completely
+2500 | Next: model zoo part three plus shared template details
+2501 | ================================================================
+2502 | SECTION 26 - MODEL ZOO PART 3 AND SHARED TEMPLATE
+2503 | ================================================================
+2504 | MODEL M25: radial-basis SVM refined second attempt allowed
+2505 | M25 only if M10 skipped earlier with documented reason
+2506 | MODEL M26: sklearn-style multi-layer perceptron baseline
+2507 | M26 grid: hidden 64-32 versus 128-64, alpha 1e-4 to 1e-2
+2508 | M26 purpose: bridge toward approach 2 deep learning story
+2509 | M26 note: early stopping on validation fraction required
+2510 | M26 clearly labeled classical baseline, not approach 2 scope
+2511 | MODEL M27: ridge-classifier closed-form linear variant
+2512 | M27 purpose: fast deterministic linear reference point
+2513 | MODEL M28: passive-aggressive online linear classifier
+2514 | M28 purpose: streaming-readiness discussion benchmark
+2515 | M28 note: multiple shuffled seeds averaged for stability
+2516 | MODEL M29: nearest-centroid classifier simple reference
+2517 | M29 purpose: ultrafast triage baseline with weak accuracy
+2518 | M29 documents where simplicity might suffice operationally
+2519 | MODEL M30: Gaussian-process attempt on subsample optional
+2520 | M30 likely skipped: cost; skip requires logged reason only
+2521 | Zoo target: 26 to 30 trained models with metric rows
+2522 | The final count recorded in evaluation.md header block
+2523 | Skip count above four total invalidates the benchmark
+2524 | Invalidation forces remediation before document assembly
+2525 | Every skip, valid or not, listed in leaderboard as row
+2526 | Skip rows carry status skipped and reason text column
+2527 | --- SUB-HEADER: shared per-model file template -------------------------------------------
+2528 | Template section 1: module docstring with model narrative
+2529 | Template section 2: imports disciplined and grouped cleanly
+2530 | Template section 3: configuration dataclass-style container
+2531 | Template section 4: build function constructing the estimator
+2532 | Template section 5: train function with timing and logging
+2533 | Template section 6: evaluate function emitting metric JSON
+2534 | Template section 7: artifact savers for model and curves
+2535 | Template section 8: main guard enabling standalone execution
+2536 | Template section 9: human-readable run summary printing
+2537 | Template rule: each section header comment present verbatim
+2538 | Template rule: every function carries docstrings with units
+2539 | Template rule: comments explain why, not repeat what code does
+2540 | Template rule: no dead code, no commented-out experiments
+2541 | Template rule: no print spam; logger with levels instead
+2542 | Template rule: paths resolved via shared path helper only
+2543 | Template rule: seeds sourced from global config only
+2544 | Template rule: metrics imported from shared evaluator module
+2545 | The shared evaluator guarantees identical metric definitions
+2546 | Metric definitions documented once in evaluation README
+2547 | Definitions include formulas in words and edge-case handling
+2548 | Example: zero-division in precision returns zero with note
+2549 | --- SUB-HEADER: model card requirements ---------------------------------------------
+2550 | Every model gets a one-page model card markdown file
+2551 | Card sections: overview, data, config, metrics, caveats
+2552 | Card overview: two-sentence plain-language description
+2553 | Card data: exact views, features count, and splits used
+2554 | Card config: final hyperparameters as a tidy table
+2555 | Card metrics: validation row plus test row for winner only
+2556 | Card caveats: failure modes observed during evaluation
+2557 | Cards live in evaluation/model_cards/ with key filenames
+2558 | Card index rendered in evaluation.md as linked table
+2559 | Cards generated from artifacts, not by manual typing
+2560 | Card generator is part of reporting source folder
+2561 | Spot-check: one card verified by hand against JSON data
+2562 | Spot-check outcome logged into run manifest lines
+2563 | --- SUB-HEADER: zoo-wide governance and closure -----------------------------------------
+2564 | Governance: leaderboard schema fixed before training starts
+2565 | Schema columns enumerated: model_key, family, view, params
+2566 | Schema continued: metrics columns, runtime, artifact paths
+2567 | Schema versioned; changes post-hoc require register entry
+2568 | Governance: identical hardware class for all model runs
+2569 | Hardware description recorded in evaluation/environment.md
+2570 | Governance: same dataset snapshot hash across all runs
+2571 | Snapshot hash printed on leaderboard as metadata column
+2572 | Governance: leaderboard sorted by validation PR-AUC desc
+2573 | Ties broken by F2 then training time ascending order
+2574 | Governance: top-five table duplicated into evaluation.md
+2575 | Governance: full table remains in CSV plus markdown render
+2576 | Governance: benchmark conclusions worded cautiously always
+2577 | Wording policy: prefer "on this dataset under this protocol"
+2578 | The policy phrase appears mandated in both PDFs results
+2579 | Zoo closure asserts: metrics present, cards present, curves
+2580 | Closure checklist appended in evaluation/evaluation.md end
+2581 | Closure marks milestone M5 complete pending M4 baselines
+2582 | M4 baselines must predate zoo execution chronologically
+2583 | Chronology verified via run manifest timestamps audit
+2584 | Audit lines print milestone order compliance PASS or FAIL
+2585 | FAIL status blocks progression to tuning stages fully
+2586 | Zoo part three specification complete and binding
+2587 | Next: training protocols, splitting strategy, seeds doctrine
+2588 | Then benchmarking leaderboard and selection policy details
+2589 | Then explainability and fairness specification sections
+2590 | Final arc then covers documentation, evaluation, PPT, PDFs
+2591 | Acceptance checklist closes the entire prompt afterward
+2592 | Forward path is strict; no section may be skipped
+2593 | The executing agent confirms section completion in logs
+2594 | Completion confirmations print as manifest lines per section
+2595 | Section numbering here matches manifest identifiers exactly
+2596 | This alignment makes audit cross-reference effortless
+2597 | Zoo total runtime budget: six hours across all families
+2598 | Budget breach triggers scope reduction via register only
+2599 | Reduction examples: smaller grids, fewer seeds documented
+2600 | Next: training and evaluation protocol specification
+2601 | ================================================================
+2602 | SECTION 27 - TRAINING AND EVALUATION PROTOCOL
+2603 | ================================================================
+2604 | Splitting strategy: stratified train 70, validation 15, test 15
+2605 | Group constraint: same claimant never spans two partitions
+2606 | Group-aware splitting prevents identity leakage across splits
+2607 | Implementation: group-stratified split utility with claimant_id
+2608 | Split artifact: three index CSVs with row counts logged
+2609 | Split fingerprint: membership hash recorded in manifest
+2610 | Refutation test: assert zero claimant overlap pairwise
+2611 | Overlap detection failure halts with offending IDs listed
+2612 | Split proportions verified within 0.3 percentage points
+2613 | Class ratios verified equal across splits within 0.2 points
+2614 | Temporal secondary check: claim dates balance across splits
+2615 | Any temporal skew over one month median gets commentary
+2616 | Cross-validation: stratified five-fold repeated twice on train
+2617 | Grouped CV respected as well via same group constraint
+2618 | CV results reported as mean plus-minus standard deviation
+2619 | Seed doctrine: master seed 42, derived seeds documented
+2620 | Derived scheme recorded in utils documentation section
+2621 | Every stochastic consumer lists its seed source table row
+2622 | The seed table ships in evaluation/reproducibility.md file
+2623 | --- SUB-HEADER: training run discipline -----------------------------------------------
+2624 | Training occurs through the master script stage S8 only
+2625 | Ad-hoc notebook training forbidden for reported numbers
+2626 | Every run writes run_id, git hash, config hash, timestamps
+2627 | Dirty git trees permitted locally but flagged in manifest
+2628 | The flag warns that exact code state is uncommitted
+2629 | Final release runs require clean committed state only
+2630 | Hardware snapshot auto-captured: CPU model, cores, RAM
+2631 | Software snapshot: OS, Python, library versions list
+2632 | Snapshots persist into evaluation/environment.md file
+2633 | Training logs capture per-model started finished durations
+2634 | Failures capture stack traces into per-model error logs
+2635 | A failed model marks its row with status failed and reason
+2636 | Retry policy: one automatic retry for transient failures
+2637 | Retried rows annotated so reviewers see instability
+2638 | Persistent failure converts to documented skip entry
+2639 | Skip decisions land in decisions register same day
+2640 | Post-training, artifacts validated before leaderboard build
+2641 | Validation: JSON parses, curves lengths sane, hashes match
+2642 | --- SUB-HEADER: metric definitions canon ---------------------------------------------
+2643 | Accuracy: correct over total, reported but de-emphasized
+2644 | Precision: TP over predicted positives for fraud class
+2645 | Recall: TP over actual positives, fraud-catch rate
+2646 | F1: harmonic mean of precision and recall values
+2647 | F2: recall-weighted harmonic mean, operational priority
+2648 | ROC-AUC: ranking quality across all thresholds noted
+2649 | PR-AUC: precision-recall area, headline for imbalance
+2650 | MCC: balanced chance-corrected agreement measure
+2651 | Brier: probability quality, lower better, four decimals
+2652 | Log-loss: penalized confidence measure, four decimals
+2653 | All metrics computed with shared evaluator module only
+2654 | Evaluator unit tests documented in code walkthrough doc
+2655 | Threshold policy: default 0.5 table plus tuned table
+2656 | Tuned threshold per model from validation F2 maximum
+2657 | A single global operating threshold derived for winner later
+2658 | Global threshold story in stage S13 threshold memo
+2659 | Metric tables always labeled with split and threshold context
+2660 | Unlabeled tables are documentation defects, fix on sight
+2661 | --- SUB-HEADER: evaluation outputs per model -------------------------------------------
+2662 | Confusion matrix at tuned threshold: figure plus CSV
+2663 | Figure annotations include counts and row-normalized rates
+2664 | ROC curve preview figure with AUC in legend area
+2665 | PR curve figure with baseline prevalence reference line
+2666 | Threshold sweep table: precision recall F2 across points
+2667 | Sweep exported CSV with 101 threshold candidates
+2668 | Probability histogram by class figure for separability view
+2669 | Histogram uses log y-scale to reveal tail behavior
+2670 | Latency measurement: 1000-row predict timed three repeats
+2671 | Latency median reported in milliseconds in JSON file
+2672 | Artifact size on disk measured and logged in kilobytes
+2673 | Size extremes flagged for practical deployment discussion
+2674 | All outputs enumerated in per-model manifest block
+2675 | Missing any output fails model completion assertion
+2676 | Completion assertions run before leaderboard assembly
+2677 | Assembly collects only complete or documented-skip rows
+2678 | Assembly validates schema conformance of every row
+2679 | Validation failures abort with offending keys printed
+2680 | The assembled leaderboard persists with content hash
+2681 | --- SUB-HEADER: statistical comparison discipline ----------------------------------------
+2682 | Compare top models with paired CV fold difference analysis
+2683 | Report mean metric differences with standard deviations
+2684 | A simple paired test name and p-value may be included
+2685 | Interpret p-values cautiously with one-line caveat text
+2686 | Practical significance threshold: 0.005 PR-AUC difference
+2687 | Differences below threshold described as statistical ties
+2688 | Tie policy: prefer the simpler model under ties always
+2689 | Simplicity order documented: linear, tree, bagged, boosted
+2690 | Stacked models rank last in simplicity preference order
+2691 | The tie policy appears in selection memo verbatim
+2692 | Comparisons never cherry-pick favorable subsets only
+2693 | Full zoo comparisons tabled in report appendix completely
+2694 | Appendix table sourced from the same leaderboard CSV
+2695 | Selection policy section follows in next numbered section
+2696 | Then calibration and thresholding stage S13 execution
+2697 | Protocol closure: rerun determinism demonstration required
+2698 | Demonstration: rerun three models, metrics identical to 1e-9
+2699 | Demonstration results logged in reproducibility.md table
+2700 | Next: benchmarking, leaderboard, and selection policy
+2701 | ================================================================
+2702 | SECTION 28 - BENCHMARKING, LEADERBOARD, SELECTION POLICY
+2703 | ================================================================
+2704 | The leaderboard is the single source of comparative truth
+2705 | Built at stage S9 from per-model artifacts exclusively
+2706 | Columns: rank, model_key, family, view, seed_count
+2707 | Columns: val_pr_auc, val_roc_auc, val_f1, val_f2 at tuned
+2708 | Columns: val_precision, val_recall, val_mcc, val_brier
+2709 | Columns: train_seconds, predict_ms, artifact_kb, status
+2710 | Columns: notes, params_path, card_path, error_reason
+2711 | Sort: status complete first by val_pr_auc descending
+2712 | Rendering: CSV master plus markdown table plus HTML snippet
+2713 | Markdown rendering caps decimals per style guide rules
+2714 | Leaderboard appears in evaluation.md near its top
+2715 | Leaderboard appears in report PDF results chapter table
+2716 | Leaderboard appears condensed on one PPT results slide
+2717 | The three appearances must agree exactly on all numbers
+2718 | An automated cross-check compares extracted values post-build
+2719 | Mismatch marks document build FAILED with diff printed
+2720 | --- SUB-HEADER: selection policy details ----------------------------------------------
+2721 | STEP 1: filter complete models with valid artifacts only
+2722 | STEP 2: rank by validation PR-AUC, practical tie tolerance
+2723 | STEP 3: among top tier, prefer simpler families per order
+2724 | STEP 4: sanity-check stability across the three seed retrains
+2725 | STEP 5: verify explainability assets feasible for candidate
+2726 | STEP 6: confirm no unresolved leakage flags on candidate
+2727 | STEP 7: declare winner and runner-up with rationale prose
+2728 | The selection memo narrates each step with actual values
+2729 | Memo includes rejected-candidate one-line reasons table
+2730 | Memo signed with date and run identifier references
+2731 | Runner-up retained for sensitivity comparison figures
+2732 | Winner versus runner-up PR curve overlay figure required
+2733 | Winner versus best linear overlay also required separately
+2734 | These overlays anchor the PPT results narrative visually
+2735 | If winner differs from expectation, investigate first always
+2736 | Unexpected winner triggers leakage re-audit automatically
+2737 | Re-audit outcome recorded before proceeding further
+2738 | Selection is final; post-test changes are prohibited
+2739 | Post-test flips count as methodological misconduct here
+2740 | The prohibition printed in selection memo footer text
+2741 | --- SUB-HEADER: tuning of the winner stage S10 ------------------------------------------
+2742 | Tuning budget: ninety minutes wall-clock maximum default
+2743 | Search space documented as ranges with justifications
+2744 | Justification: literature defaults and prior zoo learnings
+2745 | Search strategy: randomized sixty trials minimum target
+2746 | Early abort rule: plateau of fifteen trials without gain
+2747 | Trials logged: every trial writes one row with all params
+2748 | The trials table ships in evaluation/tuning folder CSV
+2749 | Best-trial artifact: params JSON plus validation metrics
+2750 | Improvement report: default versus tuned metric deltas
+2751 | If tuning gain under 0.002 PR-AUC, keep defaults instead
+2752 | The keep-default decision narrated in tuning memo lines
+2753 | Tuning uses train and validation only; test stays locked
+2754 | Refit after tuning: train plus validation combined allowed
+2755 | The refit choice justified in threshold memo afterward
+2756 | Records: wall time, trial count, best iteration noted
+2757 | Tuned winner gets fresh model card version increment
+2758 | The card links tuning CSV for full transparency chain
+2759 | --- SUB-HEADER: final test evaluation stage S12 -----------------------------------------
+2760 | Test set used exactly once on the frozen final model
+2761 | The unlocking event logged with timestamp and approver
+2762 | Approver here: the executing agent self-certifies discipline
+2763 | Certification statement text lives in evaluation footer
+2764 | Test metrics computed with the same evaluator module
+2765 | Test table: full metric suite at chosen operating threshold
+2766 | Table includes bootstrap percentile intervals, 2000 resamples
+2767 | Interval method named plainly in caption and text both
+2768 | Gap analysis: validation versus test differences computed
+2769 | Commentary: under 0.02 PR-AUC drop considered healthy
+2770 | Bigger drops trigger overfit discussion honestly in report
+2771 | The test results JSON becomes immutable post-creation
+2772 | Immutability note recorded with content hash in manifest
+2773 | Any rerun overwrites manifest run id, flagged as new run
+2774 | Old runs stay archived for audit under runs folder
+2775 | Comparison table final: winner, runner-up, best linear rows
+2776 | The table shows validation and test side by side clearly
+2777 | This table is the canonical results exhibit everywhere
+2778 | PPT shows exactly this three-row table on results slide
+2779 | Report shows it as table two in results chapter
+2780 | IEEE paper shows it as roman-numeral table per style
+2781 | Consistency check across documents automated as above
+2782 | Benchmarking section complete; selection story auditable
+2783 | Next: calibration, thresholding, operating-point translation
+2784 | Then explainability then fairness then documentation arc
+2785 | Operational framing: triage queue sorted by fraud probability
+2786 | Queue mock table of ten claims shown in evaluation folder
+2787 | Mock rows synthetic with obvious demo prefixes in IDs
+2788 | The queue exhibit demonstrates how scores drive workflow
+2789 | Reviewer handoff guidance included in threshold memo text
+2790 | Section complete; calibration details follow next
+2791 | Benchmark story integrity checklist appended in evaluation
+2792 | Checklist items cover of numbers, sources, hashes, dates
+2793 | Completion logged before unlock gate of test set proceeds
+2794 | The unlock gate named test_unlock.log artifact file
+2795 | Gate contents: authorizer, timestamp, pre-unlock checklist
+2796 | This theater of discipline impresses academic reviewers
+2797 | More importantly it prevents real analytical accidents
+2798 | Benchmarking specification ends here fully
+2799 | Next section: calibration and operating thresholds
+2800 | Then: explainability and fairness deep specifications
+2801 | ================================================================
+2802 | SECTION 29 - CALIBRATION, THRESHOLDS, EXPLAINABILITY, FAIRNESS
+2803 | ================================================================
+2804 | Calibration stage S13 aligns scores with empirical frequencies
+2805 | Diagnostics: reliability diagram on validation predictions
+2806 | Ten equal-width bins, counts annotated per bin segment
+2807 | Metrics: expected calibration error and Brier reported
+2808 | Methods compared: Platt logistic versus isotonic regression
+2809 | Comparison table: ECE and Brier before and after each
+2810 | Selection criterion: lower validation ECE, stated plainly
+2811 | Calibration fitted strictly out-of-fold on validation data
+2812 | Refit-on-validation discipline documented step by step
+2813 | Post-calibration reliability diagram regenerated for proof
+2814 | Side-by-side before/after figure required in evaluation
+2815 | Caption explains reading method for non-technical audiences
+2816 | Threshold policy: derive operating point from constraints
+2817 | Constraint option A: precision floor 0.90 maximize recall
+2818 | Constraint option B: recall floor 0.80 minimize false alarms
+2819 | Constraint option C: F2 maximization as default fallback
+2820 | The team picks one option before seeing test, documented
+2821 | The choice and justification recorded in threshold memo
+2822 | Operational translation: score-to-action bands defined
+2823 | Bands: auto-clear below 0.30, review 0.30 to threshold
+2824 | Bands: escalate above threshold with priority ordering
+2825 | Band boundaries configurable; defaults exactly as above
+2826 | The band table appears in report operations chapter
+2827 | --- SUB-HEADER: explainability specification -------------------------------------------
+2828 | EXPLAIN LEVEL 1: global importance for the final model
+2829 | Methods: native gain plus permutation on validation data
+2830 | Output: top twenty five features horizontal bar figures
+2831 | Consistency: rank correlation between methods reported
+2832 | Discussion: why both methods agree or diverge, paragraph
+2833 | EXPLAIN LEVEL 2: directionality via partial dependence
+2834 | PDP for top eight features plus two two-way interactions
+2835 | Each PDP caption interprets shape in business language
+2836 | EXPLAIN LEVEL 3: local explanations for selected claims
+2837 | Five claims chosen: two TP, one TN, one FP, one FN
+2838 | For tree winners use leaf-path contribution narratives
+2839 | For linear winners use coefficient-times-value narratives
+2840 | Narrative template: top three drivers with direction each
+2841 | Narratives reviewed for plausibility against domain logic
+2842 | Anomalous drivers trigger investigation notes in register
+2843 | EXPLAIN LEVEL 4: surrogate summary tree optional bonus
+2844 | If used, fidelity metric versus main model reported
+2845 | Shapley-style explanations postponed to approach 2 scope
+2946-note: keep approach 1 explanations lightweight and honest
+2947 | Every explanation figure lands under images/models folder
+2948 | Explanation tables land in evaluation/explainability folder
+2949 | --- SUB-HEADER: fairness specification ---------------------------------------------------
+2950 | Slices: gender, age bands, city tiers, income bands, plan type
+2951 | Per-slice metrics: TPR, FPR, precision, approval rate
+2952 | Slice table exported CSV and rendered in evaluation.md
+2953 | Minimum slice size thirty positives, else noted as unstable
+2954 | Unstable slices excluded from disparity claims explicitly
+2955 | Disparity metrics: max gap and ratio versus reference slice
+2956 | Reference slice: majority group, choice justified in text
+2957 | Thresholds: flag gaps above five percentage points for review
+2958 | Review outcome: explanation candidates, never silent acceptance
+2959 | Mitigations discussed: threshold-agnostic first, then per-slice
+2960 | Per-slice thresholds discouraged; legal-ethics note included
+2961 | Fairness narrative: limitations of aggregates acknowledged
+2962 | Intersectional small-sample warning paragraph included
+2963 | Fairness section appears in report and one PPT slide
+2964 | The slide title: equity checks for flag and denial rates
+2965 | No fairness section may claim absence of bias absolutely
+2966 | Wording policy: "no large gaps observed under these checks"
+2967 | --- SUB-HEADER: operational narrative outputs --------------------------------------------
+2968 | Explain the yes or no answer with top drivers template
+2969 | Template example wording given as quoted lines in docs
+2970 | Wording avoids accusatory tone toward claimants always
+2971 | Wording offers next-step guidance for flagged claims
+2972 | Next steps: documents to provide, review timelines, contacts
+2973 | The template library ships in documentation/explanations.md
+2974 | Ten filled examples using synthetic claims included there
+2975 | Examples span approved, flagged, rejected outcome bands
+2976 | The PPT includes one example walk-through on a slide
+2977 | The report includes three examples in operations chapter
+2978 | The IEEE paper compresses to one illustrative example
+2979 | Human-factors note: investigators remain decision owners
+2980 | The system recommends; humans adjudicate, stated everywhere
+2981 | Calibration and threshold section reviewed at M6 gate
+2982 | M6 exit: winner finalized, calibrated, tested once
+2983 | M6 artifacts enumerated in milestone_m6.md file
+2984 | Section complete; documentation and deliverables arc next
+2985 | Forward sections enumerate every document in detail
+2986 | No document may deviate from enumerated specifications
+2987 | Additions allowed; omissions never allowed whatsoever
+2988 | Section 29 complete and binding for model communication
+2989 | Next: documentation folder and evaluation folder specs
+2990 | Then PPT, report PDF, IEEE paper, acceptance, closing
+2991 | The end is near but rigor must not decay at finish line
+2992 | Finish-line discipline paragraph included in lessons learned
+2993 | The team signs the acceptance checklist with initials
+2994 | Adviser-facing versions are the generated final artifacts
+2995 | No hand edits after generation without full regeneration
+2996 | This rule keeps trust in document-number consistency
+2997 | If regeneration impossible, document why in deviations log
+2998 | Such deviations are expected to be rare and justified
+2999 | Proceed to documentation folder specification immediately
+3000 | Next and final arc: deliverables, acceptance, and closing

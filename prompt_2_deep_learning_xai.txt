@@ -1,0 +1,3000 @@
+0001 | ================================================================
+0002 | MASTER IMPLEMENTATION PROMPT - APPROACH 2 OF 3
+0003 | PROJECT: Medical Insurance Claim Fraud Detection
+0004 | SUBTITLE: AI Claim Verification Plus Explainable Fraud Detection
+0005 | APPROACH: Deep Learning Models with Explainable AI Layer
+0006 | SESSION: Session 2 of the three-session build plan
+0007 | INSTITUTION: IIIT Dharwad, B.Tech Data Science and AI
+0008 | TEAM: B Varshith 23BDS011, M Jagadeshwar 23BDS033
+0009 | TEAM: J Ganesh 23BDS024
+0010 | FACULTY ADVISER: Prof. Ramesh Athe
+0011 | ADVISER RULE: credit him on PPT title and PDF title pages
+0012 | DOCUMENT TYPE: implementation-only specification prompt
+0013 | LINE COUNT: exactly 3000 lines, numbered for traceability
+0014 | CODE POLICY: this prompt carries zero code by design
+0015 | CODE EXPECTATION: executing agent writes all code itself
+0016 | TONE: English, formal academic, no marketing language
+0017 | PRIMARY GOAL: fraud classification, yes or no per claim
+0018 | SECONDARY GOAL: five deep approaches fairly benchmarked
+0019 | TERTIARY GOAL: XAI explanations for every model trained
+0020 | PREREQUISITE: approach 1 frozen dataset artifacts exist
+0021 | HOW TO USE: paste this file to a capable coding agent
+0022 | AUTONOMY: decide everything, ask the user nothing
+0023 | DEEP ZOO: five named approaches A through E
+0024 | APPROACH A: multilayer perceptron reference baseline
+0025 | APPROACH B: TabNet-style attentive tabular network
+0026 | APPROACH C: one-dimensional convolutional tabular net
+0027 | APPROACH D: autoencoder anomaly detection hybrid
+0028 | APPROACH E: feature-token transformer tabular net
+0029 | MODEL KEYS: dl_a_mlp, dl_b_tabnet, dl_c_cnn1d fixed
+0030 | MODEL KEYS: dl_d_autoencoder, dl_e_transformer fixed
+0031 | --- SUB-HEADER: relationship to approach 1 --------------------
+0032 | Approach 2 reuses approach 1 frozen dataset and splits
+0033 | Dataset schema hash must match approach 1 snapshot hash
+0034 | Split fingerprints must match approach 1 index files
+0035 | Any hash mismatch halts this pipeline with loud error
+0036 | Standalone fallback: rerun approach 1 stages S1 to S5
+0037 | Fallback documented in the reproduction guide file
+0038 | Approach 1 leaderboard is the classical comparison anchor
+0039 | Deep winners compared against classical winner explicitly
+0040 | Never retype classical numbers; import artifacts read-only
+0041 | Import audit verifies classical metric file hashes first
+0042 | Approach 2 owns evaluation2 and documentation2 folders
+0043 | Suffix 2 naming prevents collisions with approach 1
+0044 | Shared style guide, palette, glossary carry over unchanged
+0045 | Glossary extends with deep learning and XAI terms
+0046 | Comparability is the scientific spine of the project
+0047 | Same splits, same metrics, same thresholds, same slices
+0048 | Spine checks are automated gates, not good intentions
+0049 | The spine narrative quoted identically in both PDFs
+0050 | Test-set usage equally sacred: exactly once at the end
+0051 | --- SUB-HEADER: deliverable inventory --------------------------
+0052 | DELIVERABLE D1: fully commented Python deep codebase
+0053 | DELIVERABLE D2: one-command training entry script
+0054 | DELIVERABLE D3: images2 folder with training visuals
+0055 | DELIVERABLE D4: documentation2 folder, very detailed
+0056 | DELIVERABLE D5: evaluation2 folder with all artifacts
+0057 | DELIVERABLE D6: PPT, about twenty-two slides
+0058 | DELIVERABLE D7: project report PDF, thirty-five plus pages
+0059 | DELIVERABLE D8: IEEE-style research paper PDF, two-column
+0060 | DELIVERABLE D9: GitHub repository updated, tag v2.0
+0061 | Each deliverable specified deeply in numbered sections below
+0062 | Acceptance checklist closes this file at section 30
+0063 | One best deep model declared via frozen composite score
+0064 | Composite blends metrics, calibration, XAI, stability, cost
+0065 | Weights frozen before any training begins, auditable
+0066 | The user trains models personally by running scripts
+0067 | Scripts must run first try, no syntax errors tolerated
+0068 | Comment quality mandate strongest in this approach
+0069 | Every tensor shape transition deserves a comment
+0070 | Hardware: laptop-first, GPU optional auto-detected
+0071 | CPU path must finish zoo within sixteen hours worst
+0072 | GPU path target under six hours for all approaches
+0073 | Checkpoints save every five epochs minimum
+0074 | Resume-from-checkpoint flag must work correctly
+0075 | Training logs per epoch to CSV files always
+0076 | --- SUB-HEADER: scope boundaries --------------------------------
+0077 | SCOPE IN: five deep tabular model families
+0078 | SCOPE IN: gradient and perturbation XAI methods
+0079 | SCOPE IN: surrogate and counterfactual explanations
+0080 | SCOPE IN: fairness slices per deep model trained
+0081 | SCOPE IN: docs, evaluation, PPT, two PDF artifacts
+0082 | SCOPE OUT: vision or documents, approach 3 only
+0083 | SCOPE OUT: LLM agents, approach 3 only
+0084 | SCOPE OUT: production deployment and serving
+0085 | SCOPE OUT: any real patient data whatsoever
+0086 | Output remains yes or no plus calibrated probability
+0087 | Score bands reuse approach 1 triage definitions
+0088 | Auto-clear below 0.30 stays unchanged
+0089 | Review band 0.30 up to operating threshold stays
+0090 | Escalation above threshold with priority order stays
+0091 | Deep models must emit identical banding metadata
+0092 | Banding contract checked by artifact validation gates
+0093 | Calibration required of every deep model produced
+0094 | Methods compared: temperature, isotonic, Platt scaling
+0095 | Threshold selection validation-driven, same as before
+0096 | Constraint options A B C carried over identically
+0097 | Team picks one option before test, recorded in memo
+0098 | End-to-end runtime target twelve hours worst case
+0099 | Approach 2 closes with frozen deep leaderboard
+0100 | Section complete; role and mission follow next
+0101 | ================================================================
+0102 | SECTION 2 - ROLE AND MISSION OF THE EXECUTING AGENT
+0103 | ================================================================
+0104 | You are a senior deep learning engineer, tabular focus
+0105 | You hold explainable-AI specialization experience too
+0106 | You write code that students can read and learn from
+0107 | You act as documentation lead for deep content
+0108 | You never ask questions; decide, record, proceed
+0109 | Priority order: correctness, clarity, training efficiency
+0110 | Prefer well-understood architectures over exotic novelty
+0111 | Every claim must be backed by evaluation artifacts
+0112 | Never fabricate metrics, curves, or explanation outputs
+0113 | Document failed runs as carefully as successful ones
+0114 | Design experiments to survive reviewer scrutiny
+0115 | Keep hyperparameter stories complete and transparent
+0116 | Respect baselines: classical models set the bar
+0117 | Prove deep value or honestly concede parity
+0118 | Parity plus superior XAI can still win composite
+0119 | Calibrate deep probabilities before threshold discussion
+0120 | Watch overfitting via learning curves for every model
+0121 | Log telemetry per epoch into evaluation2 folder
+0122 | Keep configuration external to code inside YAML files
+0123 | Never hardcode paths, seeds, shapes, or thresholds
+0124 | Maintain the single-command regeneration contract
+0125 | Atomic artifact writes required: temp then rename
+0126 | --- SUB-HEADER: mission statement --------------------------------
+0127 | MISSION: build five deep tabular fraud classifiers
+0128 | Each answers yes or no with calibrated probabilities
+0129 | Each pairs with model-appropriate XAI explanations
+0130 | Benchmarks under one strict shared evaluation protocol
+0131 | Classical leaderboard provides the comparison anchor
+0132 | Composite score blends performance and explanation quality
+0133 | Documentation explains every architecture choice accessibly
+0134 | Evaluation folder becomes the permanent audit record
+0135 | PPT and two PDFs communicate findings honestly
+0136 | Deep learning must win or teach why it cannot
+0137 | Learning outcomes are deliverables, not just wins
+0138 | Decisions must come with reason codes always
+0139 | Explanation layer is equal citizen to prediction layer
+0140 | Reviewers should trust and understand each decision shown
+0141 | One command reruns training, evaluation, documents fully
+0142 | Repository public, reads like a top academic project
+0143 | You own design, guidance, and validation here
+0144 | The user owns execution of long trainings
+0145 | Therefore scripts must be robust and resumable
+0146 | Interruptions must never corrupt metrics or artifacts
+0147 | Failed approach rows stay visible with error reasons
+0148 | Silent deletions of failures constitute misconduct
+0149 | Everything reproducible from repository alone
+0150 | Hardware and software snapshots recorded per run
+0151 | --- SUB-HEADER: five approaches portrait --------------------------
+0152 | Span: dense, attention, convolution, anomaly, transformer
+0153 | Span ensures conclusions generalize beyond one family
+0154 | Each approach gets two hundred specification lines here
+0155 | Architecture section then training section, fixed order
+0156 | Each approach yields model card and XAI asset pack
+0157 | Approach letters A through E used everywhere consistently
+0158 | Taxonomy map figure positions the five families
+0159 | Map appears in PPT and in report methods chapter
+0160 | Ranking by preregistered composite scorecard only
+0161 | Ranking rules frozen in documentation before runs
+0162 | Deviations need recorded justifications, no exceptions
+0163 | Register file continues approach 1 decision format
+0164 | Equal hyperparameter search budgets across approaches
+0165 | Equal wall-clock ceilings per approach by default
+0166 | Efficiency differences reported, never weaponized unfairly
+0167 | Abort ladders pre-approved for budget overruns
+0168 | Ladder events logged with justification rows
+0169 | Reference configs feed composite selection only
+0170 | Variants and ablations flagged as non-reference rows
+0171 | Non-reference rows excluded from composite math
+0172 | This rule prevents lucky variants from hijacking selection
+0173 | Seeded ensembling allowed only where preregistered
+0174 | Ensemble rows clearly marked in leaderboard renders
+0175 | Model cards versioned; updates logged with timestamps
+0176 | --- SUB-HEADER: XAI posture ----------------------------------------
+0177 | XAI mandatory for all five approaches, no exceptions
+0178 | Method families: gradient, perturbation, surrogate based
+0179 | Outputs: global rankings plus per-claim local attributions
+0180 | Quality scored via faithfulness and stability checks
+0181 | Faithfulness: removing top features degrades prediction
+0182 | Stability: repeated explanations agree under jitter
+0183 | Rubric fixed in XAI overview section ahead
+0184 | XAI composite feeds the headline selection score
+0185 | Explanations render for non-technical readers too
+0186 | Plain-language templates convert attributions to sentences
+0187 | Tone rules: evidence-led number, never accusatory
+0188 | No phrase may imply claimant intent or guilt
+0189 | Banned phrases listed in style guide appendix
+0190 | Causal-language scanner greps documents pre-build
+0191 | Violations block document builds automatically
+0192 | XAI figures follow palette and caption rules
+0193 | Every XAI table exports CSV next to figure
+0194 | Missing XAI assets block final release entirely
+0195 | XAI chapter anchors report and paper equally
+0196 | This posture fulfills recording mandates for XAI
+0197 | Mission definition restated at acceptance section end
+0198 | Keep comparability spine in mind throughout
+0199 | Numbers decide; narratives only explain numbers
+0200 | Next: ground rules governing deep deliverables
+0201 | ================================================================
+0202 | SECTION 3 - NON-NEGOTIABLE GROUND RULES
+0203 | ================================================================
+0204 | RULE A: this prompt file contains zero code
+0205 | RULE B: executing agent authors all training code
+0206 | RULE C: code runs end to end from one entrypoint
+0207 | RULE D: every file carries complete comments
+0208 | RULE E: comments explain why, not repeat what
+0209 | RULE F: docstrings include shapes and dtypes everywhere
+0210 | RULE G: no syntax errors in any delivered file
+0211 | RULE H: master script trains all approaches in order
+0212 | RULE I: each approach also runs standalone equally
+0213 | RULE J: configuration lives in YAML, nothing hardcoded
+0214 | RULE K: all seeds enumerated in one reproducibility table
+0215 | RULE L: dependencies pinned exactly with versions
+0216 | RULE M: CPU fallback exists for every path
+0217 | RULE N: GPU auto-detected when available
+0218 | RULE O: mixed precision off by default for stability
+0219 | RULE P: checkpoints every five epochs minimum
+0220 | RULE Q: resume flag tested and documented
+0221 | RULE R: early stopping patience twenty epochs default
+0222 | RULE S: NaN loss aborts with clear diagnostics
+0223 | RULE T: gradient clipping norm one, triggers logged
+0224 | RULE U: standard artifact set identical per approach
+0225 | --- SUB-HEADER: artifact contract rules ---------------------------
+0226 | Set: weights, metrics JSON, curves CSV, config snapshot
+0227 | Set: learning-curve figure, confusion matrix figure
+0228 | Set: ROC and PR curves plus threshold sweep table
+0229 | Set: calibration table and reliability diagram
+0230 | Set: XAI attribution tables with figures
+0231 | Set: fairness slice tables with commentary
+0232 | RULE V: missing artifacts fail completion gates
+0233 | RULE W: every artifact records run id, git hash
+0234 | RULE X: leaderboard builds only from validated sets
+0235 | RULE Y: documents read numbers from evaluation2 only
+0236 | RULE Z: hand-edited metrics invalidate the release
+0237 | Three seeded retrains per final approach required
+0238 | Retrain variance reported beside mean metric values
+0239 | Best-seed picks validation PR-AUC highest, preregistered
+0240 | Test evaluation happens exactly once at the end
+0241 | Test unlock logged with checklist like approach 1
+0242 | Unlock artifact evaluation2/test_unlock.log required
+0243 | Learning curves mark best epoch with vertical line
+0244 | Train-validation gaps analyzed per approach in prose
+0245 | Gradient health diagnostics printed at intervals
+0246 | Explosion or vanishing warnings logged with magnitudes
+0247 | Telemetry CSV rows: one per epoch per seed
+0248 | --- SUB-HEADER: comparability rules ----------------------------------
+0249 | RULE: identical train, validation, test splits as classical
+0250 | RULE: split fingerprints verified before any training
+0251 | RULE: identical metric definitions from shared evaluator
+0252 | RULE: identical threshold conventions as approach 1
+0253 | RULE: identical fairness slices and minimum cell sizes
+0254 | RULE: classical and deep compared side by side
+0255 | RULE: winner declared by frozen composite only
+0256 | RULE: posterior composite changes count as misconduct
+0257 | RULE: phrase on this dataset under this protocol kept
+0258 | If deep loses to classical, report it honestly
+0259 | Root causes considered: budget, encoding, sample size
+0260 | Never bury disappointing results in appendices
+0261 | Discussion celebrates whatever evidence shows
+0262 | Every figure traceable to generating artifact id
+0263 | Traceability slogan: click a number, find its artifact
+0264 | Slogan printed in documentation2 overview footer
+0265 | --- SUB-HEADER: operability rules --------------------------------------
+0266 | Zoo runtime budget: ten hours laptop default
+0267 | Per-approach budget: two hours including search
+0268 | Overruns trigger reduction ladder steps in order
+0269 | Ladder: fewer trials, fewer epochs, smaller width
+0270 | Minimum trials per approach: thirty search points
+0271 | Maximum epochs default one hundred fifty with stop
+0272 | Batch sizes fixed powers of two, documented
+0273 | Determinism best-effort; GPU limits disclosed
+0274 | Environment capture includes CUDA stack versions
+0275 | Paths relative via shared path helper only
+0276 | No internet needed during training or documents
+0277 | Fonts and styles vendored for offline builds
+0278 | Rerunning master twice yields same numbers on CPU
+0279 | Reproducibility demo reruns two approaches as proof
+0280 | Demo table embedded in reproducibility documentation
+0281 | Cleanup mode deletes all but best checkpoints
+0282 | Disk ceiling documented: ten gigabytes maximum
+0283 | Loaders stream with workers and prefetch documented
+0284 | Dead code and lint failures prohibited equally
+0285 | Simplicity with evidence beats complexity without
+0286 | Any undocumented quirk gains a comment note
+0287 | Troubleshooting appendix collects symptoms and fixes
+0288 | Fixes cite causes, never ritual superstition
+0289 | Rules bind every file the agent emits
+0290 | Gate mapping table prints at acceptance time
+0291 | Each rule cited by section and line span
+0292 | Citations rendered into coverage matrix automatically
+0293 | Coverage gaps block milestone exits firmly
+0294 | Ground rules complete and binding entirely
+0295 | Next: problem recap and deep learning rationale
+0296 | Hypotheses registered before any training begins
+0297 | Preregistration habit carried from approach 1
+0298 | The habit protects conclusions from hindsight bias
+0299 | Next section explains why deep learning at all
+0300 | Then pipeline architecture for stages DL0 to DL16
+0301 | ================================================================
+0302 | SECTION 4 - PROBLEM RECAP AND DEEP LEARNING RATIONALE
+0303 | ================================================================
+0304 | Problem recalled: classify fraud yes or no, India context
+0305 | Approach 1 produced strong classical tabular baselines
+0306 | Deep learning explores what manual features miss
+0307 | HYPOTHESIS H1: nonlinear interactions beyond engineering
+0308 | HYPOTHESIS H2: learned representations beat manual ratios
+0309 | HYPOTHESIS H3: anomaly structure separates fraud
+0310 | HYPOTHESIS H4: attention yields interpretable feature usage
+0311 | Each hypothesis answered in discussion with evidence
+0312 | Answers evidence-bound, speculative parts labeled clearly
+0313 | Tabular deep literature mixed; honesty required
+0314 | Cite both positive and skeptical tabular-DL studies
+0315 | Balanced stance protects academic credibility
+0316 | Why deep: end-to-end representation learning potential
+0317 | Why deep: embeddings for high-cardinality categoricals
+0318 | Why deep: anomaly framing matches fraud intuition
+0319 | Why deep: XAI tooling now supports tabular well
+0320 | Risks: overfit, tuning hunger, opacity, wasted capacity
+0321 | Each risk paired with mitigation in methodology
+0322 | Mitigations: budgets, regularization, early stop, audits
+0323 | Fraud taxonomy from approach 1 remains authoritative
+0324 | Types recalled: fabricated bills, upcoding, duplicates
+0325 | Also phantom admissions, collusion, identity misuse
+0326 | Deep evaluation adds recall-by-fraud-type table
+0327 | Synthetic fraud_type metadata used evaluation-only
+0328 | Metadata never enters features, rule retained strictly
+0329 | This per-type table is new evidence classical lacked
+0330 | It feeds discussion on fraud-type heterogeneity
+0331 | --- SUB-HEADER: workflow and calibration expectations ------------------
+0332 | Triage workflow unchanged from approach 1 bands
+0333 | Champion must calibrate as well as classical winner
+0334 | Temperature scaling added to calibration toolkit
+0335 | Temperature explained simply in report appendix
+0336 | Comparison memo picks method per approach frozen rule
+0337 | Rule: minimal ECE, ties broken toward simpler method
+0338 | ECE computed on ten-bin reliability binning
+0339 | Brier score reported alongside as confirmation
+0340 | Threshold constraints A B C carried over
+0341 | Pre-test pick documented in threshold memo log
+0342 | Queue mock gains top reason-code column new
+0343 | Reason codes specified formally in XAI sections
+0344 | Operational translation stays investigator-centric
+0345 | System recommends; humans adjudicate, always stated
+0346 | Ethics framing identical to approach 1 statement
+0347 | --- SUB-HEADER: what makes approach 2 distinct -------------------------
+0348 | Learned features replace frozen manual engineering view
+0349 | Frozen table remains input; embeddings learn jointly
+0350 | Attention exposes instance-wise feature usage patterns
+0351 | Anomaly training frames fraud as deviation signal
+0352 | XAI is first-class deliverable, not garnish
+0353 | Composite selection prices explanation quality in
+0354 | Seeded ensembling quantifies prediction uncertainty
+0355 | Prediction variance bands shown in reliability exhibits
+0356 | Training dynamics become deliverable evidence
+0357 | Learning-curve narratives per approach required
+0358 | Convergence across architectures signals robustness
+0359 | Divergence demands careful analysis sections
+0360 | Either outcome yields honest discussion content
+0361 | Novelty claim: benchmark plus XAI audit, Indian context
+0362 | Abstract promises empirical, honest tabular verdict
+0363 | --- SUB-HEADER: success criteria deltas ----------------------------------
+0364 | Carry-over target: PR-AUC parity or better than classical
+0365 | New target: faithfulness above 0.70 deletion score
+0366 | New target: stability Jaccard above 0.60 top-k
+0367 | New target: ECE at or below classical winner value
+0368 | New target: per-approach training under two hours
+0369 | Targets preregistered, never adjusted post-hoc
+0370 | Infeasibility documented with causes, not silent edits
+0371 | Criteria table printed early in evaluation.md
+0372 | Each closes PASS or FAIL with evidence links
+0373 | Evidence points to artifact paths and hashes
+0374 | Reviewer path: criterion to evidence in two clicks
+0375 | Failures narrate remediation options plainly
+0376 | Problem framing identical across PPT and PDFs
+0377 | Rationale occupies one full slide and subsection
+0378 | Citations carry years and venues, quality filtered
+0379 | Citation keys prefixed DLTAB for deep additions
+0380 | Master reference list synchronized across documents
+0381 | Hypotheses echoed in results with verdict per item
+0382 | Verdicts: confirmed, refuted, inconclusive allowed
+0383 | Inconclusive listed with what evidence was missing
+0384 | Recap complete; pipeline architecture follows
+0385 | Stages DL0 through DL16 defined ahead precisely
+0386 | Keep spine in mind while reading forward
+0387 | Spine makes this a project, not a zoo
+0388 | Fraud detection stays the heartbeat throughout
+0389 | Yes or no question shapes every section ahead
+0390 | Rationale section closed and binding
+0391 | --- SUB-HEADER: transition notes -------------------------------------------
+0392 | Forward map: architecture, folders, ingestion, preprocessing
+0393 | Then per-approach architecture and training pairs
+0394 | Then unified governance, evaluation, leaderboard
+0395 | Then XAI framework, assignments, formats
+0396 | Then fairness, error analysis, documentation arc
+0397 | Then evaluation finalization and PPT plus PDFs
+0398 | Acceptance checklist closes the entire prompt
+0399 | Line cadence: one hundred per section, strict
+0400 | Next: deep pipeline architecture stages overview
+0401 | ================================================================
+0402 | SECTION 5 - DEEP PIPELINE ARCHITECTURE OVERVIEW
+0403 | ================================================================
+0404 | Pipeline is a linear DAG of stages DL0 to DL16
+0405 | STAGE DL0: environment bootstrap, device detection
+0406 | DL0 OUTPUT: verified environment and device report
+0407 | STAGE DL1: dataset contract validation against approach 1
+0408 | DL1 checks: schema hash, split fingerprints, prevalence
+0409 | STAGE DL2: feature encoding adaptation for deep inputs
+0410 | DL2 OUTPUT: numeric matrix plus categorical index maps
+0411 | STAGE DL3: dataset and loader construction per approach
+0412 | DL3 OUTPUT: batched iterators, leakage-safe sampling
+0413 | STAGE DL4: tiny overfit sanity run per approach
+0414 | DL4 demands overfit-100-rows proof before training
+0415 | STAGE DL5: hyperparameter search per approach capped
+0416 | DL5 OUTPUT: trials table and best configuration snapshot
+0417 | STAGE DL6: final training per approach, three seeds
+0418 | DL6 OUTPUT: checkpoints, best weights, learning curves
+0419 | STAGE DL7: validation full metric suite emission
+0420 | STAGE DL8: calibration fitting on validation out-of-fold
+0421 | STAGE DL9: thresholding to declared constraint
+0422 | STAGE DL10: XAI computation global and local artifacts
+0423 | STAGE DL11: XAI faithfulness and stability scoring
+0424 | STAGE DL12: fairness slice evaluation per approach
+0425 | STAGE DL13: leaderboard assembly and composite scoring
+0426 | STAGE DL14: selection memo and runner-up declaration
+0427 | STAGE DL15: single test-set evaluation exactly once
+0428 | STAGE DL16: artifact generation: docs, PPT, PDFs
+0429 | Each stage logs run manifest id, durations, status
+0430 | Stage failure halts downstream with remediation hints
+0431 | --- SUB-HEADER: stage data contracts ---------------------------------------
+0432 | Contracts defined like approach 1, extended for tensors
+0433 | Contract DL2-OUT: shapes, dtypes, index-map schema
+0434 | Contract DL3-OUT: iterator interface, batch schema
+0435 | Contract DL6-OUT: checkpoint naming, state versioning
+0436 | Contract DL10-OUT: attribution alignment guarantees
+0437 | Alignment: attribution order equals frozen registry order
+0438 | Registry provenance: frozen features from approach 1
+0439 | Embedding columns appended after registry freeze only
+0440 | Appends documented in deep registry extension file
+0441 | Validators run at every stage boundary line
+0442 | Failures print offending keys with expected specs
+0443 | Contracts versioned alongside schema freeze lineage
+0444 | Lineage proves approach 2 consumed approach 1 outputs
+0445 | The proof strengthens the single-project story
+0446 | Artifact root evaluation2 with runs folder below
+0447 | evaluation2/latest mirrors final approved run
+0448 | Document builders read only evaluation2/latest
+0449 | Images root images2 with models2, xai, diagrams
+0450 | Caches live in gitignored workspace2 folder
+0451 | --- SUB-HEADER: compute posture and telemetry --------------------------------
+0452 | Device policy: GPU preferred, CPU silently fine
+0453 | Device report: name, memory, CUDA stack logged
+0454 | Telemetry per epoch: losses, metrics, lr, seconds
+0455 | Telemetry additions: GPU percent, memory watermark
+0456 | Telemetry additions: throughput samples per second
+0457 | CSV rows feed learning-curve figures automatically
+0458 | Automatic figures eliminate manual plot drift
+0459 | Run manifest stores per-stage timing splits
+0460 | Timing table appears in report appendix
+0461 | Slowdowns beyond 2x flagged for commentary
+0462 | Loader stalls profiled via fetch p95 instrumentation
+0463 | Instrumentation overhead disclosed in performance notes
+0464 | Telemetry retained under evaluation2/runs forever
+0465 | Older runs compressible, never deletable silently
+0466 | --- SUB-HEADER: architecture diagram obligations ------------------------------
+0467 | Diagram 1: end-to-end pipeline for README hero
+0468 | Diagram 2: tensor journey CSV row to prediction
+0469 | Diagram 3: five-approach taxonomy map with icons
+0470 | Diagram 4: XAI stack methods per approach mapping
+0471 | All diagrams follow style guide and palette
+0472 | Each includes claim C-2001 worked-example callout
+0473 | Diagrams regenerate from versioned source files
+0474 | Sources kept alongside images for future edits
+0475 | Tensor journey names exact shapes at each hop
+0476 | Shapes match configuration defaults verbatim
+0477 | Drift script compares config versus diagram labels
+0478 | Drift output logged into run manifest lines
+0479 | Architecture walkthrough mirrors approach 1 style
+0480 | Claim C-2001 threads PPT demo and report story
+0481 | Consistency checked by documentation review pass
+0482 | Diagram text legible at slide scale minimum
+0483 | Colorblind-safe encodings and clear arrows required
+0484 | Each diagram ships with caption and caveat text
+0485 | Pipeline overview section complete and binding
+0486 | --- SUB-HEADER: transition -----------------------------------------------------
+0487 | Forward: folder structure, then ingestion contracts
+0488 | Folder layout mirrors approach 1 family conventions
+0489 | Consistent layout reduces reviewer confusion
+0490 | Deep additions get suffixed roots as defined
+0491 | Milestones N1 through N10 listed in folder section
+0492 | Milestones map one-to-one to pipeline stages
+0493 | Traceability: every gate cites section and lines
+0494 | Coverage matrix enforces the citations later
+0495 | Section closed; repository structure follows next
+0496 | Keep the run manifest mental model throughout
+0497 | Manifest is the nervous system of this project
+0498 | All roads lead to manifest-verifiable evidence
+0499 | Next: repository and folder structure for approach 2
+0500 | Structure discipline first; creativity inside code later
+0501 | ================================================================
+0502 | SECTION 6 - REPOSITORY AND FOLDER STRUCTURE
+0503 | ================================================================
+0504 | Approach 2 extends the same repository root
+0505 | Root gains approach2 markers and dedicated subtrees
+0506 | FOLDER src_dl/ holds all deep learning sources
+0507 | src_dl/data: encoders, datasets, loaders, samplers
+0508 | src_dl/models: five approach implementation files
+0509 | src_dl/train: loops, schedulers, early stopping
+0510 | src_dl/xai: attributions, faithfulness, stability
+0511 | src_dl/evaluate: metrics reuse plus deep additions
+0512 | src_dl/reporting: document builders for approach 2
+0513 | src_dl/utils: device, seeds, checkpoints, timing
+0514 | Each module starts with long purpose comment block
+0515 | Comments cite this prompt section as contract
+0516 | FOLDER config_dl/ holds YAML per approach plus shared
+0517 | shared.yaml: seeds, splits, metrics, budgets
+0518 | One YAML per approach named by model key
+0519 | YAML comments annotate knobs with safe ranges
+0520 | FOLDER evaluation2/ mirrors approach 1 structure
+0521 | evaluation.md same fourteen-part section order
+0522 | leaderboard.csv deep zoo master comparison
+0523 | metrics/ per-approach per-seed JSON files
+0524 | curves/ ROC PR and threshold sweeps CSV
+0525 | xai/ attributions, faithfulness, stability tables
+0526 | fairness/ slice tables per approach and slice
+0527 | --- SUB-HEADER: runs, manifests, and media --------------------------------------
+0528 | runs/ stores run folders by identifier scheme
+0529 | latest/ mirrors final approved approach-2 run
+0530 | images2/models2: curves, confusion, ROC PR
+0531 | images2/xai: attribution figures and panels
+0532 | images2/diagrams: four mandated diagrams
+0533 | images2/telemetry: throughput and utilization charts
+0534 | FOLDER documentation2/ holds deep documentation set
+0535 | index.md hub with reading paths for audiences
+0536 | overview.md one-page approach-2 story
+0537 | architectures.md five chapters, one per approach
+0538 | training_protocol.md unified governance prose
+0539 | xai_guide.md method explanations with worked story
+0540 | results_discussion.md findings rendered to prose
+0541 | code_walkthrough.md per-file explanations
+0542 | reproducibility.md reruns and determinism notes
+0543 | limitations.md deep-specific honesty chapter
+0544 | glossary_dl.md embeddings to rollout defined
+0545 | coverage_matrix.md sections mapped to evidence
+0546 | decisions register continued, deviations log continued
+0547 | --- SUB-HEADER: presentation and reports areas ------------------------------------
+0548 | presentation2/ holds PPT source and exports
+0549 | presentation2/assets holds slide-optimized figures
+0550 | reports2/ holds report and paper sources and PDFs
+0551 | reports2/assets holds print-resolution figures
+0552 | checkpoints/ gitignored, best retained only at end
+0553 | Cleanup via master flag documented clearly
+0554 | workspace2/ gitignored caches, never artifacts
+0555 | README gains approach 2 quick-start section
+0556 | Quick-start: one command training plus docs
+0557 | README links both leaderboards comparison table
+0558 | Table generated from both leaderboard CSVs
+0559 | CHANGELOG extended with approach 2 milestones
+0560 | Release tag v2.0 at completion point
+0561 | Tag notes list deliverables and headline results
+0562 | Structure drift detector compares tree to manifest
+0563 | Drift fails builds with missing or extra listings
+0564 | --- SUB-HEADER: naming rules and milestones ---------------------------------------
+0565 | Filenames lowercase with underscores, no spaces
+0566 | Seed suffixes _s01 _s02 _s03 on retrains
+0567 | Best checkpoint alias <key>_best.pt regenerated
+0568 | Model cards <key>_model_card.md version tracked
+0569 | XAI artifacts <key>_attributions.csv patterns
+0570 | Faithfulness <key>_faithfulness.json patterns
+0571 | Stability <key>_stability.json patterns exactly
+0572 | Fairness <key>_fairness_<slice>.csv patterns
+0573 | Telemetry <key>_<seed>_epoch_log.csv patterns
+0574 | Checkpoint <key>_<seed>_epoch<N>.pt patterns
+0575 | Artifact hashes recorded in per-run manifest
+0576 | Verify mode recomputes hashes, reports mismatches
+0577 | MILESTONE N1: environment and dataset contract green
+0578 | MILESTONE N2: encoders, loaders, sanity overfit pass
+0579 | MILESTONE N3: approaches A and B complete
+0580 | MILESTONE N4: approaches C and D complete
+0581 | MILESTONE N5: approach E complete, zoo built
+0582 | MILESTONE N6: XAI scores and fairness complete
+0583 | MILESTONE N7: leaderboard, selection, test ritual
+0584 | MILESTONE N8: documentation2 and evaluation2 sealed
+0585 | MILESTONE N9: PPT built and rehearsed
+0586 | MILESTONE N10: both PDFs compiled and verified
+0587 | Milestones carry entry and exit criteria lists
+0588 | Evidence lists archived per milestone folder
+0589 | Structure section complete and binding
+0590 | Forward: ingestion contracts against approach 1
+0591 | Then deep preprocessing and embedding policy
+0592 | Then loaders, samplers, leakage ceremonies
+0593 | Then the five architecture-training section pairs
+0594 | Governance and evaluation arcs follow after
+0595 | XAI arc receives two hundred fifty lines minimum
+0596 | Fairness and error analysis follow quality arcs
+0597 | Documentation, evaluation, documents close file
+0598 | Every forward link checked by build verifier
+0599 | Next: dataset ingestion and contract validation
+0600 | Contracts before code, always and everywhere
+0601 | ================================================================
+0602 | SECTION 7 - DATASET INGESTION AND CONTRACT VALIDATION
+0603 | ================================================================
+0604 | Input contract: approach 1 stage S5 model-ready tables
+0605 | Required: train, validation, test parquet files
+0606 | Required: frozen feature registry CSV artifact
+0607 | Required: split membership hash manifest artifact
+0608 | Required: imputation and scaling state objects
+0609 | Schema hash compared to recorded value, stop on drift
+0610 | Split fingerprints compared pairwise, stop on mismatch
+0611 | Label balance recomputed and printed for audit
+0612 | Fraud prevalence printed to three decimals exactly
+0613 | Row counts printed beside expected values table
+0614 | Any count discrepancy beyond zero triggers halt
+0615 | Standalone contingency: rerun approach 1 S1 to S5
+0616 | Contingency commands documented in reproduction guide
+0617 | Contingency outputs hashed and cross-checked equally
+0618 | Ingestion never mutates approach 1 artifacts in place
+0619 | Deep copies land under data_dl/interim with manifest
+0620 | Copy checksums recorded, lineage table appended
+0621 | Lineage: source run id, copy timestamp, agent id
+0622 | Immutability assertion recomputes source hashes too
+0623 | --- SUB-HEADER: encoding adaptation for deep inputs ----------------------------
+0624 | Inputs split into numeric block and categorical block
+0625 | Numeric block standardized with train-fitted deep scaler
+0626 | Deep scaler persisted with version tag and printout
+0627 | Drift guard: deep scaler params versus approach 1 params
+0628 | Mismatch beyond epsilon fails contract validation
+0629 | Categorical block: integer indices with vocab maps
+0630 | Vocab JSON exports include unknown-token bucket zero
+0631 | Unknown index always zero, convention documented
+0632 | Cardinality table lists fields with vocab sizes
+0633 | Cardinality feeds embedding dimension rules later
+0634 | High-card hospital ids enter as embeddings now
+0635 | Identifier embeddings justified as representation learning
+0636 | Leakage guard: dropout plus regularization on embeddings
+0637 | Guard evidence: ablation with versus without id embeddings
+0638 | Ablation reported in evaluation2 extras folder
+0639 | Ordinal fields dual-encoded: index plus numeric value
+0640 | Dual-encoding rationale commented in data module
+0641 | Boolean flags enter numeric block as zero-one floats
+0642 | Missing indicators retained unchanged from freeze
+0643 | Date-derived features stay numeric, no raw dates
+0644 | Feature order append-only, never reordered later
+0645 | Append-only preserves attribution alignment contract
+0646 | Alignment asserted: registry length equals matrix width
+0647 | --- SUB-HEADER: tensor and batch contracts ----------------------------------------
+0648 | Numeric tensor float32 shape B by F_num
+0649 | Categorical tensor int64 shape B by F_cat
+0650 | Labels float32 shape B values zero or one only
+0651 | Optional weight tensor float32 shape B for weighting
+0652 | Weight policy per imbalance probe default record
+0653 | Batch ordering: shuffled train, sequential eval splits
+0654 | Shuffle seeds derive from master seed, tabled
+0655 | Validation and test never shuffled, never augmented
+0656 | Batch defaults: 512 train, 2048 evaluation passes
+0657 | Adjustments permitted with logged reasons only
+0658 | Memory guard: batch staging under 4 GB host RAM
+0659 | Workers four, persistent workers enabled default
+0660 | Prefetch factor two default, commented in loader
+0661 | Drop-last true train, false evaluation splits
+0662 | Loader emits batch-count log at construction time
+0663 | Counts verified against expected division math checks
+0664 | --- SUB-HEADER: ingestion quality gates ----------------------------------------------
+0665 | GATE G1: artifacts exist at declared paths
+0666 | GATE G2: hashes match recorded lineage values
+0667 | GATE G3: numeric block free of NaN and infinity
+0668 | GATE G4: categorical indices within vocab bounds
+0669 | GATE G5: labels binary with expected prevalence
+0670 | GATE G6: widths match registry plus extensions
+0671 | GATE G7: encoding maps parse with version match
+0672 | GATE G8: loader smoke test yields correct shapes
+0673 | Failures halt with offending paths printed clearly
+0674 | Gate report JSON lands in evaluation2 folder
+0675 | Rendered summary embeds into documentation2 overview
+0676 | Gates rerun every pipeline execution, no caching
+0677 | No skip flags permitted for ingestion gates ever
+0678 | Ingestion completes milestone N1 with environment
+0679 | N1 exit evidence enumerated in milestone file list
+0680 | Approach 1 artifact mutation escalates to full rerun
+0681 | Suspicion path documented in troubleshooting appendix
+0682 | Ingestion documentation lists all contracts thoroughly
+0683 | Contract tables render into data chapter of report
+0684 | The chapter cites this section by line spans
+0685 | Spans maintained automatically by coverage matrix
+0686 | Matrix generation reads manifest tags only
+0687 | Human curation of matrix prohibited for integrity
+0688 | Section complete, binding, and gated at N1
+0689 | Forward: deep preprocessing including embeddings
+0690 | Augmentation policies reviewed cautiously next too
+0691 | Feature dropout candidate with ablation duty
+0692 | Attribution semantics must survive every transform
+0693 | Interpretability-first bias governs representation tweaks
+0694 | Bias stated explicitly in architectures chapter text
+0695 | Next: tabular preprocessing deep specification
+0696 | Keep registry alignment mantra at every step
+0697 | Alignment failures are build-fatal, by design
+0698 | Fatal now beats wrong explanations later
+0699 | Proceed: deep preprocessing and embedding policy
+0700 | Embeddings finally exploit high-cardinality richness
+0701 | ================================================================
+0702 | SECTION 8 - TABULAR PREPROCESSING FOR DEEP MODELS
+0703 | ================================================================
+0704 | Numeric features standardized via train-fitted scaler
+0705 | Scaler persisted with version and parameter printout
+0706 | Optional power-transform variant benchmarked for skew
+0707 | Variant decision recorded with skew statistics table
+0708 | Post-scaling clipping to train p0.1 and p99.9 optional
+0709 | Clipping decisions per feature family recorded
+0710 | Embedding dimension rule: min 600 via quarter-power heuristic
+0711 | Exact formula and parameters documented in architectures
+0712 | Vocabulary caps documented for highest-cardinality fields
+0713 | Unknown-token rates tracked per categorical field
+0714 | Rates above 0.5 percent flagged for follow-up
+0715 | Embedding init: small normal, standard deviation 0.02
+0716 | Init choices commented citing common practice
+0717 | Embedding dropout default 0.10, tunable in search
+0718 | Embeddings excluded from weight decay by default
+0719 | Exclusion rationale protects rare category learning
+0720 | Rationale commented with rare-category memorization note
+0721 | --- SUB-HEADER: masks and structural missing semantics ------------------------------
+0722 | Structural missingness already encoded by approach 1
+0723 | Deep models additionally receive indicator block input
+0724 | Indicator order matches frozen registry indicator order
+0725 | No indicator derivable from labels, guard assertion
+0726 | Assertion runs during dataset construction, logged
+0727 | Fraud-relevant null patterns discussed in guide
+0728 | Example: missing implant invoice indicator meaning
+0729 | Example: absent document pages indicator meaning
+0730 | Examples grounded in Indian claim workflow language
+0731 | Never imply missing documents prove fraud anywhere
+0732 | Wording: signals correlate; adjudication stays human
+0733 | --- SUB-HEADER: tabular augmentation policies --------------------------------------------
+0734 | Candidate A1: numeric feature dropout, p 0.05
+0735 | Candidate A2: mixup on numeric block, alpha 0.2
+0736 | Candidate A3: in-batch SMOTE variant for balance
+0737 | Each trialed as explicit experiment, never default
+0738 | Trials judged on validation only, identical seeds
+0739 | Guard: attribution alignment re-verified post-augment
+0740 | Trial outputs: delta PR-AUC, ECE, faithfulness, stability
+0741 | Decision table keeps or rejects each with proof
+0742 | Mixup caution: interpolated fraud semantics debated
+0743 | Debate paragraph appears in discussion chapter
+0744 | Rejections recorded as negative results, celebrated
+0745 | Default reference configs use no augmentation
+0746 | Default preserves attribution clarity across zoo
+0747 | Winning augmentations become flagged variant rows
+0748 | Reference-only rule for composite selection stands
+0749 | --- SUB-HEADER: class imbalance deep toolkit ----------------------------------------------
+0750 | Tool T1: class-weighted loss, inverse frequency ratio
+0751 | Weight computation printed with formula in words
+0752 | Tool T2: weighted random sampler for balanced batches
+0753 | Sampler affects train loader only, documented
+0754 | Tool T3: focal loss gamma two, alpha tuned lightly
+0755 | Tool T4: plain BCE plus threshold-only strategy
+0756 | Probe: tools trialed on approach A first
+0757 | Probe protocol frozen before zoo begins
+0758 | Probe picks zoo-wide default tool afterward
+0759 | Exceptions per approach need register rationale
+0760 | Autoencoder exception documented in approach D text
+0761 | Trial rows saved evaluation2/imbalance_tools.csv
+0762 | Table cites probe run ids for traceability
+0763 | Approach 1 resampling choice referenced in prose
+0764 | Differences must be principled, never arbitrary
+0765 | Imbalance chapter unifies both toolkits in report
+0766 | Chapter ends with operationally usable recommendation
+0767 | Recommendation phrased for insurer readers too
+0768 | Preprocessing artifacts: scaler, vocab maps, extensions
+0769 | Artifacts: indicator map, augmentation trials, probe memo
+0770 | Manifest hashes every artifact enumerated here
+0771 | Sign-off: preprocessing chapter reviewed at N2 gate
+0772 | Reviewer initials and dates recorded in evidence
+0773 | Deep preprocessing complete and binding going forward
+0774 | --- SUB-HEADER: representation map obligations -----------------------------------------
+0775 | Adaptation map table documents every transform
+0776 | Columns: source feature, transform, target block
+0777 | Map exports CSV and renders in architectures chapter
+0778 | Map generated from code metadata, never hand-typed
+0779 | Hand-typed maps drift; generated maps stay true
+0780 | Keys: claim_id retained for explanation joins only
+0781 | Keys never enter model inputs, guard assertion
+0782 | Guard test: forward attempt with id fails shape check
+0783 | Design philosophy restated: comparability spine
+0784 | Deep preprocessing adapts, never reinterprets, approach 1
+0785 | Semantics preserved completely through encodings
+0786 | Zero-friendly conventions documented for unknowables
+0787 | Unknown bucket zero referenced everywhere consistently
+0788 | Preprocessing section closes with artifact checklist
+0789 | Checklist embedded with pass stamps reviewed
+0790 | Forward: dataset classes, loaders, sampler mechanics
+0791 | Leakage ceremonies detailed in next section fully
+0792 | Negative-control ritual defined there proudly
+0793 | Ritual is celebrated rigor, shown on PPT
+0794 | Section closed, gated at milestone N2 partly
+0795 | Remaining N2 parts: loaders and sanity overfit
+0796 | Proceed without detours through loader spec
+0797 | Every gate maps to acceptance table at end
+0798 | Traceability carries to the final line 3000
+0799 | Next: datasets, loaders, and imbalance sampling
+0800 | Batches are small worlds; build them honestly
+0801 | ================================================================
+0802 | SECTION 9 - DATASETS, LOADERS, AND IMBALANCE SAMPLING
+0803 | ================================================================
+0804 | Dataset classes wrap encoded tables as tensor providers
+0805 | Base interface defined once, reused across zoo
+0806 | Per sample: numeric vector, categorical vector, label
+0807 | Optional: sample weight and claim id on demand
+0808 | Id output behind constructor flag, default excluded
+0809 | Flag mechanism prevents accidental identifier ingestion
+0810 | Explanation harness requests ids explicitly when needed
+0811 | Explanation joins assert claim_id alignment strictly
+0812 | Misalignment raises hard errors, never silent reindex
+0813 | Docstrings describe len and getitem semantics clearly
+0814 | In-memory tensors acceptable under 1.5 GB train
+0815 | Larger sizes route to documented memmap alternative
+0816 | Alternative noted as future work if unused now
+0817 | Every class emits construction log lines with shapes
+0818 | Shapes cross-checked against contract expectations
+0819 | --- SUB-HEADER: loader construction and validation ------------------------------------
+0820 | Train loader: shuffle true, drop-last true, pinned
+0821 | Eval loaders: sequential, drop-last false, pinned
+0822 | Worker seeding documented for reproducible shuffles
+0823 | Verification: first-epoch batch index hash recorded
+0824 | Hash stored in run manifest for auditors
+0825 | Smoke test asserts shapes, dtypes, label domains
+0826 | Failures print offending batch indices precisely
+0827 | Fetch timers log p50 and p95 milliseconds per batch
+0828 | Stall threshold: p95 above 200 ms warns loudly
+0829 | Warnings surface in telemetry summary commentary
+0830 | Custom collation forbidden unless logged experiment
+0831 | Simplicity stance keeps loaders auditable stable
+0832 | --- SUB-HEADER: imbalance sampling mechanics ------------------------------------------
+0833 | Weighted sampler probabilities from class counts
+0834 | Effective weights printed once per run
+0835 | Oversampled counts reported per epoch in telemetry
+0836 | Effective sample size per epoch computed and logged
+0837 | Sampler governs order; shuffle flag interplay commented
+0838 | Interplay comment prevents reviewer confusion
+0839 | Alternative: plain shuffle plus class-weighted loss
+0840 | Probe chooses default; zoo follows the default
+0841 | Exception register rows: approach, deviation, reason
+0842 | Validation and test untouched by balancing ever
+0843 | Assertion path described for reviewer verification
+0844 | Failure storyboard placed in troubleshooting appendix
+0845 | Appendix entry lists symptoms, causes, fixes clearly
+0846 | --- SUB-HEADER: leakage-safe ceremony rituals -------------------------------------------
+0847 | Ceremony 1: split fingerprints verified at loader build
+0848 | Ceremony 2: claimant group overlaps asserted absent
+0849 | Offenders printed with counts, pipeline then halts
+0850 | Ceremony 3: fitted-on metadata equals train token
+0851 | Mismatch produces descriptive failure with guidance
+0852 | Ceremony 4: batch statistics sampled for sanity
+0853 | Statistics: numeric mean and std spot comparisons
+0854 | Wild deviations flagged for investigation notes
+0855 | Ceremony 5: shuffled-label negative control yearly ritual
+0856 | Control: one-seed model must score near 0.5 AUC
+0857 | Deviation above band triggers leakage investigation
+0858 | Control results tabled in reproducibility appendix
+0859 | Ritual mentioned on PPT protocol fairness slide
+0860 | Ritual cited in report methodology quality list
+0861 | Ritual cited in one IEEE paper sentence exactly
+0862 | --- SUB-HEADER: dataset statistics block -------------------------------------------------
+0863 | Stats printed at ingestion completion every run
+0864 | Content: rows, widths, class counts, prevalence
+0865 | Content: categorical cardinalities, unknown rates
+0866 | Content: ranges of five headline numeric features
+0867 | Block archived JSON beside human-readable rendering
+0868 | Rendering appears in evaluation.md part two
+0869 | Consistency: values equal approach 1 reported numbers
+0870 | Drift fails comparability spine with hard stop
+0871 | Sign-off: loaders reviewed at milestone N2 gate
+0872 | Evidence appended to milestone file listing
+0873 | Forward: the five approaches begin from here
+0874 | Each approach section pair: architecture then training
+0875 | Approach A is also the code-conventions template
+0876 | Conventions defined once, inherited everywhere else
+0877 | Divergences documented via exception entries only
+0878 | Section complete, binding, and gated at N2 fully
+0879 | Recap: datasets defined, loaders honest, ceremonies proud
+0880 | Mantra: batches are small worlds built honestly
+0881 | Loader quality shapes every downstream number
+0882 | Respect the plumbing; the plumbing respects reviewers
+0883 | Next: approach A multilayer perceptron architecture
+0884 | MLP is reference for patterns reused later
+0885 | Read approach A sections with extra care
+0886 | Later sections describe deltas against A mostly
+0887 | Delta style keeps documentation lean and sharp
+0888 | Lean documentation wins adviser reading time
+0889 | Section closure logged into run manifest as N2a
+0890 | Timebox check: training-free work ends soon
+0891 | Compute begins with approach A architecture spec
+0892 | Keep composite scorecard pillars in mind now
+0893 | Pillars: performance, calibration, explanations, stability
+0894 | Pillars echo through every design choice forward
+0895 | Zero questions; decide and document always
+0896 | Binding section ends at this numbered line
+0897 | Commitments continue in approach A immediately
+0898 | Next line begins the deep model zoo truly
+0899 | Section complete with all gates accounted
+0900 | Next: approach A architecture specification begins
+0901 | ================================================================
+0902 | SECTION 10 - APPROACH A: MLP ARCHITECTURE
+0903 | ================================================================
+0904 | MODEL KEY: dl_a_mlp for all artifact naming
+0905 | Role: reference deep baseline, simplest design
+0906 | Input: numeric block concatenated with embeddings
+0907 | Each categorical field owns its embedding table
+0908 | Concatenation order fixed and documented in config
+0909 | Concatenated vector feeds first hidden layer directly
+0910 | Hidden blocks: 256, 128, 64 units default
+0911 | Activation ReLU default; GELU trialed in search
+0912 | Batch norm after each linear, before activation
+0913 | Dropout 0.30, 0.20, 0.10 descending default
+0914 | Head: single logit; sigmoid only at inference
+0915 | Loss: BCE-with-logits for numerical stability
+0916 | Class weighting follows probe default record
+0917 | Parameters under 1.5 million for reference config
+0918 | Parameter count printed with breakdown table
+0919 | Breakdown: embeddings versus hidden versus head
+0920 | Table appears in architectures chapter for A
+0921 | --- SUB-HEADER: design rationale ------------------------------------------------
+0922 | Rationale: universal approximator baseline for rows
+0923 | Rationale: tests if depth beats strong trees
+0924 | Rationale: simplicity protects reproduction efforts
+0925 | Rationale: cleanest target for attribution baselines
+0926 | Limitation: no explicit interaction structure built
+0927 | Discussion connects this limitation to results
+0928 | Width-depth tradeoff paragraph cites two studies
+0929 | Citation keys DLTAB-prefixed in master list
+0930 | Regularization: dropout plus weight decay combo
+0931 | Weight decay 1e-4 on linear weights only
+0932 | Embeddings excluded for rare-category protection
+0933 | Batch norm placement rationale cited from literature
+0934 | Layer norm variant allowed in search space only
+0935 | Residual connections omitted in reference config
+0936 | Omission isolates depth effect before residual adds
+0937 | Residual becomes ablation variant B explicitly
+0938 | Ablation B table scheduled in evaluation2 extras
+0939 | --- SUB-HEADER: search space for approach A --------------------------------------------
+0940 | Hidden sizes among three laddered presets choices
+0941 | Presets: 256-128-64, 512-256-128, 128-64-32
+0942 | Dropout base 0.1 to 0.5 log-uniform range
+0943 | Learning rate 1e-4 to 3e-3 log-uniform
+0944 | Weight decay 1e-6 to 1e-2 log-uniform
+0945 | Batch size 256, 512, 1024 categorical choice
+0946 | Activation ReLU versus GELU binary choice
+0947 | Embedding scale multiplier 0.5 to 2.0 continuous
+0948 | Trials thirty minimum, seeded sampler documented
+0949 | Pruning after ten epochs on stalled validation
+0950 | Scored on validation PR-AUC, ties toward ECE
+0951 | Trials logged dl_a_mlp_trials.csv convention
+0952 | Columns: params, epochs, best val, seconds, status
+0953 | Crashes retained with error text column populated
+0954 | Crash rate above 20 percent triggers investigation
+0955 | Outcome recorded in decisions register entry
+0956 | --- SUB-HEADER: diagram and worked narrative -----------------------------------------
+0957 | Figure: layer blocks with shapes annotated clearly
+0958 | Shapes shown for default config, example batch
+0959 | Figure lives in images2/diagrams with source
+0960 | Narrative: claim C-2001 travels to sigmoid output
+0961 | Expected initial loss ballpark stated upfront
+0962 | Ballpark from prevalence-weighted BCE arithmetic
+0963 | Arithmetic shown in words inside documentation
+0964 | Reader should predict initial loss before running
+0965 | Prediction versus observed logged as learning ritual
+0966 | Ritual demonstrates mechanistic understanding honestly
+0967 | Acceptance facts listed for architecture review
+0968 | Fact: parameter count printed and within target
+0969 | Fact: concat order printed, matches config exactly
+0970 | Fact: forward shape comments verified by reviewer
+0971 | Fact: diagram matches implemented defaults fully
+0972 | Expectation: competitive, likely behind boosters
+0973 | Counter-expectation cited in balanced literature note
+0974 | Approach A patterns become zoo template conventions
+0975 | Template inheritance shown in code walkthrough
+0976 | Reviewers should read approach A with most care
+0977 | Later approaches describe deltas, not full repeats
+0978 | Delta style keeps total documentation lean sharp
+0979 | Architecture freeze: no post-hoc edits after N3
+0980 | --- SUB-HEADER: closure --------------------------------------------------------------
+0981 | Edits beyond freeze need deviations entries only
+0982 | Expectations logged for PASS or FAIL scoring
+0983 | Scoring happens in discussion, evidence-bound
+0984 | Approach A architecture section complete and binding
+0985 | Next: training protocol and artifact emissions for A
+0986 | Training section defines patterns reused by B through E
+0987 | Reuse never hides per-approach table differences
+0988 | Differences recorded in maintained delta table
+0989 | Delta table columns: aspect, approach, difference, reason
+0990 | Table rendered inside architectures documentation
+0991 | Advisor review velocity considered in style choices
+0992 | Anchor architecture serves pedagogy and science
+0993 | Both roles emphasized in report methods chapter
+0994 | Closure logged into manifest as zoo item A-design
+0995 | Next section trains A with full telemetry
+0996 | Telemetry conventions defined there once for all
+0997 | Once-for-all discipline reduces reviewer burden
+0998 | Approach A section ends exactly at budget
+0999 | Transition note: training unlocks artifacts soon
+1000 | Next size: approach A training protocol and artifacts
+1001 | ================================================================
+1002 | SECTION 11 - APPROACH A: MLP TRAINING AND ARTIFACTS
+1003 | ================================================================
+1004 | Optimizer AdamW with documented betas, epsilon
+1005 | Scheduler cosine decay with five-epoch linear warmup
+1006 | Alternative plateau reducer trialed inside search
+1007 | Gradient clipping norm 1.0, triggers logged
+1008 | Trigger counts become training-health telemetry rows
+1009 | Epoch cap one hundred fifty, early stop enforced
+1010 | Patience twenty on validation PR-AUC watch metric
+1011 | Best checkpoint restored at end, not last epoch
+1012 | Restoration assertion logged with epoch numbers
+1013 | Loss wiring: BCE-with-logits directly for stability
+1014 | Stability comment explains internal sigmoid handling
+1015 | Class weight placement documented inside loss setup
+1016 | Weighted sampler alternative follows probe default
+1017 | Final-logit bias prior-adjusted option default enabled
+1018 | Adjustment math shown in words inside comments
+1019 | Rationale: faster convergence near nine percent prevalence
+1020 | Governance: option recorded in config with note
+1021 | --- SUB-HEADER: telemetry and learning-curve obligations ----------------------------
+1022 | Per-epoch: train loss, val loss, val PR-AUC, ROC-AUC
+1023 | Include: learning rate, epoch seconds, GPU percent
+1024 | Include: gradient norm mean and max observed
+1025 | CSV per seed named by established convention
+1026 | Learning-curve figure: loss twin-axis with val metric
+1027 | Figure marks best epoch with vertical annotation
+1028 | Caption states early-stop event and restored id
+1029 | Three-seed overlay figure required for variance view
+1030 | Overlay bands show mean plus-minus one std
+1031 | Overfit diagnosis paragraph accompanies each figure
+1032 | Paragraph compares gaps against expected ranges
+1033 | Flat curves trigger learning-rate audit note
+1034 | Audit table samples lr at ten epoch marks
+1035 | Underfit and overfit signals defined in guide
+1036 | Signals drive mitigation suggestions in discussion
+1037 | Suggestions remain suggestions unless rerun justified
+1038 | Justified reruns documented with config diff tables
+1039 | Diffs rendered small and precise in documentation
+1040 | --- SUB-HEADER: evaluation emission for approach A ------------------------------------
+1041 | Validation metrics JSON, full suite contract
+1042 | Suite: accuracy precision recall F1 F2 ROC PR MCC Brier
+1043 | Plus ECE on ten-bin reliability binning
+1044 | Threshold sweep over 101 candidates exported
+1045 | Chosen threshold per frozen constraint recorded
+1046 | Confusion matrix at chosen threshold: figure plus CSV
+1047 | ROC and PR curves: points CSV plus figures
+1048 | Probability histogram by class with log-scale y
+1049 | Latency: batch inference timed on 10000-row sample
+1050 | Median milliseconds and artifact size megabytes logged
+1051 | Calibration: temperature fitted on validation split
+1052 | ECE before versus after with reliability diagrams
+1053 | Method selected per calibration memo comparison
+1054 | Seed ensemble mean probability across three seeds
+1055 | Ensemble delta reported versus best single seed
+1056 | Ensembling preregistered: allowed at selection only
+1057 | Equal weights; learned stacking deferred to future work
+1058 | --- SUB-HEADER: sanity obligations ---------------------------------------------------
+1059 | Overfit-100-rows proof required before full training
+1060 | Proof: loss nears zero within fifty epochs max
+1061 | Proof figure archived evaluation2/sanity folder
+1062 | Negative control: shuffled-label one-seed run once
+1063 | Expected val AUC near 0.5, PASS band documented
+1064 | Deviation triggers full leakage investigation ritual
+1065 | Investigation steps enumerated in troubleshooting appendix
+1066 | Micro-check: zero top feature, measure metric drop
+1067 | Check loosely mirrors faithfulness; redundancy noted
+1068 | Note prevents duplicated-work accusations in review
+1069 | All sanity outputs cited in reproducibility appendix
+1070 | Approach A milestone pairs with B inside N3
+1071 | N3 exit: A and B artifacts validated, cards drafted
+1072 | Card pattern identical to approach 1 model cards
+1073 | Cards gain XAI summary box added post-stage
+1074 | Box update logged in card footer with timestamps
+1075 | --- SUB-HEADER: transition ------------------------------------------------------------
+1076 | Approach A immutable after N3 gate sealing
+1077 | Defect-only reopen bar: wrong metric, leakage proof
+1078 | Cosmetic issues never justify reference retraining
+1079 | Styling fixes repainted from stored data instead
+1080 | Approach B motivation: attention may beat plain depth
+1081 | Bridge paragraph reused in report method transitions
+1082 | B hypothesis H2b: stepwise masks aid faithfulness
+1083 | Hypothesis tested in XAI scoring section later
+1084 | Recap: architecture, search, training, emissions done
+1085 | Expectations logged for discussion verdict pass
+1086 | Verdict possibilities: confirmed, refuted, inconclusive
+1087 | Inconclusive allowed only with missing-evidence note
+1088 | Approach A complete and binding in full
+1089 | Next section: TabNet-style attentive architecture
+1090 | TabNet adds sequential decision-step narrative
+1091 | Its masks feed XAI as auxiliary signals only
+1092 | Auxiliary status protects comparability of scores
+1093 | Comparability mantra repeated: same protocols all
+1094 | Approach A artifacts sealed with manifest hashes
+1095 | Sealing ceremony logged with timestamps recorded
+1096 | Forward: section 12 specifies approach B design
+1097 | Mask mechanics, steps, sparsity explained there
+1098 | Expect slower epochs due to sequential steps
+1099 | Budget ladder stands ready for overruns
+1100 | Next: approach B TabNet-style architecture section
+1101 | ================================================================
+1102 | SECTION 12 - APPROACH B: TABNET-STYLE ARCHITECTURE
+1103 | ================================================================
+1104 | MODEL KEY: dl_b_tabnet for all artifacts
+1105 | Role: attention-based sequential feature selection
+1106 | Concept: decision steps choose sparse masks per row
+1107 | Masks serve prediction and interpretability narratives
+1108 | Decision steps default five, range three to eight
+1109 | Feature transformer: two shared plus two specific blocks
+1110 | Blocks: linear, batch norm, gated linear units
+1111 | GLU usage justified with gating intuition comments
+1112 | Attentive transformer: prior-aware sparsemax masks
+1113 | Sparsity regularization lambda default 1e-3, searched
+1114 | Prior scale gamma default 1.5, effect documented
+1115 | Mask reuse discourages redundant selections across steps
+1116 | Ghost batch norm with virtual batch 256 default
+1117 | Ghost normalization explained in one comment block
+1118 | Batch norm momentum 0.02 default setting
+1119 | Outputs aggregate step logits into final logit
+1120 | Aggregation commented as residual-style accumulation
+1121 | Parameters under 2.5 million reference configuration
+1122 | Parameter printout requirement mirrors approach A
+1123 | --- SUB-HEADER: rationale and literature ---------------------------------------------
+1124 | Rationale: instance-wise selection fits heterogeneous claims
+1125 | Example: cardiac seniors select different features
+1126 | Example: maternity claims weight documentation fields
+1127 | Rationale: built-in masks reduce extra XAI burden
+1128 | Caution: masks still audited by faithfulness checks
+1129 | Anchor: attentive tabular learning original paper
+1130 | Anchor cited with year and venue in master list
+1131 | Skeptic: replication concerns cited for balance
+1132 | Prediction 1: B beats A on faithfulness scores
+1133 | Prediction 2: B roughly matches A on metrics
+1134 | Prediction 3: B trains slower per epoch
+1135 | All predictions scored PASS or FAIL later
+1136 | Scoring table rendered with evidence links
+1137 | Balanced stance continues throughout the zoo
+1138 | --- SUB-HEADER: search space for approach B -------------------------------------------
+1139 | Steps 3 to 8 integer uniform range
+1140 | Step width multiplier 8 to 64 categorical ladder
+1141 | Sparsity lambda 1e-4 to 1e-2 log range
+1142 | Learning rate 1e-4 to 2e-3 log range
+1143 | Gamma prior 1.0 to 2.5 uniform range
+1144 | Dropout 0.0 to 0.3 continuous sampled
+1145 | Trials thirty minimum, same sampler discipline
+1146 | Pruning after twelve epochs on stalled validation
+1147 | Trials file dl_b_tabnet_trials.csv naming
+1148 | Crash watch identical to approach A rules
+1149 | Known crash: sparsemax instability; fix storyboarded
+1150 | Fix: epsilon floors, dtype cautions, documented
+1151 | Stability notes live in troubleshooting appendix
+1152 | --- SUB-HEADER: mask analytics obligations -------------------------------------------
+1153 | Aggregate masks: mean weight per feature dataset-wide
+1154 | Aggregate exports as global usage ranking table
+1155 | Ranking compared with permutation importance ranks
+1156 | Rank correlation reported with interpretation
+1157 | Step diversity: mask entropy across decision steps
+1158 | Entropy trend across steps plotted and captioned
+1159 | Caption asks whether later steps specialize
+1160 | Specialization informs steps hyperparameter reflection
+1161 | Per-class mask profiles: fraud versus legit deltas
+1162 | Deltas discussed with domain reading paragraph
+1163 | Caution: masks are selection, not causal proof
+1164 | Caution sentence mandatory in every mask discussion
+1165 | Visual: heatmap of sample claims by mask rows
+1166 | Twenty diverse claims, synthetic indices only
+1167 | Figure sized for report half-column reproduction
+1168 | --- SUB-HEADER: diagram, narrative, acceptance ----------------------------------------
+1169 | Diagram: steps with mask and transform branches
+1170 | Diagram annotates shapes consistent with config
+1171 | Diagram shows prior-scale feedback arrow clearly
+1172 | Narrative: C-2001 traverses steps selecting features
+1173 | Narrative names top features per step from run
+1174 | Instance archived in XAI outputs for verification
+1175 | Fact: steps count printed, mask shapes verified
+1176 | Fact: sparsity lambda logged, loss split printed
+1177 | Fact: aggregation verified via tiny hand example
+1178 | Hand example: five-row toy batch recomputation
+1179 | Script asserts numeric closeness, results logged
+1180 | Quirk: longer epochs from sequential computation
+1181 | Timebox: over two hours triggers ladder steps
+1182 | Ladder: shrink width, then steps, then trials
+1183 | Each ladder action logged with justification
+1184 | Mask artifacts preview: feeds XAI stage directly
+1185 | Dependency recorded in XAI dependency graph
+1186 | Architecture binding within hundred-line budget
+1187 | Next: approach B training, telemetry, emissions
+1188 | Delta table grows with B-specific training rows
+1189 | Row maintenance scheduled through milestones N3-N5
+1190 | Approach B design closes with acceptance listed
+1191 | Mask semantics caution quoted in captions forward
+1192 | Verbatim caution text stored in style guide
+1193 | Reuse prevents wording drift across documents
+1194 | Drift detector watches for unauthorized rephrases
+1195 | Approach B section complete as specified
+1196 | Transition: convolution motivates next after training
+1197 | Local patterns across ordered groups hypothesis
+1198 | Ordering arbitrariness debated honestly later
+1199 | Debate preview primes reader expectations early
+1200 | Next: approach B training protocol and artifacts
+1201 | ================================================================
+1202 | SECTION 13 - APPROACH B: TRAINING AND MASK ARTIFACTS
+1203 | ================================================================
+1204 | Optimizer AdamW; scheduler cosine warmup three epochs
+1205 | Alternative step decay allowed within search space
+1206 | Gradient clipping norm 1.0, telemetry retained
+1207 | Epoch cap one hundred fifty, patience twenty
+1208 | Watch metric validation PR-AUC, comparability intact
+1209 | Loss: task BCE plus sparsity penalty tracked split
+1210 | Telemetry gains mask-sparsity column per epoch row
+1211 | Split-loss companion figure plots tradeoff curve
+1212 | Caption explains accuracy versus sparsity balance
+1213 | Virtual batch handling commented in training loop
+1214 | Effective batch math clarified for reviewers
+1215 | Best-checkpoint restore assertion mirror of A
+1216 | Restoration logs identical structure for audit ease
+1217 | Three seeds recorded in seed table extension
+1218 | Seed table gains approach B rows automatically
+1219 | Schema v2: telemetry adds mask columns now
+1220 | Version handling keeps approach A files valid
+1221 | --- SUB-HEADER: telemetry additions and profiling -----------------------------------
+1222 | Mask entropy per epoch appended to CSV columns
+1223 | Column definitions documented in telemetry schema
+1224 | Step-time profiling compares seconds versus A
+1225 | Comparison feeds paper efficiency discussion
+1226 | Efficiency claims paired with accuracy context
+1227 | Throughput dips beyond 30 percent investigated
+1228 | Suspects: mask computation, ghost-norm synchronization
+1229 | Findings appended to troubleshooting appendix dated
+1230 | --- SUB-HEADER: evaluation emission for approach B --------------------------------
+1231 | Metrics JSON structure identical to A contract
+1232 | Extra fields: mask aggregate checksum, step count
+1233 | Threshold sweep, curves, histograms per contract
+1234 | Calibration comparison includes temperature again
+1235 | ECE table adds pre versus post rows
+1236 | Seed ensembling allowed identically to A
+1237 | Ensemble row flagged in leaderboard renders
+1238 | Probability histogram skew commentary required
+1239 | Skew contrast with A discussed if observed
+1240 | No cherry-picking seeds for any narrative
+1241 | Seed selection preregistered: best-validation single
+1242 | Everything else reported across seeds transparently
+1243 | --- SUB-HEADER: mask artifacts emission --------------------------------------------
+1244 | File dl_b_tabnet_masks_val.npy archived with metadata
+1245 | Metadata: shape, dtype, registry hash, seed list
+1246 | File dl_b_tabnet_mask_aggregate.csv ranking table
+1247 | File dl_b_tabnet_mask_steps.png entropy figure
+1248 | File dl_b_tabnet_mask_heatmap.png sample heatmap
+1249 | File dl_b_tabnet_mask_profiles.csv per-class deltas
+1250 | All mask artifacts listed in run manifest
+1251 | Consumed by XAI stage per dependency graph
+1252 | Raw-mask rule: no post-processing before scoring
+1253 | Rule prevents inflated faithfulness appearances
+1254 | Rule stated explicitly in XAI overview chapter
+1255 | --- SUB-HEADER: sanity obligations for approach B ---------------------------------
+1256 | Overfit-100 rows proof mandatory before training
+1257 | Extra: mask-collapse detection during proof run
+1258 | Collapse signature: entropy near zero instantly
+1259 | Detection triggers lambda audit with guidance
+1260 | Guidance lists candidate lambda adjustments clearly
+1261 | Negative control shuffled labels same as before
+1262 | Expected band PASS documented in appendix table
+1263 | Micro-check: randomize masks post-hoc, metrics drop
+1264 | Drop magnitude logged as mask-relevance evidence
+1265 | Evidence feeds discussion on selection benefit
+1266 | Approach B training closes milestone N3 segment
+1267 | N3 requires A and B cards drafted, artifacts green
+1268 | Immutability policy identical to approach A
+1269 | Defect bar identical: correctness issues only
+1270 | --- SUB-HEADER: transition to approach C --------------------------------------------
+1271 | Bridge: local patterns across ordered feature groups
+1272 | Caution: tabular ordering is arbitrary, debated
+1273 | Debate reused in approach C rationale section
+1274 | Ordering sensitivity experiment mandatory later
+1275 | Arms: semantic, importance-sorted, random orders
+1276 | Random arms: three seeds, deterioration expected
+1277 | No deterioration signals robustness, reported plainly
+1278 | Approach B complete and binding fully
+1279 | Recap: architecture, masks, training, emissions
+1280 | Next: approach C one-dimensional CNN architecture
+1281 | Keep comparability spine: same contracts everywhere
+1282 | Spine rechecked at every milestone boundary
+1283 | N3 exit evidence enumerated in manifest file
+1284 | Evidence formatting matches approach A lists
+1285 | Consistency accelerates adviser review and audit
+1286 | Audit-friendliness restated as design principle
+1287 | Principle index maintained in overview file
+1288 | Index rows cite prompt sections for traceability
+1289 | Coverage maps every gate to enforcing lines
+1290 | Maps generated from manifest data automatically
+1291 | Automation avoids compliance theater entirely
+1292 | Theater-free compliance is this project signature
+1293 | Virtue statement quoted in report conclusion
+1294 | Approach B reflections summarized in three sentences
+1295 | Summary drafted into PPT speaker notes later
+1296 | Draft numbers must match evaluation verbatim
+1297 | Mismatch cues document build failure as designed
+1298 | Transition: convolutional tabular design awaits
+1299 | Momentum steady: three architecture slots remain
+1300 | Next: approach C 1D-CNN architecture section
+1301 | ================================================================
+1302 | SECTION 14 - APPROACH C: 1D-CNN ARCHITECTURE
+1303 | ================================================================
+1304 | MODEL KEY: dl_c_cnn1d for every artifact
+1305 | Role: convolutional probe of local feature patterns
+1306 | Framing: features arranged into ordered sequence
+1307 | Ordering: semantic groups, registry order inside
+1308 | Groups: claimant, policy, billing, clinical, provider
+1309 | Boundaries annotated and preserved for interpretation
+1310 | Alternative ordering: importance-sorted variant arm
+1311 | Sensitivity measured empirically, never argued only
+1312 | Sequence length equals concatenated block widths
+1313 | Embeddings project to shared width before concat
+1314 | Projection width default 8, searched 4 to 16
+1315 | Conv stack: kernels 3, 5, 3 default pattern
+1316 | Channels 64, 128, 128 progression, same padding
+1317 | ReLU default; batch norm between conv layers
+1318 | Adaptive max pool to fixed length eight default
+1319 | Head: flattened pooled into two dense layers
+1320 | Dense 128 and 64 with dropout 0.2 between
+1321 | Output single logit per zoo contract
+1322 | Parameters under 2.0 million reference config
+1323 | Parameter breakdown requirement mirrors earlier rules
+1324 | --- SUB-HEADER: rationale and honest debate ------------------------------------------
+1325 | Rationale: kernels capture interacting feature clumps
+1326 | Example: room rent, tier, LOS local interactions
+1327 | Example: pharmacy share with diagnostics adjacency
+1328 | Debate: tabular lacks natural translation invariance
+1329 | Consequence: ordering hacks may manufacture signals
+1330 | Mitigation: mandatory ordering sensitivity experiment
+1331 | Arms: semantic, importance, random three seeded
+1332 | Arm results with identical budgets for fairness
+1333 | Literature: CNN tabular adaptations cited with years
+1334 | Skeptic anchor: tree-dominance surveys cited too
+1335 | Prediction 1: C near A metrics on average
+1336 | Prediction 2: weaker XAI alignment than B masks
+1337 | Prediction 3: ordering arms separate visibly
+1338 | Predictions scored PASS or FAIL in discussion
+1339 | Either way contributes honest learning to paper
+1340 | --- SUB-HEADER: search space for approach C ------------------------------------------
+1341 | Projection width 4 to 16 categorical ladder
+1342 | Channel presets among three ladder configurations
+1343 | Kernel patterns among three preset stacks
+1344 | Dropout 0.1 to 0.4 continuous coverage
+1345 | Learning rate 1e-4 to 2e-3 log range
+1346 | Trials thirty minimum, same sampler discipline
+1347 | Ordering arms excluded from tuning budgets
+1348 | Arms rerun afterward with best config fixed
+1349 | Results table dl_c_cnn1d_ordering.csv artifact
+1350 | Columns: arm, seed, metrics, rank-delta statistics
+1351 | Rank-delta compares stability versus semantic arm
+1352 | Pairwise rank correlations computed across arms
+1353 | Figure: metrics by arm, boxplots with seed points
+1354 | Caption interprets with caveat lines appended
+1355 | --- SUB-HEADER: interpretation assets ------------------------------------------------
+1356 | Deferred: activation-max visuals; limits disclosed
+1357 | Required: gradient response maps to feature axis
+1358 | Mapping: responses summed within group boundaries
+1359 | Group-level contribution bars become report figures
+1360 | Bars compared against MLP attribution rankings
+1361 | Contrast paragraph marks stable versus divergent
+1362 | Divergences framed as complementary lenses
+1363 | Framing policy: enrich, never accuse methods
+1364 | Diagram: conv stack with shapes and boundaries
+1365 | C-2001 continues through kernel response hotspots
+1366 | Hotspots annotated with feature name examples
+1367 | Hotspot veracity checked against local attribution
+1368 | Check logged as explanation-alignment sanity
+1369 | --- SUB-HEADER: acceptance facts ----------------------------------------------------
+1370 | Fact: ordering scheme version recorded in config
+1371 | Fact: projection width consistency asserted at build
+1372 | Fact: padding documented, no edge leakage paths
+1373 | Fact: parameter count printed within target band
+1374 | Fact: search logs complete, crashes analyzed
+1375 | Architecture acceptance reviewed at milestone N4
+1376 | N4 pairs C with D for completion criteria
+1377 | Immutability post-N4 identical to prior rules
+1378 | Transition: training deltas added to delta table
+1379 | Table columns stable: aspect, difference, reason
+1380 | Table rendered inside architectures documentation
+1381 | Anchors link leaderboard keys for reviewer hops
+1382 | Two-click evidence path preserved for growth
+1383 | Convolution closes pattern-extraction family slot
+1384 | Slots so far: dense, attention, convolution done
+1385 | Remaining: anomaly then transformer families
+1386 | Slot map diagram updated with progress markers
+1387 | Cosmetics never delay required artifact work
+1388 | Priority: compliance artifacts first, polish later
+1389 | Polish backlog lives separate from acceptance
+1390 | Review: C architecture within budget and binding
+1391 | Next section trains C with ordering arms honored
+1392 | Arm protocol restated there for self-sufficiency
+1393 | Sections survive extraction for report assembly
+1394 | Assembly convenience designed into boundaries
+1395 | Closure logged into manifest as C-design done
+1396 | Next: approach C training and ordering arms
+1397 | Time discipline continues identical to before
+1398 | No special favors for fancy architectures
+1399 | Architecture slot three closure confirmed
+1400 | Next: approach C training protocol and arms
+1401 | ================================================================
+1402 | SECTION 15 - APPROACH C: TRAINING AND ORDERING ARMS
+1403 | ================================================================
+1404 | Optimizer AdamW continuing zoo-wide convention
+1405 | Scheduler cosine warmup; plateau variant allowed
+1406 | Gradient clipping norm 1.0, telemetry same
+1407 | Epoch cap one hundred fifty, patience twenty
+1408 | Watch metric validation PR-AUC unchanged
+1409 | Loss BCE logits with probe-chosen imbalance tool
+1410 | Probe default applies unless exception registered
+1411 | Three seeds recorded in seed table extension
+1412 | Best-checkpoint restore assertion identical rule
+1413 | Telemetry v3 adds ordering-arm identifier column
+1414 | Nullable elsewhere; schema evolution append-only
+1415 | Append-only policy keeps downstream parsers stable
+1416 | Policy explained in telemetry schema document
+1417 | Learning curves faceted across ordering arms
+1418 | Facet captions state seeds and metric displayed
+1419 | Curves inspected for arm-specific overfit signals
+1420 | --- SUB-HEADER: ordering-arm execution protocol ------------------------------------
+1421 | Arm SEM: semantic group ordering, reference arm
+1422 | Arm IMP: importance-sorted from classical ranking
+1423 | Importance source: approach 1 winner permutation table
+1424 | Dependence documented with artifact path citation
+1425 | Arms RND1 RND2 RND3: distinct random permutations
+1426 | Permutations seeded and archived for reproduction
+1427 | All arms share best-config values exactly
+1428 | No arm receives extra tuning advantages ever
+1429 | Arm metrics: full validation suite plus ECE each
+1430 | Analysis: paired deltas SEM minus RND average
+1431 | Intervals reported with cautious language template
+1432 | Template avoids causality claims from ordering
+1433 | Findings feed methods reflection in report PDF
+1434 | Reflection length: at least eight sentences honest
+1435 | PPT condenses ordering story into half-slide visual
+1436 | Visual: arm boxplots with mean markers and points
+1437 | Anecdotes connect back to adjacency examples given
+1438 | Adjacency examples: billing clumps, document clumps
+1439 | Clump language kept plain for mixed audiences
+1440 | --- SUB-HEADER: evaluation emission and calibration ---------------------------------
+1441 | Metrics JSON contract unchanged, version v3 noted
+1442 | Extra fields: ordering arm id, permutation hash
+1443 | Threshold process per frozen constraint again
+1444 | Confusion, curves, histograms by convention
+1445 | Calibration memo appends approach rows only
+1446 | Append-only memo preserves decision history
+1447 | History shows methods reasoning across zoo
+1448 | Ensemble rules identical; rows flagged distinctly
+1449 | Latency and size columns logged identically
+1450 | Deployability note: conv cost versus dense contrast
+1451 | Contrast numbers cited in appendix performance table
+1452 | --- SUB-HEADER: sanity obligations ---------------------------------------------------
+1453 | Overfit-100 proof mandatory before serious training
+1454 | Extra sanity: feature shuffle at eval must hurt
+1455 | Hurt band: PR-AUC drop at least 0.02 expected
+1456 | Absence triggers metric or leakage investigation
+1457 | Outcome registered before any claims proceed
+1458 | Negative control shuffled labels same ritual
+1459 | Results appended to same appendix table rows
+1460 | Micro-check: zero one semantic group, measure drop
+1461 | Drop ranking across five groups tabled
+1462 | Table compared with group attribution bars
+1463 | Coherence narrative written in approach C discussion
+1464 | Narrative target six sentences with caveats
+1465 | Milestone N4 exit pairs C and D artifacts
+1466 | Immutability rules identical to prior approaches
+1467 | Defect-only reopen bar unchanged, logged
+1468 | Styling fixes repainted from stored data only
+1469 | Stored metric numbers never altered post-hoc
+1470 | --- SUB-HEADER: transition to approach D ---------------------------------------------
+1471 | Bridge: fraud as deviation from legitimate manifold
+1472 | Caution: anomalies include odd-but-legit behavior
+1473 | Caution threaded through D narrative design
+1474 | Stakes: unsupervised signals plus classifier hybrid
+1475 | Hybrid mechanics specified precisely next section
+1476 | Anomaly scores must calibrate like other outputs
+1477 | Calibration comparability preserved as contract
+1478 | Contract language reused to avoid definition drift
+1479 | Drift checks automated in evaluator test suite
+1480 | Approach C reflections for PPT: two sentences
+1481 | Plus one caveat line about ordering sensitivity
+1482 | Reflection archived in presentation2 notes source
+1483 | Notes versioned alongside PPT build scripts
+1484 | Transition logged into manifest as C complete
+1485 | Recap: training, arms, emissions, sanity done
+1486 | Next two slots: autoencoder then transformer
+1487 | Budget check: zoo inside ten-hour commitment
+1488 | Ledger rows already logged from A B C telemetry
+1489 | Ledger review at N4 gate confirms health
+1490 | Health judged on budget, crashes, and drift
+1491 | Drift zero-tolerance for artifacts of record
+1492 | Approach D anticipation: reconstruction error signal
+1493 | Counterpoint: some fraud reconstructs surprisingly well
+1494 | Counterpoint experiment mandatory, not speculative
+1495 | Design measures phenomenon, not just stories
+1496 | Section ends; anomaly architecture follows
+1497 | Keep answer yes-or-no at heart of everything
+1498 | Anomaly score becomes probability through hybrid
+1499 | Path specified with exact discipline next
+1500 | Next: approach D autoencoder architecture section
+1501 | ================================================================
+1502 | SECTION 16 - APPROACH D: AUTOENCODER ARCHITECTURE
+1503 | ================================================================
+1504 | MODEL KEY: dl_d_autoencoder for all artifacts
+1505 | Role: anomaly scoring via reconstruction error
+1506 | Concept: encoder compresses, decoder reconstructs rows
+1507 | Training population nuance: legit-only versus full
+1508 | Decision: both arms run, legit-only primary
+1509 | Full-population arm comparison recorded with metrics
+1510 | Input: numeric block plus projected embeddings
+1511 | Labels never enter encoder or decoder paths
+1512 | Encoder: 256 to 128 to 32 bottleneck default
+1513 | Bottleneck searched 8 to 64 in tuning band
+1514 | Decoder mirrors 128 to 256 reconstruction output
+1515 | ReLU and batch norm between hidden layers
+1516 | Dropout 0.1 only in encoder reference config
+1517 | Output preserves input block dtype handling
+1518 | Numeric MSE plus categorical cross-entropy mixed loss
+1519 | Loss weighting documented with sensitivity check
+1520 | Sensitivity across three weighting settings required
+1521 | Settings archived with metrics in arm table
+1522 | Parameters under 1.2 million reference config
+1523 | --- SUB-HEADER: scoring and hybrid classifier -------------------------------------------
+1524 | Anomaly score: mean reconstruction error per row
+1525 | Standardization: validation mean and std normalization
+1526 | Stats fitted on validation legit rows only
+1527 | Fit-scope enforced with logged assertions here
+1528 | Hybrid: small logistic head on score features
+1529 | Features: raw score, standardized, rank percentile
+1530 | Head trained on train-split labels, tiny footprint
+1531 | Hybrid emits calibrated probabilities like others
+1532 | Threshold machinery reused from shared evaluator
+1533 | Pure-threshold-on-score arm kept as comparison note
+1534 | Hybrid preferred unless evidence contradicts clearly
+1535 | Contradiction reported without suppression anywhere
+1536 | Figure: score distributions legit versus fraud overlay
+1537 | Figure marks operating threshold vertical line
+1538 | Caption explains overlap drives classification errors
+1539 | --- SUB-HEADER: rationale and literature framing -------------------------------------
+1540 | Rationale: fraud deviates from learned legit manifold
+1541 | Rationale: unsupervised phase reduces label dependence
+1542 | Scope honesty: only encoder trains label-free
+1543 | Hybrid head still supervised; stated clearly
+1544 | Anchor: autoencoder fraud classics with years
+1545 | Counter-anchor: fraud-reconstruction phenomenon studies
+1546 | Mandatory check: holdout fraud reconstruction rate
+1547 | Quantify fraction of fraud rows well reconstructed
+1548 | Fraction tabled with exemplar feature profiles
+1549 | Profiles linked to fraud types from taxonomy
+1550 | Example: mild upcoding may reconstruct well
+1551 | Contrast: phantom admissions should reconstruct poorly
+1552 | These examples become preregistered predictions
+1553 | Predictions scored PASS or FAIL in discussion
+1554 | --- SUB-HEADER: search space for approach D ----------------------------------------------
+1555 | Bottleneck width 8, 16, 32, 64 ladder
+1556 | Encoder depth presets two versus three stacks
+1557 | Loss weighting among three documented choices
+1558 | Dropout 0.0 to 0.3 continuous sampled
+1559 | Learning rate 3e-4 to 3e-3 log range
+1560 | Search metric: validation PR-AUC of hybrid
+1561 | Secondary: reconstruction AUC alone tracked too
+1562 | Both logged per trial with full configs
+1563 | Trials thirty minimum; pruning after ten epochs
+1564 | Arms post-tuning with best configs fixed
+1565 | Arm deltas discussed with reconstruction context
+1566 | Context joins fraud-reconstruction check outputs
+1567 | Join keys claim_id on holdout sample only
+1568 | --- SUB-HEADER: interpretation assets ------------------------------------------------
+1569 | Asset: per-feature reconstruction error contributions
+1570 | Rule: squared errors attributed per feature slot
+1571 | Categorical parts aggregated from cross-entropy terms
+1572 | Aggregation math documented in XAI guide precisely
+1573 | Table: mean contributions for top anomaly decile
+1574 | Decile drawn from validation fraud rows
+1575 | Stories: three claims narrated with contributions
+1576 | Anonymized synthetic ids per policy rules
+1577 | Figure: contribution waterfall for one flagged claim
+1578 | Waterfall readable at slide scale too
+1579 | Figure: score versus calibration curve exhibit
+1580 | Exhibit shows anomaly-to-probability mapping fidelity
+1581 | Fidelity statistic: rank correlation with interval
+1582 | --- SUB-HEADER: acceptance facts ------------------------------------------------------
+1583 | Fact: population filters logged with row counts
+1584 | Fact: normalization stats archived in artifacts
+1585 | Fact: hybrid head inside checkpoint artifact
+1586 | Fact: scores exported CSV with claim_id joins
+1587 | Fact: arms complete with tables in evaluation2
+1588 | Fact: reconstruction check table exists, narrated
+1589 | Acceptance at N4 paired with approach C
+1590 | Immutability after N4 mirrors earlier rules
+1591 | Anomaly slot completes taxonomy map fourth cell
+1592 | Remaining slot: transformer approach E ahead
+1593 | Distinction from B: full self-attention, not steps
+1594 | Distinction diagrammed in taxonomy deep-dive box
+1595 | Approach D closure logged N4a done in manifest
+1596 | Next: approach D training, arms, emissions detail
+1597 | Arms execution protocol specified precisely there
+1598 | Metrics discipline unbroken; comparator rows standard
+1599 | Section binding and complete at this line budget
+1600 | Next: approach D training protocol and arms
+1601 | ================================================================
+1602 | SECTION 17 - APPROACH D: TRAINING AND ARM PROTOCOLS
+1603 | ================================================================
+1604 | Optimizer AdamW; scheduler cosine warm restarts
+1605 | Restarts rationale: reconstruction landscape roughness
+1606 | Restart cycle every fifty epochs default scheme
+1607 | Gradient clipping norm 1.0 continuing conventions
+1608 | Epoch cap two hundred, patience thirty for AE
+1609 | Longer cap justified for unsupervised convergence
+1610 | Justification recorded in config comments for audit
+1611 | Hybrid head: short logistic fit after encoder freeze
+1612 | Freeze discipline: no joint tuning in reference
+1613 | Joint variant listed as ablation, flagged row
+1614 | Telemetry v4 adds per-block loss components
+1615 | Components: numeric MSE and categorical CE apart
+1616 | Component plots reveal lopsided learning early
+1617 | Lopsidedness triggers weighting sensitivity revisit
+1618 | Revisit protocol: three weight settings rerun
+1619 | Outcomes tabled in arm comparison chapter
+1620 | --- SUB-HEADER: arms execution protocol -----------------------------------------------
+1621 | Arm SL: trained on strictly legit-labeled rows
+1622 | Population counts printed: kept and dropped rows
+1623 | Concern: near-fraud legit neighbors leak signal
+1624 | Mitigation: none applied, disclosed as limitation
+1625 | Disclosure drafted into approach D documentation
+1626 | Arm FULL: trained on all rows regardless labels
+1627 | FULL rationale: low prevalence preserves manifold
+1628 | Hypothesis: SL separates anomaly gaps better
+1629 | Measurement: standardized mean score difference
+1630 | Statistic computed across validation with interval
+1631 | BOTH arms: hybrid PR-AUC, ROC-AUC, ECE rows
+1632 | Arms logged identical schema with arm tags
+1633 | Analysis: paired seed deltas, cautious language
+1634 | Cautious templates reused from approach C
+1635 | Decision rule: winner arm becomes reference config
+1636 | Preregistered preference: SL unless clearly inferior
+1637 | Preference justification: anomaly narrative purity
+1638 | --- SUB-HEADER: evaluation emission ---------------------------------------------------
+1639 | Hybrid probabilities calibrated per shared memo
+1640 | Memo appends approach D methods and outcomes
+1641 | ECE rows: raw, standardized, calibrated trio
+1642 | Trio motivates final calibrated probability path
+1643 | Threshold sweep identical 101-candidate grid
+1644 | Confusion, curves, histograms per contract
+1645 | Extra exhibit: score by fraud_type metadata table
+1646 | Rows: per-type median standardized scores listed
+1647 | Metadata usage disclosure repeated, evaluation-only
+1648 | Findings linked to taxonomy narrative stories
+1649 | Examples: duplicates high, mild upcoding lower
+1650 | Evidence rule: minimum thirty rows per type
+1651 | Starved types marked and excluded from claims
+1652 | --- SUB-HEADER: sanity obligations ---------------------------------------------------
+1653 | Sanity: reconstruct-100-rows overfit proof first
+1654 | Proof: reconstruction loss drops decade on log scale
+1655 | Sanity: identity-trap check for copy decoders
+1656 | Shuffle input features; reconstruction must collapse
+1657 | No collapse implies shortcut learning; halt review
+1658 | Negative control: shuffled labels for hybrid head
+1659 | Expect AUC near 0.5 else score leakage suspected
+1660 | Micro-check: mask top contribution feature, error jumps
+1661 | Table joins contribution ranks with jump magnitudes
+1662 | Coherence narrates interpretability reliability
+1663 | Approach D milestone: N4 completion with C
+1664 | Immutability per zoo-wide defect-only policy
+1665 | Approach D reflections for PPT prepared
+1666 | Slide sketch references histogram and waterfall
+1667 | Sketch versioned, never orphaned from results
+1668 | --- SUB-HEADER: transition to approach E ---------------------------------------------
+1669 | Bridge: self-attention across all feature tokens
+1670 | Counterpoint: heavier compute, quadratic interactions
+1671 | Guardrails defined early inside E timebox rules
+1672 | Guardrails protect ten-hour zoo budget commitment
+1673 | Commitment restated before final architecture zone
+1674 | Diversity complete after E specification lands
+1675 | Diversity strengthens zoo-wide meta-conclusions
+1676 | Meta-conclusion outline reserved in discussion doc
+1677 | Structural placeholders allowed only in that outline
+1678 | Numeric placeholders forbidden anywhere always
+1679 | Placeholder scanner gates builds for compliance
+1680 | Approach D closure manifest line: N4b done
+1681 | Next: transformer tokenizer architecture full spec
+1682 | Tokenizer choices described with dimension rationale
+1683 | Pooling to logit versus CLS compared preregistered
+1684 | Comparison executed as ablation row flagged
+1685 | Approach E expected heaviest compute in zoo
+1686 | Expectation shapes pre-approved budget ladder
+1687 | Ladder recorded in decisions register timestamped
+1688 | Transition: final architecture specification begins
+1689 | Standards hold: diagram, facts, acceptance list
+1690 | Fifth slot closes taxonomy completeness checklist
+1691 | Checklist rendered atop architectures doc table
+1692 | Cells link each approach anchor for navigation
+1693 | Momentum carries into transformer design now
+1694 | Keep explanation-first bias at every choice
+1695 | Attention maps auxiliary only, rule renewed
+1696 | Rule keeps scored XAI comparable across zoo
+1697 | Approach D binding and complete at budget
+1698 | Next section specifies approach E architecture
+1699 | Final architecture, then unified governance arc
+1700 | Next: approach E feature-token transformer design
+1701 | ================================================================
+1702 | SECTION 18 - APPROACH E: TRANSFORMER ARCHITECTURE
+1703 | ================================================================
+1704 | MODEL KEY: dl_e_transformer for all artifacts
+1705 | Role: self-attention across feature tokens
+1706 | Tokenization: one token per feature region
+1707 | Region scheme: semantic groups split to twelve tokens
+1708 | Rationale: granularity balanced against compute
+1709 | Full per-field tokens listed as ablation only
+1710 | Token embeddings: linear projections to width 64
+1711 | Width searched 32 to 128 in ladder
+1712 | Token identity via learned type embeddings
+1713 | No sinusoidal positions; tokens are typed sets
+1714 | Design point debated briefly in architectures chapter
+1715 | Attention: four heads default, searched two to eight
+1716 | Blocks: two encoder blocks default depth
+1717 | Depth searched one to four within timebox
+1718 | Feedforward expansion two, GELU activations used
+1719 | Pre-norm residual chosen for training stability
+1720 | Choice justified citing stability literature line
+1721 | Dropout 0.1 on attention and feedforward paths
+1722 | Readout: mean pooling into two dense head layers
+1723 | CLS-token variant preregistered as ablation row
+1724 | Output single logit per zoo contract
+1725 | Parameters under 3.0 million reference configuration
+1726 | --- SUB-HEADER: rationale and literature -------------------------------------------
+1727 | Rationale: pairwise interactions learned, no ordering
+1728 | Rationale: attention maps offer structured views
+1729 | Caution: attention weights are not explanations
+1730 | Critique cited; faithfulness audits still required
+1731 | Anchor: tabular transformer papers with years
+1732 | Skeptic: boosting superiority analyses cited again
+1733 | Prediction 1: E has highest compute cost
+1734 | Prediction 2: strong faithfulness may emerge
+1735 | Prediction 3: metric parity with boosters, not dominance
+1736 | Predictions scored in discussion table later
+1737 | Compute ceiling: epoch cost twice approach A
+1738 | Ceiling enforced via timebox guards in training
+1739 | --- SUB-HEADER: search space for approach E ------------------------------------------
+1740 | d_model 32, 64, 128 categorical ladder
+1741 | Depth one to four encoder blocks integer
+1742 | Heads two, four, eight categorical set
+1743 | Dropout 0.0 to 0.3 continuous sampled
+1744 | Learning rate 5e-4 to 3e-3 log range
+1745 | Weight decay 1e-5 to 1e-2 log range
+1746 | Trials thirty minimum, pruning after twelve epochs
+1747 | Pruning metric validation PR-AUC as always
+1748 | Timebox guard: epoch above eight minutes aborts
+1749 | Aborts logged with reasons in trials CSV
+1750 | Ladder: reduce depth, then width, then trials
+1751 | Ladder events recorded with justifications
+1752 | Reductions never traded against comparability
+1753 | Guardrails reviewed at milestone N5 gate
+1754 | --- SUB-HEADER: interpretation assets ------------------------------------------------
+1755 | Asset: attention rollout aggregation documented
+1756 | Rollout caveats cited; audits still required
+1757 | Asset: token-pair interaction heatmap examples
+1758 | Labels readable region names, never raw indices
+1759 | Asset: per-claim top token contributors ranking
+1760 | Ranking mapped back to underlying features table
+1761 | Mapping heuristic: uniform within region, disclosed
+1762 | Disclosure paragraph anticipates adviser scrutiny
+1763 | Figure: attention heatmap for claim C-2001
+1764 | Companion: same claim through B mask view paired
+1765 | Pairing supports converging-signals narrative
+1766 | Convergence quantified via top-k overlap later
+1767 | Overlap table seeds XAI comparison chapter
+1768 | --- SUB-HEADER: acceptance facts ------------------------------------------------
+1769 | Fact: tokenization scheme archived with regions
+1770 | Fact: attention shape assertions logged at build
+1771 | Fact: parameter and compute estimates printed
+1772 | Fact: timebox events logged, ladder justified
+1773 | Fact: ablations CLS and full-token scheduled
+1774 | Fact: interpretation assets checked into images2/xai
+1775 | Acceptance gate N5 concludes architecture arc
+1776 | Checklist: five slots, artifacts, cards, tables
+1777 | Green means validated existence, not performance
+1778 | Judgment reserved for leaderboard and selection
+1779 | Separation principle: build-acceptance before results
+1780 | Principle restated in audit-friendly ethos note
+1781 | Approach E architecture within budget and binding
+1782 | Next: training protocol with memory guards
+1783 | Memory scaling note: tokens squared times width
+1784 | Note includes concrete default-configuration numbers
+1785 | Numbers recomputed automatically in device report
+1786 | Performance appendix hosts detailed scaling table
+1787 | Recap of five-slot arc prepared for discussion
+1788 | Recap table: family, params, budget, quirks
+1789 | Quirks column lists timebox or stability items
+1790 | Recap reused verbatim in report methods opening
+1791 | Transition: final training section for the zoo
+1792 | Governance consolidation follows immediately after
+1793 | Consolidation detects contradictions automatically
+1794 | Contradiction detector described in governance part
+1795 | Approach E design closes with full acceptance
+1796 | Zoo architecture era ends after next section
+1797 | Build era ends; judgment era begins
+1798 | Mantra: numbers decide, narratives explain numbers
+1799 | Closure logged into manifest as E-design done
+1800 | Next: approach E training protocol and ablations
+1801 | ================================================================
+1802 | SECTION 19 - APPROACH E: TRAINING AND ABLATIONS
+1803 | ================================================================
+1804 | Optimizer AdamW, decoupled weight decay as searched
+1805 | Scheduler cosine with warmup ten percent horizon
+1806 | Horizon from timebox, capped one hundred twenty epochs
+1807 | Patience fifteen, tighter for heavier epochs justified
+1808 | Justification recorded in config comment for audit
+1809 | Gradient clipping norm 1.0 with trigger telemetry
+1810 | Loss BCE logits; probe imbalance default applies
+1811 | Exceptions follow registration and justification ritual
+1812 | Timebox guard: eight minutes per epoch hard stop
+1813 | Stop triggers pre-approved budget ladder steps
+1814 | Ladder one: depth minus one; two: width halved
+1815 | Three: trials reduced to twenty-four floor
+1816 | Four: epoch cap ninety with logged entry
+1817 | Every step logged with qualitative impact commentary
+1818 | Commentary avoids false precision about untested effects
+1819 | --- SUB-HEADER: memory and stability guards ----------------------------------------
+1820 | Activation checkpointing available behind flag
+1821 | Flag default off; docs describe when to enable
+1822 | Memory note: tokens squared times width scaling
+1823 | Concrete example: twelve tokens at width 64
+1824 | Example numbers recomputed in device report figures
+1825 | Pre-norm verified via gradient health logs
+1826 | Explosions beyond five per run trigger lr audit
+1827 | Audit may lengthen warmup as documented step
+1828 | Change becomes delta row in delta table
+1829 | Delta table now spans approaches A through E
+1830 | Rendered from config snapshots, never hand-typed
+1831 | Hand-typed governance tables prohibited for drift
+1832 | --- SUB-HEADER: ablation executions ---------------------------------------------------
+1833 | Ablation E1: CLS readout versus mean pooling
+1834 | E1 pairs trained identically, three seeds each
+1835 | Outcome: metrics plus parameter delta tabled
+1836 | Prefer pooling unless CLS gains above 0.005 PR-AUC
+1837 | Ablation E2: full per-field tokens, capped budget
+1838 | Cap ninety minutes wall-clock for entire E2
+1839 | E2 measures granularity benefit versus cost surge
+1840 | Surge columns: epoch seconds, peak memory noted
+1841 | E2 single-seed, no tuning, transparently scoped
+1842 | Ablation E3: attention-free token mixing arm
+1843 | Mixer mirrors widths, no extra tuning favors
+1844 | E3 tests whether attention itself adds value
+1845 | All ablations flagged non-reference in leaderboard
+1846 | Non-reference excluded from composite selection math
+1847 | Exclusion protects selection from variant luck
+1848 | --- SUB-HEADER: evaluation emission ------------------------------------------------
+1849 | Metrics contract unchanged, version v5 rows noted
+1850 | Extra fields: token count, d_model, heads, depth
+1851 | Calibration memo appends E rows, methods compared
+1852 | Threshold per frozen constraint as every model
+1853 | Confusion, curves, histograms per convention
+1854 | Ensembles permitted with preregistered flagged rows
+1855 | Attention artifacts archived with checksum metadata
+1856 | Names dl_e_transformer_attn_*.npy plus maps CSV
+1857 | Consumption map updated in XAI dependency graph
+1858 | Graph marks attention inputs auxiliary status
+1859 | Primary scored methods stay unified across zoo
+1860 | Unification rationale: explanation comparability
+1861 | Auxiliary enriches narrative, never scored alone
+1862 | Scoring isolation prevents architecture marketing
+1863 | Marketing distortions defined in XAI governance part
+1864 | --- SUB-HEADER: sanity obligations -----------------------------------------------
+1865 | Overfit-100 proof mandatory before full trains
+1866 | Extra: attention entropy floor detection in proof
+1867 | Collapse means token dominance; guidance logged
+1868 | Guidance: revisit widths or regularization choices
+1869 | Negative control shuffled labels same ritual
+1870 | Micro-check: permute tokens, metrics must degrade
+1871 | Degradation confirms type encodings carry signal
+1872 | Table joins permutation identities affected rows
+1873 | Approach E completion closes milestone N5 zoo build
+1874 | N5 exit: five artifact-complete families present
+1875 | Build-complete certification distinct from judgments
+1876 | Certification lines in evaluation2 build audit log
+1877 | Zoo architecture era officially ends at N5
+1878 | Next arc: unified governance consolidation
+1879 | Consolidation indexes rules, detects contradictions
+1880 | Detector compares statements across documentation
+1881 | Mismatch examples: patience or seed count drift
+1882 | Detector enforces single-source-of-truth discipline
+1883 | Truth sources: configs, manifests, leaderboards
+1884 | Sources enumerated in coverage matrix file
+1885 | Approach E reflections for PPT notes drafted
+1886 | Tone: measured excitement, honest compute caveats
+1887 | Caveats calibrated for laptop-first audiences
+1888 | Transition: build phase ends with this section
+1889 | Governance, evaluation, selection, XAI arcs remain
+1890 | Then fairness, errors, docs, evaluation, documents
+1891 | Acceptance checklist finally closes file at 3000
+1892 | Cadence: hundred-line sections unbroken so far
+1893 | Approach E training binding and complete here
+1894 | Recap: guards, ablations, emissions, sanity set
+1895 | Forward momentum protected into governance arc
+1896 | N5 gate evidence list grows with E artifacts
+1897 | List formatting consistent with prior milestones
+1898 | Consistency is courtesy to every future auditor
+1899 | Zoo built; judgment protocols sharpen next
+1900 | Next: unified training governance and ledger
+1901 | ================================================================
+1902 | SECTION 20 - UNIFIED TRAINING GOVERNANCE AND LEDGER
+1903 | ================================================================
+1904 | Purpose: one governance view binding five approaches
+1905 | This section indexes, checks, never overrides above
+1906 | INDEX 1: AdamW across zoo, decoupled decay
+1907 | INDEX 2: cosine-dominant schedules, variants logged
+1908 | INDEX 3: patience range fifteen through thirty
+1909 | INDEX 4: watch metric validation PR-AUC always
+1910 | INDEX 5: three seeded retrains per reference
+1911 | INDEX 6: best-checkpoint restore assertion everywhere
+1912 | INDEX 7: telemetry schema versions v1 through v5
+1913 | INDEX 8: calibration methods compared identically
+1914 | INDEX 9: threshold constraints A B C preregistered
+1915 | INDEX 10: artifact contracts identical per model
+1916 | Each index cites enforcing section and line spans
+1917 | Citations rendered in training protocol document
+1918 | Page generated from realized manifest values only
+1919 | Generation checks realized values against spec
+1920 | Mismatch tiers: fatal, warning, informational
+1921 | Fatal: wrong watch metric, seed count drift
+1922 | Warning: patience change justified in register
+1923 | Informational: scheduler variants within search
+1924 | --- SUB-HEADER: compute and budget ledger -------------------------------------------
+1925 | Ledger: per-approach hours from telemetry sums
+1926 | Compared against declared budgets, variance rows
+1927 | Overage beyond 15 percent requires explanation
+1928 | Causes enumerated: ladder events, hardware stalls
+1929 | Stall metric: loader fetch p95 from telemetry
+1930 | Ledger CSV renders into report appendix
+1931 | Optional energy paragraph uses measured numbers only
+1932 | No invented energy figures permitted anywhere
+1933 | Fairness criterion: equal trial budgets zoo-wide
+1934 | Exceptions only through pre-approved ladders
+1935 | Ladder transparency table lists every reduction
+1936 | Columns: approach, step, reason, impact text
+1937 | Auditors judge whether reductions biased comparisons
+1938 | Bias assessment included in selection memo appendix
+1939 | --- SUB-HEADER: seed governance and variance ------------------------------------------
+1940 | Master seed with derivation scheme per model
+1941 | Scheme table: approach, base seed, derived trio
+1942 | Metrics reported mean plus-minus std across seeds
+1943 | Flag rule: PR-AUC std above 0.01 triggers review
+1944 | Review hypothesizes causes with evidence pointers
+1945 | Pointers: overlays, telemetry stability, slices
+1946 | Variance colors selection composite stability score
+1947 | Score definition lives in selection section, referenced
+1948 | Ensembling permission preregistration restated here
+1949 | Ensemble rows never confused with single runs
+1950 | Guard: leaderboard renders ensemble rows flagged
+1951 | --- SUB-HEADER: data governance recap ------------------------------------------------
+1952 | Auditors confirm splits and preprocessors unchanged
+1953 | Checklist embedded in auditing documentation page
+1954 | Items link artifact hashes to manifest records
+1955 | Verify command shown in reproduction guide
+1956 | Two-click verification promised for every claim
+1957 | Claims listed: dataset, split, seed table integrity
+1958 | Mutation-watch: any source change forces full rerun
+1959 | Rerun rule absolute regardless of change triviality
+1960 | Rule quoted in both PDF reproducibility sections
+1961 | --- SUB-HEADER: training anti-patterns prohibited --------------------------------------
+1962 | PROHIBITED: test usage for early stopping ever
+1963 | PROHIBITED: unlogged validation-informed tweak loops
+1964 | PROHIBITED: mid-search config edits without new run id
+1965 | PROHIBITED: deleting failed trials from any logs
+1966 | PROHIBITED: seed cherry-picking for narratives
+1967 | PROHIBITED: hand metric recomputation from exports
+1968 | PROHIBITED: checkpoint contamination across run ids
+1969 | Contamination detection: checkpoint parent references
+1970 | Parent chains verify provenance of resumed runs
+1971 | Resume ritual documented in troubleshooting appendix
+1972 | Anti-pattern banner printed atop protocol page
+1973 | Banner also printed in experiment journal requirement
+1974 | Journal: date, intent, config, outcome, surprise
+1975 | Journal maintained automatically from trial logs
+1976 | Agent adds notes during run reviews, dated
+1977 | Journal excerpt appears in report appendix
+1978 | --- SUB-HEADER: governance sign-off ----------------------------------------------------
+1979 | Conformance report generated at N6 entry
+1980 | Rows per approach with pass status and citations
+1981 | Fatal mismatch blocks leaderboard assembly
+1982 | Blocked state surfaces remediation hints enumerated
+1983 | Trio initials and dates recorded in milestone files
+1984 | Governance consolidation complete and binding
+1985 | Next: evaluation protocol and test rituals detail
+1986 | Then leaderboard, composite, selection memo
+1987 | Composite consumes XAI scores with frozen weights
+1988 | Weights frozen before any training commenced already
+1989 | Audit trail ends at one-command regeneration claim
+1990 | Claim verified during final acceptance run
+1991 | Verification evidence reproduced in documents
+1992 | Section closed; evaluation protocol follows next
+1993 | Metric pipelines and calibration details arrive
+1994 | Test ritual ceremonies described with precision
+1995 | Deep evaluation era begins after this transition
+1996 | Every artifact checksummed, every decision preregistered
+1997 | Ethos steady into XAI chapters ahead
+1998 | Line budget respected exactly at closure here
+1999 | Governance section complete; proceed confidently
+2000 | Next: evaluation protocol and test rituals specification
+2001 | ================================================================
+2002 | SECTION 21 - EVALUATION PROTOCOL AND TEST RITUALS
+2003 | ================================================================
+2004 | Evaluation consumes artifacts through shared harnesses
+2005 | Harness: same evaluator module as approach 1
+2006 | Extensions append outputs; core metrics untouched
+2007 | Core list identical to classical evaluator exactly
+2008 | Definitions canon referenced, never re-copied prose
+2009 | Validation-first hierarchy for all judgments
+2010 | Judgments: tuning, calibration, threshold, selection
+2011 | Test participates exactly once at sealed stage
+2012 | Sealed rituals mirror approach 1 unlock ceremony
+2013 | Unlock checklist gains deep-specific additions
+2014 | Addition: XAI assets validated pre-test
+2015 | Addition: composite computed and frozen pre-test
+2016 | Frozen composite printed into test_unlock.log
+2017 | Unlock timestamped with authorizer and gate rows
+2018 | Test batch: five reference configurations together
+2019 | Include preregistered ensembled variants flagged
+2020 | --- SUB-HEADER: validation evaluation routine -----------------------------------------
+2021 | Single deterministic forward pass order enforced
+2022 | Enforced by sequential loader and eval-mode model
+2023 | Eval-mode assertion logged per evaluation run
+2024 | Deterministic ops flag state recorded clearly
+2025 | Sigmoid applied exactly once, guard-tested
+2026 | Double-application guard in evaluator unit suite
+2027 | Guard failure produces loud errors with fixes
+2028 | Rows per seed plus mean-std summary row
+2029 | Summary computed from seed rows, never refit
+2030 | Curves per seed plus mean-banded overlays
+2031 | Overlays show band width honestly in figures
+2032 | Threshold grids identical across models and seeds
+2033 | Grid archived once, referenced by every artifact
+2034 | --- SUB-HEADER: calibration deep obligations ------------------------------------------
+2035 | Baseline row: uncalibrated probabilities always listed
+2036 | Methods: Platt logistic, isotonic, temperature trio
+2037 | Temperature: single parameter fitted on logits
+2038 | Isotonic: out-of-fold validation predictions required
+2039 | Fit-scope assertions logged per calibration estimator
+2040 | Outputs: ECE, Brier, reliability diagram per method
+2041 | Memo picks per approach with rationale sentences
+2042 | Rule: minimal ECE, tie toward simpler method
+2043 | Memo append-only, approach rows in order
+2044 | Calibrated artifacts versioned with model artifacts
+2045 | Version binding regenerates test probability rows
+2046 | Regeneration logs assert identical inputs forward
+2047 | --- SUB-HEADER: test protocol ritual detailed ----------------------------------------
+2048 | Pre-unlock audit: leaderboard, memo, assets complete
+2049 | Gate file evaluation2/test_unlock.log required
+2050 | Unlock actor self-certifies with checklist quoted
+2051 | Certification text quoted in evaluation.md part eight
+2052 | Test batch executes once, metrics, hash locked
+2053 | Post-test: reporting only, never decisions
+2054 | Post-test anomaly: investigate, document, never re-tune
+2055 | Re-tuning after test equals misconduct formally
+2056 | Clause quoted in project ethics statement text
+2057 | Intervals: two-thousand bootstrap resamples
+2058 | Method named in captions of result tables
+2059 | Test table: five approaches, classical winner import
+2060 | Import audit verifies approach 1 metric hashes
+2061 | --- SUB-HEADER: per-fraud-type evidence -----------------------------------------------
+2062 | Segmented recall by synthetic fraud_type metadata
+2063 | Evaluation-only disclaimer repeated on the table
+2064 | Rows per type: counts, recall, interval widths
+2065 | Cells under thirty rows marked data-starved
+2066 | Findings feed heterogeneity discussion chapter
+2067 | Claims need corroboration from two model families
+2068 | Policy prevents single-model overinterpretation
+2069 | Table exported CSV, rendered in evaluation.md
+2070 | Figure: per-type recall bars with whiskers
+2071 | Caption discloses synthetic taxonomic basis carefully
+2072 | --- SUB-HEADER: harness quality obligations -------------------------------------------
+2073 | Unit tests extended for tensor ingestion paths
+2074 | Test: tensors normalized to numpy safely
+2075 | Test: eval-mode and no-grad contexts validated
+2076 | Test: probability clipping epsilon consistent zoo-wide
+2077 | Epsilon logged once per harness execution
+2078 | Performance: full validation eval under two minutes
+2079 | Test path identical to validation path asserted
+2080 | Divergences require deviations-log justification
+2081 | Outputs immutable post-write via manifest hashing
+2082 | Verify mode detects later bit changes automatically
+2083 | Changes trigger errata commentary in evaluation
+2084 | Errata note exists even with zero entries, stated
+2085 | Zero-errata statement is discipline evidence itself
+2086 | --- SUB-HEADER: evaluation sign-off ------------------------------------------------
+2087 | Protocol reviewed at milestone N6 exit gate
+2088 | N6 needs XAI faithfulness scores schedule ready
+2089 | Schedule ensures selection never waits on XAI
+2090 | Composite inputs: metrics, calibration, XAI, stability
+2091 | Completeness validator prints green grid to manifest
+2092 | Red cells map to missing artifacts with owners
+2093 | Owners symbolic roles, not personal names there
+2094 | Evaluation section complete; leaderboard assembly next
+2095 | Composite and selection memo defined alongside
+2096 | Order frozen: XAI before leaderboard freeze
+2097 | Enforcement programmatic in pipeline stage order
+2098 | Numbers decide; narratives explain, never lead
+2099 | Evaluation protocol closed and binding fully
+2100 | Next: leaderboard, composite scorecard, selection memo
+2101 | ================================================================
+2102 | SECTION 22 - LEADERBOARD, COMPOSITE, AND SELECTION MEMO
+2103 | ================================================================
+2104 | Leaderboard input: validated artifact sets only
+2105 | Contract checker passes before any row admission
+2106 | Rows: references, flagged ensembles, flagged ablations
+2107 | Columns mirror classical plus deep additions
+2108 | Additions: epochs, best epoch, params, epoch seconds
+2109 | Additions: ECE post-calibration, faithfulness, stability
+2110 | Additions: composite score and sub-scores columns
+2111 | Default sort: reference rows by composite descending
+2112 | Exports: CSV master plus markdown render pair
+2113 | Render rounding four decimals per style guide
+2114 | Rounding at render-time only; raw data untouched
+2115 | --- SUB-HEADER: composite scorecard frozen definition --------------------------------
+2116 | Ingredient: validation PR-AUC, weight 0.40 frozen
+2117 | Ingredient: ECE inverted, weight 0.10 frozen
+2118 | Inversion: one minus zoo-normalized ECE rule
+2119 | Ingredient: faithfulness, weight 0.20 frozen
+2120 | Ingredient: stability, weight 0.15 frozen
+2121 | Ingredient: variance inverse, weight 0.05 frozen
+2122 | Ingredient: efficiency, weight 0.10 frozen
+2123 | Efficiency: inverse zoo-normalized hours rule
+2124 | Normalization bounds documented with word formulas
+2125 | Ties map to half-step offsets, stated rule
+2126 | Composite computed by script from raw columns
+2127 | No recomputation with altered weights ever
+2128 | Weight config hash recorded in composite block
+2129 | Tampering detected via that hash verification
+2130 | --- SUB-HEADER: selection protocol steps ----------------------------------------------
+2131 | STEP 1: confirm five artifact-complete reference rows
+2132 | STEP 2: compute composite, retain top two
+2133 | STEP 3: verify top-two XAI completeness checks
+2134 | STEP 4: compare top-two versus classical winner
+2135 | STEP 5: draft selection memo from frozen template
+2136 | Template: verdict, numbers, rationale, caveats
+2137 | STEP 6: caveats include ladder-event fairness notes
+2138 | STEP 7: declare deep winner and runner-up
+2139 | STEP 8: recommend project champion across approaches
+2140 | Champion rule: higher val PR-AUC with XAI support
+2141 | Support rule: complete XAI asset pack required
+2142 | STEP 9: register decision with timestamped entry
+2143 | STEP 10: freeze leaderboard, hash, tag selected
+2144 | Selected tag unlocks documents into test stage
+2145 | No document quotes pre-selection numbers as headline
+2146 | Headline is champion row; others are context
+2147 | --- SUB-HEADER: comparison exhibits required -------------------------------------------
+2148 | EXHIBIT X1: classical versus deep merged table
+2149 | X1 columns: model, family, PR-AUC, ECE, hours, composite
+2150 | EXHIBIT X2: PR overlay champion versus classical best
+2151 | EXHIBIT X3: reliability overlay calibrated pair
+2152 | EXHIBIT X4: faithfulness bars across five approaches
+2153 | EXHIBIT X5: stability Jaccard bars across five
+2154 | EXHIBIT X6: compute-hours bars with budget line
+2155 | EXHIBIT X7: per-fraud-type recall heat table
+2156 | Exhibits generated by scripts from artifacts only
+2157 | Hand-editing exhibits prohibited with strictness
+2158 | Each carries caption, method line, caveat text
+2159 | Exhibits map into PPT slides and report chapter
+2160 | Mapping table lives in reporting documentation
+2161 | --- SUB-HEADER: selection memo requirements ---------------------------------------------
+2162 | Opening paragraph: verdict in plain language
+2163 | Second: what won, margin, under which rules
+2164 | Third: surprises with evidence citations
+2165 | Fourth: uncertainty list, honestly drawn
+2166 | Appendix A: leaderboard snapshot inline table
+2167 | Appendix B: ladder events fairness discussion
+2168 | Appendix C: runner-up reasoning, respectful tone
+2169 | Tone: celebrate evidence, mourn nothing, factual
+2170 | Length: two pages inside report appendix copy
+2171 | PPT adaptation: one slide verdict plus three bullets
+2172 | Paper adaptation: four sentences exact
+2173 | Adaptations checked by automated quotation checks
+2174 | Checks extract numbers, compare against artifacts
+2175 | Mismatch blocks document builds with diffs printed
+2176 | --- SUB-HEADER: champion declaration closure --------------------------------------------
+2177 | Champion row marked champion=true in leaderboard
+2178 | Champion card upgrades only after test ritual
+2179 | Document builds refuse champion cards before that
+2180 | Refusal messages state unmet prerequisites exactly
+2181 | Champion narrative templates for report and paper
+2182 | Templates: problem fit, evidence, explanation readiness
+2183 | Reviewed against accusations-free tone rules
+2184 | Champion slide footer: prepared for Prof. Ramesh Athe
+2185 | Footer standard across result slides consistently
+2186 | Closure: benchmarking and selection binding fully
+2187 | Forward: XAI framework begins explanation arc
+2188 | Explanation arc is the signature of approach 2
+2189 | Recording mandate: XAI for every approach honored
+2190 | Framework next unifies methods and scoring rubrics
+2191 | Native features get no scoring bonuses, restated
+2192 | Restatement protects cross-model explanation fairness
+2193 | Next: XAI framework overview and governance
+2194 | Selection sealed; explanation era officially begins
+2195 | Cadence holds: sections exactly one hundred lines
+2196 | Remaining arc: XAI two sections, formats one
+2197 | Then fairness one, error loop one section
+2198 | Then documentation, evaluation, documents, checklist
+2199 | Line discipline continues to final numbered line
+2200 | Next: XAI framework overview, rubrics, governance
+2201 | ================================================================
+2202 | SECTION 23 - XAI FRAMEWORK OVERVIEW AND GOVERNANCE
+2203 | ================================================================
+2204 | XAI mandate: every approach explained, local and global
+2205 | Families: gradient-based, perturbation-based, surrogate
+2206 | Natives: masks and attention as auxiliary only
+2207 | Method SH: SHAP-style additive attributions required
+2208 | Method IG: integrated gradients for differentiable models
+2209 | Method LM: LIME-style local surrogate explanations
+2210 | Method PI: permutation importance as global reference
+2211 | Method CF: counterfactuals for flagged claims
+2212 | Auxiliary-only rule for natives stated again here
+2213 | Implementations may use pinned established libraries
+2214 | Library choices documented with versions listed
+2215 | Fallback: hand-rolled with unit-tested cores allowed
+2216 | Fallback tests compare against library outputs
+2217 | Discrepancies beyond tolerance investigated, logged
+2218 | --- SUB-HEADER: alignment contracts ------------------------------------------------
+2219 | Attribution arrays align to frozen registry order
+2220 | Alignment assertion runs per produced output table
+2221 | Embedding-expanded parts aggregate to source fields
+2222 | Mapping documented with formulas in XAI guide
+2223 | Sign convention: positive pushes fraud probability up
+2224 | Convention printed in every figure caption template
+2225 | Output schema: claim_id, feature, attribution, rank, method
+2226 | Extra column: approach key for cross-model joins
+2227 | Schema v1 frozen; changes need new version row
+2228 | Outputs stored evaluation2/xai with manifest checksums
+2229 | Rendering layer reads outputs, builds uniform figures
+2230 | Grammar: bars for local, dot panels for global
+2231 | Exceptions documented with reasons per figure type
+2232 | --- SUB-HEADER: faithfulness and stability rubric --------------------------------------
+2233 | Faithfulness: deletion-curve evaluation per model
+2234 | Delete top-k, measure prediction drop progression
+2235 | Area normalized to scalar within zero and one
+2236 | Baseline: random-deletion curve for contrast bars
+2237 | Contrast delta reported; negatives scrutinized aloud
+2238 | Scrutiny considers redundancy and masking misuse
+2239 | Stability: attributions repeated under jittered states
+2240 | Jitter: re-seeded weights, tiny data perturbations
+2241 | Metric: top-k Jaccard overlap, k equals ten
+2242 | Scalar averaged across stratified validation sample
+2243 | Sample: five hundred claims stratified by outcome
+2244 | Strata: approved, flagged, rejected proportions balanced
+2245 | Scores logged per method per approach in tables
+2246 | Tables feed composite ingredients with frozen weights
+2247 | --- SUB-HEADER: XAI purposes and audiences ---------------------------------------------
+2248 | PURPOSE P1: investigator triage evidence lists
+2249 | PURPOSE P2: claimant-facing plain decision reasons
+2250 | PURPOSE P3: model debugging and leakage sniffing
+2251 | PURPOSE P4: scientific narrative for report and paper
+2252 | Purposes map to output formats specified next section
+2253 | Purposes never blended ambiguously in one text
+2254 | Claimant texts filtered through tone rules strictly
+2255 | Tone: no accusations, no legalese, give next steps
+2256 | Investigator texts denser but still evidence-led
+2257 | Debug texts may use full technical vocabulary
+2258 | --- SUB-HEADER: XAI governance and anti-gaming rules ---------------------------------
+2259 | ANTI-GAME 1: raw attributions only for scoring
+2260 | ANTI-GAME 2: no feature-name cosmetics pre-scoring
+2261 | Cosmetics allowed post-scoring for display only
+2262 | Display pipeline separated from scoring pipeline
+2263 | Separation verified by code review checklist
+2264 | ANTI-GAME 3: method choices frozen pre-modeling
+2265 | Freeze date recorded in XAI guide header
+2266 | ANTI-GAME 4: failures published beside successes
+2267 | Example: LIME instability on sparse segments shown
+2268 | Failure exhibits teach method-selection wisdom
+2269 | ANTI-GAME 5: no causal certainty claims anywhere
+2270 | Causal scanner greps documents for banned phrases
+2271 | Scanner results logged; violations block builds
+2272 | Banned list in style guide appendix table
+2273 | --- SUB-HEADER: XAI deliverable inventory --------------------------------------------
+2274 | Global tables: rankings per approach and method
+2275 | Global figures: dot-summary panels with palette rules
+2276 | Local tables: per-claim top-ten drivers with signs
+2277 | Local figures: bar or waterfall, readability-tuned
+2278 | Counterfactual dossiers for five flagged claims
+2279 | Dossier: feature, current, counterfactual, feasibility
+2280 | Feasibility judged domain-plausible only, annotated
+2281 | XAI guide explains every method in plain words
+2282 | Guide embeds worked example with claim C-2001
+2283 | Example numbers pulled from artifacts verbatim
+2284 | Framework set, governance declared, budgets next
+2285 | XAI stage budget: ninety minutes zoo-wide cap
+2286 | Cap enforced via sampling rules already fixed
+2287 | Assignments section follows for approaches A and B
+2288 | Then part two for C, D, and E packs
+2289 | Comparison converges into consensus story outputs
+2290 | Consensus anchors the paper XAI-results pillar
+2291 | Pillar strength comes from governance discipline
+2292 | Governance restated proudly at section closures
+2293 | Method libraries pinned; contracts asserted; rubric fixed
+2294 | Framework section complete and fully binding
+2295 | Next: XAI assignments for approaches A and B
+2296 | Assignment packs detail methods, sets, budgets
+2297 | Packs differ by architecture, not by standards
+2298 | Standards sameness encodes fairness by design
+2299 | Reviewers reward sameness with trust in equality
+2300 | Next: XAI assignments for approaches A and B packs
+2301 | ================================================================
+2302 | SECTION 24 - XAI ASSIGNMENTS: APPROACHES A AND B
+2303 | ================================================================
+2304 | APPROACH A dl_a_mlp method pack specified here
+2305 | A-M1: SHAP-style values via fast approximation allowed
+2306 | Background set: two hundred stratified train rows fixed
+2307 | Choice justified: coverage versus compute balance
+2308 | Explained set: five hundred stratified validation rows
+2309 | Outputs aligned to registry schema as contracted
+2310 | A-M2: integrated gradients with zero baseline primary
+2311 | Sensitivity arm: dataset-mean baseline also logged
+2312 | Steps fifty default, completeness check enforced
+2313 | Check: completeness delta under five percent required
+2314 | Violations: raise steps, log events in manifest
+2315 | A-M3: permutation importance on validation split
+2316 | Repeats: ten shuffles per feature with intervals
+2317 | A-OUTPUT: global consensus via rank-average table
+2318 | Agreement: pairwise Spearman among methods printed
+2319 | Divergences discussed with hypothesized causes per case
+2320 | --- SUB-HEADER: approach A locals and counterfactuals --------------------------------
+2321 | Exemplars: two TP, one TN, one FP, one FN
+2322 | Selection ids archived; stories anonymized per policy
+2323 | Each exemplar: top ten drivers with sign colors
+2324 | Counterfactuals focused on FP and FN exemplars
+2325 | CF constraints: immutable fields locked by policy
+2326 | Locked set: age, gender, history fields listed
+2327 | Feasible deltas listed first in every dossier
+2328 | CF optimizer: distance plus sparsity weighting noted
+2329 | No CF gradients flow into test decisions ever
+2330 | Stories drafted into explanation guide chapter
+2331 | Stories tone-scanned before any publication
+2332 | --- SUB-HEADER: approach B dl_b_tabnet method pack --------------------------------------
+2333 | B-M0: native mask aggregates auxiliary-only tagged
+2334 | Auxiliary tag propagates into scoring exclusions
+2335 | B-M1: SHAP-style values matching A protocol exactly
+2336 | Protocol matching enables comparability claims
+2337 | B-M2: integrated gradients through step modules
+2338 | Step handling notes documented in code comments
+2339 | Aggregation across steps: sum rule, justified line
+2340 | B-M3: permutation importance identical parameters
+2341 | Consensus procedure mirrors A exactly again
+2342 | Comparability test: A versus B rank correlation
+2343 | Statistic reported in comparison chapter table
+2344 | Divergence examples sampled for narrative vignettes
+2345 | Vignette rule: never frame one model as lying
+2346 | Framing instead: lenses differ; consensus earns trust
+2347 | --- SUB-HEADER: masks versus learned attributions audit ---------------------------------
+2348 | Audit question: do native masks match audited attributions
+2349 | Metric: top-k overlap masks versus SHAP per claim
+2350 | Population: same stratified five hundred validation rows
+2351 | Result: overlap distribution by outcome class groups
+2352 | When masks agree, trust compounds, stated plainly
+2353 | Disagreement analysis links sparsity lambda sweep rows
+2354 | Sweep refs point to tuning trials, not new trainings
+2355 | Audit conclusion feeds XAI results subsection
+2356 | Honest branch: masks weak, scored methods rescue
+2357 | Either branch constitutes publishable learning
+2358 | --- SUB-HEADER: budgets and bookkeeping --------------------------------------------
+2359 | A-pack estimate twenty minutes on CPU targets
+2360 | B-pack estimate twenty-five minutes similarly
+2361 | Estimates printed; actuals logged; variance discussed
+2362 | Guard: downsample to three hundred if overruns
+2363 | Downsample logged with new stratification manifest rows
+2364 | XAI seeds table rows per method per approach
+2365 | Seeds derive deterministically from master scheme
+2366 | Bookkeeping table rendered in XAI guide appendix
+2367 | --- SUB-HEADER: acceptance facts for section 24 --------------------------------------
+2368 | Fact: A and B packs complete, schema-valid
+2369 | Fact: consensus tables include agreement statistics
+2370 | Fact: exemplar dossiers drafted, tone-scanned, archived
+2371 | Fact: mask audit rendered into comparison chapter
+2372 | Fact: budgets within guard allowances documented
+2373 | Acceptance reviewed at milestone N6 XAI segment
+2374 | N6 blocks leaderboard freeze until XAI inputs done
+2375 | Dependency graph marks A and B packs complete
+2376 | Next: packs for C, D, E with equal rigor
+2377 | Equal rigor is strategy, not accidental repetition
+2378 | Repetition encodes fairness by deliberate design
+2379 | Trust quote reused in report XAI methods opening
+2380 | Special cases handled without breaking schemas
+2381 | Edge rules: projections, contributions, rollout mapping
+2382 | Everything maps to registry order before scoring
+2383 | That rule is the spine of XAI comparability
+2384 | Violations fail builds automatically via assertions
+2385 | Part one acceptance stamps into N6 evidence list
+2386 | Next section: XAI assignments for C, D, and E
+2387 | Following: explanation formats and reason codes
+2388 | Formats serve investigators, claimants, scientists
+2389 | Audience separation already declared in governance
+2390 | Governance echo once more at part-two closing
+2391 | Cadence persists into XAI part two now
+2392 | No optional side quests allowed in this arc
+2393 | Side quests live in future_work documentation instead
+2394 | Transition complete; continue without detours
+2395 | Part two delivers remaining packs and convergence
+2396 | Convergence picture becomes the guide frontispiece
+2397 | Frontispiece recommendation noted for reporting team
+2398 | Approach A and B explanation era closed properly
+2399 | Packs sealed with manifest hashes as evidence
+2400 | Next: XAI assignments for approaches C, D, and E
+2401 | ================================================================
+2402 | SECTION 25 - XAI ASSIGNMENTS: APPROACHES C, D, AND E
+2403 | ================================================================
+2404 | APPROACH C dl_c_cnn1d method pack specified here
+2405 | C-M1: gradient saliency mapped to feature axis
+2406 | Mapping: responses pooled within group boundaries
+2407 | Pooling function: sum within group, documented primary
+2408 | Sensitivity arm: max pooling logged as variant row
+2409 | C-M2: integrated gradients with shared baselines
+2410 | Completeness tolerance five percent enforced again
+2411 | C-M3: SHAP-style sampling respecting ordering notes
+2412 | Ordering caveat repeated in method description text
+2413 | C-M4: permutation importance identical protocol
+2414 | Consensus via rank-average mirrors A and B exactly
+2415 | Extra exhibit: ordering-arm attribution stability table
+2416 | Stability by arm: top-k Jaccard across permutations
+2417 | Findings disclose ordering fragility in XAI results
+2418 | --- SUB-HEADER: approach D dl_d_autoencoder method pack --------------------------------
+2419 | D-M1: per-feature reconstruction error primary ranked
+2420 | Rankings from squared-error contribution arrays
+2421 | D-M2: integrated gradients on hybrid head path
+2422 | Path: error features through logistic head defined
+2423 | D-M3: SHAP-style values on hybrid head inputs
+2424 | Head-input list documented: score trio features
+2425 | Consensus via rank-average across three outputs
+2426 | Caveat: D explanations describe unusualness only
+2427 | Verbatim caption: unusualness, never claimant guilt
+2428 | Exhibit: anomaly waterfall on C-2001 exemplar
+2429 | Exhibit pairs D waterfall with B mask side-by-side
+2430 | Pairing supports cross-method convergence narrative
+2431 | --- SUB-HEADER: approach E dl_e_transformer method pack ---------------------------------
+2432 | E-M0: attention rollout auxiliary-only tagged
+2433 | Tag propagates into scoring exclusions by design
+2434 | E-M1: integrated gradients over token embeddings
+2435 | Token outputs mapped via region distribution rules
+2436 | Heuristic disclosed once, applied uniformly always
+2437 | E-M2: SHAP-style values on pooled head inputs
+2438 | Sampling budget identical to other packs enforced
+2439 | E-M3: permutation importance identical protocol
+2440 | Consensus mirrors other approaches exactly again
+2441 | Uplift: attention-pair matrix enriches narrative only
+2442 | Scores still computed from primary packs solely
+2443 | --- SUB-HEADER: cross-approach convergence analysis -------------------------------------
+2444 | Matrix: pairwise rank agreement across five approaches
+2445 | Heatmap figure with annotated values per cell
+2446 | Consensus list: intersection of top-ten features
+2447 | Intersection count named consensus strength statistic
+2448 | Statistic anchors XAI results chapter opening
+2449 | Counterpoint: two disagreement vignettes analyzed
+2450 | Hypotheses labeled, never upgraded post-hoc
+2451 | Convergence outputs feed paper results subsection
+2452 | Figure numbering reserved in reporting configuration
+2453 | --- SUB-HEADER: budgets and acceptance for section 25 -------------------------------------
+2454 | Packs C, D, E estimates: 20, 15, 25 minutes
+2455 | Overrun guard: same downsizing protocol as before
+2456 | All packs recorded in seeds table appendix
+2457 | Acceptance facts mirror section 24 requirements
+2458 | Fact: packs complete, schema valid, checksummed
+2459 | Fact: convergence matrix and consensus published
+2460 | Fact: D caveats attached as mandated verbatim
+2461 | Fact: scoring inputs exported for composite use
+2462 | Export schema: approach, method, faithfulness, stability
+2463 | Composite consumes exactly this table, nothing else
+2464 | Anything else is governance violation, blocked build
+2465 | N6 XAI segment completes with section stamps
+2466 | Leaderboard freeze unblocks as scores available
+2467 | Sequence enforced programmatically in stage order
+2468 | --- SUB-HEADER: documentation obligations emerging --------------------------------------
+2469 | XAI guide gains C, D, E method narratives
+2470 | Each: intuition, mechanics, caveats, example row
+2471 | C-2001 example extended across five approaches
+2472 | Five-panel figure: one claim, five lenses
+2473 | Panels consistent, tone-scanned, palette-following
+2474 | Five-panel becomes signature XAI exhibit in PPT
+2475 | Report: full-width figure with extended caption
+2476 | Paper: compressed panel with methods cross-reference
+2477 | All versions built from same artifact data
+2478 | Build asserts identical numbers across versions
+2479 | --- SUB-HEADER: closing reflections for assignments -------------------------------------
+2480 | Assignments honor recording mandate: XAI for all
+2481 | Governance kept native versus scored separation
+2482 | Scored feeds composite; natives enrich narrative
+2483 | Split prevents architecture marketing dominance
+2484 | Every exhibit regenerable from artifacts alone
+2485 | Culture quote closes the XAI guide introduction
+2486 | Next: explanation output formats and reason codes
+2487 | Codes structure downstream automation use cases
+2488 | Automation: triage queues and audit summaries
+2489 | Formats frozen before document builds begin
+2490 | Freeze enables PPT and PDF without spec drift
+2491 | Drift detector watches templates post-freeze
+2492 | Post-freeze changes need deviations justifications
+2493 | Cadence continues: fairness section follows formats
+2494 | Error analysis loop closes experimentation phase
+2495 | Assignments complete and binding in every part
+2496 | Signed packs A through E all emitted now
+2497 | Emissions hashed, listed, and consumable forward
+2498 | Convergence story ready for document spotlight
+2499 | Next: explanation output formats and reason-code taxonomy
+2500 | Reason codes turn explanations into actions
+2501 | ================================================================
+2502 | SECTION 26 - EXPLANATION FORMATS AND REASON CODES
+2503 | ================================================================
+2504 | FAMILY 1: machine-readable attribution tables CSV
+2505 | Schema: claim_id, feature, attribution, rank, method
+2506 | Extra column: approach key for cross-model joins
+2507 | FAMILY 2: global consensus ranking tables
+2508 | Columns: mean rank, per-method ranks, agreement stat
+2509 | FAMILY 3: human-readable claim explanation dossiers
+2510 | Dossier: summary line, top drivers, caveats, next steps
+2511 | Summary template: score band plus dominant driver count
+2512 | Drivers rendered as three to five natural sentences
+2513 | Sentences avoid accusatory phrasing by design rules
+2514 | Allowed example: billing pattern differs from typical
+2515 | Banned example: claimant fabricated bills phrase
+2516 | Caveat block: correlation reminder always present
+2517 | Next steps: documents to provide, review channels
+2518 | Texts tone-scanned before shipping to documents
+2519 | FAMILY 4: investigator compact technical briefs
+2520 | Brief: metrics context, drivers, segment, history
+2521 | Segment: fraud rate in claim peer cohort stated
+2522 | History: prior claims counts without judgment words
+2523 | Brief closes with confidence commentary and advice
+2524 | Advice: verify documents, contact provider, expedite
+2525 | --- SUB-HEADER: reason-code taxonomy -----------------------------------------------------
+2526 | Codes: compact identifiers for explanation themes
+2527 | R-BILLHIGH: amount atypical for profile group
+2528 | R-DUPDOC: duplicates or resubmission indicators
+2529 | R-WAITVIO: waiting-period inconsistency indicators
+2530 | R-DOCINC: document completeness below expectation
+2531 | R-PROVOUT: provider outlier behavior flag
+2532 | R-STAYDEV: stay length deviates beyond norms
+2533 | R-EARLYPOL: early-policy high-severity pattern
+2534 | R-RFREQ: unusual frequency-recency claimant pattern
+2535 | R-MIXSHARE: abnormal charge composition shares
+2536 | R-GEODIST: geography-distance anomaly signal
+2537 | Assignment deterministic from top attributed features
+2538 | Mapping: feature groups to candidate codes published
+2539 | Rules frozen alongside template freeze event
+2540 | Each dossier lists up to three codes prioritized
+2541 | Codes enable dashboards without long text payloads
+2542 | Dashboard mock appears in presentation assets
+2543 | --- SUB-HEADER: rendering specifications ------------------------------------------------
+2544 | Local figures: horizontal bars, signed color encoding
+2545 | Fraud-pushing orange, legit-pushing teal with legend
+2546 | Labels: human feature names, never registry keys
+2547 | Naming map maintained in reporting configuration
+2548 | Map changes post-freeze forbidden under deviations
+2549 | Global figures: mean-magnitude dots with direction hue
+2550 | Rows ordered by consensus; top twenty five shown
+2551 | Sizes suited for slide and print variants
+2552 | Variants generated by builders, never hand-tweaked
+2553 | Alt-text required for accessibility in exports
+2554 | Alt-text generated from driver sentences templated
+2555 | Accessibility checklist embedded in reporting docs
+2556 | --- SUB-HEADER: dossier assembly pipeline ------------------------------------------------
+2557 | Inputs: attribution rows, codes, claim metadata copy
+2558 | Metadata limited to non-sensitive synthetic identifiers
+2559 | Templates versioned with build configuration repository
+2560 | Outputs: markdown dossier plus PDF-ready snippet
+2561 | Snippet constraints for report compilation noted
+2562 | Validation: codes deduplicated, render clean required
+2563 | Failures halt document builds with precise diffs
+2564 | Five showcase dossiers minimum for documents
+2565 | Showcase set drawn from exemplar selection rule
+2566 | One champion-model test showcase post-test only
+2567 | Unlock sequencing enforced by builder dependencies
+2568 | --- SUB-HEADER: quality review ritual ----------------------------------------------------
+2569 | Checklist: alignment, tone, codes, caveats, next steps
+2570 | Item: numbers match attribution exports exactly
+2571 | Trio initials recorded per showcase dossier signed
+2572 | Disagreements resolved with evidence, logged
+2573 | Tie policy: conservative wording always wins
+2574 | Signed checklists archived in documentation folder
+2575 | Archive path documented in XAI guide
+2576 | --- SUB-HEADER: triage workflow integration ----------------------------------------------
+2577 | Dossiers attach to triage queue mock as links
+2578 | Queue gains columns: top code and dossier anchor
+2579 | Anchors resolve within documentation site structure
+2580 | Mock disclaimer: synthetic demonstration data only
+2581 | Workflow narrative updated in operations chapter
+2582 | Walk: flagged claim, investigator, dossier, decision
+2583 | Dossier reading target: under two minutes
+2584 | Validated informally with team reading trials noted
+2585 | Notes feed presentation speaker notes preparation
+2586 | --- SUB-HEADER: closure and forward links -----------------------------------------------
+2587 | Formats frozen; fairness slices follow same rigor
+2588 | Frozen formats referenced in PPT build chain
+2589 | Chain: artifacts, dossiers, slides, PDFs sequenced
+2590 | Sequencing encoded in master script dependencies
+2591 | Explanation outputs embed in all document types
+2592 | Embedding depth varies per document purpose
+2593 | Embedding rules itemized in reporting specs
+2594 | Rules enforce number traceability throughout
+2595 | Slogan: click a number, find its artifact again
+2596 | Slogan printed in documentation2 overview footer
+2597 | Format specification complete; fairness follows
+2598 | Explanation equity across slices checked there
+2599 | Section closed with codes ready for action
+2600 | Next: fairness and demographic slice evaluation
+2601 | ================================================================
+2602 | SECTION 27 - FAIRNESS AND DEMOGRAPHIC SLICE EVALUATION
+2603 | ================================================================
+2604 | Fairness evaluation mandatory for all five approaches
+2605 | Slices: gender, age bands, city tier, income band
+2606 | Extra slice: plan type as product exposure check
+2607 | Definitions identical to approach 1 for comparability
+2608 | Disparity metrics computed identically as well
+2609 | Per slice: TPR, FPR, precision, approval rate
+2610 | Outcome-rate framing connects fairness to business
+2611 | Minimum cells: thirty positives, else unstable mark
+2612 | Unstable slices excluded from disparity claims
+2613 | Exclusions named with reasons for transparency
+2614 | Reference slice: majority group, justified in text
+2615 | Justification discusses alternatives and sensitivity
+2616 | Sensitivity: repeat metrics versus alternative reference
+2617 | Findings listed in fairness memo appendix rows
+2618 | --- SUB-HEADER: disparity metrics and thresholds ---------------------------------
+2619 | Metrics: max gap and ratio per metric computed
+2620 | Flag gaps beyond five percentage points for review
+2621 | Ratio outside 0.8 to 1.25 flagged for discussion
+2622 | Flags create review entries in memo table rows
+2623 | Columns: slice, metric, gap, ratio, verdict
+2624 | Verdicts: acceptable, watch, investigate required
+2625 | Investigate entries demand hypothesis paragraphs
+2626 | Hypotheses: sample poverty, segment mix, bias
+2627 | Bias conclusions need two-model corroboration
+2628 | Corroboration mirrors fraud-type evidence rules
+2629 | Single-model findings reported as observations only
+2630 | Tone: measured concern, no alarmism, no denial
+2631 | --- SUB-HEADER: explanation equity checks ----------------------------------------------
+2632 | Requirement: explanation quality measured per slice
+2633 | Metrics: faithfulness and stability within slices
+2634 | Gaps beyond 0.10 flagged for investigation notes
+2635 | Hypotheses: representation, feature missingness patterns
+2636 | Missingness disparity tables generated as support
+2637 | Support exported to evaluation2/fairness folder
+2638 | Equity narrative included in fairness chapter
+2639 | Narrative six sentences minimum, evidence-linked
+2640 | Framing: explanations are claimant-facing resources
+2641 | Unequal explanations constitute service inequity
+2642 | Argument phrased responsibly within conventions
+2643 | --- SUB-HEADER: mitigation discussions -----------------------------------------------
+2644 | Threshold-agnostic mitigations ranked first always
+2645 | Options: data collection narratives for future work
+2646 | Options: reweighting experiments logged as variants
+2647 | Variants flagged non-reference in leaderboards
+2648 | Per-slice thresholds discussed then discouraged
+2649 | Reasons: complexity, legal questions, gaming risk
+2650 | Legal framing: literature cited, no legal claims
+2651 | Disclaimer: not legal advice, printed in memo footer
+2652 | Outcomes summarized in memo final table
+2653 | Verdicts: applied, deferred, rejected, with reasons
+2654 | Deferred items flow into future_work file
+2655 | --- SUB-HEADER: artifacts and exhibits ---------------------------------------------
+2656 | Artifact: slice metrics CSV per approach per dimension
+2657 | Artifact: disparity memo markdown per approach
+2658 | Artifact: explanation equity tables with flags
+2659 | Exhibit F1: approval-rate bars by gender and age
+2660 | Exhibit F2: TPR FPR scatter across slices
+2661 | Exhibit F3: disparity flag heatmap across approaches
+2662 | Captions disclose slice sizes and stability notes
+2663 | Exhibits generated strictly from artifact CSVs
+2664 | Report chapter structure mirrors memo tables
+2665 | Paper inclusion: one concise fairness paragraph
+2666 | PPT inclusion: one slide on equity results
+2667 | --- SUB-HEADER: honesty and scope guardrails ------------------------------------------
+2668 | No demographic causal-effect claims allowed
+2669 | Synthetic-data limitations foregrounded clearly
+2670 | Text: synthetic slices may not reflect reality
+2671 | Text placed in memo header and chapter intro
+2672 | Sensitive-attribute usage policy documented
+2673 | Attributes used for auditing, never for denying
+2674 | Statement included in ethics discussion section
+2675 | Auditors verify inputs exclude sensitive misuse
+2676 | Registry audit lists exclusion evidence per field
+2677 | --- SUB-HEADER: closure and transitions --------------------------------------------
+2678 | Fairness artifacts gate N6 final sub-gate entry
+2679 | Green artifacts unblock selection memo signatures
+2680 | Trio initials and dates recorded in evidence
+2681 | Forward: error analysis loop closes experiment phase
+2682 | Loop uses fairness findings as error themes
+2683 | Themes drive targeted slicing of errors next
+2684 | Findings may trigger documentation-only addenda
+2685 | Addenda enrich narrative, never hide difficult rows
+2686 | Hiding constitutes misconduct under ethics clause
+2687 | Clause reference printed in memo footer again
+2688 | Fairness evaluation binding and complete here
+2689 | Next: error analysis and ablation loop specs
+2690 | Loop consolidates learning into discussion fodder
+2691 | Fodder translates into paper contribution credibility
+2692 | Credibility earned through exhaustive honest study
+2693 | Study outputs power bridge into approach 3
+2694 | Bridge: richer signals beyond tabular reach
+2695 | Bridge drafted in final documentation section
+2696 | Cadence maintained: no shortcuts at finish lines
+2697 | Section complete; error protocol follows next
+2698 | Fairness story closed with integrity intact
+2699 | Next: error analysis and ablation loop deep spec
+2700 | Errors studied become trust earned later
+2701 | ================================================================
+2702 | SECTION 28 - ERROR ANALYSIS AND ABLATION LOOP
+2703 | ================================================================
+2704 | Error analysis converts mistakes into knowledge artifacts
+2705 | Population: validation errors of champion and runner-up
+2706 | Sets: false positives and false negatives separated
+2707 | Sizes capped five hundred each via stratified sampling
+2708 | Seeds logged; full sets reproducible on demand
+2709 | PROFILE 1: financial characteristics of errors
+2710 | PROFILE 2: document completeness patterns of errors
+2711 | PROFILE 3: provider contexts of error rows
+2712 | PROFILE 4: policy age and waiting-period interplay
+2713 | Profiles compare errors against correct-side cohorts
+2714 | Statistics: median deltas with interval context
+2715 | Interpretations labeled hypotheses for targeted review
+2716 | --- SUB-HEADER: representative error dossiers ---------------------------------------
+2717 | Select four FP and four FN cases deeply
+2718 | Dossier: claim story, drivers, why likely missed
+2719 | Why-missed section speculation-labeled strictly
+2720 | Dossiers archived separately from showcase ones
+2721 | Separation avoids confusing strengths with weaknesses
+2722 | Dossiers feed PPT limitations slide illustrations
+2723 | Illustrations anonymized per synthetic policy rules
+2724 | Identifiers consistent across dossier series
+2725 | Consistency enables cross-reference of related exhibits
+2726 | --- SUB-HEADER: ablation ladder obligations -----------------------------------------
+2727 | ABLATION 1: remove provider aggregates, measure delta
+2728 | ABLATION 2: remove history aggregates, measure delta
+2729 | ABLATION 3: remove document completeness indicators
+2730 | ABLATION 4: numeric-only versus plus-embeddings
+2731 | ABLATION 5: imbalance tool swap against default
+2732 | Each: one seed, same budget, transparently scoped
+2733 | Scoped as directional evidence, not tuned studies
+2734 | Rows flagged non-reference in leaderboard exports
+2735 | Synthesis: ablation, delta PR-AUC, interpretation line
+2736 | Synthesis feeds feature-family importance discussion
+2737 | Importance triangulated with XAI consensus table
+2738 | Triangulation strengthens claims under questioning
+2739 | --- SUB-HEADER: leakage re-audit triggers ----------------------------------------------
+2740 | Trigger: ablation removal improves validation oddly
+2741 | Protocol: rerun leakage ceremonies for that family
+2742 | Ceremonies: window recompute, lineage checks, controls
+2743 | Outcomes documented either way: cleared or confirmed
+2744 | Confirmed leakage: quarantine, fix, rerun affected
+2745 | Cascades documented with honest changelog entries
+2746 | Changelog surfaces in report reproducibility appendix
+2747 | Appendix celebrates catching errors as process win
+2748 | --- SUB-HEADER: error-theme synthesis ----------------------------------------------
+2749 | Themes clustered from error profiles, named carefully
+2750 | Names: thin-history claims, low-doc rural claims
+2751 | Names descriptive, never pejorative, tone-governed
+2752 | Each theme: size note, exemplar link, hypothesis
+2753 | Themes mapped against fraud taxonomy types
+2754 | Mapping finds blind spots: types under-caught
+2755 | Blind spots listed with future-work pointers
+2756 | Pointer: richer document signals motivate approach 3
+2757 | Pointer sentence mandated in report limitations chapter
+2758 | Sentence connects project arc to agentic future
+2759 | --- SUB-HEADER: knowledge freeze ----------------------------------------------------
+2760 | Findings exported to findings registry file rows
+2761 | Registry: finding, evidence, confidence, usage
+2762 | Usage lists where findings are quoted in documents
+2763 | Registry prevents orphaned insights and citation sprawl
+2764 | Freeze logged with manifest line and timestamp
+2765 | Post-freeze changes need deviations entries
+2766 | Frozen findings feed discussion outline directly
+2767 | Outline mapping maintained in documentation
+2768 | Mapping accelerates coherence reviews during assembly
+2769 | --- SUB-HEADER: contribution framing for paper -------------------------------------
+2770 | Draft rules: three to five contributions, evidence-backed
+2771 | Each lists supporting exhibits by identifiers
+2772 | Overclaim detector scans drafts against banned list
+2773 | Violations require rewrites, logged as events
+2774 | Rewrites preserve candor minus inflation risk
+2775 | Advisor slide adds contributions summary box
+2776 | Box identical to paper abstract contribution trio
+2777 | Trio picks by evidence strength, not ease
+2778 | Ease-picking flagged as red flag in reviews
+2779 | --- SUB-HEADER: experimentation phase closure -------------------------------------
+2780 | Closure gate: loops documented, registry frozen
+2781 | Evidence: dossiers, ablations, re-audit outcomes
+2782 | Sign-off by trio with dates in milestone records
+2783 | Proceed signal: documentation and deliverables unlock
+2784 | Order: docs first, then PPT, then PDFs
+2785 | Rationale: docs validate what slides will claim
+2786 | Rationale quoted in reporting specification opening
+2787 | Mantra: errors studied become trust earned later
+2788 | Mantra printed at report discussion chapter end
+2789 | Section complete; documentation arc begins next
+2790 | Arc: documentation2 then evaluation2 finalization
+2791 | Then presentation and both PDF specifications
+2792 | Acceptance checklist closes the prompt afterward
+2793 | Cadence: hundred-line sections continue to hold
+2794 | Errors era ends; explanation-to-documents era begins
+2795 | Documentation is the product; models its evidence
+2796 | That sentence guides priority of remaining work
+2797 | Reproducers remain the north-star audience ahead
+2798 | Section closed cleanly at line budget exactly
+2799 | Next: documentation2 folder exhaustive specification
+2800 | Docs prove engineering maturity beyond metrics
+2801 | ================================================================
+2802 | SECTION 29 - DOCUMENTATION2 AND EVALUATION2 FINALIZATION
+2803 | ================================================================
+2804 | Documentation2 mirrors approach 1 rigor, deep-focused
+2805 | index.md: hub with paths for three audiences
+2806 | Audiences: adviser, examiner, future reproducer
+2807 | overview.md: one-page story with headline table
+2808 | Headline generated from leaderboard automatically
+2809 | architectures.md: five chapters with diagrams
+2810 | Chapters end with acceptance-facts checklist
+2811 | training_protocol.md: governance prose plus tables
+2812 | Tables generated from configs and manifests only
+2813 | xai_guide.md: methods with worked C-2001 story
+2814 | Guide embeds five-panel and consensus exhibits
+2815 | results_discussion.md: findings registry as prose
+2816 | Mapping registry rows to numbered subsections
+2817 | code_walkthrough.md: per-file explanations, entrypoints
+2818 | Includes call-graph overview diagram image
+2819 | Call graph from static analysis tool output
+2820 | Tool configured in repo with documented command
+2821 | reproducibility.md: reruns, determinism table rows
+2822 | limitations.md: themes, blind spots, caveats
+2823 | Style: same markdown conventions as approach 1
+2824 | Headers sentence-case, GitHub-renderable tables
+2825 | Figures relative; link checker gates builds
+2826 | Footers: timestamps and source artifact ids
+2827 | --- SUB-HEADER: glossary, matrix, registers -------------------------------------------
+2828 | glossary_dl.md: embeddings to rollout defined
+2829 | Definitions two sentences, cross-linked occurrences
+2830 | coverage_matrix.md: sections mapped to artifacts
+2831 | Matrix auto-generated from manifest tags only
+2832 | Checker fails when sections lack evidence
+2833 | decisions register: date, decision, rationale, impact
+2834 | deviations log: affected artifacts, rerun needs
+2835 | Registers render into report appendix verbatim
+2836 | Verbatim enforced with diff checks at build
+2837 | Locale rules identical to approach 1 standards
+2838 | INR formats, DD-MM-YYYY dates, Indian terms kept
+2839 | Spell-check configuration committed in repo
+2840 | --- SUB-HEADER: pedagogical obligations -----------------------------------------------
+2841 | Every architecture chapter contains teach-back box
+2842 | Box: three questions with answers for team quiz
+2843 | Questions target adviser-likely probes
+2844 | Answers drawn strictly from documented artifacts
+2845 | Troubleshooting appendix: OOM, stalls, NaN, masks
+2846 | Entries list symptoms, causes, fixes clearly
+2847 | Docs may show commands; prompt itself stays code-free
+2848 | Distinction stated explicitly in overview preamble
+2849 | --- SUB-HEADER: evaluation2 finalization ----------------------------------------------
+2850 | evaluation.md parts one through fourteen same skeleton
+2851 | Part 1: run summary with environment deep rows
+2852 | Part 2: dataset summary with contract results
+2853 | Part 3: DL data-quality gates table
+2854 | Part 4: imbalance probe results and chosen default
+2855 | Part 5: deep leaderboard rendered from CSV
+2856 | Part 6: selection memo embedded verbatim
+2857 | Part 7: tuning summaries with trial counts
+2858 | Part 8: one-time test results with champion
+2859 | Part 9: calibration summary with chosen methods
+2860 | Part 10: XAI headline results with scores
+2861 | Part 11: fairness summary with flags and notes
+2862 | Part 12: reproducibility evidence and rename checks
+2863 | Part 13: limitations carried from documentation2
+2864 | Part 14: artifact manifest with checksums
+2865 | Deep additions integrated without renumbering parts
+2866 | Compatibility statement printed at file header
+2867 | Statement aids advisers comparing both approaches
+2868 | --- SUB-HEADER: leaderboard render and test block --------------------------------------
+2869 | Render: champions and reference rows first block
+2870 | Ensembles flagged; ablations in collapsed sections
+2871 | Counts equal CSV totals, automated assertion
+2872 | Footer: composite weights recap and freeze hash
+2873 | Test block: five rows plus classical import
+2874 | Columns: full suite, intervals, threshold noted
+2875 | Footnote: unlock timestamp citation line included
+2876 | Champion bold; runner-up italic; baselines shaded
+2877 | Narrative: three sentences maximum, evidence-bound
+2878 | Templates prevent prose drift; detector checks digits
+2879 | --- SUB-HEADER: closure and sign-off ---------------------------------------------------
+2880 | runs archive structure documented in README block
+2881 | latest sync verified hash-equal to selected run
+2882 | Errata note finalized or explicit zero statement
+2883 | Verify mode recomputes all hashes green
+2884 | Sign-off trio initials and dates recorded
+2885 | N8 exits when docs and evaluation both sealed
+2886 | N9 handles presentation; N10 both PDF builds
+2887 | Milestone map recap in evaluation.md header
+2888 | Immutability: changes force new run id, stated
+2889 | Standard wording table maintained in style guide
+2890 | Consolidated comparisons reserved for approach 3
+2891 | Approach 2 self-complete even standing alone
+2892 | Self-completeness principle restated for audits
+2893 | Forward: PPT, report PDF, IEEE paper specs
+2894 | Then final acceptance checklist at section 30
+2895 | Cadence: one hundred lines per section steadfast
+2896 | Documentation2 and evaluation2 closed binding
+2897 | Next: presentation, PDFs, acceptance, and closing
+2898 | Adviser credit on PPT title remains hard rule
+2899 | Rule text: Faculty Adviser Prof. Ramesh Athe
+2900 | Next: slide-by-slide PPT and both PDF outlines
+2901 | ================================================================
+2902 | SECTION 30 - PRESENTATION, PDFS, ACCEPTANCE, AND CLOSING
+2903 | ================================================================
+2904 | PPT file: approach_2_deep_learning_xai.pptx output
+2905 | Slide count approximately twenty-two slides
+2906 | SLIDE 1: title, team names, roll numbers exactly
+2907 | Slide 1 footer: Faculty Adviser Prof. Ramesh Athe
+2908 | Adviser line smaller than title but clearly visible
+2909 | SLIDE 2: three-approach project arc diagram
+2910 | SLIDE 3: approach 1 recap with classical best row
+2911 | SLIDE 4: why deep learning, four hypothesis boxes
+2912 | SLIDE 5: deep pipeline architecture walkthrough
+2913 | SLIDE 6: comparability spine and data contracts
+2914 | SLIDE 7: five-approach taxonomy map with icons
+2915 | SLIDE 8: approach A design and telemetry figure
+2916 | SLIDE 9: approach B design with mask visual
+2917 | SLIDE 10: approach C design with ordering arms plot
+2918 | SLIDE 11: approach D design with score histogram
+2919 | SLIDE 12: approach E design with attention heatmap
+2920 | SLIDE 13: training governance and compute ledger
+2921 | SLIDE 14: deep leaderboard top block table
+2922 | SLIDE 15: calibration and threshold operating story
+2923 | SLIDE 16: XAI five-panel same-claim showcase
+2924 | SLIDE 17: faithfulness and stability comparison
+2925 | SLIDE 18: classical versus deep merged table
+2926 | SLIDE 19: fairness and explanation equity results
+2927 | SLIDE 20: limitations, error themes, surprises
+2928 | SLIDE 21: bridge to approach 3 document intelligence
+2929 | --- SUB-HEADER: final slides and speaker notes ------------------------------------------
+2930 | SLIDE 22: thank-you with references and questions
+2931 | Slide 22 footer repeats team and adviser credits
+2932 | Every slide: speaker notes 80 to 140 words
+2933 | Notes include evidence index anchoring to artifacts
+2934 | Notes written for natural aloud delivery
+2935 | Builds fail when notes missing or numbers stale
+2936 | Stale detection compares versus evaluation2 latest
+2937 | Theme: project palette, consistent chart styling
+2938 | Accessibility: contrast checked, alt text on images
+2939 | --- SUB-HEADER: report PDF specification ---------------------------------------------
+2940 | Report file: approach_2_project_report.pdf volume
+2941 | Length target thirty-five to forty-five pages
+2942 | Title page: team, rolls, adviser Prof. Ramesh Athe
+2943 | Chapters: abstract, introduction, related work
+2944 | Chapters: data comparability, architectures five parts
+2945 | Chapters: governance, evaluation methodology
+2946 | Chapters: results, XAI, fairness, limitations
+2947 | Chapters: approach 3 bridge, conclusion, references
+2948 | Appendices: leaderboard, registers, reproducibility
+2949 | Every number validated by build-time diff checks
+2950 | --- SUB-HEADER: IEEE paper specification ------------------------------------------
+2951 | Paper file: approach_2_ieee_paper.pdf two-column
+2952 | Length six to eight pages, eighteen-plus references
+2953 | Sections: abstract, keywords, intro, related, method
+2954 | Sections: experiments, XAI audit, discussion, end
+2955 | Contribution trio matches findings registry selections
+2956 | Tables sourced only from evaluation2 artifacts
+2957 | Acknowledgment thanks Prof. Ramesh Athe for guidance
+2958 | Acknowledgment paragraph printed before references
+2959 | --- SUB-HEADER: GitHub and regeneration contract ------------------------------------
+2960 | README gains approach 2 quick-start block
+2961 | Tag v2.0 release with deliverables listed
+2962 | One master command from clean checkout regenerates
+2963 | Timed regeneration recorded in evaluation.md part 12
+2964 | Demo rerun of two approaches, metrics diff zero
+2965 | Tolerance: floating rounding only, disclosed plainly
+2966 | --- SUB-HEADER: acceptance checklist for approach 2 ------------------------------------
+2967 | CHECK: five approaches trained, artifacts complete
+2968 | CHECK: seeds, splits, metrics match approach 1 spine
+2969 | CHECK: XAI packs complete for all five, scored
+2970 | CHECK: composite frozen, selection memo archived
+2971 | CHECK: single test evaluation performed once, logged
+2972 | CHECK: fairness and equity checks documented rows
+2973 | CHECK: documentation2 complete, gates green stamped
+2974 | CHECK: evaluation.md fourteen parts from data
+2975 | CHECK: PPT with adviser credits and speaker notes
+2976 | CHECK: report PDF and IEEE PDF compiled, diffed
+2977 | CHECK: honesty scanners zero violations overall
+2978 | CHECK: two-click number traceability spot-verified
+2979 | Sign-off: trio initials and dates in acceptance file
+2980 | Final note: precision over speed, honesty over gloss
+2981 | This completes the deep learning with XAI prompt
+2982 | Execute autonomously, ask nothing, deliver end to end
+2983 | Approach 3 agentic prompt extends this foundation
+2984 | Consolidated deliverables defined inside approach 3
+2985 | Bridge: tabular lessons inform document intelligence
+2986 | Carry forward: comparability spine, evidence culture
+2987 | Carry forward: tone governance, audit-friendly gates
+2988 | The five-model zoo stands reproducible and explained
+2989 | Every decision documented, every number traceable
+2990 | Thank-you from the specification: build with discipline
+2991 | Next file: approach 3 master prompt, agentic multimodal
+2992 | It specifies Gemini VLMs and multi-agent pipelines
+2993 | It specifies Next.js app, local DB, hundred users
+2994 | Inclusive UX for all education levels mandatory there
+2995 | Keep this file available for cross-reference
+2996 | Cross-links maintained in consolidated documentation
+2997 | Approach 2 budget concludes exactly three thousand
+2998 | Build verifier tooling re-counts lines on delivery
+2999 | The specification ends with gratitude and resolve
+3000 | END OF APPROACH 2 PROMPT FILE - 3000 LINES EXACTLY

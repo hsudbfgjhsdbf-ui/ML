@@ -1,0 +1,68 @@
+In this approach
+Total we are having three approaches one is the traditional approach then we are going to use deep learning approach for the classification task
+And now this is the main
+Thing so we are going to use agent K in this agent K approach
+What we are doing is we are going to bring BLM's
+Vision language models or if not we will use multi-model LLM where it can do all visionary
+The visionary document documentation scaling was here. So if you use this multi-model LLM
+So we are going to have all kind of
+Approaches so that we can do things first and
+We need to create a multi-agent system
+for this approach
+We'll have a lot of
+Scanning under this means see we now
+Around hundred users data. I mean the kind of profile of the kind of policy they have taken the kind of
+Insurance policy they have taken the kind of
+Amount they have paid the
+Period of solution whatever whatever the details that is required in form of insurance
+All this will be in the context of India because we should not go to us everything will be in the context of us and
+And so with this so we are going to have a lot of understanding
+So in this approach we need to be very careful this when we are designing this is in the system. We need to
+Create such a system where the user will upload documents certain images with this information
+We are going to process that this
+Really a claiming medical insurance or not and we need to do XI reasoning for
+Why this particular user is not
+Not able to not able to claim why this reason is claimed and we should give proper reasoning of what happened to particular claim
+So we need to handle all education in the all three approaches. This is very important step
+We need to handle all kind of education. There will be women there will be children there will be a
+Grand there will be old person so we need to handle all kind of
+approaches so that it will be helpful. So then in the case of
+Building this multi-agent system this primarily
+designed for
+medical and medical insurance fraud
+Medical insurance claim fraud detection this this tool should help everyone
+This system whatever the system which are designing should be the best should be the
+This should give all sorts of requirements which are which is mentioned here and it should beat all systems in the world
+This is the best system that we can create
+for
+Automation of medical in medical insurance claim and we should
+Create after building all this system
+We are going to use gemini api key where we will get all sorts of api key
+in my
+Documentation image everything so for this start for this
+Particular system. We are only going to use gemini api with
+We have we are going to have a lot of detail forms and multi-agent collaboration system and everything
+We are going to build this in langjai and langgraph
+then
+Evaluation folders right benchmarks files and I will update that even if I run myself then I will run the whole project with single command then after running the command all the files should
+All details should update in evaluation.md and
+then
+All files should update in
+All files should update in documentation create a detailed detail documentation and very very detailed documentation for this task explaining code explaining everything explaining
+Then create
+Create then create
+Evaluation folder where we will have all details then create a PPD for presentation with all sorts of details then create a
+PDF document for submitting the report and
+And then after building all these three
+Approaches so we are going to create a one
+DTL BPD and one detail research paper one detail report.pdf where we can submit so
+Keep this as an academic project so that we can work further. This should be the
+complex project the best efficient so
+So we are going to do in three sessions so in these three sessions we can build the complete project end to end with all requirements
+With all details right now. I am having only one pdf where you should have primary details into the system and the detail over question
+So this is what we are going to do build and
+You don't need to ask any question you just need to work on this you should create images you should create a data relation
+You know for this agent exchange there won't be any data set based on the data available in the database and the data available in the
+In the user uploaded with these two we are going to work. So the data which is available in the database you should write
+Local DB so write local DB under a website for this nextjs website and this is what we are going to do
+Thank you

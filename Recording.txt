@@ -1,0 +1,49 @@
+this is second approach guys so what we are going to do is in this approach we
+are we will be taking a lot of DL based models so in this DL based models we are
+going to create all kind of all sorts of models I mean so in this case for
+classification for specially classification and we'll also play XA to
+this whatever the approaches we are going to do means we will have a lot of
+XA approaches for all approaches which we are going to do in this project so in
+this case we are going to take lot of DL models which are used for specially
+our project already you know that medical fraud medical insurance claim
+fraud detection so we should give you yes or no so this is the overall task in this task what we are
+going to do is in this task we will have we have already going to train we will have
+data set huge data set with this huge data set we are going to train several
+DL models which will be helpful for this so in this DL training model we will take
+lot of approaches allow this should be efficient work so first we will create
+several files for making building this model we will have several top or top 5 or
+top 10 approaches okay top 5 is enough with this top 5 approaches we will
+continually build the Python programs and with our data set we are going to build
+build a model and we are going to submit our results with the complete file steps
+this is the main there's after writing the files everything the code should be with
+complete comments this is very very necessary step that we need to make the code
+which you are writing should be how should have complete comments so after
+writing the complete store thing so what we are going to do is we are going to run
+it evaluate we are going to generate results whatever we have done we will
+update in detail documentation this detail document is very very detailed and
+along with this detailed documentation we are going to have evaluation folder in this
+evaluation folder we will let a lot of information about our project
+approaches whatever we are going to do then after this with the amount of
+information from documentation and evaluation folder we are going to create a
+presentation ppt then with this along with this presentation ppt we are going
+to take one more step that is to make a report PDF along with the research paper
+report PDF so we need to make two detailed report PDFs in IEEE or multiple
+multiple research platforms style so this will be helpful for to give some sort of
+introduction this this all approaches should be the daily documented so and so you
+don't need to ask any version you can decide on yourself and try to try to have that
+you try to create everything in one chrome so that I can use it for developing then create
+extensive information documentation evaluation folder and clear clearly write
+everything in documentation folder I mean clearly write all Python program files in the
+code coding where we will have each every model you don't need to train model you don't need to
+train the models I will train everything on myself you just need to write the
+efficient the most efficient code without any syntax error so that in the process of
+training I can run a single file and it will be helpful for writing everything and after all this you
+need to make a PPD and PDF if if it is able to for you based on your system
+requirements if you are able to run if you are able to you don't need to store
+any libraries any .env system scripts where it will be helpful for running the files so you just need to
+build a simple model and you can store it in my github account it will be public so
+this is the entire approach we are going to do you should train the model evaluate it
+if there is any possibility of updating users you need to do it then you should
+update every each and every result in the PDF document and in the report PDF
+research paper PDF all details regarding the project will be given to you then you
+you should have detailed planning on what to do how to do it and everything
