@@ -1,0 +1,4 @@
+Authorizer: pipeline self-certification
+Run: run_20260807_151423
+Timestamp: 07-08-2026 15:14:23 UTC
+Pre-unlock condition: validation leaderboard and threshold selection complete; test labels not previously used for selection.

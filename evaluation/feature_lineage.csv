@@ -1,0 +1,26 @@
+feature,source,transform,rationale,decision_time_available
+claim_amount_inr,ClaimAmount,renamed,Claim value is the primary financial signal.,True
+patient_age_years,PatientAge,renamed,Age supports demographic slice auditing and risk context.,True
+patient_income_inr,PatientIncome,renamed,Income contextualizes the requested amount.,True
+cluster_code,Cluster,numeric category code,"Supplied cluster is treated as a source feature, not a label.",True
+log_claim_amount,ClaimAmount,log1p,Reduces the effect of right-skewed claim values.,True
+log_patient_income,PatientIncome,log1p,Stabilizes income scale for linear and distance models.,True
+claim_to_income_ratio,"ClaimAmount, PatientIncome",safe ratio,High claim relative to income can prioritize review.,True
+claim_minus_income_scaled,"ClaimAmount, PatientIncome",scaled difference,Captures financial mismatch without unbounded subtraction.,True
+claim_amount_per_age,"ClaimAmount, PatientAge",safe ratio,Captures amount-age interaction without dividing by zero.,True
+income_age_interaction,"PatientIncome, PatientAge",safe ratio,Represents income context by age.,True
+claim_year,ClaimDate,calendar year,Captures broad temporal drift.,True
+claim_month,ClaimDate,calendar month,Captures seasonal claim patterns.,True
+claim_day_of_week,ClaimDate,weekday index,Captures operational timing patterns.,True
+claim_day_of_month,ClaimDate,day of month,Captures billing-cycle timing.,True
+claim_is_weekend,ClaimDate,binary calendar flag,Weekend activity is an auditable process signal.,True
+claim_month_sin,ClaimDate,cyclic month encoding,Preserves December-to-January continuity.,True
+claim_month_cos,ClaimDate,cyclic month encoding,Preserves seasonal phase information.,True
+age_band,PatientAge,ordinal bins,Provides interpretable age-group audits.,True
+cluster_category,Cluster,nominal category,Allows nonlinear cluster effects without ordinal assumptions.,True
+patientgender,PatientGender,normalized category,Retains source context with unknown-category safety.,True
+providerspecialty,ProviderSpecialty,normalized category,Retains source context with unknown-category safety.,True
+patientmaritalstatus,PatientMaritalStatus,normalized category,Retains source context with unknown-category safety.,True
+patientemploymentstatus,PatientEmploymentStatus,normalized category,Retains source context with unknown-category safety.,True
+claimtype,ClaimType,normalized category,Retains source context with unknown-category safety.,True
+claimsubmissionmethod,ClaimSubmissionMethod,normalized category,Retains source context with unknown-category safety.,True

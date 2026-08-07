@@ -1,0 +1,159 @@
+{
+  "dropped_columns": [
+    "ClaimID",
+    "PatientID",
+    "ProviderID",
+    "DiagnosisCode",
+    "ProcedureCode",
+    "ProviderLocation",
+    "ClaimStatus",
+    "ClaimDate",
+    "ClaimLegitimacy"
+  ],
+  "finite_matrix": true,
+  "missingness": [
+    {
+      "column": "ClaimAmount",
+      "dtype": "float64",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4490
+    },
+    {
+      "column": "ClaimDate",
+      "dtype": "datetime64[ns]",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 731
+    },
+    {
+      "column": "ClaimID",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4500
+    },
+    {
+      "column": "ClaimLegitimacy",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 2
+    },
+    {
+      "column": "ClaimStatus",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 3
+    },
+    {
+      "column": "ClaimSubmissionMethod",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 3
+    },
+    {
+      "column": "ClaimType",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4
+    },
+    {
+      "column": "Cluster",
+      "dtype": "int64",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4
+    },
+    {
+      "column": "DiagnosisCode",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4495
+    },
+    {
+      "column": "PatientAge",
+      "dtype": "int64",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 100
+    },
+    {
+      "column": "PatientEmploymentStatus",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4
+    },
+    {
+      "column": "PatientGender",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 2
+    },
+    {
+      "column": "PatientID",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4500
+    },
+    {
+      "column": "PatientIncome",
+      "dtype": "float64",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4500
+    },
+    {
+      "column": "PatientMaritalStatus",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4
+    },
+    {
+      "column": "ProcedureCode",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4495
+    },
+    {
+      "column": "ProviderID",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 4500
+    },
+    {
+      "column": "ProviderLocation",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 3876
+    },
+    {
+      "column": "ProviderSpecialty",
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unique_values": 5
+    }
+  ],
+  "profile": {
+    "columns": 19,
+    "duplicate_claim_ids": 0,
+    "duplicate_rows": 0,
+    "fraud_count": 270,
+    "fraud_rate": 0.06,
+    "legitimate_count": 4230,
+    "missing_cells": 0,
+    "rows": 4500
+  }
+}

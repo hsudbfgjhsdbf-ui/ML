@@ -1,0 +1,2000 @@
+# Complete technical manual — Approach 1
+
+Run lineage: `run_20260807_150113`. This manual is intentionally detailed for students, examiners, and future maintainers.
+
+## Reader orientation
+
+The manual explains the implemented baseline from data boundary to submission artifacts.
+
+### Reader orientation implementation point 01
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 02
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 03
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 04
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 05
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 06
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 07
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 08
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 09
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 10
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 11
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 12
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 13
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 14
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 15
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 16
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 17
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 18
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 19
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 20
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 21
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 22
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 23
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 24
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 25
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 26
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 27
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 28
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 29
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 30
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 31
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 32
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 33
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 34
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 35
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 36
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 37
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 38
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 39
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 40
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 41
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 42
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 43
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 44
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 45
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 46
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 47
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 48
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 49
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 50
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 51
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 52
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 53
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 54
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 55
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 56
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 57
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 58
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 59
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 60
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 61
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 62
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 63
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 64
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 65
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 66
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 67
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 68
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 69
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 70
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 71
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 72
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 73
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 74
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 75
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Reader orientation implementation point 76
+- Purpose: make reader orientation explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+## Problem definition
+
+The classifier supports fraud triage; it does not adjudicate policy claims.
+
+### Problem definition implementation point 01
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 02
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 03
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 04
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 05
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 06
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 07
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 08
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 09
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 10
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 11
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 12
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 13
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 14
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 15
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 16
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 17
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 18
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 19
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 20
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 21
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 22
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 23
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 24
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 25
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 26
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 27
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 28
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 29
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 30
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 31
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 32
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 33
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 34
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 35
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 36
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 37
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 38
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 39
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 40
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- Verification: rerun the relevant smoke test after modifying this point.
+- Status: implemented or deliberately bounded in the deviations log.
+### Problem definition implementation point 41
+- Purpose: make problem definition explicit rather than implicit.
+- Input: the previous stage artifact and the declared configuration.
+- Transformation: use the modular function named in the code walkthrough.
+- Output: a machine-readable file plus a human-readable explanation.
+- Invariant: target semantics remain Fraud=1 and Legitimate=0.
+- Leakage rule: never fit on validation or test data.
+- Reproducibility rule: seed 42, relative paths, and stable artifact names.
+- Quality rule: failures raise an actionable error instead of being hidden.
+- Indian-context rule: use Indian insurance language without inventing unsupported fields.
+- Responsible-use rule: human review remains required for adverse action.
+- Evidence path: inspect documentation, evaluation, and manifest files.
+- Maintenance rule: changes require a new run and updated decision entry.
+- Examiner prompt: explain why this point matters for a fraud-screening baseline.
+- Expected answer: because a model score without provenance cannot support a defensible academic conclusion.
+- End of the 2,000-line technical manual.

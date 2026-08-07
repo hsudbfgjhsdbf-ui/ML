@@ -1,0 +1,20 @@
+field,dtype,description,missing_percent,unique_values,model_role
+ClaimID,object,Unique claim identifier; audit-only.,0.0,4500,audit_only
+PatientID,object,Patient identifier; excluded from model features.,0.0,4500,audit_only
+ProviderID,object,Provider identifier; excluded from model features.,0.0,4500,audit_only
+ClaimAmount,float64,Claimed monetary amount; source unit is not independently verified.,0.0,4490,source_or_excluded
+ClaimDate,datetime64[ns],Date associated with the supplied claim row.,0.0,731,source_or_excluded
+DiagnosisCode,object,Opaque diagnosis code; near-unique in this snapshot.,0.0,4495,source_or_excluded
+ProcedureCode,object,Opaque procedure code; near-unique in this snapshot.,0.0,4495,source_or_excluded
+PatientAge,int64,Reported patient age in years.,0.0,100,source_or_excluded
+PatientGender,object,Reported gender category.,0.0,2,source_or_excluded
+ProviderSpecialty,object,Provider specialty category.,0.0,5,source_or_excluded
+ClaimStatus,object,Supplied claim status; excluded as potentially post-decision.,0.0,3,source_or_excluded
+PatientIncome,float64,Reported patient income; source unit is not independently verified.,0.0,4500,source_or_excluded
+PatientMaritalStatus,object,Reported marital-status category.,0.0,4,source_or_excluded
+PatientEmploymentStatus,object,Reported employment category.,0.0,4,source_or_excluded
+ProviderLocation,object,Supplied provider location string; excluded due to high cardinality and unverified geography.,0.0,3876,source_or_excluded
+ClaimType,object,Claim type category.,0.0,4,source_or_excluded
+ClaimSubmissionMethod,object,Claim submission channel.,0.0,3,source_or_excluded
+Cluster,int64,Supplied numeric cluster; retained with shortcut-risk audit.,0.0,4,source_or_excluded
+ClaimLegitimacy,object,Target label: Fraud or Legitimate.,0.0,2,target

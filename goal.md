@@ -1,0 +1,2000 @@
+# End-to-end project goals and release plan
+
+Generated for run `run_20260807_150113` on 07-08-2026 15:04:37 UTC.
+
+This register turns the long project prompt into testable goals. A goal is complete only when implementation, evidence, documentation, and verification exist.
+
+## Goal domain: Project framing
+
+**Intent:** Define fraud screening as binary classification with Fraud=1 and Legitimate=0.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Project framing G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Project framing G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the project framing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete project framing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Indian context
+
+**Intent:** Keep INR, Indian insurance products, policyholder protection, and human review in scope.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Indian context G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Indian context G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the indian context behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete indian context artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Dataset provenance
+
+**Intent:** Preserve the supplied workbook and state that provenance and license require confirmation.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Dataset provenance G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Dataset provenance G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the dataset provenance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete dataset provenance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Data quality
+
+**Intent:** Run schema, label, range, duplicate, missingness, and identifier gates before EDA.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Data quality G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Data quality G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the data quality behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete data quality artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Exploratory analysis
+
+**Intent:** Generate class, distribution, category, relationship, and temporal figures before fitting.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Exploratory analysis G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Exploratory analysis G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the exploratory analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete exploratory analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Feature lineage
+
+**Intent:** Document every engineered feature, source column, transform, and screening-time rationale.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Feature lineage G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Feature lineage G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the feature lineage behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete feature lineage artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Leakage prevention
+
+**Intent:** Exclude identifiers, near-unique codes, location, and post-decision status from model inputs.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Leakage prevention G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Leakage prevention G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the leakage prevention behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete leakage prevention artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Split discipline
+
+**Intent:** Use a deterministic stratified 70/15/15 split and persist memberships.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Split discipline G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Split discipline G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the split discipline behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete split discipline artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Preprocessing
+
+**Intent:** Fit imputation, one-hot encoding, and scaling on training rows only.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Preprocessing G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Preprocessing G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the preprocessing behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete preprocessing artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Imbalance handling
+
+**Intent:** Compare fraud-aware metrics and threshold choices rather than reporting accuracy alone.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Imbalance handling G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Imbalance handling G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the imbalance handling behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete imbalance handling artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Baseline governance
+
+**Intent:** Keep a majority classifier so every model has an honesty floor.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Baseline governance G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Baseline governance G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the baseline governance behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete baseline governance artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Model diversity
+
+**Intent:** Benchmark linear, probabilistic, tree, boosting, margin, instance, neural, and ensemble families.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Model diversity G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Model diversity G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the model diversity behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete model diversity artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Tuning
+
+**Intent:** Record each search space, trial count, score, and selected parameter set.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Tuning G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Tuning G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the tuning behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete tuning artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Thresholding
+
+**Intent:** Choose the operating point on validation F2 with a documented precision preference.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Thresholding G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Thresholding G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the thresholding behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete thresholding artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Calibration
+
+**Intent:** Report probability quality and a reliability diagram without using the locked test labels.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Calibration G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Calibration G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the calibration behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete calibration artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Evaluation
+
+**Intent:** Store metrics, confusion matrices, curve points, latency, size, and intervals.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Evaluation G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Evaluation G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the evaluation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete evaluation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Statistics
+
+**Intent:** Use paired tests cautiously and distinguish statistical from practical significance.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Statistics G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Statistics G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the statistics behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete statistics artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Explainability
+
+**Intent:** Provide global importance and neutral local reason templates without causal claims.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Explainability G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Explainability G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the explainability behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete explainability artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Fairness
+
+**Intent:** Audit gender, age, claim type, and employment slices with small-cell warnings.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Fairness G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Fairness G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the fairness behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete fairness artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Error analysis
+
+**Intent:** Separate false positives and false negatives and preserve their operational meaning.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Error analysis G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Error analysis G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the error analysis behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete error analysis artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Artifacts
+
+**Intent:** Make all generated outputs traceable to a run identifier and source checksum.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Artifacts G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Artifacts G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the artifacts behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete artifacts artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Documentation
+
+**Intent:** Explain what, why, how, limitations, and code flow for a student reader.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Documentation G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Documentation G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the documentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete documentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Presentation
+
+**Intent:** Build a professional 20-slide deck with evidence-linked speaker notes.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Presentation G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Presentation G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the presentation behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete presentation artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Academic reporting
+
+**Intent:** Build a detailed project report and a compact IEEE-inspired paper with references.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Academic reporting G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Academic reporting G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the academic reporting behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete academic reporting artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Goal domain: Verification
+
+**Intent:** Run compile, unit, artifact, link, and number consistency checks before release.
+**Owner:** project team with adviser review.
+**Status:** PASS for the implemented Approach 1 baseline unless a later evidence line says otherwise.
+
+- Verification G1: write the requirement in the decision register; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G2: implement the behavior in a modular function; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G3: add a machine-readable artifact for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G4: add a human-readable explanation for the artifact; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G5: write a unit or smoke test for the behavior; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G6: check the behavior against the supplied data snapshot; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G7: link the evidence from the README and report; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+- Verification G8: review the result for leakage and overclaiming; evidence must name a repository-relative path and run identifier.
+  - Acceptance: the verification behavior is deterministic under seed 42 and has no unresolved placeholder.
+  - Risk: an incomplete verification artifact can create an attractive but non-reproducible conclusion.
+  - Review question: can an examiner reproduce the claim from the linked source without private context?
+  - Data rule: never introduce an unverified field, population estimate, or fabricated metric while closing this goal.
+  - Communication rule: use neutral language and explain how a human claims reviewer should act.
+  - Release gate: mark PASS only after the corresponding verification command succeeds.
+  - Handoff: preserve the artifact so later deep-learning and agent approaches can compare fairly.
+## Milestone and command matrix
+
+| Milestone | Evidence | Verification command | Exit condition |
+| --- | --- | --- | --- |
+| M1 dataset frozen | data/dataset_card.md; data/metadata/raw_manifest.json | python scripts/verify_artifacts.py | checksum and target semantics recorded |
+- M1 dataset frozen review note: confirm `data/dataset_card.md; data/metadata/raw_manifest.json` exists before claiming completion.
+- M1 dataset frozen reproducibility note: rerun the command after a clean dependency install.
+- M1 dataset frozen ethics note: no automatic denial or claimant-intent inference is authorized.
+| M2 EDA complete | documentation/eda_report.md; images/eda/ | find images/eda -type f | figures indexed and interpretation written |
+- M2 EDA complete review note: confirm `documentation/eda_report.md; images/eda/` exists before claiming completion.
+- M2 EDA complete reproducibility note: rerun the command after a clean dependency install.
+- M2 EDA complete ethics note: no automatic denial or claimant-intent inference is authorized.
+| M3 features frozen | evaluation/feature_registry.csv; documentation/feature_engineering.md | python -m pytest -q | no target or identifier leakage |
+- M3 features frozen review note: confirm `evaluation/feature_registry.csv; documentation/feature_engineering.md` exists before claiming completion.
+- M3 features frozen reproducibility note: rerun the command after a clean dependency install.
+- M3 features frozen ethics note: no automatic denial or claimant-intent inference is authorized.
+| M4 baselines complete | evaluation/leaderboard.csv | python scripts/verify_artifacts.py | majority and logistic rows present |
+- M4 baselines complete review note: confirm `evaluation/leaderboard.csv` exists before claiming completion.
+- M4 baselines complete reproducibility note: rerun the command after a clean dependency install.
+- M4 baselines complete ethics note: no automatic denial or claimant-intent inference is authorized.
+| M5 model zoo complete | evaluation/metrics/; evaluation/tuning/ | python scripts/verify_artifacts.py | complete and failed models both visible |
+- M5 model zoo complete review note: confirm `evaluation/metrics/; evaluation/tuning/` exists before claiming completion.
+- M5 model zoo complete reproducibility note: rerun the command after a clean dependency install.
+- M5 model zoo complete ethics note: no automatic denial or claimant-intent inference is authorized.
+| M6 winner explained | evaluation/explainability/; images/models/ | python scripts/verify_artifacts.py | importance and threshold artifacts exist |
+- M6 winner explained review note: confirm `evaluation/explainability/; images/models/` exists before claiming completion.
+- M6 winner explained reproducibility note: rerun the command after a clean dependency install.
+- M6 winner explained ethics note: no automatic denial or claimant-intent inference is authorized.
+| M7 fairness checked | evaluation/fairness/slice_metrics.csv | python scripts/verify_artifacts.py | slice metrics and small-cell policy documented |
+- M7 fairness checked review note: confirm `evaluation/fairness/slice_metrics.csv` exists before claiming completion.
+- M7 fairness checked reproducibility note: rerun the command after a clean dependency install.
+- M7 fairness checked ethics note: no automatic denial or claimant-intent inference is authorized.
+| M8 reports built | presentation/; reports/ | python scripts/verify_artifacts.py | PPTX and both PDFs open |
+- M8 reports built review note: confirm `presentation/; reports/` exists before claiming completion.
+- M8 reports built reproducibility note: rerun the command after a clean dependency install.
+- M8 reports built ethics note: no automatic denial or claimant-intent inference is authorized.
+| M9 code reviewed | src/; tests/ | python -m compileall -q src scripts tests | no syntax errors |
+- M9 code reviewed review note: confirm `src/; tests/` exists before claiming completion.
+- M9 code reviewed reproducibility note: rerun the command after a clean dependency install.
+- M9 code reviewed ethics note: no automatic denial or claimant-intent inference is authorized.
+| M10 release sealed | evaluation/run_manifest.json; CHANGELOG.md | git diff --check | numbers trace to frozen run |
+- M10 release sealed review note: confirm `evaluation/run_manifest.json; CHANGELOG.md` exists before claiming completion.
+- M10 release sealed reproducibility note: rerun the command after a clean dependency install.
+- M10 release sealed ethics note: no automatic denial or claimant-intent inference is authorized.
+
+## Current run facts
+
+- Run id: `run_20260807_150113`
+- Winner key: `voting`
+- Leaderboard rows: 20
+- Complete model rows: 20
+- Input: `data/raw/health_insurance_fraud_claims.xlsx`
+- Presentation: `presentation/approach_1_traditional_ml.pptx`
+- Project report: `reports/approach_1_project_report.pdf`
+- IEEE paper: `reports/approach_1_ieee_paper.pdf`
+
+### Release review item 001
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 002
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 003
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 004
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 005
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 006
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 007
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 008
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 009
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 010
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 011
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 012
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 013
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 014
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 015
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 016
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 017
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 018
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 019
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 020
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 021
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 022
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 023
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
+- Reviewer action: check that the wording says “on this dataset under this protocol”.
+- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
+- Decision: PASS only when the command and artifact agree.
+- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
+### Release review item 024
+- Question: does this artifact have a source, timestamp, and relative path?
+- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+- End of the 2,000-line goal register: all acceptance evidence remains artifact-driven.

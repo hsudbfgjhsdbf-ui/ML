@@ -1,0 +1,4 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""estimator__alpha"": 0.1}",0.9838055763283391,0.00735254171747783,2
+"{""estimator__alpha"": 1.0}",0.9838894977022253,0.005449618791602477,1
+"{""estimator__alpha"": 10.0}",0.9685845563955588,0.009407837083905036,3

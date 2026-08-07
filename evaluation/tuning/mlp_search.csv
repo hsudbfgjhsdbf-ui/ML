@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.003}",0.8787381845925206,0.10124112821556233,3
+"{""alpha"": 0.01, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.003}",0.8790815994174208,0.10141876365746932,2
+"{""alpha"": 0.0001, ""hidden_layer_sizes"": [32], ""learning_rate_init"": 0.001}",0.8151186693811522,0.04809783851820367,4
+"{""alpha"": 0.01, ""hidden_layer_sizes"": [64, 32], ""learning_rate_init"": 0.003}",0.9773803514680725,0.008207703704743633,1

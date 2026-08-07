@@ -1,0 +1,74 @@
+{
+  "bootstrap_intervals": {
+    "accuracy": {
+      "estimate": 0.9985185185185185,
+      "lower_2_5": 0.9955555555555555,
+      "upper_97_5": 1.0
+    },
+    "brier": {
+      "estimate": 0.0019335399538394486,
+      "lower_2_5": 0.0009418152765012103,
+      "upper_97_5": 0.0037897114778974576
+    },
+    "f1": {
+      "estimate": 0.9873417721518988,
+      "lower_2_5": 0.9565217391304348,
+      "upper_97_5": 1.0
+    },
+    "f2": {
+      "estimate": 0.9798994974874372,
+      "lower_2_5": 0.9322033898305084,
+      "upper_97_5": 1.0
+    },
+    "mcc": {
+      "estimate": 0.9866443032481743,
+      "lower_2_5": 0.9551875091154058,
+      "upper_97_5": 1.0
+    },
+    "pr_auc": {
+      "estimate": 1.0,
+      "lower_2_5": 0.9999999999999998,
+      "upper_97_5": 1.0000000000000002
+    },
+    "precision": {
+      "estimate": 1.0,
+      "lower_2_5": 1.0,
+      "upper_97_5": 1.0
+    },
+    "recall": {
+      "estimate": 0.975,
+      "lower_2_5": 0.9166666666666666,
+      "upper_97_5": 1.0
+    },
+    "roc_auc": {
+      "estimate": 1.0,
+      "lower_2_5": 0.9999999999999999,
+      "upper_97_5": 1.0
+    }
+  },
+  "metrics": {
+    "accuracy": 0.9985185185185185,
+    "balanced_accuracy": 0.9875,
+    "brier": 0.0019335399538394486,
+    "cohen_kappa": 0.9865551239916343,
+    "f1": 0.9873417721518988,
+    "f2": 0.9798994974874372,
+    "false_negative": 1,
+    "false_positive": 0,
+    "log_loss": 0.013215436439729868,
+    "mcc": 0.9866443032481743,
+    "pr_auc": 1.0,
+    "precision": 1.0,
+    "recall": 0.975,
+    "roc_auc": 1.0,
+    "specificity": 1.0,
+    "support_negative": 635,
+    "support_positive": 40,
+    "threshold": 0.49,
+    "true_negative": 635,
+    "true_positive": 39
+  },
+  "model_key": "voting",
+  "run_id": "run_20260807_151423",
+  "threshold": 0.49
+}

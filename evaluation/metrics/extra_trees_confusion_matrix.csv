@@ -1,0 +1,3 @@
+,predicted_legitimate,predicted_fraud
+actual_legitimate,632,2
+actual_fraud,1,40

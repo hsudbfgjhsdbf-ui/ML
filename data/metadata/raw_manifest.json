@@ -1,0 +1,17 @@
+{
+  "bytes": 886099,
+  "file": "data/raw/health_insurance_fraud_claims.xlsx",
+  "license_status": "license and redistribution terms require confirmation from the data owner",
+  "profile": {
+    "columns": 19,
+    "duplicate_claim_ids": 0,
+    "duplicate_rows": 0,
+    "fraud_count": 270,
+    "fraud_rate": 0.06,
+    "legitimate_count": 4230,
+    "missing_cells": 0,
+    "rows": 4500
+  },
+  "retrieved_or_supplied": "repository-provided snapshot",
+  "sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45"
+}

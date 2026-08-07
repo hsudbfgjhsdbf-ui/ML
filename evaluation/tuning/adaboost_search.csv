@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""learning_rate"": 0.05, ""n_estimators"": 80}",0.9976736226736227,0.0027953782006234404,1
+"{""learning_rate"": 0.05, ""n_estimators"": 160}",0.9976736226736227,0.0027953782006234404,1
+"{""learning_rate"": 0.2, ""n_estimators"": 80}",0.9976736226736227,0.0027953782006234404,1
+"{""learning_rate"": 0.2, ""n_estimators"": 160}",0.9976736226736227,0.0027953782006234404,1

@@ -1,0 +1,4 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""var_smoothing"": 1e-11}",0.7919674550295008,0.05458826338207777,3
+"{""var_smoothing"": 1e-09}",0.8231743250704091,0.04980710098640203,2
+"{""var_smoothing"": 1e-07}",0.8262009854865572,0.04285369831441245,1

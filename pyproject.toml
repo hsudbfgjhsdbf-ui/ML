@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medical-insurance-fraud-detection"
+version = "1.0.0"
+description = "Reproducible traditional ML baseline for medical insurance claim fraud screening"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 120
+exclude = ["workspace", "evaluation/runs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

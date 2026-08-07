@@ -1,0 +1,20 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Generated scratch and transient checkpoints
+workspace/
+checkpoints/
+
+# OS/editor noise
+.DS_Store
+.vscode/
+.idea/
+
+# Keep generated submission artifacts visible in the repository; only caches are ignored.

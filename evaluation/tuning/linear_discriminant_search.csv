@@ -1,0 +1,3 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""solver"": ""svd""}",0.9123357178905147,0.04962674446028504,2
+"{""solver"": ""lsqr""}",0.9166833452982895,0.050140694954568736,1

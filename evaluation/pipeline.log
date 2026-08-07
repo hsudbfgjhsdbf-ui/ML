@@ -1,0 +1,245 @@
+2026-08-07 14:58:26,754 | INFO | Self-test passed: metric imports, seed, and probability contract are healthy
+2026-08-07 14:58:35,969 | INFO | Starting run_20260807_145835 with seed=42
+2026-08-07 14:58:36,747 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 14:58:36,841 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 14:58:46,289 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 14:58:47,242 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 14:58:49,375 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 14:58:52,200 | INFO | [4/20] fitting Decision tree
+2026-08-07 14:58:53,517 | INFO | [5/20] fitting Random forest
+2026-08-07 14:58:57,856 | INFO | [6/20] fitting Extra trees
+2026-08-07 14:59:01,527 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 14:59:09,395 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 14:59:11,523 | INFO | [9/20] fitting AdaBoost
+2026-08-07 14:59:17,016 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 14:59:19,251 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 14:59:20,638 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 14:59:21,761 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 14:59:22,939 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 14:59:24,115 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 14:59:25,245 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 14:59:27,636 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 14:59:28,898 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 14:59:30,145 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 14:59:31,696 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 14:59:34,116 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 14:59:44,042 | ERROR | Pipeline failed: 'true_negative'
+Traceback (most recent call last):
+  File "/home/user/ML/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'true_negative'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/ML/src/pipeline.py", line 469, in main
+    run_pipeline(args.config.resolve(), dry_run=args.dry_run, self_test=args.self_test)
+  File "/home/user/ML/src/pipeline.py", line 452, in run_pipeline
+    figure_records.extend(generate_model_curves(results, paths.images, int(config["reporting"].get("dpi", 180))))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/src/evaluation/plots.py", line 272, in generate_model_curves
+    matrix = np.array([[row["true_negative"], row["false_positive"]], [row["false_negative"], row["true_positive"]]])
+                        ~~~^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/.venv/lib/python3.11/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/.venv/lib/python3.11/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'true_negative'
+2026-08-07 14:59:52,556 | INFO | Starting run_20260807_145952 with seed=42
+2026-08-07 14:59:53,370 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 14:59:53,462 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:00:03,095 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:00:04,057 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:00:06,116 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:00:09,033 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:00:10,355 | INFO | [5/20] fitting Random forest
+2026-08-07 15:00:14,715 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:00:18,513 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:00:26,300 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:00:28,495 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:00:34,119 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:00:36,397 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:00:37,776 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:00:38,917 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:00:40,103 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:00:41,360 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:00:42,513 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:00:44,977 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:00:46,232 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:00:47,536 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:00:49,111 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:00:51,590 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:01:03,456 | ERROR | Pipeline failed: name 'winner_name' is not defined
+Traceback (most recent call last):
+  File "/home/user/ML/src/pipeline.py", line 469, in main
+    run_pipeline(args.config.resolve(), dry_run=args.dry_run, self_test=args.self_test)
+  File "/home/user/ML/src/pipeline.py", line 455, in run_pipeline
+    deliverables = build_all_documents(paths, context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/src/reporting/documents.py", line 1166, in build_all_documents
+    ppt = build_presentation(paths, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ML/src/reporting/documents.py", line 923, in build_presentation
+    s=slide("Winner spotlight", f"{winner_name} • validation-selected")
+                                   ^^^^^^^^^^^
+NameError: name 'winner_name' is not defined
+2026-08-07 15:01:13,453 | INFO | Starting run_20260807_150113 with seed=42
+2026-08-07 15:01:14,225 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:01:14,320 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:01:23,925 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:01:24,904 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:01:26,915 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:01:29,682 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:01:31,028 | INFO | [5/20] fitting Random forest
+2026-08-07 15:01:35,816 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:01:39,583 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:01:47,602 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:01:49,805 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:01:55,852 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:01:58,231 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:01:59,659 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:02:00,843 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:02:02,017 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:02:03,220 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:02:04,376 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:02:07,020 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:02:08,306 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:02:09,593 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:02:11,178 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:02:13,685 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:02:26,630 | INFO | Completed run run_20260807_150113; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:04:45,869 | INFO | Starting run_20260807_150445 with seed=42
+2026-08-07 15:04:46,642 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:04:46,741 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:04:56,671 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:04:57,676 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:04:59,765 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:05:02,679 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:05:03,991 | INFO | [5/20] fitting Random forest
+2026-08-07 15:05:08,279 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:05:11,928 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:05:19,787 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:05:21,996 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:05:27,725 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:05:29,989 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:05:31,442 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:05:32,732 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:05:34,255 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:05:35,533 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:05:36,729 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:05:39,158 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:05:40,412 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:05:41,752 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:05:43,356 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:05:45,921 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:05:58,535 | INFO | Completed run run_20260807_150445; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:07:25,722 | INFO | Starting run_20260807_150725 with seed=42
+2026-08-07 15:07:26,493 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:07:26,591 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:07:36,081 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:07:37,074 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:07:39,052 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:07:42,014 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:07:43,354 | INFO | [5/20] fitting Random forest
+2026-08-07 15:07:47,677 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:07:51,294 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:07:59,284 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:08:01,499 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:08:07,181 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:08:09,488 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:08:10,887 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:08:12,106 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:08:13,283 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:08:14,466 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:08:15,692 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:08:18,103 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:08:19,381 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:08:20,766 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:08:22,380 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:08:24,817 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:08:36,557 | INFO | Completed run run_20260807_150725; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:09:40,645 | INFO | Starting run_20260807_150940 with seed=42
+2026-08-07 15:09:41,420 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:09:41,517 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:09:51,246 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:09:52,260 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:09:54,258 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:09:57,289 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:09:58,708 | INFO | [5/20] fitting Random forest
+2026-08-07 15:10:03,374 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:10:07,033 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:10:15,027 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:10:17,265 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:10:22,943 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:10:25,203 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:10:26,591 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:10:27,736 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:10:28,874 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:10:30,049 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:10:31,258 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:10:33,699 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:10:34,976 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:10:36,275 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:10:37,838 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:10:40,304 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:10:52,290 | INFO | Completed run run_20260807_150940; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:12:34,212 | INFO | Starting run_20260807_151234 with seed=42
+2026-08-07 15:12:34,962 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:12:35,053 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:12:47,174 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:12:48,105 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:12:50,034 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:12:52,851 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:12:54,202 | INFO | [5/20] fitting Random forest
+2026-08-07 15:12:58,534 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:13:02,152 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:13:09,747 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:13:11,846 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:13:17,532 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:13:19,867 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:13:21,262 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:13:22,443 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:13:23,650 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:13:24,846 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:13:26,000 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:13:28,617 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:13:29,914 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:13:31,226 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:13:32,784 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:13:35,237 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:13:47,822 | INFO | Completed run run_20260807_151234; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:14:23,013 | INFO | Starting run_20260807_151423 with seed=42
+2026-08-07 15:14:23,759 | INFO | Loaded 4500 rows with fraud prevalence 0.0600
+2026-08-07 15:14:23,852 | INFO | Split train=3150 validation=675 test=675
+2026-08-07 15:14:37,129 | INFO | [1/20] fitting Majority-class baseline
+2026-08-07 15:14:38,079 | INFO | [2/20] fitting Logistic regression (L2)
+2026-08-07 15:14:40,031 | INFO | [3/20] fitting Logistic regression (L1)
+2026-08-07 15:14:42,954 | INFO | [4/20] fitting Decision tree
+2026-08-07 15:14:44,456 | INFO | [5/20] fitting Random forest
+2026-08-07 15:14:48,793 | INFO | [6/20] fitting Extra trees
+2026-08-07 15:14:52,530 | INFO | [7/20] fitting Gradient boosting
+2026-08-07 15:15:00,303 | INFO | [8/20] fitting Histogram gradient boosting
+2026-08-07 15:15:02,424 | INFO | [9/20] fitting AdaBoost
+2026-08-07 15:15:07,930 | INFO | [10/20] fitting Support vector machine (RBF)
+2026-08-07 15:15:10,194 | INFO | [11/20] fitting K-nearest neighbors
+2026-08-07 15:15:11,560 | INFO | [12/20] fitting Gaussian naive Bayes
+2026-08-07 15:15:12,721 | INFO | [13/20] fitting Bernoulli naive Bayes
+2026-08-07 15:15:13,886 | INFO | [14/20] fitting Quadratic discriminant analysis
+2026-08-07 15:15:15,091 | INFO | [15/20] fitting Linear discriminant analysis
+2026-08-07 15:15:16,299 | INFO | [16/20] fitting Multi-layer perceptron
+2026-08-07 15:15:18,770 | INFO | [17/20] fitting Calibrated ridge classifier
+2026-08-07 15:15:20,018 | INFO | [18/20] fitting Passive-aggressive classifier
+2026-08-07 15:15:21,318 | INFO | [19/20] fitting Soft voting ensemble
+2026-08-07 15:15:22,909 | INFO | [20/20] fitting Stacking ensemble
+2026-08-07 15:15:25,351 | INFO | Validation winner: Soft voting ensemble (F2=1.0000, PR-AUC=1.0000)
+2026-08-07 15:15:38,359 | INFO | Completed run run_20260807_151423; winner=voting; deliverables={'ppt': '/home/user/ML/presentation/approach_1_traditional_ml.pptx', 'project_report': '/home/user/ML/reports/approach_1_project_report.pdf', 'ieee_paper': '/home/user/ML/reports/approach_1_ieee_paper.pdf'}
+2026-08-07 15:16:04,947 | INFO | Self-test passed: metric imports, seed, and probability contract are healthy

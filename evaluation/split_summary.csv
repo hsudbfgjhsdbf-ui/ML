@@ -1,0 +1,4 @@
+split,rows,fraud,fraud_rate,index_min,index_max
+train,3150,189,0.06,0,4499
+validation,675,41,0.06074074074074074,1,4495
+test,675,40,0.05925925925925926,9,4494

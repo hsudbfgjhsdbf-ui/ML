@@ -1,0 +1,51 @@
+# Reproducible default configuration for the traditional ML approach.
+# All paths are relative to the repository root; no absolute path is required.
+seed: 42
+project:
+  name: medical_insurance_claim_fraud_detection
+  approach: approach_1_traditional_ml
+  currency: INR
+  date_format: '%d-%m-%Y'
+data:
+  input_path: data/raw/health_insurance_fraud_claims.xlsx
+  target_column: ClaimLegitimacy
+  positive_label: Fraud
+  negative_label: Legitimate
+  max_rows: null
+  allow_synthetic_fallback: false
+splitting:
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  test_fraction: 0.15
+  group_column: PatientID
+  stratify: true
+training:
+  cv_folds: 3
+  n_jobs: -1
+  search_iterations: 4
+  scoring: average_precision
+  max_models: null
+  run_external_boosters: false
+  random_state: 42
+  test_bootstrap_replicates: 300
+evaluation:
+  threshold_metric: f2
+  threshold_grid_points: 99
+  precision_floor: 0.50
+  positive_class: 1
+  min_slice_size: 20
+reporting:
+  dpi: 180
+  top_n_features: 20
+  top_n_models: 5
+  make_ppt: true
+  make_pdf: true
+paths:
+  processed_dir: data/processed
+  interim_dir: data/interim
+  evaluation_dir: evaluation
+  documentation_dir: documentation
+  images_dir: images
+  models_dir: artifacts/models
+  reports_dir: reports
+  presentation_dir: presentation

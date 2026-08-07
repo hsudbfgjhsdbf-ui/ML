@@ -1,0 +1,4 @@
+# Imbalance-policy comparison\n\nThe table is generated on training rows and validation probabilities only. SMOTE is never applied to validation or test rows.\n\n               policy  train_rows_after_policy  threshold  val_precision  val_recall   val_f1   val_f2  val_pr_auc  val_roc_auc
+                 none                     3150       0.39       0.930233     0.97561 0.952381 0.966184    0.972886     0.994460
+class_weight_balanced                     3150       0.77       0.909091     0.97561 0.941176 0.961538    0.967862     0.994383
+                smote                     5922       0.64       0.909091     0.97561 0.941176 0.961538    0.969759     0.994191\n

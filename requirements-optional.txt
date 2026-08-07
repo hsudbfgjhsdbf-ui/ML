@@ -1,0 +1,6 @@
+# Optional external tabular boosters for future adapter modules.
+# The core pipeline does not require these packages so it remains laptop-friendly.
+xgboost==2.1.1
+lightgbm==4.5.0
+catboost==1.2.7
+shap==0.46.0

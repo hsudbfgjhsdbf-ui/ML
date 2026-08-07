@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""learning_rate"": 0.04, ""max_depth"": 2, ""n_estimators"": 140}",0.9996718559218559,0.0004640658057237704,2
+"{""learning_rate"": 0.1, ""max_depth"": 2, ""n_estimators"": 140}",0.9998371998371999,0.00023023419818853726,1
+"{""learning_rate"": 0.04, ""max_depth"": 2, ""n_estimators"": 80}",0.9952726305516885,0.004474222127082763,3
+"{""learning_rate"": 0.1, ""max_depth"": 3, ""n_estimators"": 140}",0.988731938509748,0.015935445381168315,4

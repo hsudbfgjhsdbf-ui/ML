@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{""max_depth"": null, ""min_samples_leaf"": 1, ""n_estimators"": 220}",0.9917346487259305,0.005456946400402748,4
+"{""max_depth"": 12, ""min_samples_leaf"": 1, ""n_estimators"": 220}",0.9918625419200794,0.005231262269183005,2
+"{""max_depth"": null, ""min_samples_leaf"": 1, ""n_estimators"": 140}",0.9924855529704192,0.004644193244545407,1
+"{""max_depth"": 12, ""min_samples_leaf"": 3, ""n_estimators"": 220}",0.9917412600195425,0.00517595904653147,3
