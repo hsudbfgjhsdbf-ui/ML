@@ -1,0 +1,27 @@
+# Python & Virtual Environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+project_execution.log
+
+# Next.js & Node
+nextjs-app/.next/
+nextjs-app/node_modules/
+nextjs-app/.npm/
+nextjs-app/.cache/
+
+# Databases & large checkpoints (preserve small csv/md)
+*.sqlite3
+data/*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db

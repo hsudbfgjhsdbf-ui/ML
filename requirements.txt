@@ -1,0 +1,26 @@
+# Dependencies for Medical Insurance Claim Fraud Detection End-to-End Project
+# Institution: IIIT Dharwad, B.Tech Data Science & AI
+# Faculty Adviser: Prof. Ramesh Athe
+numpy==2.4.6
+pandas==3.0.5
+openpyxl==3.1.5
+scipy==1.17.1
+scikit-learn==1.9.0
+imbalanced-learn==0.14.2
+xgboost==3.2.0
+lightgbm==4.7.0
+torch==2.13.0
+matplotlib==3.11.1
+seaborn==0.13.2
+shap==0.51.0
+lime==0.2.0.1
+langchain==1.3.14
+langchain-core==1.5.3
+langgraph==1.2.10
+google-generativeai==0.8.6
+pydantic==2.13.4
+pyyaml==6.0.3
+reportlab==5.0.0
+python-pptx==1.0.2
+jupyter==1.1.1
+nbformat==5.11.0

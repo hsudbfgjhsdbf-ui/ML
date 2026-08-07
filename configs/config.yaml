@@ -1,0 +1,125 @@
+# Master Configuration File for Medical Insurance Claim Fraud Detection
+# Project: End-to-End Medical Insurance Claim Fraud Detection
+# Institution: IIIT Dharwad, Department of Data Science and AI
+# Faculty Adviser: Prof. Ramesh Athe
+# Team: B Varshith (23BDS011), M Jagadeshwar (23BDS033), J Ganesh (23BDS024)
+
+project:
+  name: "Medical Insurance Claim Fraud Detection System"
+  session: "Session 1 to 3 Complete End-to-End Build"
+  country: "India"
+  currency: "INR"
+  random_seed: 42
+  test_size: 0.15
+  val_size: 0.15
+  stratified: true
+
+paths:
+  raw_data: "data/raw/Health Insurance Fraud Claims.xlsx"
+  processed_data: "data/processed/claims_processed.csv"
+  synthetic_data: "data/synthetic/synthetic_indian_claims.csv"
+  data_dictionary: "data/metadata_dictionary.md"
+  models_dir: "models_saved"
+  eval_dir: "evaluation"
+  docs_dir: "documentation"
+  viz_dir: "visualizations"
+  ppt_dir: "presentation"
+  reports_dir: "reports"
+  db_path: "data/local_database.db"
+
+indian_context:
+  insurers:
+    - "Star Health and Allied Insurance"
+    - "ICICI Lombard General Insurance"
+    - "HDFC Ergo General Insurance"
+    - "New India Assurance"
+    - "United India Insurance"
+  schemes:
+    - "Ayushman Bharat PM-JAY"
+    - "Central Government Health Scheme (CGHS)"
+    - "Employees State Insurance Scheme (ESIS)"
+  hospital_tiers:
+    - "Tier-1 Metro Corporate Hospital"
+    - "Tier-2 City Multi-Specialty Hospital"
+    - "Tier-3 Town Nursing Home"
+
+approach1:
+  enabled: true
+  cv_folds: 5
+  optimization_metric: "f2_score"
+  algorithms:
+    logistic_regression:
+      C: [0.01, 0.1, 1.0, 10.0]
+      penalty: ["l1", "l2"]
+      solver: ["saga"]
+    decision_tree:
+      max_depth: [5, 10, 15]
+      min_samples_split: [2, 10, 20]
+      min_samples_leaf: [1, 5, 10]
+    random_forest:
+      n_estimators: [50, 100, 200]
+      max_depth: [10, 20, null]
+      min_samples_leaf: [1, 2, 4]
+    gradient_boosting:
+      n_estimators: [100, 150]
+      learning_rate: [0.05, 0.1]
+      max_depth: [3, 5]
+    xgboost:
+      n_estimators: [100, 200]
+      learning_rate: [0.05, 0.1]
+      max_depth: [4, 6]
+      scale_pos_weight: [1.0, 5.0, 10.0]
+    lightgbm:
+      n_estimators: [100, 200]
+      learning_rate: [0.05, 0.1]
+      num_leaves: [31, 63]
+    svm:
+      C: [0.1, 1.0, 10.0]
+      kernel: ["rbf", "linear"]
+      gamma: ["scale", "auto"]
+    knn:
+      n_neighbors: [3, 5, 7, 9]
+      weights: ["uniform", "distance"]
+    naive_bayes:
+      type: "gaussian"
+    ann_baseline:
+      hidden_layer_sizes: [64, 32]
+      max_iter: 200
+    adaboost:
+      n_estimators: [50, 100]
+      learning_rate: [0.5, 1.0]
+    qda:
+      reg_param: [0.0, 0.1, 0.5]
+
+approach2:
+  enabled: true
+  epochs: 40
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  focal_loss_gamma: 2.0
+  focal_loss_alpha: 0.25
+  early_stopping_patience: 15
+  architectures:
+    - "MLP"
+    - "WideAndDeep"
+    - "DeepAndCrossNetwork"
+    - "TabNetStyle"
+    - "TabularTransformer"
+    - "ResNetTabular"
+    - "NODE"
+    - "LSTMSequential"
+    - "AutoencoderAnomaly"
+    - "VariationalAutoencoder"
+  xai:
+    shap_samples: 100
+    lime_samples: 50
+    compute_counterfactuals: true
+
+approach3:
+  enabled: true
+  db_path: "data/local_database.db"
+  vector_store_path: "data/vector_store.db"
+  simulation_fallback: true
+  gemini_model: "gemini-1.5-pro-latest"
+  gemini_vision_model: "gemini-1.5-flash"
