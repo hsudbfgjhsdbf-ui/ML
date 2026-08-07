@@ -1,0 +1,10 @@
+{
+  "best_epoch": 14,
+  "best_validation_pr_auc": 0.9826881173362936,
+  "device": "cpu",
+  "epochs_run": 21,
+  "key": "dl_b_tabnet",
+  "parameter_count": 39697,
+  "seed": 43,
+  "training_seconds": 2.587575267000375
+}

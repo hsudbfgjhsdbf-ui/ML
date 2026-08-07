@@ -1,0 +1,22 @@
+{
+  "best_seed": 43,
+  "device": "cpu",
+  "display_name": "1D convolutional tabular network",
+  "epochs": 19,
+  "family": "convolution",
+  "key": "dl_c_cnn1d",
+  "parameter_count": 27265,
+  "status": "complete",
+  "threshold": 0.48000000000000004,
+  "threshold_metric": "f2_with_precision_floor",
+  "training_seconds": 59.12371326599987,
+  "val_accuracy": 0.9911111111111112,
+  "val_f1": 0.9302325581395349,
+  "val_f2": 0.9569524043208254,
+  "val_f2_std": 0.0037385517229777884,
+  "val_pr_auc": 0.9763240388447795,
+  "val_pr_auc_std": 0.0032672541591715373,
+  "val_precision": 0.8888888888888888,
+  "val_recall": 0.975609756097561,
+  "val_roc_auc": 0.9976917750250057
+}

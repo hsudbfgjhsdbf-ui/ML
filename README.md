@@ -130,6 +130,27 @@ Optional external boosters are listed in `requirements-optional.txt`. The core
 pipeline intentionally does not require them, GPU access, paid APIs, or an
 internet connection during training.
 
+## Approach 2 — Deep learning with XAI
+
+Approach 2 is now implemented under `src_dl/` and consumes the frozen Approach 1
+split. Install the pinned stack and run:
+
+```bash
+python -m pip install -r requirements-dl.txt
+python scripts/run_deep_learning.py --config config_dl/default.yaml
+python scripts/verify_deep_artifacts.py
+```
+
+Delivered deep artifacts include five architectures (MLP, TabNet-style,
+1D-CNN, autoencoder hybrid, and feature-token transformer), three seeded runs,
+epoch telemetry, checkpoints, calibration, fairness, occlusion importance,
+faithfulness, stability, a 22-slide deck, a 35-page project report, and a
+6-page IEEE-inspired paper. The deep run is still bounded by the supplied
+4,500-row workbook and does not claim production or population-level validity.
+
+Approach 3 agentic document reasoning is intentionally not claimed as completed
+until its Gemini/LangGraph/Next.js artifacts are built and evaluated separately.
+
 ## Repository hygiene
 
 The serialized model bundle and comparative model binaries under

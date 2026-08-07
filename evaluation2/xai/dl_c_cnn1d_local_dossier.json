@@ -1,0 +1,32 @@
+{
+  "base_probability": 0.004688740242272615,
+  "drivers": [
+    {
+      "feature": "numeric__patient_income_inr",
+      "global_rank": 7,
+      "occlusion_probability_change": -0.0013992264866828918
+    },
+    {
+      "feature": "numeric__claim_amount_inr",
+      "global_rank": 5,
+      "occlusion_probability_change": -0.0011791759170591831
+    },
+    {
+      "feature": "numeric__patient_age_years",
+      "global_rank": 10,
+      "occlusion_probability_change": 0.0009119168389588594
+    },
+    {
+      "feature": "numeric__claim_month",
+      "global_rank": 9,
+      "occlusion_probability_change": -0.0008979439735412598
+    },
+    {
+      "feature": "numeric__income_age_interaction",
+      "global_rank": 8,
+      "occlusion_probability_change": 0.0007024491205811501
+    }
+  ],
+  "language": "Signals are associations used to prioritize review; they do not establish claimant intent.",
+  "row_index": 0
+}

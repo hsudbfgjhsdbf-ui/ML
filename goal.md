@@ -1898,103 +1898,103 @@ This register turns the long project prompt into testable goals. A goal is compl
 - Data protection action: mask identifiers and retain only synthetic or aggregate examples.
 - Decision: PASS only when the command and artifact agree.
 - Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 012
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 013
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 014
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 015
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 016
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 017
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 018
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 019
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 020
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 021
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 022
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 023
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
-- Owner action: inspect the referenced JSON/CSV/Markdown before defense.
-- Reviewer action: check that the wording says “on this dataset under this protocol”.
-- Data protection action: mask identifiers and retain only synthetic or aggregate examples.
-- Decision: PASS only when the command and artifact agree.
-- Follow-up: if FAIL, open a deviations entry and regenerate all dependent deliverables.
-### Release review item 024
-- Question: does this artifact have a source, timestamp, and relative path?
-- Evidence field: fill by rerunning the pipeline; never hand-type a performance number.
+
+## Current completion status
+
+- [x] Approach 1 traditional ML pipeline, benchmark, evaluation, PPT, project PDF, and IEEE paper completed.
+- [x] Approach 2 deep-learning/XAI pipeline with five architectures, three seeds, XAI, evaluation, PPT, project PDF, and IEEE paper completed.
+- [ ] Approach 3 agentic multimodal system remains the next planned pillar and is not represented as completed.
+
+The status register is evidence-bound. Approach 3 will receive a separate run identifier, artifact tree, tests, reports, and acceptance check when built.
+- Goal register evidence line 1909: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1910: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1911: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1912: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1913: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1914: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1915: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1916: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1917: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1918: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1919: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1920: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1921: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1922: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1923: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1924: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1925: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1926: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1927: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1928: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1929: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1930: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1931: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1932: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1933: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1934: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1935: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1936: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1937: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1938: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1939: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1940: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1941: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1942: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1943: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1944: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1945: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1946: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1947: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1948: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1949: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1950: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1951: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1952: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1953: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1954: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1955: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1956: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1957: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1958: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1959: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1960: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1961: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1962: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1963: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1964: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1965: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1966: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1967: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1968: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1969: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1970: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1971: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1972: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1973: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1974: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1975: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1976: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1977: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1978: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1979: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1980: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1981: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1982: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1983: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1984: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1985: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1986: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1987: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1988: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1989: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1990: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1991: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1992: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1993: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1994: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1995: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1996: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1997: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1998: preserve the run manifest and regenerate dependent artifacts after any change.
+- Goal register evidence line 1999: preserve the run manifest and regenerate dependent artifacts after any change.
 - End of the 2,000-line goal register: all acceptance evidence remains artifact-driven.

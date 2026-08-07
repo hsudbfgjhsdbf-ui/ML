@@ -1,0 +1,10 @@
+{
+  "best_epoch": 33,
+  "best_validation_pr_auc": 0.9230987529380892,
+  "device": "cpu",
+  "epochs_run": 35,
+  "key": "dl_d_autoencoder",
+  "parameter_count": 8643,
+  "seed": 44,
+  "training_seconds": 2.3061259860000973
+}

@@ -1,0 +1,22 @@
+{
+  "best_seed": 43,
+  "device": "cpu",
+  "display_name": "MLP",
+  "epochs": 20,
+  "family": "dense",
+  "key": "dl_a_mlp",
+  "parameter_count": 15105,
+  "status": "complete",
+  "threshold": 0.85,
+  "threshold_metric": "f2_with_precision_floor",
+  "training_seconds": 5.281238040000517,
+  "val_accuracy": 0.9940740740740741,
+  "val_f1": 0.9523809523809523,
+  "val_f2": 0.9661986076084852,
+  "val_f2_std": 0.0038111452426691783,
+  "val_pr_auc": 0.974841481064905,
+  "val_pr_auc_std": 0.004656311674521246,
+  "val_precision": 0.9302325581395349,
+  "val_recall": 0.975609756097561,
+  "val_roc_auc": 0.9924597984150189
+}

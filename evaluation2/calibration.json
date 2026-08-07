@@ -1,0 +1,9 @@
+{
+  "after_brier": 0.002641975308651013,
+  "after_ece": 0.005283950362354517,
+  "before_brier": 0.009710304022033099,
+  "before_ece": 0.01932366192340851,
+  "method": "isotonic regression on validation probabilities",
+  "run_id": "run_20260807_155540",
+  "test_calibrated_brier": 0.0077485520523582815
+}

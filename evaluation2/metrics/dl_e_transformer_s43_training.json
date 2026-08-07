@@ -1,0 +1,10 @@
+{
+  "best_epoch": 25,
+  "best_validation_pr_auc": 0.9746016966615739,
+  "device": "cpu",
+  "epochs_run": 32,
+  "key": "dl_e_transformer",
+  "parameter_count": 19873,
+  "seed": 43,
+  "training_seconds": 55.55179233999979
+}

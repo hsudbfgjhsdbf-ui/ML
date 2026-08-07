@@ -1,0 +1,10 @@
+{
+  "model_count": 5,
+  "paths": {
+    "ieee_paper": "/home/user/ML/reports2/approach_2_ieee_paper.pdf",
+    "ppt": "/home/user/ML/presentation2/approach_2_deep_learning_xai.pptx",
+    "project_report": "/home/user/ML/reports2/approach_2_project_report.pdf"
+  },
+  "run_id": "run_20260807_155540",
+  "xai_count": 5
+}

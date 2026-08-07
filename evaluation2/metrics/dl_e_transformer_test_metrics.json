@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.9925925925925926,
+  "balanced_accuracy": 0.9960629921259843,
+  "brier": 0.0114578031988355,
+  "cohen_kappa": 0.9372384937238494,
+  "f1": 0.9411764705882353,
+  "f2": 0.975609756097561,
+  "false_negative": 0,
+  "false_positive": 5,
+  "log_loss": 0.05329887554466072,
+  "mcc": 0.9390898592677527,
+  "pr_auc": 0.9787638938217991,
+  "precision": 0.8888888888888888,
+  "recall": 1.0,
+  "roc_auc": 0.9988779527559054,
+  "specificity": 0.9921259842519685,
+  "support_negative": 635,
+  "support_positive": 40,
+  "threshold": 0.98,
+  "true_negative": 630,
+  "true_positive": 40
+}

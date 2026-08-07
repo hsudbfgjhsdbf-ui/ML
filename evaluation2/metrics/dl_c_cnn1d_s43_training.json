@@ -1,0 +1,10 @@
+{
+  "best_epoch": 19,
+  "best_validation_pr_auc": 0.9792723356892292,
+  "device": "cpu",
+  "epochs_run": 26,
+  "key": "dl_c_cnn1d",
+  "parameter_count": 27265,
+  "seed": 43,
+  "training_seconds": 18.57880754400003
+}

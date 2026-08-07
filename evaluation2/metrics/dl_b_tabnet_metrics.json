@@ -1,0 +1,22 @@
+{
+  "best_seed": 43,
+  "device": "cpu",
+  "display_name": "TabNet-style attentive network",
+  "epochs": 14,
+  "family": "attention",
+  "key": "dl_b_tabnet",
+  "parameter_count": 39697,
+  "status": "complete",
+  "threshold": 0.78,
+  "threshold_metric": "f2_with_precision_floor",
+  "training_seconds": 7.997706085000118,
+  "val_accuracy": 0.9955555555555555,
+  "val_f1": 0.963855421686747,
+  "val_f2": 0.970873786407767,
+  "val_f2_std": 0.0,
+  "val_pr_auc": 0.9781569960012657,
+  "val_pr_auc_std": 0.0037857236019448993,
+  "val_precision": 0.9523809523809523,
+  "val_recall": 0.975609756097561,
+  "val_roc_auc": 0.9966146033700084
+}

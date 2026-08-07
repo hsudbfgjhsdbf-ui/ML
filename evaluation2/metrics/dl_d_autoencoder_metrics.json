@@ -1,0 +1,22 @@
+{
+  "best_seed": 43,
+  "device": "cpu",
+  "display_name": "Autoencoder anomaly hybrid",
+  "epochs": 16,
+  "family": "anomaly",
+  "key": "dl_d_autoencoder",
+  "parameter_count": 8643,
+  "status": "complete",
+  "threshold": 0.61,
+  "threshold_metric": "f2_with_precision_floor",
+  "training_seconds": 6.084293558000354,
+  "val_accuracy": 0.9925925925925926,
+  "val_f1": 0.9411764705882353,
+  "val_f2": 0.9361504796684347,
+  "val_f2_std": 0.010247033318646896,
+  "val_pr_auc": 0.9527965960566984,
+  "val_pr_auc_std": 0.02103998193211369,
+  "val_precision": 0.9090909090909091,
+  "val_recall": 0.975609756097561,
+  "val_roc_auc": 0.9915365084250212
+}

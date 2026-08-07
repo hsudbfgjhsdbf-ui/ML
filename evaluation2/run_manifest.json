@@ -1,0 +1,196 @@
+{
+  "config": {
+    "evaluation": {
+      "min_slice_size": 20,
+      "precision_floor": 0.5,
+      "threshold_grid_points": 99
+    },
+    "models": {
+      "autoencoder_latent_dim": 16,
+      "autoencoder_reconstruction_weight": 0.1,
+      "cnn_channels": 64,
+      "dropout": 0.25,
+      "hidden_dim": 128,
+      "tabnet_steps": 4,
+      "transformer_dim": 32,
+      "transformer_heads": 4,
+      "transformer_layers": 2
+    },
+    "reporting": {
+      "dpi": 180,
+      "make_pdf": true,
+      "make_ppt": true
+    },
+    "seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "source_config": "config/default.yaml",
+    "splitting": {
+      "require_approach1_membership": true,
+      "test_fraction": 0.15,
+      "train_fraction": 0.7,
+      "validation_fraction": 0.15
+    },
+    "training": {
+      "batch_size": 256,
+      "bootstrap_replicates": 300,
+      "device": "auto",
+      "epochs": 35,
+      "full_refit": true,
+      "gradient_clip_norm": 1.0,
+      "learning_rate": 0.001,
+      "num_workers": 0,
+      "patience": 7,
+      "search_trials": 3,
+      "weight_decay": 0.0001,
+      "xai_sample_size": 250
+    }
+  },
+  "device": "cpu",
+  "environment": {
+    "machine": "x86_64",
+    "packages": {
+      "joblib": "1.4.2",
+      "matplotlib": "3.9.2",
+      "numpy": "2.0.2",
+      "pandas": "2.2.3",
+      "scipy": "1.14.1",
+      "sklearn": "1.5.2"
+    },
+    "platform": "Linux-6.1.158+-x86_64-with-glibc2.36",
+    "processor": "",
+    "python": "3.11.2 (main, Apr  8 2026, 01:58:00) [GCC 12.2.0]"
+  },
+  "feature_count": 49,
+  "feature_fingerprint": "a9b8197b5635f847bff30b3f0ec5efa0f1485c5299612c20db5ce1de22ddbfda",
+  "input_sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "model_count": 5,
+  "run_id": "run_20260807_155540",
+  "run_timestamp": "07-08-2026 15:55:40 UTC",
+  "split_fingerprint": "3bc2230ff033d29d4eb664ca8b78f2c902416a154bcc0cee88d0863881d59c9f",
+  "winner": {
+    "best_seed": 44,
+    "device": "cpu",
+    "display_name": "Feature-token transformer",
+    "epochs": 28,
+    "faithfulness": 0.077768538845703,
+    "family": "transformer",
+    "key": "dl_e_transformer",
+    "parameter_count": 19873,
+    "stability": 0.25,
+    "status": "complete",
+    "test_accuracy": 0.9925925925925926,
+    "test_balanced_accuracy": 0.9960629921259843,
+    "test_brier": 0.0114578031988355,
+    "test_cohen_kappa": 0.9372384937238494,
+    "test_f1": 0.9411764705882353,
+    "test_f2": 0.975609756097561,
+    "test_false_negative": 0,
+    "test_false_positive": 5,
+    "test_log_loss": 0.05329887554466072,
+    "test_mcc": 0.9390898592677527,
+    "test_metrics": {
+      "accuracy": 0.9925925925925926,
+      "balanced_accuracy": 0.9960629921259843,
+      "brier": 0.0114578031988355,
+      "cohen_kappa": 0.9372384937238494,
+      "f1": 0.9411764705882353,
+      "f2": 0.975609756097561,
+      "false_negative": 0,
+      "false_positive": 5,
+      "log_loss": 0.05329887554466072,
+      "mcc": 0.9390898592677527,
+      "pr_auc": 0.9787638938217991,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "roc_auc": 0.9988779527559054,
+      "specificity": 0.9921259842519685,
+      "support_negative": 635,
+      "support_positive": 40,
+      "threshold": 0.98,
+      "true_negative": 630,
+      "true_positive": 40
+    },
+    "test_pr_auc": 0.9787638938217991,
+    "test_precision": 0.8888888888888888,
+    "test_recall": 1.0,
+    "test_roc_auc": 0.9988779527559054,
+    "test_specificity": 0.9921259842519685,
+    "test_support_negative": 635,
+    "test_support_positive": 40,
+    "test_threshold": 0.98,
+    "test_true_negative": 630,
+    "test_true_positive": 40,
+    "threshold": 0.98,
+    "threshold_metric": "f2_with_precision_floor",
+    "training_seconds": 176.90817746599942,
+    "val_accuracy": 0.997037037037037,
+    "val_f1": 0.975609756097561,
+    "val_f2": 0.9708890391281849,
+    "val_f2_std": 0.003848237481785481,
+    "val_metrics": {
+      "accuracy": 0.997037037037037,
+      "balanced_accuracy": 0.9870162345156575,
+      "brier": 0.009710304022033099,
+      "cohen_kappa": 0.9740324690313149,
+      "f1": 0.975609756097561,
+      "f2": 0.975609756097561,
+      "false_negative": 1,
+      "false_positive": 1,
+      "log_loss": 0.039971181758131136,
+      "mcc": 0.9740324690313149,
+      "pr_auc": 0.9830388667083477,
+      "precision": 0.975609756097561,
+      "recall": 0.975609756097561,
+      "roc_auc": 0.9975378933600062,
+      "specificity": 0.998422712933754,
+      "support_negative": 634,
+      "support_positive": 41,
+      "threshold": 0.98,
+      "threshold_metric": "f2_with_precision_floor",
+      "true_negative": 633,
+      "true_positive": 40
+    },
+    "val_pr_auc": 0.9800098909602237,
+    "val_pr_auc_std": 0.005767626815401593,
+    "val_precision": 0.975609756097561,
+    "val_recall": 0.975609756097561,
+    "val_roc_auc": 0.9975378933600062
+  },
+  "winner_key": "dl_e_transformer",
+  "xai": [
+    {
+      "faithfulness": 0.005872938665561378,
+      "key": "dl_a_mlp",
+      "stability": 0.5384615384615384,
+      "top_feature": "numeric__claim_amount_inr"
+    },
+    {
+      "faithfulness": 0.08166134916245937,
+      "key": "dl_b_tabnet",
+      "stability": 0.6666666666666666,
+      "top_feature": "numeric__claim_amount_inr"
+    },
+    {
+      "faithfulness": 0.07958974229404703,
+      "key": "dl_c_cnn1d",
+      "stability": 0.8181818181818182,
+      "top_feature": "numeric__claim_to_income_ratio"
+    },
+    {
+      "faithfulness": 0.022823010513093323,
+      "key": "dl_d_autoencoder",
+      "stability": 0.5384615384615384,
+      "top_feature": "numeric__claim_amount_inr"
+    },
+    {
+      "faithfulness": 0.077768538845703,
+      "key": "dl_e_transformer",
+      "stability": 0.25,
+      "top_feature": "numeric__claim_amount_inr"
+    }
+  ]
+}

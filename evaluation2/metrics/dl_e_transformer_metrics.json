@@ -1,0 +1,22 @@
+{
+  "best_seed": 44,
+  "device": "cpu",
+  "display_name": "Feature-token transformer",
+  "epochs": 28,
+  "family": "transformer",
+  "key": "dl_e_transformer",
+  "parameter_count": 19873,
+  "status": "complete",
+  "threshold": 0.98,
+  "threshold_metric": "f2_with_precision_floor",
+  "training_seconds": 176.90817746599942,
+  "val_accuracy": 0.997037037037037,
+  "val_f1": 0.975609756097561,
+  "val_f2": 0.9708890391281849,
+  "val_f2_std": 0.003848237481785481,
+  "val_pr_auc": 0.9800098909602237,
+  "val_pr_auc_std": 0.005767626815401593,
+  "val_precision": 0.975609756097561,
+  "val_recall": 0.975609756097561,
+  "val_roc_auc": 0.9975378933600062
+}

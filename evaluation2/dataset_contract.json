@@ -1,0 +1,15 @@
+{
+  "input_sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "split_fingerprint": "3bc2230ff033d29d4eb664ca8b78f2c902416a154bcc0cee88d0863881d59c9f",
+  "feature_fingerprint": "a9b8197b5635f847bff30b3f0ec5efa0f1485c5299612c20db5ce1de22ddbfda",
+  "profile": {
+    "rows": 4500,
+    "columns": 19,
+    "fraud_count": 270,
+    "legitimate_count": 4230,
+    "fraud_rate": 0.06,
+    "duplicate_rows": 0,
+    "duplicate_claim_ids": 0,
+    "missing_cells": 0
+  }
+}

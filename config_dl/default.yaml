@@ -1,0 +1,40 @@
+# Approach 2 configuration. Inputs reuse Approach 1's frozen workbook and split.
+seed: 42
+seeds: [42, 43, 44]
+source_config: config/default.yaml
+training:
+  epochs: 35
+  patience: 7
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  num_workers: 0
+  search_trials: 3
+  xai_sample_size: 250
+  bootstrap_replicates: 300
+  device: auto
+  full_refit: true
+models:
+  hidden_dim: 128
+  dropout: 0.25
+  transformer_dim: 32
+  transformer_heads: 4
+  transformer_layers: 2
+  tabnet_steps: 4
+  cnn_channels: 64
+  autoencoder_latent_dim: 16
+  autoencoder_reconstruction_weight: 0.10
+splitting:
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  test_fraction: 0.15
+  require_approach1_membership: true
+evaluation:
+  threshold_grid_points: 99
+  precision_floor: 0.50
+  min_slice_size: 20
+reporting:
+  dpi: 180
+  make_ppt: true
+  make_pdf: true

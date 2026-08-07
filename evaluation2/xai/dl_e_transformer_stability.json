@@ -1,0 +1,10 @@
+{
+  "jaccard_mean": 0.25,
+  "jaccard_values": [
+    0.25,
+    0.25,
+    0.25
+  ],
+  "repetitions": 3,
+  "top_k": 10
+}
