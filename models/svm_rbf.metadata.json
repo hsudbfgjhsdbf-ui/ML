@@ -1,0 +1,44 @@
+{
+  "accuracy": 0.9894444444444445,
+  "precision": 0.9370629370629371,
+  "recall": 0.9962825278810409,
+  "f1": 0.9657657657657658,
+  "f2": 0.9838472834067548,
+  "auc_roc": 0.9994488137354646,
+  "auc_pr": 0.9970215811919074,
+  "mcc": 0.9601625287022582,
+  "brier_score": 0.005547694391478145,
+  "true_negative": 1513,
+  "false_positive": 18,
+  "false_negative": 1,
+  "true_positive": 268,
+  "algorithm": "SVM (RBF)",
+  "threshold": 0.18,
+  "validation_f2": 0.9618208516886931,
+  "cv_f2_mean": 0.9635867054250538,
+  "cv_f2_std": 0.0036813814441881156,
+  "training_time_seconds": 35.59194204900018,
+  "prediction_time_per_sample_ms": 0.0524948888888351,
+  "tuned_hyperparameters": 2,
+  "best_hyperparameters": {
+    "C": 1.0,
+    "gamma": 0.02
+  },
+  "cv_f2_scores": [
+    0.9602649006622517,
+    0.9700665188470067,
+    0.9643255295429208,
+    0.9598214285714286,
+    0.9634551495016611
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 1,
+    "false_positive_count": 18,
+    "false_negative_paid_fraud_loss_inr": 163778.35,
+    "false_positive_review_and_friction_cost_inr": 63000.0,
+    "total_illustrative_cost_inr": 226778.35,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 360.162109375,
+  "artifact_path": "/home/user/ML/models/svm_rbf.joblib"
+}

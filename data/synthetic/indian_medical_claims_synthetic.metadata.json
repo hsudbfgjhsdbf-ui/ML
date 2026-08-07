@@ -1,0 +1,9 @@
+{
+  "data_type": "synthetic educational data",
+  "generator": "src.data_loading.generate_indian_synthetic_claims",
+  "seed": 20260807,
+  "rows_before_cleaning": 12060,
+  "intentional_exact_duplicate_rows": 60,
+  "fraud_rate_before_cleaning": 0.14966832504145938,
+  "warning": "This data is not an observed insurer dataset and must not be used for real claim decisions."
+}

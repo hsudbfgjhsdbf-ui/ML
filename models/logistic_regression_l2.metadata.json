@@ -1,0 +1,43 @@
+{
+  "accuracy": 0.9955555555555555,
+  "precision": 0.9887640449438202,
+  "recall": 0.9814126394052045,
+  "f1": 0.9850746268656716,
+  "f2": 0.9828741623231572,
+  "auc_roc": 0.9995726485349858,
+  "auc_pr": 0.997870604224346,
+  "mcc": 0.9824731451839909,
+  "brier_score": 0.005989403554339284,
+  "true_negative": 1528,
+  "false_positive": 3,
+  "false_negative": 5,
+  "true_positive": 264,
+  "algorithm": "Logistic Regression (L2)",
+  "threshold": 0.6599999999999999,
+  "validation_f2": 0.9635416666666666,
+  "cv_f2_mean": 0.9695238578644799,
+  "cv_f2_std": 0.009237388405529219,
+  "training_time_seconds": 1.6153072160000193,
+  "prediction_time_per_sample_ms": 0.00022858944450692635,
+  "tuned_hyperparameters": 1,
+  "best_hyperparameters": {
+    "C": 1.0
+  },
+  "cv_f2_scores": [
+    0.9778305621536025,
+    0.9621451104100947,
+    0.968503937007874,
+    0.9818611987381703,
+    0.9572784810126582
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 5,
+    "false_positive_count": 3,
+    "false_negative_paid_fraud_loss_inr": 843318.41,
+    "false_positive_review_and_friction_cost_inr": 10500.0,
+    "total_illustrative_cost_inr": 853818.41,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 3.947265625,
+  "artifact_path": "/home/user/ML/models/logistic_regression_l2.joblib"
+}

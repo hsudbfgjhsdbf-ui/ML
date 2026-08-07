@@ -1,0 +1,45 @@
+{
+  "accuracy": 0.9755555555555555,
+  "precision": 0.8839590443686007,
+  "recall": 0.9628252788104089,
+  "f1": 0.9217081850533808,
+  "f2": 0.9459459459459459,
+  "auc_roc": 0.980338190409359,
+  "auc_pr": 0.9368082455975563,
+  "mcc": 0.9084193709273717,
+  "brier_score": 0.02050813412280683,
+  "true_negative": 1497,
+  "false_positive": 34,
+  "false_negative": 10,
+  "true_positive": 259,
+  "algorithm": "Decision Tree",
+  "threshold": 0.575,
+  "validation_f2": 0.9425036390101892,
+  "cv_f2_mean": 0.9391141420053526,
+  "cv_f2_std": 0.008027214213896624,
+  "training_time_seconds": 3.392420463999997,
+  "prediction_time_per_sample_ms": 0.00022962222222607428,
+  "tuned_hyperparameters": 3,
+  "best_hyperparameters": {
+    "max_depth": 7,
+    "min_impurity_decrease": 0.001,
+    "min_samples_leaf": 10
+  },
+  "cv_f2_scores": [
+    0.94140625,
+    0.9254901960784314,
+    0.9355590062111802,
+    0.9485407066052227,
+    0.9445745511319282
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 10,
+    "false_positive_count": 34,
+    "false_negative_paid_fraud_loss_inr": 1318486.03,
+    "false_positive_review_and_friction_cost_inr": 119000.0,
+    "total_illustrative_cost_inr": 1437486.03,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 6.6416015625,
+  "artifact_path": "/home/user/ML/models/decision_tree.joblib"
+}

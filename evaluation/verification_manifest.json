@@ -1,0 +1,190 @@
+{
+  "all_expected_artifacts_exist": true,
+  "artifacts": [
+    {
+      "path": "/home/user/ML/data/synthetic/indian_medical_claims_synthetic.csv",
+      "exists": true,
+      "bytes": 5633593
+    },
+    {
+      "path": "/home/user/ML/data/processed/train_claims.csv",
+      "exists": true,
+      "bytes": 4018738
+    },
+    {
+      "path": "/home/user/ML/evaluation/benchmark_results.csv",
+      "exists": true,
+      "bytes": 13298
+    },
+    {
+      "path": "/home/user/ML/evaluation/approach_1_evaluation_report.md",
+      "exists": true,
+      "bytes": 16108
+    },
+    {
+      "path": "/home/user/ML/documentation/approach_1_traditional_ml_documentation.md",
+      "exists": true,
+      "bytes": 33799
+    },
+    {
+      "path": "/home/user/ML/presentation/approach_1_traditional_ml_presentation.pptx",
+      "exists": true,
+      "bytes": 2795022
+    },
+    {
+      "path": "/home/user/ML/reports/approach_1_ieee_style_research_report.pdf",
+      "exists": true,
+      "bytes": 1141899
+    },
+    {
+      "path": "/home/user/ML/models/approach_1_best_serving_bundle.joblib",
+      "exists": true,
+      "bytes": 356225
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/claim_amount_distribution.png",
+      "exists": true,
+      "bytes": 57033
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/claim_amount_boxplot.png",
+      "exists": true,
+      "bytes": 58955
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/class_and_claim_type_mix.png",
+      "exists": true,
+      "bytes": 79253
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/numeric_correlation_heatmap.png",
+      "exists": true,
+      "bytes": 323979
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/correlation_network.png",
+      "exists": true,
+      "bytes": 386994
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/amount_vs_duration.png",
+      "exists": true,
+      "bytes": 207474
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/fraud_rate_state_treatment_heatmap.png",
+      "exists": true,
+      "bytes": 378591
+    },
+    {
+      "path": "/home/user/ML/visualizations/eda/monthly_claim_patterns.png",
+      "exists": true,
+      "bytes": 119660
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/roc_curves_all_models.png",
+      "exists": true,
+      "bytes": 186294
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/precision_recall_curves_all_models.png",
+      "exists": true,
+      "bytes": 180702
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/grouped_metric_comparison.png",
+      "exists": true,
+      "bytes": 203942
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/top_five_radar.png",
+      "exists": true,
+      "bytes": 236994
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/training_time_vs_accuracy.png",
+      "exists": true,
+      "bytes": 113186
+    },
+    {
+      "path": "/home/user/ML/visualizations/model_comparison/confusion_matrices_all_models.png",
+      "exists": true,
+      "bytes": 225563
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_logistic_regression_l2.png",
+      "exists": true,
+      "bytes": 210303
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_logistic_regression_l1.png",
+      "exists": true,
+      "bytes": 194050
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_decision_tree.png",
+      "exists": true,
+      "bytes": 174678
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_random_forest.png",
+      "exists": true,
+      "bytes": 182224
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_svm_linear.png",
+      "exists": true,
+      "bytes": 196202
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_adaboost.png",
+      "exists": true,
+      "bytes": 187650
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_xgboost.png",
+      "exists": true,
+      "bytes": 189299
+    },
+    {
+      "path": "/home/user/ML/visualizations/interpretability/feature_importance_lightgbm.png",
+      "exists": true,
+      "bytes": 178123
+    },
+    {
+      "path": "/home/user/ML/visualizations/technical/traditional_ml_pipeline_diagram.png",
+      "exists": true,
+      "bytes": 61512
+    },
+    {
+      "path": "/home/user/ML/visualizations/fairness/fairness_fnr_groups.png",
+      "exists": true,
+      "bytes": 152040
+    },
+    {
+      "path": "/home/user/ML/visualizations/fairness/calibration_reliability_diagram.png",
+      "exists": true,
+      "bytes": 97974
+    }
+  ],
+  "fast_mode": false,
+  "model_failures": [],
+  "completed_models": [
+    "XGBoost",
+    "Logistic Regression (L1)",
+    "LightGBM",
+    "SVM (linear)",
+    "SVM (RBF)",
+    "Logistic Regression (L2)",
+    "Histogram Gradient Boosting",
+    "Random Forest",
+    "AdaBoost",
+    "Shallow Neural Network",
+    "Decision Tree",
+    "K-Nearest Neighbors",
+    "Quadratic Discriminant Analysis",
+    "Gaussian Naive Bayes",
+    "Multinomial Naive Bayes"
+  ],
+  "best_model": "XGBoost"
+}

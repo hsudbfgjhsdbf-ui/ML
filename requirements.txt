@@ -1,0 +1,19 @@
+# Reproducible environment for Approach 1. Python 3.11 recommended.
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.1
+imbalanced-learn==0.12.3
+scipy==1.14.0
+joblib==1.4.2
+PyYAML==6.0.2
+openpyxl==3.1.5
+matplotlib==3.9.1
+seaborn==0.13.2
+xgboost==2.1.0
+lightgbm==4.5.0
+shap==0.46.0
+python-pptx==0.6.23
+reportlab==4.2.2
+# Approach 2/3 extensions are intentionally separated to keep the baseline installation light.
+
+pytest==8.3.2

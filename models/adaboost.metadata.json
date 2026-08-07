@@ -1,0 +1,44 @@
+{
+  "accuracy": 0.9916666666666667,
+  "precision": 0.9669117647058824,
+  "recall": 0.9776951672862454,
+  "f1": 0.9722735674676525,
+  "f2": 0.9755192878338279,
+  "auc_roc": 0.9989728996039715,
+  "auc_pr": 0.9956540294425507,
+  "mcc": 0.9673907815997299,
+  "brier_score": 0.18597980776163653,
+  "true_negative": 1522,
+  "false_positive": 9,
+  "false_negative": 6,
+  "true_positive": 263,
+  "algorithm": "AdaBoost",
+  "threshold": 0.48999999999999994,
+  "validation_f2": 0.9599703484062269,
+  "cv_f2_mean": 0.9638564952381083,
+  "cv_f2_std": 0.007715706685511908,
+  "training_time_seconds": 79.55590856200001,
+  "prediction_time_per_sample_ms": 0.02793832888894738,
+  "tuned_hyperparameters": 2,
+  "best_hyperparameters": {
+    "learning_rate": 0.3,
+    "n_estimators": 160
+  },
+  "cv_f2_scores": [
+    0.964,
+    0.9565916398713826,
+    0.9688995215311005,
+    0.9544728434504792,
+    0.9753184713375797
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 6,
+    "false_positive_count": 9,
+    "false_negative_paid_fraud_loss_inr": 429838.28,
+    "false_positive_review_and_friction_cost_inr": 31500.0,
+    "total_illustrative_cost_inr": 461338.28,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 104.0078125,
+  "artifact_path": "/home/user/ML/models/adaboost.joblib"
+}

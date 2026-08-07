@@ -1,0 +1,21 @@
+# Python and local environments
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Secrets and local runtime
+.env
+.env.*
+!.env.example
+logs/*.log
+
+# Reproducible large data partitions; regenerate with the documented command.
+data/processed/*.parquet
+data/processed/*.csv
+data/synthetic/*.csv
+
+# Keep source manifests, trained baseline models, figures, PPTX and PDF deliverables.
+!data/raw/**
+!data/**/README.md

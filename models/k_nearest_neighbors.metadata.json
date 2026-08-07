@@ -1,0 +1,45 @@
+{
+  "accuracy": 0.9777777777777777,
+  "precision": 0.922509225092251,
+  "recall": 0.929368029739777,
+  "f1": 0.9259259259259259,
+  "f2": 0.9279881217520416,
+  "auc_roc": 0.9699433516495525,
+  "auc_pr": 0.9471276618661439,
+  "mcc": 0.9128629072862676,
+  "brier_score": 0.01949290669280077,
+  "true_negative": 1510,
+  "false_positive": 21,
+  "false_negative": 19,
+  "true_positive": 250,
+  "algorithm": "K-Nearest Neighbors",
+  "threshold": 0.145,
+  "validation_f2": 0.9308314937454011,
+  "cv_f2_mean": 0.864400621146239,
+  "cv_f2_std": 0.024198113578403898,
+  "training_time_seconds": 10.744512384000018,
+  "prediction_time_per_sample_ms": 0.046910184444439236,
+  "tuned_hyperparameters": 3,
+  "best_hyperparameters": {
+    "n_neighbors": 7,
+    "p": 2,
+    "weights": "distance"
+  },
+  "cv_f2_scores": [
+    0.886437908496732,
+    0.8770491803278688,
+    0.8702791461412152,
+    0.8708094848732625,
+    0.8174273858921162
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 19,
+    "false_positive_count": 21,
+    "false_negative_paid_fraud_loss_inr": 1406120.06,
+    "false_positive_review_and_friction_cost_inr": 73500.0,
+    "total_illustrative_cost_inr": 1479620.06,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 4006.5205078125,
+  "artifact_path": "/home/user/ML/models/k_nearest_neighbors.joblib"
+}

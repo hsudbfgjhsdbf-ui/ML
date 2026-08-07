@@ -1,0 +1,46 @@
+{
+  "accuracy": 0.9955555555555555,
+  "precision": 0.9851301115241635,
+  "recall": 0.9851301115241635,
+  "f1": 0.9851301115241635,
+  "f2": 0.9851301115241635,
+  "auc_roc": 0.9996406362680561,
+  "auc_pr": 0.9982442660438511,
+  "mcc": 0.9825174400675992,
+  "brier_score": 0.003977506198759014,
+  "true_negative": 1527,
+  "false_positive": 4,
+  "false_negative": 4,
+  "true_positive": 265,
+  "algorithm": "LightGBM",
+  "threshold": 0.08499999999999999,
+  "validation_f2": 0.9671396564600448,
+  "cv_f2_mean": 0.9668566592054917,
+  "cv_f2_std": 0.014940505583077988,
+  "training_time_seconds": 1237.405496003,
+  "prediction_time_per_sample_ms": 0.006737322222155247,
+  "tuned_hyperparameters": 4,
+  "best_hyperparameters": {
+    "subsample": 0.7,
+    "num_leaves": 31,
+    "min_child_samples": 35,
+    "colsample_bytree": 1.0
+  },
+  "cv_f2_scores": [
+    0.9784345047923323,
+    0.9848484848484849,
+    0.9598393574297188,
+    0.942261427425822,
+    0.9688995215311005
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 4,
+    "false_positive_count": 4,
+    "false_negative_paid_fraud_loss_inr": 282434.19,
+    "false_positive_review_and_friction_cost_inr": 14000.0,
+    "total_illustrative_cost_inr": 296434.19,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 767.4130859375,
+  "artifact_path": "/home/user/ML/models/lightgbm.joblib"
+}

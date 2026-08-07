@@ -1,0 +1,15 @@
+reference_model,compared_model,mcnemar_discordant_leader_only,mcnemar_discordant_candidate_only,mcnemar_exact_p,wilcoxon_cv_f2_p,significant_at_0_05
+XGBoost,Logistic Regression (L1),4,7,0.548828125,1.0,False
+XGBoost,LightGBM,3,5,0.7265625,0.625,False
+XGBoost,SVM (linear),4,6,0.75390625,0.8125,False
+XGBoost,SVM (RBF),14,5,0.063568115234375,0.3125,False
+XGBoost,Logistic Regression (L2),5,7,0.7744140625,0.8125,False
+XGBoost,Histogram Gradient Boosting,13,1,0.0018310546875,0.625,True
+XGBoost,Random Forest,10,5,0.30175781249999994,0.125,False
+XGBoost,AdaBoost,9,4,0.266845703125,0.125,False
+XGBoost,Shallow Neural Network,12,6,0.237884521484375,0.0625,False
+XGBoost,Decision Tree,39,5,1.4051624930289108e-07,0.0625,True
+XGBoost,K-Nearest Neighbors,37,7,5.299581744111492e-06,0.0625,True
+XGBoost,Quadratic Discriminant Analysis,75,4,5.2434681244715905e-18,0.0625,True
+XGBoost,Gaussian Naive Bayes,107,4,4.789431089465355e-27,0.0625,True
+XGBoost,Multinomial Naive Bayes,188,5,3.4653423151281805e-49,0.0625,True

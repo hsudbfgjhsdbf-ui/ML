@@ -1,0 +1,40 @@
+project:
+  name: medical-insurance-claim-fraud-india
+  random_seed: 20260807
+paths:
+  raw_workbook: data/raw/Health Insurance Fraud Claims.xlsx
+  synthetic_data: data/synthetic/indian_medical_claims_synthetic.csv
+  processed_dir: data/processed
+  models_dir: models
+  evaluation_dir: evaluation
+  documentation_dir: documentation
+  visualization_dir: visualizations
+  presentation_dir: presentation
+  reports_dir: reports
+synthetic_data:
+  n_claims: 12000
+  target_fraud_rate_min: 0.05
+  target_fraud_rate_max: 0.15
+split:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+preprocessing:
+  high_cardinality_columns: [provider_id, hospital_name, city, diagnosis_code, procedure_code]
+  low_cardinality_max: 16
+  feature_selection_k: 60
+  smote_k_neighbors: 5
+training:
+  cv_folds: 5
+  scoring: f2
+  n_jobs: -1
+  search_iterations: 4
+  class_imbalance_strategy: class_weight
+  probability_threshold_objective: f2
+  max_training_rows_for_svm: 6000
+business_costs_inr:
+  false_negative_base_loss: 125000
+  false_positive_review_cost: 3500
+reporting:
+  bootstrap_samples: 400
+  fairness_disparity_guardrail: 0.10

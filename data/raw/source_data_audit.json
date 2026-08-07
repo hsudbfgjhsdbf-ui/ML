@@ -1,0 +1,66 @@
+{
+  "source_file": "/home/user/ML/data/raw/Health Insurance Fraud Claims.xlsx",
+  "sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "rows": 4500,
+  "columns": 19,
+  "column_names": [
+    "ClaimID",
+    "PatientID",
+    "ProviderID",
+    "ClaimAmount",
+    "ClaimDate",
+    "DiagnosisCode",
+    "ProcedureCode",
+    "PatientAge",
+    "PatientGender",
+    "ProviderSpecialty",
+    "ClaimStatus",
+    "PatientIncome",
+    "PatientMaritalStatus",
+    "PatientEmploymentStatus",
+    "ProviderLocation",
+    "ClaimType",
+    "ClaimSubmissionMethod",
+    "Cluster",
+    "ClaimLegitimacy"
+  ],
+  "target_distribution": {
+    "Legitimate": 4230,
+    "Fraud": 270
+  },
+  "missingness_fraction": {
+    "ClaimID": 0.0,
+    "PatientID": 0.0,
+    "ProviderID": 0.0,
+    "ClaimAmount": 0.0,
+    "ClaimDate": 0.0,
+    "DiagnosisCode": 0.0,
+    "ProcedureCode": 0.0,
+    "PatientAge": 0.0,
+    "PatientGender": 0.0,
+    "ProviderSpecialty": 0.0,
+    "ClaimStatus": 0.0,
+    "PatientIncome": 0.0,
+    "PatientMaritalStatus": 0.0,
+    "PatientEmploymentStatus": 0.0,
+    "ProviderLocation": 0.0,
+    "ClaimType": 0.0,
+    "ClaimSubmissionMethod": 0.0,
+    "Cluster": 0.0,
+    "ClaimLegitimacy": 0.0
+  },
+  "adequacy_criteria": {
+    "minimum_records": false,
+    "clear_binary_label": true,
+    "indian_context": false,
+    "policy_temporal_history_features": false
+  },
+  "adequate_as_primary_training_data": false,
+  "decision": "Preserve as raw reference and use transparent synthetic Indian fallback.",
+  "limitations": [
+    "Contains 4,500 records, below the required 10,000-record threshold.",
+    "Locations and identifiers are generic rather than Indian-context provider/policy data.",
+    "Does not provide policy limits, waiting periods, co-pay, or claim-history features.",
+    "Claim currency and documentation conventions are not identified as Indian."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "accuracy": 0.8927777777777778,
+  "precision": 0.5945273631840796,
+  "recall": 0.8884758364312267,
+  "f1": 0.7123695976154992,
+  "f2": 0.8085250338294994,
+  "auc_roc": 0.9512042327220104,
+  "auc_pr": 0.8209574582814918,
+  "mcc": 0.6694361147322864,
+  "brier_score": 0.06662763933421575,
+  "true_negative": 1368,
+  "false_positive": 163,
+  "false_negative": 30,
+  "true_positive": 239,
+  "algorithm": "Multinomial Naive Bayes",
+  "threshold": 0.12499999999999999,
+  "validation_f2": 0.8063427800269906,
+  "cv_f2_mean": 0.424199685056968,
+  "cv_f2_std": 0.026811662091680784,
+  "training_time_seconds": 0.46026677600002586,
+  "prediction_time_per_sample_ms": 0.00026095277778242435,
+  "tuned_hyperparameters": 1,
+  "best_hyperparameters": {
+    "alpha": 0.05
+  },
+  "cv_f2_scores": [
+    0.4647006255585344,
+    0.38636363636363635,
+    0.4293381037567084,
+    0.40504050405040504,
+    0.43555555555555553
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 30,
+    "false_positive_count": 163,
+    "false_negative_paid_fraud_loss_inr": 1723405.52,
+    "false_positive_review_and_friction_cost_inr": 570500.0,
+    "total_illustrative_cost_inr": 2293905.52,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 8.0244140625,
+  "artifact_path": "/home/user/ML/models/multinomial_naive_bayes.joblib"
+}

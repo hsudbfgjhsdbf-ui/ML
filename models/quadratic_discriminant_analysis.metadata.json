@@ -1,0 +1,43 @@
+{
+  "accuracy": 0.955,
+  "precision": 0.8092105263157895,
+  "recall": 0.9144981412639405,
+  "f1": 0.8586387434554974,
+  "f2": 0.8913043478260869,
+  "auc_roc": 0.9850949035909664,
+  "auc_pr": 0.8956631234573427,
+  "mcc": 0.83419916306329,
+  "brier_score": 0.04218450155151537,
+  "true_negative": 1473,
+  "false_positive": 58,
+  "false_negative": 23,
+  "true_positive": 246,
+  "algorithm": "Quadratic Discriminant Analysis",
+  "threshold": 0.05,
+  "validation_f2": 0.8922068463219228,
+  "cv_f2_mean": 0.8784140118822521,
+  "cv_f2_std": 0.013029865283762291,
+  "training_time_seconds": 0.8119759260000592,
+  "prediction_time_per_sample_ms": 0.0016616850000951268,
+  "tuned_hyperparameters": 1,
+  "best_hyperparameters": {
+    "reg_param": 0.01
+  },
+  "cv_f2_scores": [
+    0.8958168902920284,
+    0.8705882352941177,
+    0.8619313647246608,
+    0.8721389108129439,
+    0.8915946582875098
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 23,
+    "false_positive_count": 58,
+    "false_negative_paid_fraud_loss_inr": 1445901.31,
+    "false_positive_review_and_friction_cost_inr": 203000.0,
+    "total_illustrative_cost_inr": 1648901.31,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 61.5849609375,
+  "artifact_path": "/home/user/ML/models/quadratic_discriminant_analysis.joblib"
+}

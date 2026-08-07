@@ -1,0 +1,48 @@
+{
+  "accuracy": 0.9911111111111112,
+  "precision": 0.9809885931558935,
+  "recall": 0.9591078066914498,
+  "f1": 0.9699248120300752,
+  "f2": 0.9634055265123226,
+  "auc_roc": 0.9993614009358026,
+  "auc_pr": 0.9967775205293324,
+  "mcc": 0.9647949512996686,
+  "brier_score": 0.007697168601371163,
+  "true_negative": 1526,
+  "false_positive": 5,
+  "false_negative": 11,
+  "true_positive": 258,
+  "algorithm": "Shallow Neural Network",
+  "threshold": 0.19999999999999996,
+  "validation_f2": 0.9652366863905325,
+  "cv_f2_mean": 0.9946841944980214,
+  "cv_f2_std": 0.0017848443596931456,
+  "training_time_seconds": 19.40033262199995,
+  "prediction_time_per_sample_ms": 0.0009279161110953282,
+  "tuned_hyperparameters": 3,
+  "best_hyperparameters": {
+    "learning_rate_init": 0.001,
+    "hidden_layer_sizes": [
+      64,
+      32
+    ],
+    "alpha": 0.0001
+  },
+  "cv_f2_scores": [
+    0.9927293064876958,
+    0.9941234084231146,
+    0.9945408734602463,
+    0.9939843312814773,
+    0.9980430528375733
+  ],
+  "cost_matrix_inr": {
+    "false_negative_count": 11,
+    "false_positive_count": 5,
+    "false_negative_paid_fraud_loss_inr": 2109259.01,
+    "false_positive_review_and_friction_cost_inr": 17500.0,
+    "total_illustrative_cost_inr": 2126759.01,
+    "assumption": "FN cost equals synthetic claim amount; FP cost is configured review/friction proxy, not a real financial liability."
+  },
+  "model_size_kb": 149.7939453125,
+  "artifact_path": "/home/user/ML/models/shallow_neural_network.joblib"
+}
