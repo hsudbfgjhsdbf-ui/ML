@@ -1,0 +1,26 @@
+# Approach 1: Traditional Machine Learning Benchmarking Report
+
+This report presents the comprehensive performance evaluation of 12 traditional machine learning algorithms implemented for Medical Insurance Claim Fraud Detection, adhering to the IIIT Dharwad project guidelines.
+
+## Benchmarking Results Table
+
+|                                 |   Accuracy |   Precision |   Recall |   F1-Score |   F2-Score |   AUC-ROC |   AUC-PR |    MCC |   Training Time (s) |   Prediction Latency (ms/sample) |   Model Size (KB) |
+|:--------------------------------|-----------:|------------:|---------:|-----------:|-----------:|----------:|---------:|-------:|--------------------:|---------------------------------:|------------------:|
+| Random Forest                   |     0.9893 |      0.8947 |   0.9341 |     0.914  |     0.9259 |    0.9968 |   0.9588 | 0.9085 |               0.525 |                            0.008 |           1404.67 |
+| LightGBM                        |     0.9887 |      0.8854 |   0.9341 |     0.9091 |     0.9239 |    0.9977 |   0.9706 | 0.9034 |               0.143 |                            0.004 |            341.6  |
+| Gradient Boosting               |     0.9893 |      0.9032 |   0.9231 |     0.913  |     0.919  |    0.9965 |   0.9646 | 0.9074 |               1.853 |                            0.002 |            131.38 |
+| XGBoost                         |     0.9887 |      0.8936 |   0.9231 |     0.9081 |     0.917  |    0.996  |   0.9569 | 0.9022 |               0.087 |                            0.003 |            137.18 |
+| AdaBoost                        |     0.988  |      0.8925 |   0.9121 |     0.9022 |     0.9081 |    0.997  |   0.9558 | 0.8958 |               0.474 |                            0.008 |             33.29 |
+| Decision Tree                   |     0.9853 |      0.8485 |   0.9231 |     0.8842 |     0.9071 |    0.9585 |   0.8474 | 0.8773 |               0.023 |                            0.001 |              8.74 |
+| Artificial Neural Network       |     0.9853 |      0.8557 |   0.9121 |     0.883  |     0.9002 |    0.9963 |   0.9494 | 0.8757 |               2.428 |                            0.002 |            124.65 |
+| Quadratic Discriminant Analysis |     0.9727 |      0.6984 |   0.967  |     0.8111 |     0.898  |    0.9942 |   0.9026 | 0.809  |               0.009 |                            0.001 |             10.55 |
+| Gaussian Naive Bayes            |     0.9747 |      0.719  |   0.956  |     0.8208 |     0.8969 |    0.9961 |   0.9365 | 0.8169 |               0.005 |                            0.001 |              2.13 |
+| Support Vector Machine          |     0.9587 |      0.5973 |   0.978  |     0.7417 |     0.8674 |    0.9915 |   0.8587 | 0.7466 |               1.635 |                            0.05  |            209.71 |
+| Logistic Regression             |     0.9513 |      0.5563 |   0.978  |     0.7092 |     0.8492 |    0.9907 |   0.8739 | 0.7174 |               0.03  |                            0.001 |              1.69 |
+| K-Nearest Neighbors             |     0.966  |      0.8571 |   0.5275 |     0.6531 |     0.5714 |    0.9507 |   0.7011 | 0.657  |               0.003 |                            0.036 |           1313.93 |
+
+## Algorithm Rankings & Analysis
+
+1. **Primary Ranking Criterion (F2-Score)**: Prioritizes recall to minimize false negatives (undetected fraudulent claims).
+2. **Secondary Criterion (AUC-ROC)**: Evaluates class discrimination across all classification thresholds.
+3. **Top Performer**: **Random Forest** achieved the highest F2-Score of **0.9259**.
