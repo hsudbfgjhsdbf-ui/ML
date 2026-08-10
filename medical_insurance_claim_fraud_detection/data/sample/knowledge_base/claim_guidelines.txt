@@ -1,0 +1,11 @@
+Claim Processing Guidelines
+1. Verify policy active and premium paid.
+2. Validate documents: bill, prescription, discharge summary, ID proof.
+3. Check duplicates via ClaimID and PatientID+Date+Amount.
+4. Cross-check diagnosis and procedure codes for medical necessity.
+5. Run fraud model; if probability >0.7 escalate.
+6. If document validation fails, request resubmission or flag for manual review.
+7. If anomaly score in top 5% vs history, manual review.
+8. For flagged claims, retrieve policy rules and evidence; provide explanation with citations.
+9. Never auto-reject high-value claims without human review.
+10. Log decision, evidence, reviewer, timestamp for audit.

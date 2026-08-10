@@ -1,0 +1,91 @@
+erDiagram
+    PATIENT ||--o{ CLAIM : submits
+    POLICYHOLDER ||--o{ POLICY : owns
+    POLICY ||--o{ CLAIM : covers
+    PROVIDER ||--o{ CLAIM : submits
+    CLAIM ||--o{ DOCUMENT : has
+    CLAIM ||--|| DIAGNOSIS : has
+    CLAIM ||--|| PROCEDURE : has
+    CLAIM ||--|| FRAUD_LABEL : labeled_as
+    CLAIM ||--o{ REVIEW_DECISION : undergoes
+    PROVIDER ||--o{ HISTORICAL_CLAIM : has_history
+    PATIENT ||--o{ HISTORICAL_CLAIM : has_history
+
+    PATIENT {
+        string PatientID PK
+        int PatientAge
+        string PatientGender
+        float PatientIncome
+        string PatientMaritalStatus
+        string PatientEmploymentStatus
+    }
+    POLICYHOLDER {
+        string PolicyholderID PK
+        string Name
+        string Contact
+    }
+    POLICY {
+        string PolicyNumber PK
+        string PolicyholderID FK
+        date StartDate
+        date EndDate
+        float CoverageLimit
+        string Status
+    }
+    PROVIDER {
+        string ProviderID PK
+        string Specialty
+        string Location
+        float HistoricalFraudRate
+    }
+    CLAIM {
+        string ClaimID PK
+        string PatientID FK
+        string ProviderID FK
+        string PolicyNumber FK
+        float ClaimAmount
+        date ClaimDate
+        string DiagnosisCode FK
+        string ProcedureCode FK
+        string ClaimType
+        string ClaimSubmissionMethod
+        string ClaimStatus
+        int Cluster
+    }
+    DIAGNOSIS {
+        string DiagnosisCode PK
+        string Description
+    }
+    PROCEDURE {
+        string ProcedureCode PK
+        string Description
+        float BaselineCost
+    }
+    DOCUMENT {
+        string DocumentID PK
+        string ClaimID FK
+        string DocumentType
+        float BillTotal
+        date BillDate
+        string Hash
+        string ValidationStatus
+    }
+    FRAUD_LABEL {
+        string ClaimID PK
+        string ClaimLegitimacy
+        int BinaryLabel
+    }
+    REVIEW_DECISION {
+        string DecisionID PK
+        string ClaimID FK
+        string Decision
+        string Reviewer
+        datetime Timestamp
+        string Explanation
+    }
+    HISTORICAL_CLAIM {
+        string ClaimID PK
+        string ProviderID FK
+        float Amount
+        date Date
+    }

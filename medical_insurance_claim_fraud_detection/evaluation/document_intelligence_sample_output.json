@@ -1,0 +1,253 @@
+{
+  "claim_id": "6eea92b2-bd25-484d-94bd-278706e7f11c",
+  "documents_processed": 4,
+  "document_results": [
+    {
+      "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json",
+      "document_hash": "292def6eeced8379d569ce9f6f9dc671b08674e4d6cd50fbb31aad3c1af59710",
+      "document_type": "medical_bill",
+      "document_type_confidence": 0.99,
+      "ocr_text_preview": "{\n  \"document_type\": \"medical_bill\",\n  \"claim_id\": \"4d76c7f7-d36a-4139-b451-a9a4ad10d7d5\",\n  \"patient_name\": \"REDACTED\",\n  \"provider_name\": \"General Hospital - New Alishaview\",\n  \"bill_date\": \"2024-07-08\",\n  \"discharge_date\": \"2024-07-07\",\n  \"total_amount\": 7820.52,\n  \"items\": [\n    {\n      \"description\": \"Room Charges\",\n      \"amount\": 3000\n    },\n    {\n      \"description\": \"Surgery\",\n      \"amount\": 4000\n    },\n    {\n      \"description\": \"Lab\",\n      \"amount\": 820.52\n    }\n  ],\n  \"diagnosis_code\": \"Ta150\",\n  \"procedure_code\": \"iO013\"\n}",
+      "ocr_confidence": 0.95,
+      "extracted_fields": {
+        "claim_number": "4d76c7f7-d36a-4139-b451-a9a4ad10d7d5",
+        "provider_name": "General Hospital - New Alishaview",
+        "bill_total": 7820.52,
+        "bill_date": "2024-07-08",
+        "diagnosis_code": "Ta150",
+        "procedure_code": "iO013"
+      },
+      "field_confidences": {
+        "claim_number": 0.95,
+        "provider_name": 0.95,
+        "bill_total": 0.95,
+        "bill_date": 0.95,
+        "diagnosis_code": 0.95,
+        "procedure_code": 0.95
+      },
+      "validation": {
+        "status": "FAILED",
+        "errors": [
+          "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+        ],
+        "warnings": [],
+        "risk_indicators": [
+          "amount_mismatch"
+        ],
+        "validation_confidence": 0.9500000000000001
+      },
+      "vlm": {
+        "vlm_used": false,
+        "reason": "VLM disabled via config/env"
+      },
+      "meta": {
+        "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json",
+        "ocr_engine": "fallback",
+        "is_synthetic_fixture": true,
+        "structured_fixture": {
+          "document_type": "medical_bill",
+          "claim_id": "4d76c7f7-d36a-4139-b451-a9a4ad10d7d5",
+          "patient_name": "REDACTED",
+          "provider_name": "General Hospital - New Alishaview",
+          "bill_date": "2024-07-08",
+          "discharge_date": "2024-07-07",
+          "total_amount": 7820.52,
+          "items": [
+            {
+              "description": "Room Charges",
+              "amount": 3000
+            },
+            {
+              "description": "Surgery",
+              "amount": 4000
+            },
+            {
+              "description": "Lab",
+              "amount": 820.52
+            }
+          ],
+          "diagnosis_code": "Ta150",
+          "procedure_code": "iO013"
+        }
+      },
+      "timestamp": "2026-08-06T11:03:06.489975",
+      "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+      "document_risk": "HIGH"
+    },
+    {
+      "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json",
+      "document_hash": "a633f946280d9896c646d7cb52ae522636fc0ceaea2a0a446f7c484a043e402e",
+      "document_type": "medical_bill",
+      "document_type_confidence": 0.99,
+      "ocr_text_preview": "{\n  \"document_type\": \"medical_bill\",\n  \"claim_id\": \"e35193b4-3609-492b-866a-98de19317e9c\",\n  \"patient_name\": \"REDACTED\",\n  \"provider_name\": \"City Clinic - East Curtis\",\n  \"bill_date\": \"2024-07-10\",\n  \"discharge_date\": \"2024-07-08\",\n  \"total_amount\": 6000.0,\n  \"items\": [\n    {\n      \"description\": \"Consultation\",\n      \"amount\": 500\n    },\n    {\n      \"description\": \"Procedure\",\n      \"amount\": 4000\n    }\n  ],\n  \"diagnosis_code\": \"Fo766\",\n  \"procedure_code\": \"jR349\",\n  \"notes\": \"Intentional mismatch: items sum 4500 vs total 6000 for testing\"\n}",
+      "ocr_confidence": 0.95,
+      "extracted_fields": {
+        "claim_number": "e35193b4-3609-492b-866a-98de19317e9c",
+        "provider_name": "City Clinic - East Curtis",
+        "bill_total": 6000.0,
+        "bill_date": "2024-07-10",
+        "diagnosis_code": "Fo766",
+        "procedure_code": "jR349"
+      },
+      "field_confidences": {
+        "claim_number": 0.95,
+        "provider_name": 0.95,
+        "bill_total": 0.95,
+        "bill_date": 0.95,
+        "diagnosis_code": 0.95,
+        "procedure_code": 0.95
+      },
+      "validation": {
+        "status": "FAILED",
+        "errors": [
+          "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+        ],
+        "warnings": [],
+        "risk_indicators": [
+          "amount_mismatch"
+        ],
+        "validation_confidence": 0.9500000000000001
+      },
+      "vlm": {
+        "vlm_used": false,
+        "reason": "VLM disabled via config/env"
+      },
+      "meta": {
+        "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json",
+        "ocr_engine": "fallback",
+        "is_synthetic_fixture": true,
+        "structured_fixture": {
+          "document_type": "medical_bill",
+          "claim_id": "e35193b4-3609-492b-866a-98de19317e9c",
+          "patient_name": "REDACTED",
+          "provider_name": "City Clinic - East Curtis",
+          "bill_date": "2024-07-10",
+          "discharge_date": "2024-07-08",
+          "total_amount": 6000.0,
+          "items": [
+            {
+              "description": "Consultation",
+              "amount": 500
+            },
+            {
+              "description": "Procedure",
+              "amount": 4000
+            }
+          ],
+          "diagnosis_code": "Fo766",
+          "procedure_code": "jR349",
+          "notes": "Intentional mismatch: items sum 4500 vs total 6000 for testing"
+        }
+      },
+      "timestamp": "2026-08-06T11:03:06.490242",
+      "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+      "document_risk": "HIGH"
+    },
+    {
+      "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_prescription.json",
+      "document_hash": "e81e4f2c7fa0a656463736ef8b535bd5251681f041def6a8674d41606fb35e1a",
+      "document_type": "prescription",
+      "document_type_confidence": 0.99,
+      "ocr_text_preview": "{\n  \"document_type\": \"prescription\",\n  \"patient_id\": \"REDACTED\",\n  \"doctor\": \"Dr. Smith, Orthopedics\",\n  \"date\": \"2024-07-06\",\n  \"medications\": [\n    \"Ibuprofen 400mg\",\n    \"Amoxicillin 500mg\"\n  ],\n  \"diagnosis\": \"Fracture\"\n}",
+      "ocr_confidence": 0.95,
+      "extracted_fields": {
+        "patient_id": "REDACTED",
+        "bill_date": "2024-07-06",
+        "diagnosis_code": "Fracture"
+      },
+      "field_confidences": {
+        "patient_id": 0.95,
+        "bill_date": 0.95,
+        "diagnosis_code": 0.95
+      },
+      "validation": {
+        "status": "PASSED",
+        "errors": [],
+        "warnings": [],
+        "risk_indicators": [],
+        "validation_confidence": 0.9499999999999998
+      },
+      "vlm": {
+        "vlm_used": false,
+        "reason": "VLM disabled via config/env"
+      },
+      "meta": {
+        "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_prescription.json",
+        "ocr_engine": "fallback",
+        "is_synthetic_fixture": true,
+        "structured_fixture": {
+          "document_type": "prescription",
+          "patient_id": "REDACTED",
+          "doctor": "Dr. Smith, Orthopedics",
+          "date": "2024-07-06",
+          "medications": [
+            "Ibuprofen 400mg",
+            "Amoxicillin 500mg"
+          ],
+          "diagnosis": "Fracture"
+        }
+      },
+      "timestamp": "2026-08-06T11:03:06.490383",
+      "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+      "document_risk": "LOW"
+    },
+    {
+      "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_discharge.json",
+      "document_hash": "2d0bf745dbb214221f6f1299843370a6df952fa4e52f939634ea3dc0ef4dc844",
+      "document_type": "discharge_summary",
+      "document_type_confidence": 0.99,
+      "ocr_text_preview": "{\n  \"document_type\": \"discharge_summary\",\n  \"patient_id\": \"REDACTED\",\n  \"admission_date\": \"2024-07-03\",\n  \"discharge_date\": \"2024-07-07\",\n  \"diagnosis\": \"Ta150\",\n  \"procedure\": \"iO013\",\n  \"hospital\": \"General Hospital - New Alishaview\",\n  \"follow_up\": \"2 weeks\"\n}",
+      "ocr_confidence": 0.95,
+      "extracted_fields": {
+        "patient_id": "REDACTED",
+        "provider_name": "General Hospital - New Alishaview",
+        "diagnosis_code": "Ta150",
+        "procedure_code": "iO013",
+        "bill_date": "2024-07-03"
+      },
+      "field_confidences": {
+        "patient_id": 0.95,
+        "provider_name": 0.95,
+        "diagnosis_code": 0.95,
+        "procedure_code": 0.95,
+        "bill_date": 0.7
+      },
+      "validation": {
+        "status": "PASSED",
+        "errors": [],
+        "warnings": [],
+        "risk_indicators": [],
+        "validation_confidence": 0.9
+      },
+      "vlm": {
+        "vlm_used": false,
+        "reason": "VLM disabled via config/env"
+      },
+      "meta": {
+        "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_discharge.json",
+        "ocr_engine": "fallback",
+        "is_synthetic_fixture": true,
+        "structured_fixture": {
+          "document_type": "discharge_summary",
+          "patient_id": "REDACTED",
+          "admission_date": "2024-07-03",
+          "discharge_date": "2024-07-07",
+          "diagnosis": "Ta150",
+          "procedure": "iO013",
+          "hospital": "General Hospital - New Alishaview",
+          "follow_up": "2 weeks"
+        }
+      },
+      "timestamp": "2026-08-06T11:03:06.490519",
+      "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+      "document_risk": "LOW"
+    }
+  ],
+  "missing_documents": [],
+  "duplicates": [],
+  "overall_validation_status": "FAILED",
+  "overall_risk_indicators": [
+    "amount_mismatch"
+  ],
+  "timestamp": "2026-08-06T11:03:06.490559"
+}

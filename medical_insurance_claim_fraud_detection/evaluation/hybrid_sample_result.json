@@ -1,0 +1,648 @@
+{
+  "claim_id": "6eea92b2-bd25-484d-94bd-278706e7f11c",
+  "model_version": "hybrid_v1.0",
+  "fraud_probability": 0.0,
+  "fraud_prediction": 0,
+  "anomaly_score": 0.404009656492165,
+  "document_validation_status": "FAILED",
+  "policy_validation_status": "PASSED",
+  "risk_category": "HIGH",
+  "recommended_decision": "FLAG_FOR_MANUAL_REVIEW",
+  "key_risk_signals": [
+    "Missing required documents: prescription, discharge_summary",
+    "Document validation FAILED",
+    "Bill total 6000.0 != claimed 1703.04",
+    "Diagnosis mismatch doc Fo766 vs claim Bj740"
+  ],
+  "positive_evidence": [
+    "No strong historical anomaly"
+  ],
+  "missing_or_inconsistent_info": [
+    "prescription",
+    "discharge_summary",
+    "Validation error: Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+  ],
+  "explanation": "Fraud risk probability estimated at 0.00 (HIGH risk). Key risk signals: Missing required documents: prescription, discharge_summary; Document validation FAILED; Bill total 6000.0 != claimed 1703.04; Diagnosis mismatch doc Fo766 vs claim Bj740. Positive evidence: No strong historical anomaly. Evidence sources: document_intelligence, /home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json, /home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json. Recommended operational decision: FLAG_FOR_MANUAL_REVIEW. Flagged for manual review due to moderate risk or validation issues; reviewer should verify documents and policy coverage. Disclaimer: This result is decision support and not a final legal or insurance determination. Human reviewer must remain involved.",
+  "evidence_references": [
+    {
+      "type": "missing_docs",
+      "details": [
+        "prescription",
+        "discharge_summary"
+      ],
+      "source": "document_intelligence"
+    },
+    {
+      "type": "doc_error",
+      "doc": "medical_bill",
+      "errors": [
+        "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+      ],
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json"
+    },
+    {
+      "type": "doc_error",
+      "doc": "medical_bill",
+      "errors": [
+        "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+      ],
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json"
+    },
+    {
+      "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent",
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+      "score": 0.2390698597515511
+    },
+    {
+      "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+      "score": 0.20187423788636477
+    },
+    {
+      "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rule",
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+      "score": 0.18700590220218852
+    },
+    {
+      "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mis",
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+      "score": 0.1549826115393207
+    },
+    {
+      "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+      "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+      "score": 0.0
+    },
+    {
+      "type": "bill_mismatch",
+      "bill_total": 6000.0,
+      "claimed": 1703.04
+    }
+  ],
+  "timestamp": "2026-08-06T11:03:18.839327+00:00",
+  "disclaimer": "This output is generated by a fraud-risk decision-support prototype for academic purposes. It is NOT a final legal, medical, or insurance determination. A qualified human reviewer must remain involved, especially for REJECT_OR_ESCALATE or high-impact claims.",
+  "doc_validation_detail": {
+    "claim_id": "6eea92b2-bd25-484d-94bd-278706e7f11c",
+    "documents_processed": 2,
+    "document_results": [
+      {
+        "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json",
+        "document_hash": "292def6eeced8379d569ce9f6f9dc671b08674e4d6cd50fbb31aad3c1af59710",
+        "document_type": "medical_bill",
+        "document_type_confidence": 0.99,
+        "ocr_text_preview": "{\n  \"document_type\": \"medical_bill\",\n  \"claim_id\": \"4d76c7f7-d36a-4139-b451-a9a4ad10d7d5\",\n  \"patient_name\": \"REDACTED\",\n  \"provider_name\": \"General Hospital - New Alishaview\",\n  \"bill_date\": \"2024-07-08\",\n  \"discharge_date\": \"2024-07-07\",\n  \"total_amount\": 7820.52,\n  \"items\": [\n    {\n      \"description\": \"Room Charges\",\n      \"amount\": 3000\n    },\n    {\n      \"description\": \"Surgery\",\n      \"amount\": 4000\n    },\n    {\n      \"description\": \"Lab\",\n      \"amount\": 820.52\n    }\n  ],\n  \"diagnosis_code\": \"Ta150\",\n  \"procedure_code\": \"iO013\"\n}",
+        "ocr_confidence": 0.95,
+        "extracted_fields": {
+          "claim_number": "4d76c7f7-d36a-4139-b451-a9a4ad10d7d5",
+          "provider_name": "General Hospital - New Alishaview",
+          "bill_total": 7820.52,
+          "bill_date": "2024-07-08",
+          "diagnosis_code": "Ta150",
+          "procedure_code": "iO013"
+        },
+        "field_confidences": {
+          "claim_number": 0.95,
+          "provider_name": 0.95,
+          "bill_total": 0.95,
+          "bill_date": 0.95,
+          "diagnosis_code": 0.95,
+          "procedure_code": 0.95
+        },
+        "validation": {
+          "status": "FAILED",
+          "errors": [
+            "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+          ],
+          "warnings": [],
+          "risk_indicators": [
+            "amount_mismatch"
+          ],
+          "validation_confidence": 0.9500000000000001
+        },
+        "vlm": {
+          "vlm_used": false,
+          "reason": "VLM disabled via config/env"
+        },
+        "meta": {
+          "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json",
+          "ocr_engine": "fallback",
+          "is_synthetic_fixture": true,
+          "structured_fixture": {
+            "document_type": "medical_bill",
+            "claim_id": "4d76c7f7-d36a-4139-b451-a9a4ad10d7d5",
+            "patient_name": "REDACTED",
+            "provider_name": "General Hospital - New Alishaview",
+            "bill_date": "2024-07-08",
+            "discharge_date": "2024-07-07",
+            "total_amount": 7820.52,
+            "items": [
+              {
+                "description": "Room Charges",
+                "amount": 3000
+              },
+              {
+                "description": "Surgery",
+                "amount": 4000
+              },
+              {
+                "description": "Lab",
+                "amount": 820.52
+              }
+            ],
+            "diagnosis_code": "Ta150",
+            "procedure_code": "iO013"
+          }
+        },
+        "timestamp": "2026-08-06T11:03:18.831048",
+        "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+        "document_risk": "HIGH"
+      },
+      {
+        "document_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json",
+        "document_hash": "a633f946280d9896c646d7cb52ae522636fc0ceaea2a0a446f7c484a043e402e",
+        "document_type": "medical_bill",
+        "document_type_confidence": 0.99,
+        "ocr_text_preview": "{\n  \"document_type\": \"medical_bill\",\n  \"claim_id\": \"e35193b4-3609-492b-866a-98de19317e9c\",\n  \"patient_name\": \"REDACTED\",\n  \"provider_name\": \"City Clinic - East Curtis\",\n  \"bill_date\": \"2024-07-10\",\n  \"discharge_date\": \"2024-07-08\",\n  \"total_amount\": 6000.0,\n  \"items\": [\n    {\n      \"description\": \"Consultation\",\n      \"amount\": 500\n    },\n    {\n      \"description\": \"Procedure\",\n      \"amount\": 4000\n    }\n  ],\n  \"diagnosis_code\": \"Fo766\",\n  \"procedure_code\": \"jR349\",\n  \"notes\": \"Intentional mismatch: items sum 4500 vs total 6000 for testing\"\n}",
+        "ocr_confidence": 0.95,
+        "extracted_fields": {
+          "claim_number": "e35193b4-3609-492b-866a-98de19317e9c",
+          "provider_name": "City Clinic - East Curtis",
+          "bill_total": 6000.0,
+          "bill_date": "2024-07-10",
+          "diagnosis_code": "Fo766",
+          "procedure_code": "jR349"
+        },
+        "field_confidences": {
+          "claim_number": 0.95,
+          "provider_name": 0.95,
+          "bill_total": 0.95,
+          "bill_date": 0.95,
+          "diagnosis_code": 0.95,
+          "procedure_code": 0.95
+        },
+        "validation": {
+          "status": "FAILED",
+          "errors": [
+            "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+          ],
+          "warnings": [],
+          "risk_indicators": [
+            "amount_mismatch"
+          ],
+          "validation_confidence": 0.9500000000000001
+        },
+        "vlm": {
+          "vlm_used": false,
+          "reason": "VLM disabled via config/env"
+        },
+        "meta": {
+          "source_path": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json",
+          "ocr_engine": "fallback",
+          "is_synthetic_fixture": true,
+          "structured_fixture": {
+            "document_type": "medical_bill",
+            "claim_id": "e35193b4-3609-492b-866a-98de19317e9c",
+            "patient_name": "REDACTED",
+            "provider_name": "City Clinic - East Curtis",
+            "bill_date": "2024-07-10",
+            "discharge_date": "2024-07-08",
+            "total_amount": 6000.0,
+            "items": [
+              {
+                "description": "Consultation",
+                "amount": 500
+              },
+              {
+                "description": "Procedure",
+                "amount": 4000
+              }
+            ],
+            "diagnosis_code": "Fo766",
+            "procedure_code": "jR349",
+            "notes": "Intentional mismatch: items sum 4500 vs total 6000 for testing"
+          }
+        },
+        "timestamp": "2026-08-06T11:03:18.831298",
+        "privacy_safeguard": "Patient identifiers redacted/hashed; no real PHI transmitted externally by default",
+        "document_risk": "HIGH"
+      }
+    ],
+    "missing_documents": [
+      "prescription",
+      "discharge_summary"
+    ],
+    "duplicates": [],
+    "overall_validation_status": "FAILED",
+    "overall_risk_indicators": [
+      "amount_mismatch"
+    ],
+    "timestamp": "2026-08-06T11:03:18.831311"
+  },
+  "rag_detail": {
+    "claim_id": "6eea92b2-bd25-484d-94bd-278706e7f11c",
+    "model_version": "agentic_rag_v1.0",
+    "fraud_probability": 0.0,
+    "anomaly_score": 0.404009656492165,
+    "agent_results": [
+      {
+        "agent": "DocumentVerificationAgent",
+        "status": "FAILED",
+        "confidence": 0.4,
+        "risk_signals": [
+          "Missing required documents: prescription, discharge_summary",
+          "Document validation FAILED"
+        ],
+        "evidence": [
+          {
+            "type": "missing_docs",
+            "details": [
+              "prescription",
+              "discharge_summary"
+            ],
+            "source": "document_intelligence"
+          },
+          {
+            "type": "doc_error",
+            "doc": "medical_bill",
+            "errors": [
+              "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+            ],
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json"
+          },
+          {
+            "type": "doc_error",
+            "doc": "medical_bill",
+            "errors": [
+              "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+            ],
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json"
+          }
+        ],
+        "positive_evidence": []
+      },
+      {
+        "agent": "PolicyRuleMatchingAgent",
+        "status": "PASSED",
+        "confidence": 0.7,
+        "risk_signals": [],
+        "evidence": [
+          {
+            "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+            "score": 0.2390698597515511
+          },
+          {
+            "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+            "score": 0.20187423788636477
+          },
+          {
+            "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rule",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+            "score": 0.18700590220218852
+          },
+          {
+            "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mis",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+            "score": 0.1549826115393207
+          },
+          {
+            "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+            "score": 0.0
+          }
+        ],
+        "positive_evidence": [],
+        "retrieved": [
+          {
+            "id": "policy_rules.txt_chunk_0",
+            "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent with procedure (e.g., pediatric codes not for adults >18 unless exception). 9. Routine checkups limited to 2 per year. 10. Emergency claims require ER documentation.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+            "source_name": "policy_rules.txt",
+            "chunk_index": 0,
+            "score": 0.2390698597515511
+          },
+          {
+            "id": "coverage_rules.txt_chunk_0",
+            "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+            "source_name": "coverage_rules.txt",
+            "chunk_index": 0,
+            "score": 0.20187423788636477
+          },
+          {
+            "id": "claim_guidelines.txt_chunk_0",
+            "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rules and evidence; provide explanation with citations. 9. Never auto-reject high-value claims without human review. 10. Log decision, evidence, reviewer, timestamp for audit.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+            "source_name": "claim_guidelines.txt",
+            "chunk_index": 0,
+            "score": 0.18700590220218852
+          },
+          {
+            "id": "fraud_indicators.txt_chunk_0",
+            "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mismatched totals, overlapping dates. - High frequency claims same patient in short window. - Provider with history of high fraud rate. - Unbundling: splitting procedure into separate billable components.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+            "source_name": "fraud_indicators.txt",
+            "chunk_index": 0,
+            "score": 0.1549826115393207
+          },
+          {
+            "id": "exclusion_clauses.txt_chunk_0",
+            "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+            "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+            "source_name": "exclusion_clauses.txt",
+            "chunk_index": 0,
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "agent": "ClaimConsistencyAgent",
+        "status": "FAILED",
+        "confidence": 0.75,
+        "risk_signals": [
+          "Bill total 6000.0 != claimed 1703.04",
+          "Diagnosis mismatch doc Fo766 vs claim Bj740"
+        ],
+        "evidence": [
+          {
+            "type": "bill_mismatch",
+            "bill_total": 6000.0,
+            "claimed": 1703.04
+          }
+        ],
+        "positive_evidence": []
+      },
+      {
+        "agent": "HistoricalPatternAnomalyAgent",
+        "status": "PASSED",
+        "confidence": 0.7,
+        "risk_signals": [],
+        "evidence": [],
+        "positive_evidence": [
+          "No strong historical anomaly"
+        ]
+      }
+    ],
+    "synthesis": {
+      "risk_category": "HIGH",
+      "recommended_decision": "FLAG_FOR_MANUAL_REVIEW",
+      "human_review_required": true,
+      "aggregated_risk_signals": [
+        "Missing required documents: prescription, discharge_summary",
+        "Document validation FAILED",
+        "Bill total 6000.0 != claimed 1703.04",
+        "Diagnosis mismatch doc Fo766 vs claim Bj740"
+      ],
+      "aggregated_evidence": [
+        {
+          "type": "missing_docs",
+          "details": [
+            "prescription",
+            "discharge_summary"
+          ],
+          "source": "document_intelligence"
+        },
+        {
+          "type": "doc_error",
+          "doc": "medical_bill",
+          "errors": [
+            "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+          ],
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json"
+        },
+        {
+          "type": "doc_error",
+          "doc": "medical_bill",
+          "errors": [
+            "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+          ],
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json"
+        },
+        {
+          "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+          "score": 0.2390698597515511
+        },
+        {
+          "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+          "score": 0.20187423788636477
+        },
+        {
+          "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rule",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+          "score": 0.18700590220218852
+        },
+        {
+          "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mis",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+          "score": 0.1549826115393207
+        },
+        {
+          "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+          "score": 0.0
+        },
+        {
+          "type": "bill_mismatch",
+          "bill_total": 6000.0,
+          "claimed": 1703.04
+        }
+      ],
+      "positive_evidence": [
+        "No strong historical anomaly"
+      ],
+      "fraud_probability": 0.0,
+      "anomaly_score": 0.404009656492165
+    },
+    "explanation": "Fraud risk probability estimated at 0.00 (HIGH risk). Key risk signals: Missing required documents: prescription, discharge_summary; Document validation FAILED; Bill total 6000.0 != claimed 1703.04; Diagnosis mismatch doc Fo766 vs claim Bj740. Positive evidence: No strong historical anomaly. Evidence sources: document_intelligence, /home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json, /home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json. Recommended operational decision: FLAG_FOR_MANUAL_REVIEW. Flagged for manual review due to moderate risk or validation issues; reviewer should verify documents and policy coverage. Disclaimer: This result is decision support and not a final legal or insurance determination. Human reviewer must remain involved.",
+    "evidence_references": [
+      {
+        "type": "missing_docs",
+        "details": [
+          "prescription",
+          "discharge_summary"
+        ],
+        "source": "document_intelligence"
+      },
+      {
+        "type": "doc_error",
+        "doc": "medical_bill",
+        "errors": [
+          "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+        ],
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json"
+      },
+      {
+        "type": "doc_error",
+        "doc": "medical_bill",
+        "errors": [
+          "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+        ],
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json"
+      },
+      {
+        "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+        "score": 0.2390698597515511
+      },
+      {
+        "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+        "score": 0.20187423788636477
+      },
+      {
+        "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rule",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+        "score": 0.18700590220218852
+      },
+      {
+        "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mis",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+        "score": 0.1549826115393207
+      },
+      {
+        "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+        "score": 0.0
+      },
+      {
+        "type": "bill_mismatch",
+        "bill_total": 6000.0,
+        "claimed": 1703.04
+      }
+    ],
+    "retrieved_policy_docs": [
+      {
+        "id": "policy_rules.txt_chunk_0",
+        "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent with procedure (e.g., pediatric codes not for adults >18 unless exception). 9. Routine checkups limited to 2 per year. 10. Emergency claims require ER documentation.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+        "source_name": "policy_rules.txt",
+        "chunk_index": 0,
+        "score": 0.2390698597515511
+      },
+      {
+        "id": "coverage_rules.txt_chunk_0",
+        "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+        "source_name": "coverage_rules.txt",
+        "chunk_index": 0,
+        "score": 0.20187423788636477
+      },
+      {
+        "id": "claim_guidelines.txt_chunk_0",
+        "text": "Claim Processing Guidelines 1. Verify policy active and premium paid. 2. Validate documents: bill, prescription, discharge summary, ID proof. 3. Check duplicates via ClaimID and PatientID+Date+Amount. 4. Cross-check diagnosis and procedure codes for medical necessity. 5. Run fraud model; if probability >0.7 escalate. 6. If document validation fails, request resubmission or flag for manual review. 7. If anomaly score in top 5% vs history, manual review. 8. For flagged claims, retrieve policy rules and evidence; provide explanation with citations. 9. Never auto-reject high-value claims without human review. 10. Log decision, evidence, reviewer, timestamp for audit.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt",
+        "source_name": "claim_guidelines.txt",
+        "chunk_index": 0,
+        "score": 0.18700590220218852
+      },
+      {
+        "id": "fraud_indicators.txt_chunk_0",
+        "text": "Fraud Indicators - Unusually high claim amount vs peer group (>3 std dev). - Upcoding: billing for more expensive procedure than performed. - Duplicate billing same date same procedure. - Patient age inconsistent with diagnosis. - Provider billing far outside specialty (e.g., orthopedics billing cardiology). - Claim submission date before service date. - Inconsistent provider location vs patient location without referral. - Missing discharge summary for inpatient claims. - Altered documents, mismatched totals, overlapping dates. - High frequency claims same patient in short window. - Provider with history of high fraud rate. - Unbundling: splitting procedure into separate billable components.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/fraud_indicators.txt",
+        "source_name": "fraud_indicators.txt",
+        "chunk_index": 0,
+        "score": 0.1549826115393207
+      },
+      {
+        "id": "exclusion_clauses.txt_chunk_0",
+        "text": "Exclusion Clauses - Cosmetic surgery not covered unless post-trauma reconstructive. - Experimental treatments not covered. - Self-inflicted injuries excluded. - Claims with fraudulent documents automatically flagged. - Pre-existing conditions have 90-day waiting period. - Dental procedures only covered under dental rider.",
+        "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/exclusion_clauses.txt",
+        "source_name": "exclusion_clauses.txt",
+        "chunk_index": 0,
+        "score": 0.0
+      }
+    ],
+    "llm": null,
+    "timestamp": "2026-08-06T11:03:18.833786",
+    "disclaimer": "Decision-support prototype. Not final legal/insurance determination. Human review mandatory.",
+    "auditable_summary": {
+      "observed_evidence": [
+        {
+          "type": "missing_docs",
+          "details": [
+            "prescription",
+            "discharge_summary"
+          ],
+          "source": "document_intelligence"
+        },
+        {
+          "type": "doc_error",
+          "doc": "medical_bill",
+          "errors": [
+            "Bill total 7820.52 does not match claimed amount 1703.04 diff 6117.48"
+          ],
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_1.json"
+        },
+        {
+          "type": "doc_error",
+          "doc": "medical_bill",
+          "errors": [
+            "Bill total 6000.0 does not match claimed amount 1703.04 diff 4296.96"
+          ],
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/synthetic_bill_mismatch.json"
+        },
+        {
+          "text": "Policy Rules - Medical Insurance 1. Policy must be active at time of service. 2. Claim must be submitted within 30 days of discharge. 3. Pre-authorization required for procedures costing > $10,000. 4. Only licensed providers in network are covered; out-of-network requires special approval. 5. Duplicate claim IDs are not allowed. 6. Claim amount must match sum of bill line items within $5 tolerance. 7. Diagnosis must justify procedure per medical necessity table. 8. Patient age must be consistent",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+          "score": 0.2390698597515511
+        },
+        {
+          "text": "Coverage Rules - Inpatient coverage includes room, surgery, anesthesia up to policy limit. - Outpatient: consultations and labs covered at 80% after deductible. - Emergency: 100% covered if genuine emergency, else 70%. - Deductible $500 per year, out-of-pocket max $5000. - Pre-authorization: required for MRI, CT, major surgery. - Generic prescriptions preferred; branded need justification.",
+          "source": "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+          "score": 0.20187423788636477
+        }
+      ],
+      "applied_rule": "Policy rule: pre-auth >$10000, duplicate check, bill total matching, peer amount comparison",
+      "risk_signal": [
+        "Missing required documents: prescription, discharge_summary",
+        "Document validation FAILED",
+        "Bill total 6000.0 != claimed 1703.04",
+        "Diagnosis mismatch doc Fo766 vs claim Bj740"
+      ],
+      "model_result": "fraud_prob=0.0 risk=HIGH",
+      "recommended_action": "FLAG_FOR_MANUAL_REVIEW",
+      "source_reference": [
+        "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/policy_rules.txt",
+        "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/coverage_rules.txt",
+        "/home/user/ML/medical_insurance_claim_fraud_detection/data/sample/knowledge_base/claim_guidelines.txt"
+      ]
+    }
+  },
+  "top_features": [
+    [
+      "PatientIncome",
+      0.6675765847740349
+    ],
+    [
+      "ClaimAmount",
+      0.3324234152259232
+    ],
+    [
+      "DiagnosisCode_Mb593",
+      4.167411333365536e-14
+    ],
+    [
+      "ProcedureCode_Ba624",
+      0.0
+    ],
+    [
+      "ProcedureCode_Ba635",
+      0.0
+    ]
+  ],
+  "weights_used": {
+    "ml": 0.5,
+    "dl": 0.2,
+    "anomaly": 0.15,
+    "document": 0.15
+  },
+  "thresholds_used": {
+    "approve_max_prob": 0.3,
+    "review_min_prob": 0.3,
+    "review_max_prob": 0.7,
+    "reject_min_prob": 0.7
+  }
+}

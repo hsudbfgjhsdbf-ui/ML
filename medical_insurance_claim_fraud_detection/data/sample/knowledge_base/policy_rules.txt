@@ -1,0 +1,11 @@
+Policy Rules - Medical Insurance
+1. Policy must be active at time of service.
+2. Claim must be submitted within 30 days of discharge.
+3. Pre-authorization required for procedures costing > $10,000.
+4. Only licensed providers in network are covered; out-of-network requires special approval.
+5. Duplicate claim IDs are not allowed.
+6. Claim amount must match sum of bill line items within $5 tolerance.
+7. Diagnosis must justify procedure per medical necessity table.
+8. Patient age must be consistent with procedure (e.g., pediatric codes not for adults >18 unless exception).
+9. Routine checkups limited to 2 per year.
+10. Emergency claims require ER documentation.

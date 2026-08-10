@@ -1,0 +1,7 @@
+Coverage Rules
+- Inpatient coverage includes room, surgery, anesthesia up to policy limit.
+- Outpatient: consultations and labs covered at 80% after deductible.
+- Emergency: 100% covered if genuine emergency, else 70%.
+- Deductible $500 per year, out-of-pocket max $5000.
+- Pre-authorization: required for MRI, CT, major surgery.
+- Generic prescriptions preferred; branded need justification.
