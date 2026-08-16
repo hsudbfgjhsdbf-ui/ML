@@ -1,0 +1,34 @@
+{
+  "model_name": "ml_quadratic_discriminant_analysis",
+  "metrics": {
+    "accuracy": 0.95,
+    "precision": 0.7273,
+    "recall": 0.8216,
+    "f1_score": 0.7716,
+    "f2_score": 0.8008,
+    "roc_auc": 0.9669,
+    "pr_auc": 0.8704,
+    "mcc": 0.7454,
+    "brier_score": 0.0455,
+    "true_negatives": 1558,
+    "false_positives": 57,
+    "false_negatives": 33,
+    "true_positives": 152,
+    "financial_loss_inr": 6789000.0,
+    "fraud_savings_inr": 28120000.0,
+    "threshold": 0.581,
+    "training_time_sec": 0.15,
+    "inference_latency_ms": 0.0,
+    "cv_f2_mean": 0.5981,
+    "cv_f2_std": 0.0461,
+    "best_val_f2": 0.7964
+  },
+  "metadata": {
+    "best_hyperparameters": {
+      "scale_pos_weight": 0.9999999986733882,
+      "optimized": true
+    },
+    "optimal_threshold": 0.5813131313131312,
+    "input_dim": 195
+  }
+}
