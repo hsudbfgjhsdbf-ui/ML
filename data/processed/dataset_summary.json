@@ -1,0 +1,51 @@
+{
+  "rows": 4500,
+  "columns": 19,
+  "dtypes": {
+    "ClaimID": "str",
+    "PatientID": "str",
+    "ProviderID": "str",
+    "ClaimAmount": "float64",
+    "ClaimDate": "datetime64[us]",
+    "DiagnosisCode": "str",
+    "ProcedureCode": "str",
+    "PatientAge": "int64",
+    "PatientGender": "str",
+    "ProviderSpecialty": "str",
+    "ClaimStatus": "str",
+    "PatientIncome": "float64",
+    "PatientMaritalStatus": "str",
+    "PatientEmploymentStatus": "str",
+    "ProviderLocation": "str",
+    "ClaimType": "str",
+    "ClaimSubmissionMethod": "str",
+    "Cluster": "int64",
+    "ClaimLegitimacy": "str"
+  },
+  "missing": {
+    "ClaimID": 0,
+    "PatientID": 0,
+    "ProviderID": 0,
+    "ClaimAmount": 0,
+    "ClaimDate": 0,
+    "DiagnosisCode": 0,
+    "ProcedureCode": 0,
+    "PatientAge": 0,
+    "PatientGender": 0,
+    "ProviderSpecialty": 0,
+    "ClaimStatus": 0,
+    "PatientIncome": 0,
+    "PatientMaritalStatus": 0,
+    "PatientEmploymentStatus": 0,
+    "ProviderLocation": 0,
+    "ClaimType": 0,
+    "ClaimSubmissionMethod": 0,
+    "Cluster": 0,
+    "ClaimLegitimacy": 0
+  },
+  "duplicates": 0,
+  "class_counts": {
+    "Legitimate": 4230,
+    "Fraud": 270
+  }
+}

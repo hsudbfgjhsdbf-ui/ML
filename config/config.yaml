@@ -1,0 +1,77 @@
+# ==============================================================================
+# Traditional Machine Learning Approach - Configuration
+# Medical Insurance Claim Fraud Detection (IIIT Dharwad)
+# ==============================================================================
+# Centralised configuration. All parameters controlling data, preprocessing,
+# feature engineering, training, evaluation and outputs live here so the same
+# code can be run with different settings without code changes.
+
+# --- Data -------------------------------------------------------------------
+data:
+  raw_path: "data/raw/Health Insurance Fraud Claims.xlsx"
+  processed_dir: "data/processed"
+  target: "ClaimLegitimacy"
+  positive_class: "Fraud"          # minority / fraud label
+  id_columns: ["ClaimID", "PatientID", "ProviderID"]  # identifiers dropped
+
+  # Near-unique codes -> dropped to avoid target-encoding leakage
+  high_cardinality: ["DiagnosisCode", "ProcedureCode", "ProviderLocation"]
+
+  # Direct target leak in the source data (Cluster ~= fraud label) -> dropped
+  drop_columns: ["Cluster"]
+
+  split:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+    stratify: true
+    random_state: 42
+
+# --- Preprocessing ----------------------------------------------------------
+preprocessing:
+  missing_threshold: 0.70         # drop features with >70% missing
+  duplicate_check: true
+  outlier_method: "iqr"           # zscore | iqr
+  outlier_preserve_fraud: true    # keep outliers that may be genuine fraud signal
+  numeric_imputation: "median"
+  categorical_imputation: "mode"
+
+# --- Feature engineering ----------------------------------------------------
+feature_engineering:
+  log_transform: true
+  polynomial_degree: 2
+  target_encoding_smoothing: 20
+  min_frequency_encoding: 1
+  interaction_features: true
+
+# --- Class imbalance --------------------------------------------------------
+imbalance:
+  strategy: "smote"               # smote | smoteenn | random_undersample | class_weight | none
+  smote_random_state: 42
+  class_weight: "balanced"
+
+# --- Training ---------------------------------------------------------------
+training:
+  cv_folds: 5
+  cv_scoring: "f2"
+  random_search_iter: 5          # for high-dim hyperparameter spaces
+  n_jobs: 1                       # serial search avoids nested-parallelism hangs
+  random_state: 42
+  test_size_use: "test"
+
+# --- Evaluation -------------------------------------------------------------
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1", "f2", "roc_auc",
+            "pr_auc", "mcc", "training_time", "pred_time_ms", "model_size_kb"]
+  rank_primary: "f2"
+  rank_secondary: "roc_auc"
+  optimal_threshold_metric: "f2"   # threshold optimised to maximise F2
+  p_value_threshold: 0.05
+  n_bootstrap: 1000
+
+# --- Outputs ----------------------------------------------------------------
+outputs:
+  models_dir: "models/ml"
+  eval_dir: "evaluation"
+  viz_dir: "visualizations/ml"
+  random_state: 42

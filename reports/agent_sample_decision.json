@@ -1,0 +1,42 @@
+{
+  "claim_id": "b3953368-6624-4668-99e8-3f2bd048f320",
+  "verdict": "Flagged",
+  "risk_score": 0.29999998500000075,
+  "explanation": "Decision: Flagged (moderate risk requiring manual review).\nAgent findings:\n- EligibilityAgent: [PASS] All required fields present and plausible.\n- PolicyAgent: [WARN] Senior citizen profile - higher co-pay / waiting-period risk.\n- AnomalyAgent: [PASS] No material anomalies detected.\n- HistoricalAgent: [PASS] No elevated historical risk signals.\nThis decision is backed by the evidence cited above and is reproducible; flagged items require human review.",
+  "findings": [
+    {
+      "agent": "EligibilityAgent",
+      "status": "pass",
+      "confidence": 0.9,
+      "details": "All required fields present and plausible.",
+      "evidence": [],
+      "severity": "low"
+    },
+    {
+      "agent": "PolicyAgent",
+      "status": "warn",
+      "confidence": 0.75,
+      "details": "Senior citizen profile - higher co-pay / waiting-period risk.",
+      "evidence": [
+        "Senior citizen profile - higher co-pay / waiting-period risk."
+      ],
+      "severity": "medium"
+    },
+    {
+      "agent": "AnomalyAgent",
+      "status": "pass",
+      "confidence": 0.6,
+      "details": "No material anomalies detected.",
+      "evidence": [],
+      "severity": "low"
+    },
+    {
+      "agent": "HistoricalAgent",
+      "status": "pass",
+      "confidence": 0.6,
+      "details": "No elevated historical risk signals.",
+      "evidence": [],
+      "severity": "low"
+    }
+  ]
+}
