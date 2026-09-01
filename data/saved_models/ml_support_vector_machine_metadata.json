@@ -1,0 +1,34 @@
+{
+  "model_name": "ml_support_vector_machine",
+  "metrics": {
+    "accuracy": 0.955,
+    "precision": 0.7476,
+    "recall": 0.8486,
+    "f1_score": 0.7949,
+    "f2_score": 0.8263,
+    "roc_auc": 0.9698,
+    "pr_auc": 0.902,
+    "mcc": 0.7717,
+    "brier_score": 0.0389,
+    "true_negatives": 1562,
+    "false_positives": 53,
+    "false_negatives": 28,
+    "true_positives": 157,
+    "financial_loss_inr": 5816000.0,
+    "fraud_savings_inr": 29045000.0,
+    "threshold": 0.567,
+    "training_time_sec": 0.263,
+    "inference_latency_ms": 0.001,
+    "cv_f2_mean": 0.7792,
+    "cv_f2_std": 0.0292,
+    "best_val_f2": 0.8369
+  },
+  "metadata": {
+    "best_hyperparameters": {
+      "scale_pos_weight": 0.9999999986733882,
+      "optimized": true
+    },
+    "optimal_threshold": 0.5671717171717171,
+    "input_dim": 195
+  }
+}

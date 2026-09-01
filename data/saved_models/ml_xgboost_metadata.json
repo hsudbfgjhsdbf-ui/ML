@@ -1,0 +1,34 @@
+{
+  "model_name": "ml_xgboost",
+  "metrics": {
+    "accuracy": 0.97,
+    "precision": 0.8104,
+    "recall": 0.9243,
+    "f1_score": 0.8636,
+    "f2_score": 0.8991,
+    "roc_auc": 0.9853,
+    "pr_auc": 0.9476,
+    "mcc": 0.8492,
+    "brier_score": 0.0227,
+    "true_negatives": 1575,
+    "false_positives": 40,
+    "false_negatives": 14,
+    "true_positives": 171,
+    "financial_loss_inr": 3070000.0,
+    "fraud_savings_inr": 31635000.0,
+    "threshold": 0.383,
+    "training_time_sec": 1.277,
+    "inference_latency_ms": 0.001,
+    "cv_f2_mean": 0.8097,
+    "cv_f2_std": 0.0333,
+    "best_val_f2": 0.9228
+  },
+  "metadata": {
+    "best_hyperparameters": {
+      "scale_pos_weight": 0.9999999986733882,
+      "optimized": true
+    },
+    "optimal_threshold": 0.3833333333333333,
+    "input_dim": 195
+  }
+}
