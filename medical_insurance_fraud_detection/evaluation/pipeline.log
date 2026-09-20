@@ -1,0 +1,151 @@
+2026-09-01 01:55:00,164 | INFO | ============================================================
+2026-09-01 01:55:00,164 | INFO | RUN ID: run_20260901_015500
+2026-09-01 01:55:00,164 | INFO | Medical Insurance Claim Fraud Detection — Approach 1
+2026-09-01 01:55:00,164 | INFO | Traditional Machine Learning with Full Benchmarking
+2026-09-01 01:55:00,164 | INFO | IIIT Dharwad | Prof. Ramesh Athe
+2026-09-01 01:55:00,164 | INFO | Team: B Varshith, M Jagadeshwar, J Ganesh
+2026-09-01 01:55:00,164 | INFO | ============================================================
+2026-09-01 01:55:00,164 | INFO | ============================================================
+2026-09-01 01:55:00,164 | INFO | STAGE S1: Data Acquisition
+2026-09-01 01:55:00,164 | INFO | ============================================================
+2026-09-01 01:55:00,164 | INFO | Loading dataset from: /home/user/ML/medical_insurance_fraud_detection/data/raw/Health_Insurance_Fraud_Claims.xlsx
+2026-09-01 01:55:00,828 | INFO | Dataset loaded: 4500 rows, 19 columns
+2026-09-01 01:55:00,829 | INFO | Dataset SHA256: 952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45
+2026-09-01 01:55:00,829 | INFO | ============================================================
+2026-09-01 01:55:00,829 | INFO | STAGE S2: Data Quality Gates
+2026-09-01 01:55:00,829 | INFO | ============================================================
+2026-09-01 01:55:00,832 | INFO |   G1 Completeness: PASS (total nulls: 0)
+2026-09-01 01:55:00,832 | INFO |   G2 Schema: PASS (expected 19, got 19)
+2026-09-01 01:55:00,833 | INFO |   G3 Uniqueness: PASS
+2026-09-01 01:55:00,834 | INFO |   G4 Target: PASS (values: <StringArray>
+['Legitimate', 'Fraud']
+Length: 2, dtype: str)
+2026-09-01 01:55:00,834 | INFO |   G5 Ranges: PASS
+2026-09-01 01:55:00,835 | INFO |   G6 Prevalence: PASS (fraud rate: 0.060)
+2026-09-01 01:55:00,835 | INFO |   Overall Quality: ALL PASS
+2026-09-01 01:55:00,835 | INFO | ============================================================
+2026-09-01 01:55:00,835 | INFO | STAGE S3: Exploratory Data Analysis
+2026-09-01 01:55:00,835 | INFO | ============================================================
+2026-09-01 01:55:05,274 | INFO |   EDA complete: 18 visualizations generated in /home/user/ML/medical_insurance_fraud_detection/images/eda
+2026-09-01 01:55:05,275 | INFO | ============================================================
+2026-09-01 01:55:05,275 | INFO | STAGE S4: Preprocessing & Feature Engineering
+2026-09-01 01:55:05,275 | INFO | ============================================================
+2026-09-01 01:55:05,278 | INFO |   Dropped 9 columns (identifiers, leakage, high-cardinality)
+2026-09-01 01:55:05,280 | INFO |   Created 7 ratio/transform features
+2026-09-01 01:55:05,285 | INFO |   Created 5 temporal features
+2026-09-01 01:55:26,818 | INFO | ============================================================
+2026-09-01 01:55:26,818 | INFO | RUN ID: run_20260901_015526
+2026-09-01 01:55:26,818 | INFO | Medical Insurance Claim Fraud Detection — Approach 1
+2026-09-01 01:55:26,818 | INFO | Traditional Machine Learning with Full Benchmarking
+2026-09-01 01:55:26,818 | INFO | IIIT Dharwad | Prof. Ramesh Athe
+2026-09-01 01:55:26,818 | INFO | Team: B Varshith, M Jagadeshwar, J Ganesh
+2026-09-01 01:55:26,818 | INFO | ============================================================
+2026-09-01 01:55:26,818 | INFO | ============================================================
+2026-09-01 01:55:26,818 | INFO | STAGE S1: Data Acquisition
+2026-09-01 01:55:26,818 | INFO | ============================================================
+2026-09-01 01:55:26,818 | INFO | Loading dataset from: /home/user/ML/medical_insurance_fraud_detection/data/raw/Health_Insurance_Fraud_Claims.xlsx
+2026-09-01 01:55:27,353 | INFO | Dataset loaded: 4500 rows, 19 columns
+2026-09-01 01:55:27,354 | INFO | Dataset SHA256: 952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45
+2026-09-01 01:55:27,355 | INFO | ============================================================
+2026-09-01 01:55:27,355 | INFO | STAGE S2: Data Quality Gates
+2026-09-01 01:55:27,355 | INFO | ============================================================
+2026-09-01 01:55:27,357 | INFO |   G1 Completeness: PASS (total nulls: 0)
+2026-09-01 01:55:27,357 | INFO |   G2 Schema: PASS (expected 19, got 19)
+2026-09-01 01:55:27,358 | INFO |   G3 Uniqueness: PASS
+2026-09-01 01:55:27,359 | INFO |   G4 Target: PASS (values: <StringArray>
+['Legitimate', 'Fraud']
+Length: 2, dtype: str)
+2026-09-01 01:55:27,360 | INFO |   G5 Ranges: PASS
+2026-09-01 01:55:27,360 | INFO |   G6 Prevalence: PASS (fraud rate: 0.060)
+2026-09-01 01:55:27,360 | INFO |   Overall Quality: ALL PASS
+2026-09-01 01:55:27,360 | INFO | ============================================================
+2026-09-01 01:55:27,360 | INFO | STAGE S3: Exploratory Data Analysis
+2026-09-01 01:55:27,360 | INFO | ============================================================
+2026-09-01 01:55:32,029 | INFO |   EDA complete: 18 visualizations generated in /home/user/ML/medical_insurance_fraud_detection/images/eda
+2026-09-01 01:55:32,030 | INFO | ============================================================
+2026-09-01 01:55:32,030 | INFO | STAGE S4: Preprocessing & Feature Engineering
+2026-09-01 01:55:32,030 | INFO | ============================================================
+2026-09-01 01:55:32,033 | INFO |   Dropped 9 columns (identifiers, leakage, high-cardinality)
+2026-09-01 01:55:32,035 | INFO |   Created 7 ratio/transform features
+2026-09-01 01:55:32,040 | INFO |   Created 5 temporal features
+2026-09-01 01:55:32,043 | INFO |   Created 3 binned features
+2026-09-01 01:55:32,044 | INFO |   Created 4 interaction features
+2026-09-01 01:55:32,050 | INFO |   Encoded categorical features (label + one-hot)
+2026-09-01 01:55:32,051 | INFO |   Final feature matrix: 4500 samples, 44 features
+2026-09-01 01:55:32,051 | INFO |   Feature list: ['ClaimAmount', 'PatientAge', 'PatientIncome', 'Cluster', 'ClaimAmountPatientIncome', 'ClaimAmountPerAge', 'IncomePerAge', 'LogClaimAmount', 'LogPatientIncome', 'ClaimAmountZScore', 'IncomeZScore', 'ClaimMonth', 'ClaimDayOfWeek', 'ClaimYear', 'ClaimIsWeekend', 'ClaimQuarter', 'AgeGroup', 'IncomeGroup', 'ClaimAmountGroup', 'ClusterIs1', 'HighClaimAmt', 'Cluster1_HighAmt', 'LowIncome_HighClaim', 'PatientGender_enc', 'ProviderSpecialty_Cardiology', 'ProviderSpecialty_General Practice', 'ProviderSpecialty_Neurology', 'ProviderSpecialty_Orthopedics', 'ProviderSpecialty_Pediatrics', 'PatientMaritalStatus_Divorced', 'PatientMaritalStatus_Married', 'PatientMaritalStatus_Single', 'PatientMaritalStatus_Widowed', 'PatientEmploymentStatus_Employed', 'PatientEmploymentStatus_Retired', 'PatientEmploymentStatus_Student', 'PatientEmploymentStatus_Unemployed', 'ClaimType_Emergency', 'ClaimType_Inpatient', 'ClaimType_Outpatient', 'ClaimType_Routine', 'ClaimSubmissionMethod_Online', 'ClaimSubmissionMethod_Paper', 'ClaimSubmissionMethod_Phone']
+2026-09-01 01:55:32,051 | INFO | ============================================================
+2026-09-01 01:55:32,051 | INFO | STAGE S6: Data Splitting
+2026-09-01 01:55:32,052 | INFO | ============================================================
+2026-09-01 01:55:32,070 | INFO |   Train: 3150 samples (189 fraud, 2961 legit)
+2026-09-01 01:55:32,070 | INFO |   Val:   675 samples (41 fraud, 634 legit)
+2026-09-01 01:55:32,070 | INFO |   Test:  675 samples (40 fraud, 635 legit)
+2026-09-01 01:55:32,070 | INFO | ============================================================
+2026-09-01 01:55:32,070 | INFO | STAGE S8: Model Zoo Training
+2026-09-01 01:55:32,070 | INFO | ============================================================
+2026-09-01 01:55:32,082 | INFO |   Training M01_MajorityClass...
+2026-09-01 01:55:32,105 | INFO |   M01_MajorityClass DONE — Val PR-AUC: 0.0607, ROC-AUC: 0.5000, F1: 0.0000, Time: 0.0s
+2026-09-01 01:55:32,106 | INFO |   Training M02_LogReg_L2...
+2026-09-01 01:55:32,152 | INFO |   M02_LogReg_L2 DONE — Val PR-AUC: 0.9806, ROC-AUC: 0.9986, F1: 0.8791, Time: 0.0s
+2026-09-01 01:55:32,152 | INFO |   Training M03_LogReg_L1...
+2026-09-01 01:55:34,364 | INFO |   M03_LogReg_L1 DONE — Val PR-AUC: 0.9707, ROC-AUC: 0.9979, F1: 0.8791, Time: 2.2s
+2026-09-01 01:55:34,364 | INFO |   Training M04_GaussianNB...
+2026-09-01 01:55:34,397 | INFO |   M04_GaussianNB DONE — Val PR-AUC: 0.8083, ROC-AUC: 0.9914, F1: 0.8889, Time: 0.0s
+2026-09-01 01:55:34,397 | INFO |   Training M05_DecisionTree...
+2026-09-01 01:55:34,437 | INFO |   M05_DecisionTree DONE — Val PR-AUC: 0.9533, ROC-AUC: 0.9869, F1: 0.9756, Time: 0.0s
+2026-09-01 01:55:34,437 | INFO |   Training M06_RandomForest...
+2026-09-01 01:55:35,372 | INFO |   M06_RandomForest DONE — Val PR-AUC: 0.9994, ROC-AUC: 1.0000, F1: 0.9880, Time: 0.6s
+2026-09-01 01:55:35,372 | INFO |   Training M07_ExtraTrees...
+2026-09-01 01:55:36,253 | INFO |   M07_ExtraTrees DONE — Val PR-AUC: 0.9942, ROC-AUC: 0.9995, F1: 0.8889, Time: 0.5s
+2026-09-01 01:55:36,254 | INFO |   Training M08_KNN...
+2026-09-01 01:55:36,658 | INFO |   M08_KNN DONE — Val PR-AUC: 0.9160, ROC-AUC: 0.9937, F1: 0.8148, Time: 0.0s
+2026-09-01 01:55:36,658 | INFO |   Training M09_LinearSVM...
+2026-09-01 01:55:36,740 | INFO |   M09_LinearSVM DONE — Val PR-AUC: 0.9828, ROC-AUC: 0.9986, F1: 0.9136, Time: 0.0s
+2026-09-01 01:55:36,740 | INFO |   Training M10_AdaBoost...
+2026-09-01 01:55:37,875 | INFO |   M10_AdaBoost DONE — Val PR-AUC: 1.0000, ROC-AUC: 1.0000, F1: 1.0000, Time: 1.0s
+2026-09-01 01:55:37,875 | INFO |   Training M11_HistGBM...
+2026-09-01 01:55:38,199 | INFO |   M11_HistGBM DONE — Val PR-AUC: 0.9988, ROC-AUC: 0.9999, F1: 0.9756, Time: 0.3s
+2026-09-01 01:55:38,200 | INFO |   Training M12_XGBoost...
+2026-09-01 01:55:38,311 | INFO |   M12_XGBoost DONE — Val PR-AUC: 1.0000, ROC-AUC: 1.0000, F1: 0.9877, Time: 0.1s
+2026-09-01 01:55:38,311 | INFO |   Training M13_LightGBM...
+2026-09-01 01:55:38,462 | INFO |   M13_LightGBM DONE — Val PR-AUC: 0.9988, ROC-AUC: 0.9999, F1: 0.9880, Time: 0.1s
+2026-09-01 01:55:38,462 | INFO |   Training M14_GBM...
+2026-09-01 01:55:41,043 | INFO |   M14_GBM DONE — Val PR-AUC: 0.9935, ROC-AUC: 0.9996, F1: 0.9756, Time: 2.6s
+2026-09-01 01:55:41,043 | INFO |   Training M15_MLP...
+2026-09-01 01:55:41,685 | INFO |   M15_MLP DONE — Val PR-AUC: 0.9633, ROC-AUC: 0.9975, F1: 0.9048, Time: 0.6s
+2026-09-01 01:55:41,686 | INFO |   Training M16_QDA...
+2026-09-01 01:55:41,697 | WARNING |   M16_QDA FAILED: The covariance matrix of class 0 is not full rank. Increase the value of `reg_param` to reduce the c
+2026-09-01 01:55:41,697 | INFO |   Building ensemble models...
+2026-09-01 01:55:41,697 | INFO |   Training M17_VotingEnsemble...
+2026-09-01 01:55:44,082 | INFO |   M17_VotingEnsemble DONE — Val PR-AUC: 1.0000, ROC-AUC: 1.0000, F1: 0.9877, Time: 1.9s
+2026-09-01 01:55:44,085 | INFO | ============================================================
+2026-09-01 01:55:44,085 | INFO | STAGE S9: Leaderboard Assembly
+2026-09-01 01:55:44,085 | INFO | ============================================================
+2026-09-01 01:55:44,089 | INFO |   Leaderboard saved: /home/user/ML/medical_insurance_fraud_detection/evaluation/leaderboard.csv
+2026-09-01 01:55:44,089 | INFO |   TOP 5 MODELS (by Validation PR-AUC):
+2026-09-01 01:55:44,090 | INFO |     M12_XGBoost: PR-AUC=1.0000, ROC-AUC=1.0000, F1=0.9877
+2026-09-01 01:55:44,090 | INFO |     M17_VotingEnsemble: PR-AUC=1.0000, ROC-AUC=1.0000, F1=0.9877
+2026-09-01 01:55:44,090 | INFO |     M10_AdaBoost: PR-AUC=1.0000, ROC-AUC=1.0000, F1=1.0000
+2026-09-01 01:55:44,090 | INFO |     M06_RandomForest: PR-AUC=0.9994, ROC-AUC=1.0000, F1=0.9880
+2026-09-01 01:55:44,090 | INFO |     M11_HistGBM: PR-AUC=0.9988, ROC-AUC=0.9999, F1=0.9756
+2026-09-01 01:55:44,090 | INFO | ============================================================
+2026-09-01 01:55:44,090 | INFO | Generating Model Visualizations
+2026-09-01 01:55:44,090 | INFO | ============================================================
+2026-09-01 01:55:45,445 | INFO |   Feature importance for: M12_XGBoost
+2026-09-01 01:55:45,445 | INFO |   Model visualizations complete
+2026-09-01 01:55:45,445 | INFO | ============================================================
+2026-09-01 01:55:45,445 | INFO | Generating Evaluation Report
+2026-09-01 01:55:45,445 | INFO | ============================================================
+2026-09-01 01:55:45,450 | INFO |   Evaluation report saved: /home/user/ML/medical_insurance_fraud_detection/evaluation/evaluation.md
+2026-09-01 01:55:45,450 | INFO | ============================================================
+2026-09-01 01:55:45,450 | INFO | Generating Documentation
+2026-09-01 01:55:45,450 | INFO | ============================================================
+2026-09-01 01:55:45,453 | INFO |   Documentation files generated in /home/user/ML/medical_insurance_fraud_detection/documentation
+2026-09-01 01:55:45,454 | INFO | ============================================================
+2026-09-01 01:55:45,454 | INFO | PIPELINE COMPLETE
+2026-09-01 01:55:45,454 | INFO |   Total time: 18.6 seconds
+2026-09-01 01:55:45,454 | INFO |   Best model: M12_XGBoost
+2026-09-01 01:55:45,454 | INFO |   Best Val PR-AUC: 1.0000
+2026-09-01 01:55:45,455 | INFO |   Models trained: 16
+2026-09-01 01:55:45,455 | INFO |   Visualizations: 18
+2026-09-01 01:55:45,455 | INFO |   Manifest: /home/user/ML/medical_insurance_fraud_detection/evaluation/run_manifest.json
+2026-09-01 01:55:45,455 | INFO | ============================================================
