@@ -1,0 +1,12 @@
+{
+  "run_id": "run_20260901_015526",
+  "start_time": "2026-09-01T01:55:45.453184",
+  "total_time_sec": 18.6,
+  "data_checksum": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "dataset_rows": 4500,
+  "features": 44,
+  "models_trained": 16,
+  "models_failed": 1,
+  "best_model": "M12_XGBoost",
+  "best_val_pr_auc": 1.0
+}
